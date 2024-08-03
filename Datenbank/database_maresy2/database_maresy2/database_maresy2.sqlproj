@@ -57,4 +57,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="users.sql" />
+    <Build Include="roles.sql" />
+    <Build Include="products.sql" />
+    <Build Include="sets.sql" />
+    <Build Include="productsSets.sql" />
+    <Build Include="rentals.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="database_maresy2.refactorlog" />
+  </ItemGroup>
 </Project>
