@@ -1,0 +1,70 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MaReSy2.styles.css" asp-append-version="true" />
+    <style>
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .login-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .login-text {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        
+
+        <div class="card mt-3 p-4">
+            <img src="~/images/Logo_Österreichisches_Rotes_Kreuz_2.jpg" alt="Login Image" width="700" height="auto" />
+            <h2>MaReSy2</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Benutzername"></label>
+                    <input asp-for="Benutzername" class="form-control" />
+                    <span asp-validation-for="Benutzername" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Passwort"></label>
+                    <input asp-for="Passwort" type="password" class="form-control" />
+                    <span asp-validation-for="Passwort" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <div class="form-group mt-3">
+                    <a href="#">Passwort vergessen?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
