@@ -1,0 +1,39 @@
+﻿@page
+
+
+@{
+    ViewData["Title"] = "Benutzerverwaltung";
+}
+
+<h1>Benutzerverwaltung</h1>
+
+<table class="table">
+        <tr>
+    <thead>
+            <th>BenutzerID</th>
+            <th>Benutzername</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>Passwort</th>
+            <th>Rolle</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+            <tr>
+                <td>1</td>
+                <td>scheissalex1</td>
+                <td>Ali</td>
+                <td>Schmiddi</td>
+                <td>lexi123</td>
+                <td>Admin</td>
+                <td>
+                    <!-- Aktion Buttons wie Bearbeiten und Löschen -->
+                    <a class="btn btn-primary" asp-page="/Edit" asp-route-id="">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="">Löschen</a>
+                </td>
+            </tr>
+        
+    </tbody>
+</table>
