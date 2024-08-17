@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MaReSy2.props" />
+</Project>
