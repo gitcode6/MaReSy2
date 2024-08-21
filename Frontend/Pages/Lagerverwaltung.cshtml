@@ -1,5 +1,5 @@
 ﻿@page
-@model MaReSy2.Pages.LagerverwaltungModel
+
 
 @{
 	ViewData["Title"] = "Lagerverwaltung";
@@ -18,19 +18,19 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var produkte in Model.ProduktListe)
+           
             {
                 <tr>
-                    <td>@produkte.productId</td>
-                    <td>@produkte.productName</td>
-                    <td>@produkte.productDescription</td>
-                    <td>@produkte.productImage</td>
-                    <td>@produkte.productActive</td>
-                    <td>@produkte.productAmount</td>
+                    <td>1</td>
+                    <td>Erste Hilfe Koffer</td>
+                    <td>Beinhaltet alles um Erste Hilfe zu leisten</td>
+                    <td>PRODUKTBILD</td>
+                    <td>Verfügbar</td>
+                    <td>15</td>
                     <td>
                         <!-- Aktion Buttons wie Bearbeiten und Löschen -->
-                        <a class="btn btn-primary" asp-page="/Edit" asp-route-id="@produkte.productId">Bearbeiten</a>
-                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="@produkte.productId">Löschen</a>
+                        <a class="btn btn-primary" asp-page="/Edit" asp-route-id="">Bearbeiten</a>
+                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="">Löschen</a>
                     </td>
                 </tr>
             }
