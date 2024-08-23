@@ -1,31 +1,3 @@
-/*using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-public class LoginModel : PageModel
-{
-	[BindProperty]
-	public string Username { get; set; }
-
-	[BindProperty]
-	public string Password { get; set; }
-
-	public IActionResult OnPost()
-	{
-		// Hier kannst du die Anmeldeinformationen überprüfen.
-		// Zum Beispiel:
-		if (Username == "admin" && Password == "password")
-		{
-			// Anmeldung erfolgreich, zum Beispiel einen Cookie setzen oder eine Session starten
-			return RedirectToPage("/Index");
-		}
-
-		// Bei Fehlern die Seite neu laden und eine Fehlermeldung anzeigen
-		ModelState.AddModelError(string.Empty, "Ungültiger Benutzername oder Passwort.");
-		return Page();
-	}
-}
-*/
-
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -47,7 +19,8 @@ public class LoginModel : PageModel
 		// Überprüfen der Anmeldeinformationen (dies ist nur ein Beispiel)
 		if (Benutzername == "admin" && Passwort == "password")
 		{
-			var claims = new List<Claim>
+
+			/*var claims = new List<Claim>
 			{
 				new Claim(ClaimTypes.Name, Benutzername)
 			};
@@ -59,12 +32,25 @@ public class LoginModel : PageModel
 			};
 
 			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+			*/
 
-			return RedirectToPage("/Index");
+			return RedirectToPage("/Übersicht U");
+		}
+		else
+		{
+			if(Benutzername == "")
+			{
+				ModelState.AddModelError(string.Empty, "Benutzername leer");
+			}
+			if (Passwort == "")
+			{
+				ModelState.AddModelError(string.Empty, "Passwort leer");
+			}
 		}
 
-		// Bei Fehlern die Seite neu laden und eine Fehlermeldung anzeigen
-		ModelState.AddModelError(string.Empty, "Ungültiger Benutzername oder Passwort.");
+		
+
+
 		return Page();
 	}
 }

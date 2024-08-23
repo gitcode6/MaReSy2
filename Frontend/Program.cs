@@ -1,29 +1,52 @@
-using Microsoft.AspNetCore.Builder;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddAuthentication("MyCookieAuth")
+	.AddCookie("MyCookieAuth", options =>
+	{
+		options.LoginPath = "/Login"; // Setze den Pfad zur Login-Seite
+	});
+
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
+	app.UseExceptionHandler("/Error");
+	app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
+// Füge die Authentifizierung und Autorisierung zur Pipeline hinzu
+app.UseAuthentication();
 app.UseAuthorization();
+
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapRazorPages();
-	endpoints.MapPut("Pages/Login.cshtml");
+	endpoints.MapRazorPages();
+	endpoints.MapGet("/", async (context) =>
+	{
+		context.Response.Redirect("/Login");
+	});
 });
 
-app.MapRazorPages();
+
+
+
+/*
+builder.Services.AddRazorPages(options =>
+{
+	options.Conventions.AuthorizeFolder("/"); // Schützt alle Seiten
+});
+*/
+
+
+
 
 app.Run();
