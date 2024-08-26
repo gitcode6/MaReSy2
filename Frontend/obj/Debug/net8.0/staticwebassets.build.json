@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XmtTYW5wbtwkmRhSgurT+TKueUhxlqTQT07LMBu6h6w=",
+  "Hash": "EssBFJzrIxNblIcJmsKpBN7FzgEA3i2hNH84aLuizP0=",
   "Source": "MaReSy2",
   "BasePath": "_content/MaReSy2",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Logo_Österreichisches_Rotes_Kreuz_2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\Übungsmedikament1.png",
+      "SourceId": "MaReSy2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\",
+      "BasePath": "_content/MaReSy2",
+      "RelativePath": "images/Übungsmedikament1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Übungsmedikament1.png"
     },
     {
       "Identity": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\js\\site.js",

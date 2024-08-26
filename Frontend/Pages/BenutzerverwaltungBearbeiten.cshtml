@@ -1,0 +1,44 @@
+﻿@page "{id:int}"
+@model BenutzerverwaltungBearbeitenModel
+
+@{
+    ViewData["Title"] = "Benutzer Bearbeiten";
+}
+<style>
+
+    .form-group{
+        margin: 20px;
+    }
+    .btnSpeichern{
+        color: white;
+        background-color: #B70E0C;
+    }
+
+</style>
+<h2>Benutzer Bearbeiten</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Benutzername">Benutzername</label>
+        <input type="text" id="Benutzername" class="form-control" asp-for="Benutzer.Benutzername" />
+    </div>
+    <div class="form-group">
+        <label for="Vorname">Vorname</label>
+        <input type="text" id="Vorname" class="form-control" asp-for="Benutzer.Vorname" />
+    </div>
+    <div class="form-group">
+        <label for="Nachname">Nachname</label>
+        <input type="text" id="Nachname" class="form-control" asp-for="Benutzer.Nachname" />
+    </div>
+    <div class="form-group">
+        <label for="Passwort">Passwort</label>
+        <input type="password" id="Passwort" class="form-control" asp-for="Benutzer.Passwort" />
+    </div>
+    <div class="form-group">
+        <label for="Rolle">Rolle</label>
+        <input type="text" id="Rolle" class="form-control" asp-for="Benutzer.Rolle" />
+    </div>
+
+    <button type="submit" class="btn btnSpeichern">Speichern</button>
+    <a asp-page="/Benutzerverwaltung" class="btn btn-secondary">Abbrechen</a>
+</form>

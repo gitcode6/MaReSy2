@@ -26,6 +26,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVudXR6ZXJ2ZXJ3YWx0dW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/BenutzerverwaltungBearbeiten.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVudXR6ZXJ2ZXJ3YWx0dW5nQmVhcmJlaXRlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/Materialreservierung.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0ZXJpYWxyZXNlcnZpZXJ1bmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/MaterialreservierungDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0ZXJpYWxyZXNlcnZpZXJ1bmdEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]

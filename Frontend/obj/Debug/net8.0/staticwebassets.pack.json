@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\Logo_Österreichisches_Rotes_Kreuz_2.jpg"
     },
     {
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\Übungsmedikament1.png",
+      "PackagePath": "staticwebassets\\images\\Übungsmedikament1.png"
+    },
+    {
       "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
