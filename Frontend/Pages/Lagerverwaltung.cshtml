@@ -12,7 +12,6 @@
                 <th>ProduktId</th>
                 <th>Produktname</th>
                 <th>Produktbeschreibung</th>
-                <th>Produktbild</th>
                 <th>Produktstatus</th>
                 <th>Produktmenge</th>
             </tr>
@@ -24,13 +23,13 @@
                     <td>1</td>
                     <td>Erste Hilfe Koffer</td>
                     <td>Beinhaltet alles um Erste Hilfe zu leisten</td>
-                    <td>PRODUKTBILD</td>
                     <td>Verfügbar</td>
                     <td>15</td>
                     <td>
-                        <!-- Aktion Buttons wie Bearbeiten und Löschen -->
-                        <a class="btn btn-primary" asp-page="/Edit" asp-route-id="">Bearbeiten</a>
+                        <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
+                        <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="1">Bearbeiten</a>
                         <a class="btn btn-danger" asp-page="/Delete" asp-route-id="">Löschen</a>
+
                     </td>
                 </tr>
             

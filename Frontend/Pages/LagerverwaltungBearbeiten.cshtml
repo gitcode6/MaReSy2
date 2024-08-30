@@ -1,0 +1,54 @@
+﻿@page "{id:int}"
+@model LagerverwaltungBearbeitenModel
+
+@{
+    ViewData["Title"] = "Produkt Bearbeiten";
+}
+<style>
+    .form-group {
+        margin: 20px;
+    }
+
+    .btnSpeichern {
+        color: white;
+        background-color: #B70E0C;
+    }
+
+    .product-image {
+        width: 200px;
+        height: auto;
+        margin: 20px 0;
+    }
+</style>
+
+<h2>Produkt Bearbeiten</h2>
+
+<!-- Anzeige Produktbild -->
+<div class="form-group">
+    <label for="Produktbild">Produktbild</label>
+    <div>
+        <img src="/images/Übungsmedikament1.png" alt="Produktbild" class="product-image" />
+    </div>
+</div>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Produktname">Produktname</label>
+        <input type="text" id="Produktname" class="form-control" asp-for="Produkt.Produktname" />
+    </div>
+    <div class="form-group">
+        <label for="Produktbeschreibung">Produktbeschreibung</label>
+        <input type="text" id="Produktbeschreibung" class="form-control" asp-for="Produkt.Produktbeschreibung" />
+    </div>
+    <div class="form-group">
+        <label for="Produktstatus">Produktstatus</label>
+        <input type="text" id="Produktstatus" class="form-control" asp-for="Produkt.Produktstatus" />
+    </div>
+    <div class="form-group">
+        <label for="Produktmenge">Produktmenge</label>
+        <input type="number" id="Produktmenge" class="form-control" asp-for="Produkt.Produktmenge" />
+    </div>
+
+    <button type="submit" class="btn btnSpeichern">Speichern</button>
+    <a asp-page="/Lagerverwaltung" class="btn btn-secondary">Abbrechen</a>
+</form>

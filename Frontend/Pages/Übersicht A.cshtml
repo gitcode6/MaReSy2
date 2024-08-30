@@ -1,4 +1,43 @@
 ﻿@page
 @model Übersicht_AModel
 @{
+	ViewData["Title"] = "Übersicht A";
 }
+<h1>Übersicht A</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Anforderer:in</th>
+            <th>Material</th>
+            <th>Anzahl</th>
+            <th>Zeitraum</th>
+            <th>Bearbeiter:in</th>
+            <th>Bearbeitung</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <!-- Rohdaten -->
+        <tr>
+            <td>2</td>
+            <td>Alexander Schmidt <br><a href="#">(a.schmidt3)</a></td>
+            <td>Reanimationspuppe Anne</td>
+            <td>3</td>
+            <td>01.08.2024 – 31.08.2024</td>
+            <td>m.summer</td>
+            <td>
+                <a href="#" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-clockwise"></i>
+                </a>
+                <a href="#" class="btn btn-outline-success">
+                    <i class="bi bi-check-circle"></i>
+                </a>
+            </td>
+        </tr>
+        
+
+
+    </tbody>
+</table>
