@@ -23,15 +23,16 @@
 
 <h2>Produkt Bearbeiten</h2>
 
-<!-- Anzeige Produktbild -->
+<!-- Anzeige und Bearbeiten Produktbild -->
 <div class="form-group">
     <label for="Produktbild">Produktbild</label>
     <div>
         <img src="/images/Übungsmedikament1.png" alt="Produktbild" class="product-image" />
     </div>
+    <input type="file" id="Produktbild" class="form-control" asp-for="Produkt.Produktbild" />
 </div>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="Produktname">Produktname</label>
         <input type="text" id="Produktname" class="form-control" asp-for="Produkt.Produktname" />

@@ -35,129 +35,136 @@
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.2s;
+            min-width: 250px;
         }
 
-            .card:hover {
-                transform: scale(1.05);
-            }
+        .card:hover {
+            transform: scale(1.05);
+        }
 
-            .card img {
-                width: 100%;
-                height: auto;
-            }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
 
-            .card h3 {
-                font-size: 18px;
-                margin: 15px;
-            }
+        .card h3 {
+            font-size: 18px;
+            margin: 15px;
+        }
 
-            .card p {
-                font-size: 14px;
-                color: #555;
-                margin: 0 15px 15px;
-            }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 0 15px 15px;
+        }
 
-            .card .price {
-                font-size: 22px;
-                color: #B70E0C;
-                margin: 15px;
-            }
+        .card .price {
+            font-size: 22px;
+            color: #B70E0C;
+            margin: 15px;
+        }
 
-            .card .btn {
-                display: block;
-                width: 80%;
-                margin: 15px auto;
-                padding: 10px;
-                text-align: center;
-                color: white;
-                background-color: #B70E0C;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                text-decoration: none;
-                transition: background-color 0.3s;
-            }
+        .card .btn {
+            display: block;
+            width: 80%;
+            margin: 15px auto;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background-color: #B70E0C;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
 
-            .card .btn:hover {
-                    background-color: #B70E0C;
-            }
+        .card .btn:hover {
+            background-color: #B70E0C;
+        }
 
-            footer {
-                display: none;
-            }
+        .search-container {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-container input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
-            <h3>Materialname</h3>
-            <p>Beschreibung des Materials</p>
-            <p class="price">0,00 €</p>
-            <a href="/MaterialreservierungDetails/@Model" class="btn">Details</a>
-        </div>
-        <!-- Weitere Produkte kann man hier hinzufügen -->
+    <!-- Suchleiste -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Materialien durchsuchen..." onkeyup="filterMaterials()">
     </div>
-    
+
+    <!-- Materialien -->
+    <div class="container" id="materialContainer">
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <h3>Materialname 1</h3>
+            <p>Beschreibung des Materials 1</p>
+            <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <h3>Materialname 2</h3>
+            <p>Beschreibung des Materials 2</p>
+            <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <h3>Materialname 3</h3>
+            <p>Beschreibung des Materials 3</p>
+            <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <h3>Materialname 4</h3>
+            <p>Beschreibung des Materials 4</p>
+            <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+        </div>
+
+        <!-- Weitere Materialien können hier hinzugefügt werden -->
+    </div>
+
+
+
+    <!-- Suchleiste für Material -->
+    <script>
+        function filterMaterials() {
+            var input, filter, container, cards, h3, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            container = document.getElementById("materialContainer");
+            cards = container.getElementsByClassName("card");
+
+            for (i = 0; i < cards.length; i++) {
+                h3 = cards[i].getElementsByTagName("h3")[0];
+                txtValue = h3.textContent || h3.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
-
-
