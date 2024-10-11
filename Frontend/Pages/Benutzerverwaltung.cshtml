@@ -1,39 +1,128 @@
 ﻿@page
-
-
 @{
     ViewData["Title"] = "Benutzerverwaltung";
 }
+<style>
+    .benutzerverwaltung_benutzerverwaltung {
+        background-color: #403A60;
+        padding-top: 10px;
+        padding-bottom: 1px;
+        text-align: center;
+        font-family: Dunant;
+    }
+    .table_detail
+    {
+        padding: 2%;
+        width: 100%;
+        font-family: Dunant;
+    }
+</style>
 
-<h1>Benutzerverwaltung</h1>
+<div class="benutzerverwaltung_benutzerverwaltung">
+    <h1 style="color: white; font-size:50px;">Benutzer:innen-Verwaltung</h1>
+</div>
 
-<table class="table">
-        <tr>
-    <thead>
-            <th>BenutzerID</th>
-            <th>Benutzername</th>
-            <th>Vorname</th>
-            <th>Nachname</th>
-            <th>Passwort</th>
-            <th>Rolle</th>
+<div class="table_detail">
+    <table class="table">
+        <thead>
+            <tr style="vertical-align: middle;">
+            <th>Filter</th>
+            <th><input type="text" id="searchInputUsername" onkeyup="filterTable()" placeholder="Benutzername"></th>
+            <th><input type="text" id="searchInputVorname" onkeyup="filterTable()" placeholder="Vorname"></th>
+            <th><input type="text" id="searchInputNachname" onkeyup="filterTable()" placeholder="Nachname"></th>
+            <th></th>
+            <th><a class="btn btn-primary" asp-page="/BenutzerverwaltungHinzufügen" style="background-color: #A0DAB3; border: #A0DAB3;">Hinzufügen</a></th>
         </tr>
-    </thead>
-    <tbody>
-        
-        
-            <tr>
+        <tr style="vertical-align: middle;">
+            <th width="4%">ID</th>
+            <th width="21%">Benutzername</th>
+            <th width="20%">Vorname</th>
+            <th width="20%">Nachname</th>
+            <th width="7%">Rolle</th>
+            <th width="28%">Tools</th>
+        </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <tr style="vertical-align: middle;">
                 <td>1</td>
                 <td>alexschmidt12</td>
                 <td>Ali</td>
                 <td>Schmiddi</td>
-                <td>lexi123</td>
+                <td>Admin</td>
+                <td>
+                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
+                    <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="1" asp-route-benutzername="alexschmidt12" asp-route-vorname="Ali" asp-route-nachname="Schmiddi" asp-route-rolle="Admin" style="background-color: #403A60;">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #B70E0C;">Löschen</a>
+                </td>
+            </tr>
+            <tr style="vertical-align: middle;">
+                <td>2</td>
+                <td>EliasStinkt</td>
+                <td>Elias</td>
+                <td>Gindl</td>
                 <td>User</td>
                 <td>
                     <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="1">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="">Löschen</a>
+                    <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="2" asp-route-benutzername="EliastStinkt" asp-route-vorname="Elias" asp-route-nachname="Gindl" asp-route-rolle="User" style="background-color: #403A60;">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="2" style="background-color: #B70E0C;">Löschen</a>
                 </td>
             </tr>
-        
-    </tbody>
-</table>
+            <tr style="vertical-align: middle;">
+                <td>3</td>
+                <td>Koarli</td>
+                <td>Karl</td>
+                <td>Heinz</td>
+                <td>User</td>
+                <td>
+                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
+                    <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="3" asp-route-benutzername="Koarli" asp-route-vorname="Karl" asp-route-nachname="Heinz" asp-route-rolle="User" style="background-color: #403A60;">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="2" style="background-color: #B70E0C;">Löschen</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function filterTable() {
+        // Variablen
+        var inputUsername = document.getElementById("searchInputUsername").value.toUpperCase();
+        var inputVorname = document.getElementById("searchInputVorname").value.toUpperCase();
+        var inputNachname = document.getElementById("searchInputNachname").value.toUpperCase();
+        var table = document.getElementById("userTableBody");
+        var tr = table.getElementsByTagName("tr");
+
+        // Schleife über alle Zeilen in der Tabelle
+        for (var i = 0; i < tr.length; i++) {
+            var tdBenutzername = tr[i].getElementsByTagName("td")[1];
+            var tdVorname = tr[i].getElementsByTagName("td")[2];
+            var tdNachname = tr[i].getElementsByTagName("td")[3];
+            var match = true; // Initialisiere match als true
+
+            // Überprüfen auf Übereinstimmungen
+            if (tdBenutzername) {
+                var txtBenutzername = tdBenutzername.textContent || tdBenutzername.innerText;
+                if (txtBenutzername.toUpperCase().indexOf(inputUsername) === -1) {
+                    match = false; // Benutzername stimmt nicht überein
+                }
+            }
+
+            if (tdVorname) {
+                var txtVorname = tdVorname.textContent || tdVorname.innerText;
+                if (txtVorname.toUpperCase().indexOf(inputVorname) === -1) {
+                    match = false; // Vorname stimmt nicht überein
+                }
+            }
+
+            if (tdNachname) {
+                var txtNachname = tdNachname.textContent || tdNachname.innerText;
+                if (txtNachname.toUpperCase().indexOf(inputNachname) === -1) {
+                    match = false; // Nachname stimmt nicht überein
+                }
+            }
+
+            // Verstecken oder Anzeigen der Zeile basierend auf dem Filter
+            tr[i].style.display = match ? "" : "none";
+        }
+    }
+</script>

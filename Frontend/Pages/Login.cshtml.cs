@@ -34,7 +34,7 @@ public class LoginModel : PageModel
 			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 			*/
 
-			return RedirectToPage("/Übersicht U");
+			return RedirectToPage("/Dashboard");
 		}
 		else
 		{

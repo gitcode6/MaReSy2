@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Datenbank\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Datenbank\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5413545A-BF97-45A0-A688-57AFA7662EFD}|database_maresy2\\database_maresy2.sqlproj|C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Datenbank\\database_maresy2\\database_maresy2.refactorlog||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5413545A-BF97-45A0-A688-57AFA7662EFD}|database_maresy2\\database_maresy2.sqlproj|solutionrelative:database_maresy2\\database_maresy2.refactorlog||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "database_maresy2.refactorlog",
+              "DocumentMoniker": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Datenbank\\database_maresy2\\database_maresy2.refactorlog",
+              "RelativeDocumentMoniker": "database_maresy2\\database_maresy2.refactorlog",
+              "ToolTip": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Datenbank\\database_maresy2\\database_maresy2.refactorlog",
+              "RelativeToolTip": "database_maresy2\\database_maresy2.refactorlog",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-11T13:26:04.402Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -41,12 +41,36 @@
       "PackagePath": "staticwebassets\\images\\anwendung_meineReservierungen.JPG"
     },
     {
-      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\images_dashboard.pptx",
-      "PackagePath": "staticwebassets\\images\\images_dashboard.pptx"
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\auszug_lagerstand.JPG",
+      "PackagePath": "staticwebassets\\images\\auszug_lagerstand.JPG"
+    },
+    {
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\auszug_materialreservierung.JPG",
+      "PackagePath": "staticwebassets\\images\\auszug_materialreservierung.JPG"
+    },
+    {
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\auszug_produkte.JPG",
+      "PackagePath": "staticwebassets\\images\\auszug_produkte.JPG"
+    },
+    {
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\auszug_produktesets.JPG",
+      "PackagePath": "staticwebassets\\images\\auszug_produktesets.JPG"
+    },
+    {
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\auszug_sets.JPG",
+      "PackagePath": "staticwebassets\\images\\auszug_sets.JPG"
+    },
+    {
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\reanimationspuppe.jpeg",
+      "PackagePath": "staticwebassets\\images\\reanimationspuppe.jpeg"
     },
     {
       "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\sonstiges_abmeldung.jpg",
       "PackagePath": "staticwebassets\\images\\sonstiges_abmeldung.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\sonstiges_einstellungen.jpg",
+      "PackagePath": "staticwebassets\\images\\sonstiges_einstellungen.jpg"
     },
     {
       "Id": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\wwwroot\\images\\sonstiges_handbuch.jpg",

@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVudXR6ZXJ2ZXJ3YWx0dW5nQmVhcmJlaXRlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/BenutzerverwaltungHinzufügen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVudXR6ZXJ2ZXJ3YWx0dW5nSGluenVmw7xnZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/LagerverwaltungBearbeiten.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nQmVhcmJlaXRlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/LagerverwaltungHinzufügen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nSGluenVmw7xnZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gindl/OneDrive - BHAK BHAS Feldbach/MaReSy2/Git/MaReSy2/Frontend/Pages/Login.cshtml]

@@ -18,19 +18,19 @@ public class LagerverwaltungBearbeitenModel : PageModel
     [BindProperty]
     public ProduktModel Produkt { get; set; }
 
-    
-    public IActionResult OnGet(int id)
+
+    public IActionResult OnGet(int id, string produktname, string produktbeschreibung, string produktbild, int menge, string status)
     {
-        
+
         // Beispielprodukt
         Produkt = new ProduktModel
         {
             ProduktID = id,
-            Produktname = "Erste Hilfe Koffer",
-            Produktbeschreibung = "Beinhaltet alles, um Erste Hilfe zu leisten",
-            Produktbild = "/images/erste-hilfe-koffer.jpg",
-            Produktstatus = "Verfügbar",
-            Produktmenge = 15
+            Produktname = produktname,
+            Produktbeschreibung = produktbeschreibung,
+            Produktbild = produktbild,
+            Produktmenge = menge,
+            Produktstatus = status,
         };
 
         if (Produkt == null)

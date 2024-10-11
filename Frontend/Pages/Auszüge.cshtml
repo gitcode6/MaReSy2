@@ -1,4 +1,78 @@
 ﻿@page
 @model MaReSy2.Pages.AuszügeModel
 @{
+    ViewData["Title"] = "Auszüge";
 }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+        .verwaltung_materialreservierung {
+            background-color: #403A60;
+            padding-top: 10px;
+            padding-bottom: 1px;
+            text-align: center;
+            font-family: Dunant;
+        }
+
+        .table_detail {
+            padding: 2%;
+            width: 100%;
+            font-family: Dunant;
+        }
+
+        .images_dashboard {
+            padding: 10px;
+            float: left;
+        }
+
+        .dashboard_allgemein {
+            background-color: #99D6EA;
+            padding: 20px;
+            font-family: Dunant;
+        }
+
+        .dashboard_dashboard {
+            background-color: #403A60;
+            padding-top: 10px;
+            padding-bottom: 1px;
+            text-align: center;
+            font-family: Dunant;
+        }
+    </style>
+    </head>
+<body>
+
+    <div class="verwaltung_materialreservierung">
+        <h1 style="color: white; font-size:50px;">Auszüge</h1>
+    </div>
+
+    <br />
+    <div class="dashboard_allgemein">
+        <div class="images_dashboard">
+            <a href="">
+                <img src="~/images/auszug_lagerstand.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div>
+        <div class="images_dashboard">
+            <a href="">
+                <img src="~/images/auszug_materialreservierung.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div><div class="images_dashboard">
+            <a href="">
+                <img src="~/images/auszug_produkte.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div><div class="images_dashboard">
+            <a href="">
+                <img src="~/images/auszug_sets.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div>
+        <div class="images_dashboard">
+            <a href="">
+                <img src="~/images/auszug_produktesets.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+
+</body>

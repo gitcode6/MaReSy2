@@ -1,0 +1,73 @@
+﻿@page
+@model BenutzerverwaltungHinzufügenModel
+@{
+    ViewData["Title"] = "Benutzer hinzufügen";
+}
+
+<style>
+    .benutzerverwaltung_benutzerverwaltung {
+        background-color: #403A60;
+        padding-top: 10px;
+        padding-bottom: 1px;
+        text-align: center;
+        font-family: Dunant;
+    }
+
+    .table_detail {
+        padding: 2%;
+        width: 100%;
+        font-family: Dunant;
+    }
+
+    .form-group {
+        margin: 20px;
+    }
+
+    .btnSpeichern {
+        color: white;
+        background-color: #B70E0C;
+    }
+
+    .benutzerverwaltung_bearbeitung {
+        background-color: #99D6EA;
+        padding: 20px;
+        font-family: Dunant;
+    }
+</style>
+<div class="benutzerverwaltung_benutzerverwaltung">
+    <h1 style="color: white; font-size:50px;">Benutzer:innen-Verwaltung</h1>
+</div>
+<br />
+<div class="benutzerverwaltung_bearbeitung">
+    <h2 style="text-align: center;">Hinzufügung</h2>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="Benutzername">Benutzername</label>
+            <input type="text" id="Benutzername" class="form-control" asp-for="Benutzer.Benutzername" />
+        </div>
+        <div class="form-group">
+            <label for="Vorname">Vorname</label>
+            <input type="text" id="Vorname" class="form-control" asp-for="Benutzer.Vorname" />
+        </div>
+        <div class="form-group">
+            <label for="Nachname">Nachname</label>
+            <input type="text" id="Nachname" class="form-control" asp-for="Benutzer.Nachname" />
+        </div>
+        <div class="form-group">
+            <label for="Passwort">Passwort</label>
+            <input type="password" id="Passwort" class="form-control" asp-for="Benutzer.Passwort" />
+        </div>
+        <div class="form-group">
+            <label for="Rolle">Rolle</label>
+            <select id="Rolle" class="form-control" asp-for="Benutzer.Rolle">
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btnSpeichern" style="background-color: #403A60;">Speichern</button>
+        <a asp-page="/Benutzerverwaltung" class="btn btn-secondary" style="background-color: #B70E0C;">Abbrechen</a>
+    </form>
+</div>
+

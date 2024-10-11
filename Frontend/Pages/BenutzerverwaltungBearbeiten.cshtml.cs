@@ -19,18 +19,18 @@ public class BenutzerverwaltungBearbeitenModel : PageModel
     public BenutzerModel Benutzer { get; set; }
 
    
-    public IActionResult OnGet(int id)
+    public IActionResult OnGet(int id, string benutzername, string vorname, string nachname, string rolle)
     {
         
         // Beispielbenutzer
         Benutzer = new BenutzerModel
         {
             BenutzerID = id,
-            Benutzername = "alexschmidt12",
-            Vorname = "Ali",
-            Nachname = "Schmiddi",
-            Passwort = "lexi123",
-            Rolle = "Admin"
+            Benutzername = benutzername,
+            Vorname = vorname,
+            Nachname = nachname,
+            Passwort = "",
+            Rolle = rolle
         };
 
         if (Benutzer == null)
