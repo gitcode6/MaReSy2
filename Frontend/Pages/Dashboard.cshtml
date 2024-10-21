@@ -1,0 +1,102 @@
+﻿@page
+@model MaReSy2.Pages.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .images_dashboard{
+            padding: 10px;
+            float: left;
+        }
+        .dashboard_allgemein
+        {
+            background-color: #99D6EA;
+            padding: 20px;
+            font-family: Dunant;
+        }
+        .dashboard_dashboard{
+            background-color: #403A60;
+            padding-top: 10px;
+            padding-bottom: 1px;
+            text-align:center;
+            font-family: Dunant;
+        }
+        </style>
+</head>
+<body>
+    <div class="dashboard_dashboard">
+        <h1 style="color: white; font-size:50px;">Dashboard</h1>
+    </div>
+    <br />
+    <div class="dashboard_allgemein">
+    <h2 style="font-size:32px;" ;>Admin-Tools</h2>
+    <div class="images_dashboard">
+        <a href="/Benutzerverwaltung">
+            <img src="~/images/verwaltung_benutzer.jpg" alt="Login Image" width="180" height="auto" />
+        </a>
+    </div>
+    <div class="images_dashboard">
+        <a href="/Lagerverwaltung">
+            <img src="~/images/verwaltung_lager.jpg" alt="Login Image" width="180" height="auto" />
+        </a>
+    </div>
+    <div class="images_dashboard">
+        <a href="/Übersicht A">
+            <img src="~/images/verwaltung_materialreservierung.jpg" alt="Login Image" width="180" height="auto" />
+        </a>
+    </div>
+    <div class="images_dashboard">
+        <a href="/auszüge">
+            <img src="~/images/verwaltung_auszuege.jpg" alt="Login Image" width="180" height="auto" />
+        </a>
+    </div>
+    
+    <div style="clear: both;"></div>
+    </div>
+    <br />
+
+    <div class="dashboard_allgemein">
+        <h2 style="font-size:32px;" ;>User-Tools</h2>
+    <div class="images_dashboard">
+        <a href="/Materialreservierung">
+            <img src="~/images/anwendung_materialreservierung.jpg" alt="Login Image" width="180" height="auto" />
+        </a>
+    </div>
+    <div class="images_dashboard">
+        <a href="/Übersicht U">
+            <img src="~/images/anwendung_meineReservierungen.jpg" alt="Login Image" width="180" height="auto" />
+        </a>
+    </div>
+    <div style="clear: both;"></div>
+    </div>
+    <br />
+
+    <div class="dashboard_allgemein">
+        <h2 style="font-size:32px;" ;>Sonstiges</h2>
+        <div class="images_dashboard">
+            <a href="/Handbuch">
+                <img src="~/images/sonstiges_handbuch.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div>
+        <div class="images_dashboard">
+            <a href="/Login">
+                <img src="~/images/sonstiges_abmeldung.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div>
+        <div class="images_dashboard">
+            <a href="/Information">
+                <img src="~/images/sonstiges_einstellungen.jpg" alt="Login Image" width="180" height="auto" />
+            </a>
+        </div>
+
+    <div style="clear: both;"></div>
+    </div>
+    <br />
+
+</body>
+
+

@@ -1,39 +1,108 @@
 ﻿@page
-@model MaReSy2.Pages.LagerverwaltungModel
-
 @{
 	ViewData["Title"] = "Lagerverwaltung";
 }
-    <h1>Lagerverwaltung</h1>
+<style>
+    .lagerverwaltung_lagerverwaltung {
+        background-color: #403A60;
+        padding-top: 10px;
+        padding-bottom: 1px;
+        text-align: center;
+        font-family: Dunant;
+    }
 
+    .table_detail {
+        padding: 2%;
+        width: 100%;
+        font-family: Dunant;
+    }
+</style>
+
+<div class="lagerverwaltung_lagerverwaltung">
+    <h1 style="color: white; font-size:50px;">Lager-Verwaltung</h1>
+</div>
+
+<div class="table_detail">
     <table class="table">
         <thead>
-            <tr>
-                <th>ProduktId</th>
-                <th>Prduktname</th>
-                <th>Produktbeschreibung</th>
-                <th>Produktbild</th>
-                <th>Prduktstatus</th>
-                <th>Prduktmenge</th>
+            <tr style="vertical-align: middle;">
+                <th>Filter</th>
+                <th><input type="text" id="searchInputBezeichnung" onkeyup="filterTable()" placeholder="Bezeichnung"></th>
+                <th><input type="text" id="searchInputBeschreibung" onkeyup="filterTable()" placeholder="Beschreibung"></th>
+                <th></th>
+                <th></th>
+                <th><a class="btn btn-primary" asp-page="/LagerverwaltungHinzufügen" style="background-color: #A0DAB3; border: #A0DAB3;">Hinzufügen</a></th>
+            </tr>
+            <tr style="vertical-align: middle;">
+                <th width="4%">ID</th>
+                <th width="21%">Bezeichnung</th>
+                <th width="40%">Beschreibung</th>
+                <th width="7%">Menge</th>
+                <th width="4%">Status</th>
+                <th width="24%">Tools</th>
             </tr>
         </thead>
-        <tbody>
-            @foreach (var produkte in Model.ProduktListe)
-            {
-                <tr>
-                    <td>@produkte.productId</td>
-                    <td>@produkte.productName</td>
-                    <td>@produkte.productDescription</td>
-                    <td>@produkte.productImage</td>
-                    <td>@produkte.productActive</td>
-                    <td>@produkte.productAmount</td>
-                    <td>
-                        <!-- Aktion Buttons wie Bearbeiten und Löschen -->
-                        <a class="btn btn-primary" asp-page="/Edit" asp-route-id="@produkte.productId">Bearbeiten</a>
-                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="@produkte.productId">Löschen</a>
-                    </td>
-                </tr>
-            }
+        <tbody id="userTableBody">
+            <tr style="vertical-align: middle;">
+                <td>1</td>
+                <td>Erste-Hilfe-Koffer</td>
+                <td>Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.</td>
+                <td>5</td>
+                <td>Aktiv</td>
+                <td>
+                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
+                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="1" asp-route-produktname="Erste-Hilfe-Koffer" asp-route-produktbeschreibung="Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-menge="5" asp-route-status="Aktiv" style="background-color: #403A60;">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #B70E0C;">Löschen</a>
+                </td>
+            </tr>
+            <tr style="vertical-align: middle;">
+                <td>2</td>
+                <td>Reanimationspuppe</td>
+                <td>Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.</td>
+                <td>3</td>
+                <td>Inaktiv</td>
+                <td>
+                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
+                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="2" asp-route-produktname="Reanimationspuppe" asp-route-produktbeschreibung="Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum." asp-route-pfadbild="~/images/reanimationspuppe.jpeg" asp-route-menge="3" asp-route-status="Inaktiv" style="background-color: #403A60;">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="2" style="background-color: #B70E0C;">Löschen</a>
+                </td>
+            </tr>
         </tbody>
     </table>
+</div>
+
+<script>
+    function filterTable() {
+        // Variablen
+        var inputBezeichnung = document.getElementById("searchInputBezeichnung").value.toUpperCase();
+        var inputBeschreibung = document.getElementById("searchInputBeschreibung").value.toUpperCase();
+        var table = document.getElementById("userTableBody");
+        var tr = table.getElementsByTagName("tr");
+
+        // Schleife über alle Zeilen in der Tabelle
+        for (var i = 0; i < tr.length; i++) {
+            var tdBezeichnung = tr[i].getElementsByTagName("td")[1];
+            var tdBeschreibung = tr[i].getElementsByTagName("td")[2];
+            var match = true; // Initialisiere match als true
+
+            // Überprüfen auf Übereinstimmungen
+            if (tdBezeichnung) {
+                var txtBezeichnung = tdBezeichnung.textContent || tdBezeichnung.innerText;
+                if (txtBezeichnung.toUpperCase().indexOf(inputBezeichnung) === -1) {
+                    match = false; // Bezeichnung stimmt nicht überein
+                }
+            }
+
+            if (tdBeschreibung) {
+                var txtBeschreibung = tdBeschreibung.textContent || tdBeschreibung.innerText;
+                if (txtBeschreibung.toUpperCase().indexOf(inputBeschreibung) === -1) {
+                    match = false; // Beschreibung stimmt nicht überein
+                }
+            }
+
+            // Verstecken oder Anzeigen der Zeile basierend auf dem Filter
+            tr[i].style.display = match ? "" : "none";
+        }
+    }
+</script>
 

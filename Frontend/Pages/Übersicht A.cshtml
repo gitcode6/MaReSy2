@@ -1,4 +1,190 @@
 ﻿@page
-@model MaReSy2.Pages.Übersicht_AModel
+@model Übersicht_AModel
 @{
+	ViewData["Title"] = "Übersicht A";
 }
+
+<style>
+    .verwaltung_materialreservierung {
+        background-color: #403A60;
+        padding-top: 10px;
+        padding-bottom: 1px;
+        text-align: center;
+        font-family: Dunant;
+    }
+
+    .table_detail {
+        padding: 2%;
+        width: 100%;
+        font-family: Dunant;
+    }
+</style>
+
+<div class="verwaltung_materialreservierung">
+    <h1 style="color: white; font-size:50px;">Materialreservierung-Verwaltung</h1>
+</div>
+
+<div class="table_detail">
+    <table class="table">
+        <thead>
+            <tr style="vertical-align: middle;">
+                <th>Filter</th>
+                <th><input type="text" id="searchInputAnforderer" onkeyup="filterTable()" placeholder="Anforderer:in"></th>
+                <th><input type="text" id="searchInputMaterial" onkeyup="filterTable()" placeholder="Material"></th>
+                <th></th>
+                <th><input type="text" id="searchInputZeitraum" onkeyup="filterTable()" placeholder="Zeitraum"></th>
+                <th>
+                    <select id="searchInputStatus" onchange="filterTable()">
+                        <option value="">Alle Status</option>
+                        <option value="Angefordert">Angefordert</option>
+                        <option value="Freigegeben">Freigegeben</option>
+                        <option value="Abgelehnt">Abgelehnt</option>
+                        <option value="Ausgeliefert">Ausgeliefert</option>
+                        <option value="Zurückgegeben">Zurückgegeben</option>
+                    </select>
+                </th>
+                <th><input type="text" id="searchInputBearbeiter" onkeyup="filterTable()" placeholder="Bearbeiter:in"></th>
+                <th></th>
+            </tr>
+            <tr style="vertical-align: middle;">
+                <th width="5%">ID</th>
+                <th width="10%">Anforderer:in</th>
+                <th width="25%">Material</th>
+                <th width="5%">Anzahl</th>
+                <th width="20%">Zeitraum</th>
+                <th width="10%">Status</th>
+                <th width="15%">Bearbeiter:in</th>
+                <th width="15%">Tools</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody" style="vertical-align: middle;">
+            <tr>
+                <td>1</td>
+                <td>Alexander Schmidt <br /> (a.schmidt3)</td>
+                <td>Reanimationspuppe</td> <!-- Aufruf des Artikels ermöglichen. -->
+                <td>3</td>
+                <td>01.08.2024 - 31.08.2024</td>
+                <td>Freigegeben</td>
+                <td>Melanie Summer <br /> (m.summer)</td>
+                <td>
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Harald Dinger <br /> (h.dinger)</td>
+                <td>Schleife "Bewerter:in"</td> <!-- Aufruf des Artikels ermöglichen. -->
+                <td>5</td>
+                <td>10.10.2024 - 30.11.2024</td>
+                <td>Angefordert</td>
+                <td>Melanie Summer <br /> (m.summer)</td>
+                <td>
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Alexander Schmidt <br /> (a.schmidt3)</td>
+                <td>Reanimationspuppe</td> <!-- Aufruf des Artikels ermöglichen. -->
+                <td>1</td>
+                <td>10.08.2024 - 31.08.2024</td>
+                <td>Angefordert</td>
+                <td>Melanie Summer <br /> (m.summer)</td>
+                <td>
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Manuel Porsche <br /> (m.porsche)</td>
+                <td>Beachflag "Station 1"</td> <!-- Aufruf des Artikels ermöglichen. -->
+                <td>3</td>
+                <td>25.02.2024 - 01.03.2024</td>
+                <td>Abgelehnt</td>
+                <td>Melanie Summer <br /> (m.summer)</td>
+                <td>
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Patrick Lackner <br /> (p.lackner)</td>
+                <td>Schleife "Bewerbsleitung"</td> <!-- Aufruf des Artikels ermöglichen. -->
+                <td>1</td>
+                <td>08.08.2024 - 31.08.2024</td>
+                <td>Freigegeben</td>
+                <td>Patrick Lackner <br /> (p.lackner)</td>
+                <td>
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function filterTable() {
+        // Variablen für die Filter
+        var inputAnforderer = document.getElementById("searchInputAnforderer").value.toUpperCase();
+        var inputMaterial = document.getElementById("searchInputMaterial").value.toUpperCase();
+        var inputZeitraum = document.getElementById("searchInputZeitraum").value.toUpperCase();
+        var inputStatus = document.getElementById("searchInputStatus").value.toUpperCase();
+        var inputBearbeiter = document.getElementById("searchInputBearbeiter").value.toUpperCase();
+        var table = document.getElementById("userTableBody");
+        var tr = table.getElementsByTagName("tr");
+
+        // Schleife über alle Zeilen in der Tabelle
+        for (var i = 0; i < tr.length; i++) {
+            var tdAnforderer = tr[i].getElementsByTagName("td")[1];
+            var tdMaterial = tr[i].getElementsByTagName("td")[2];
+            var tdZeitraum = tr[i].getElementsByTagName("td")[4];
+            var tdStatus = tr[i].getElementsByTagName("td")[5];
+            var tdBearbeiter = tr[i].getElementsByTagName("td")[6];
+            var match = true; // Initialisiere match als true
+
+            // Überprüfen auf Übereinstimmungen
+            if (tdAnforderer) {
+                var txtAnforderer = tdAnforderer.textContent || tdAnforderer.innerText;
+                if (txtAnforderer.toUpperCase().indexOf(inputAnforderer) === -1) {
+                    match = false; // Anforderer:in stimmt nicht überein
+                }
+            }
+
+            if (tdMaterial) {
+                var txtMaterial = tdMaterial.textContent || tdMaterial.innerText;
+                if (txtMaterial.toUpperCase().indexOf(inputMaterial) === -1) {
+                    match = false; // Material stimmt nicht überein
+                }
+            }
+
+            if (tdZeitraum) {
+                var txtZeitraum = tdZeitraum.textContent || tdZeitraum.innerText;
+                if (txtZeitraum.toUpperCase().indexOf(inputZeitraum) === -1) {
+                    match = false; // Zeitraum stimmt nicht überein
+                }
+            }
+
+            if (tdStatus) {
+                var txtStatus = tdStatus.textContent || tdStatus.innerText;
+                if (inputStatus !== "" && txtStatus.toUpperCase().indexOf(inputStatus) === -1) {
+                    match = false; // Status stimmt nicht überein
+                }
+            }
+
+            if (tdBearbeiter) {
+                var txtBearbeiter = tdBearbeiter.textContent || tdBearbeiter.innerText;
+                if (txtBearbeiter.toUpperCase().indexOf(inputBearbeiter) === -1) {
+                    match = false; // Bearbeiter:in stimmt nicht überein
+                }
+            }
+
+            // Verstecken oder Anzeigen der Zeile basierend auf dem Filter
+            tr[i].style.display = match ? "" : "none";
+        }
+    }
+</script>

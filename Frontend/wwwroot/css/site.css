@@ -25,3 +25,18 @@ body {
     height: 90px; /* Logo Größe hier anpassen */
     margin-left: auto;
 }
+
+
+
+/*Für Schriftart, keine Ahnung*/
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/MyCustomFont.woff2') format('woff2'), 
+         url('/fonts/MyCustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MyCustomFont', Arial, sans-serif;
+}

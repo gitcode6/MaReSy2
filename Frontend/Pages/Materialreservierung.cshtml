@@ -3,3 +3,193 @@
 @{
     ViewData["Title"] = "Materialreservierung";
 }
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Materialreservierung</title>
+    <style>
+        body
+        {
+            font-family: Dunant;
+        }
+
+        .materialreservierung_head {
+            background-color: #403A60;
+            padding-top: 10px;
+            padding-bottom: 1px;
+            text-align: center;
+            font-family: Dunant;
+        }
+        .card {
+            background-color: white;
+            width: 22%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            min-width: 250px;
+            float: left;
+            height: 500px;
+            display: grid;
+            grid-template-rows: 70% 30%; /* 70% für das Bild, 30% für den Text */
+            overflow: hidden; /* Verhindert Überlauf */
+        }
+
+
+        .card img {
+                width: 100%;
+                height: auto;
+                grid-row: 1 / 2;
+        }
+
+        .text-container {
+            grid-row: 2 / 3; /* Textcontainer nimmt die unteren 30% ein */
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Optional: Text zentriert */
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 0 15px 15px;
+        }
+
+        .card .price {
+            font-size: 22px;
+            color: #403A60;
+            margin: 15px;
+        }
+
+        .card .btn {
+            display: block;
+            width: 80%;
+            margin: 15px auto;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background-color: #403A60;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .card .btn:hover {
+            background-color: #B70E0C;
+        }
+
+        .search-container {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-container input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="materialreservierung_head">
+        <h1 style="color: white; font-size:50px;">Materialreservierung</h1>
+    </div>
+    <!-- Suchleiste -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Materialien durchsuchen..." onkeyup="filterMaterials()">
+    </div>
+
+    <!-- Materialien -->
+    <div class="container" id="materialContainer">
+        <div class="card">
+            <img src="~/images/reanimationspuppe.jpeg" alt="Material">
+            <div class="text-container">
+                <h3>Reanimationspuppe</h3>
+                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <div class="text-container">
+                <h3>Keta 2</h3>
+                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <div class="text-container">
+                <h3>Materialname 3</h3>
+                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <div class="text-container">
+                <h3>Materialname 4</h3>
+                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <div class="text-container">
+                <h3>Keta 2</h3>
+                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <div class="text-container">
+                <h3>Materialname 3</h3>
+                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <div class="text-container">
+                <h3>Materialname 4</h3>
+                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <!-- Suchleiste für Material -->
+    <script>
+        function filterMaterials() {
+            var input, filter, container, cards, h3, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            container = document.getElementById("materialContainer");
+            cards = container.getElementsByClassName("card");
+
+            for (i = 0; i < cards.length; i++) {
+                h3 = cards[i].getElementsByTagName("h3")[0];
+                txtValue = h3.textContent || h3.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

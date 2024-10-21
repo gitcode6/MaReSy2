@@ -12,7 +12,7 @@ namespace MaReSy2.Pages
         {
             _context = context;
         }
-
+        
         public IList<Produkte> ProduktListe { get; set; }
 
         public async Task OnGetAsync()
