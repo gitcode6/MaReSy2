@@ -10,6 +10,8 @@ public partial class Role
 
     public string Rolename { get; set; } = null!;
 
+
+
     [JsonIgnore]
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 }
