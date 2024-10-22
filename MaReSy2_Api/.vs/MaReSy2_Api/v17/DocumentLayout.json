@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\services\\iusermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\iusermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\models\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\models\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\onedrive - bhak bhas feldbach\\04_sj_ hak 2023_2024\\diplomarbeit\\maresy2\\maresy2_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,87 +47,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:56:13.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "Models\\Role.cs",
-              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\Role.cs",
-              "RelativeToolTip": "Models\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:50:34.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA1wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:50:28.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAmwBUAAAA7AAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAArwEcAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:36:25.742Z"
+              "WhenOpened": "2024-10-21T16:20:22.994Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "UserManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
+              "RelativeDocumentMoniker": "Services\\UserManagementService.cs",
+              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
+              "RelativeToolTip": "Services\\UserManagementService.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAgwGMAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:34:06.511Z"
+              "WhenOpened": "2024-10-21T16:33:48.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Services\\IUserManagementService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserManagementService.cs",
+              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Services\\IUserManagementService.cs",
+              "RelativeToolTip": "Services\\IUserManagementService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T16:16:09.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T16:37:56.485Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Set.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\Set.cs",
-              "RelativeDocumentMoniker": "Models\\Set.cs",
-              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\Set.cs",
-              "RelativeToolTip": "Models\\Set.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBEAAABdAAAA",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:29:04.952Z"
+              "WhenOpened": "2024-10-21T17:29:24.832Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\UserDTO.cs",
+              "RelativeToolTip": "Models\\DTO\\UserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:28:56.473Z"
+              "WhenOpened": "2024-10-21T17:28:28.095Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -137,9 +130,23 @@
               "RelativeDocumentMoniker": "Models\\MaReSyDbContext.cs",
               "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
               "RelativeToolTip": "Models\\MaReSyDbContext.cs",
-              "ViewState": "AQIAAK0AAAAAAAAAAAAUwA4AAAAFAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAA+wB4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:28:37.386Z"
+              "WhenOpened": "2024-10-21T17:05:05.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\MaReSy2_Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T16:44:20.889Z",
+              "EditorCaption": ""
             }
           ]
         }

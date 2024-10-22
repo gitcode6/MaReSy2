@@ -1,6 +1,8 @@
 
 global using MaReSy2_Api.Models;
+global using MaReSy2_Api.Models.DTO;
 global using Microsoft.EntityFrameworkCore;
+using MaReSy2_Api.Services;
 
 
 namespace MaReSy2_Api
@@ -18,6 +20,8 @@ namespace MaReSy2_Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<MaReSyDbContext>();
+
+            builder.Services.AddScoped<IUserManagementService, UserManagementService>();
             
 
             var app = builder.Build();
