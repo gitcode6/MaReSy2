@@ -1,3 +1,5 @@
+using MaReSy2.ConsumeModels;
+using MaReSy2.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -8,18 +10,21 @@ namespace MaReSy2.Pages
 {
     public class BenutzerverwaltungModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly UserService userService;
 
-        public BenutzerverwaltungModel(ApplicationDbContext context)
+        public List<User> users { get; private set; }
+
+
+        public BenutzerverwaltungModel(UserService userService)
         {
-            _context = context;
+            this.userService = userService;
         }
-
-        public IList<Benutzer> BenutzerListe { get; set; }
 
         public async Task OnGetAsync()
         {
-            BenutzerListe = await _context.Benutzer.ToListAsync();
+            users = await userService.GetUsersAsync();
         }
+
+        public IList<Benutzer> BenutzerListe { get; set; }
     }
 }

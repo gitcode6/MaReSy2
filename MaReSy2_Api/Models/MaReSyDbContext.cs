@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Elfie.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaReSy2_Api.Models;
@@ -29,7 +30,7 @@ public partial class MaReSyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='C:\\Users\\Tobias\\OneDrive - BHAK BHAS Feldbach\\04_SJ_ HAK 2023_2024\\Diplomarbeit\\MaReSy2\\Datenbank\\database_maresy2\\database1_maresy2.mdf';Integrated Security=True;Connect Timeout=30;Encrypt=True");
+        => optionsBuilder.UseSqlServer("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename='C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Datenbank\\database_maresy2\\database1_maresy2.mdf'; Integrated Security = True; Connect Timeout = 30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

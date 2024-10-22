@@ -102,3 +102,4 @@ C:\Users\User\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\obj\Deb
 C:\Users\User\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.pdb
 C:\Users\User\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.genruntimeconfig.cache
 C:\Users\User\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\obj\Debug\net8.0\ref\MaReSy2.dll
+C:\Users\gindl\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\bin\Debug\net8.0\Newtonsoft.Json.dll

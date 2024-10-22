@@ -3,8 +3,6 @@ using MaReSy2_Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.Runtime.ConstrainedExecution;
 
 namespace MaReSy2_Api.Controllers

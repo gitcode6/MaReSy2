@@ -1,22 +1,30 @@
+using MaReSy2.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddAuthentication("MyCookieAuth")
-	.AddCookie("MyCookieAuth", options =>
-	{
-		options.LoginPath = "/Login"; // Setze den Pfad zur Login-Seite
-	});
+    .AddCookie("MyCookieAuth", options =>
+    {
+        options.LoginPath = "/Login"; // Setze den Pfad zur Login-Seite
+    });
 
 builder.Services.AddAuthorization();
+builder.Services.AddHttpClient("API", client => { client.BaseAddress = new Uri("https://localhost:7162/api"); });
+
+builder.Services.AddScoped<UserService>();
+builder.Services.AddControllers();
+
+
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-	app.UseExceptionHandler("/Error");
-	app.UseHsts();
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
@@ -27,13 +35,17 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapControllers();
+
+
+
 app.UseEndpoints(endpoints =>
 {
-	endpoints.MapRazorPages();
-	endpoints.MapGet("/", async (context) =>
-	{
-		context.Response.Redirect("/Login");
-	});
+    endpoints.MapRazorPages();
+    endpoints.MapGet("/", async (context) =>
+    {
+        context.Response.Redirect("/Login");
+    });
 });
 
 
