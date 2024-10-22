@@ -44,25 +44,29 @@
     <form method="post">
         <div class="form-group">
             <label for="Benutzername">Benutzername</label>
-            <input type="text" id="Benutzername" class="form-control" asp-for="Benutzer.Benutzername" />
+            <input type="text" name="benutzername" id="Benutzername" class="form-control" asp-for="Benutzer.Benutzername" />
         </div>
         <div class="form-group">
             <label for="Vorname">Vorname</label>
-            <input type="text" id="Vorname" class="form-control" asp-for="Benutzer.Vorname" />
+            <input type="text" name="vorname" id="Vorname" class="form-control" asp-for="Benutzer.Vorname" />
         </div>
         <div class="form-group">
             <label for="Nachname">Nachname</label>
-            <input type="text" id="Nachname" class="form-control" asp-for="Benutzer.Nachname" />
+            <input type="text" name ="nachname" id="Nachname" class="form-control" asp-for="Benutzer.Nachname" />
         </div>
         <div class="form-group">
             <label for="Passwort">Passwort</label>
-            <input type="password" id="Passwort" class="form-control" asp-for="Benutzer.Passwort" />
+            <input type="password" name="passwort" id="Passwort" class="form-control" asp-for="Benutzer.Passwort" />
+        </div>
+        <div class="form-group">
+            <label for="emailadresse">E-Mail-Adresse</label>
+            <input type="email" name="email" id="EMail" class="form-control" asp-for="Benutzer.Email" />
         </div>
         <div class="form-group">
             <label for="Rolle">Rolle</label>
-            <select id="Rolle" class="form-control" asp-for="Benutzer.Rolle">
-                <option value="Admin">Admin</option>
-                <option value="User">User</option>
+            <select name = "rolle" id="Rolle" class="form-control" asp-for="Benutzer.Rolle">
+                <option name="admin" value="Admin">Admin</option>
+                <option name="user" value="User">User</option>
             </select>
         </div>
 

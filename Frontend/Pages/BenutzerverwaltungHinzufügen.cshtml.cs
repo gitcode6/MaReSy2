@@ -1,3 +1,4 @@
+using MaReSy2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Threading.Tasks;
@@ -13,10 +14,20 @@ public class BenutzerverwaltungHinzufügenModel : PageModel
         public string Nachname { get; set; }
         public string Passwort { get; set; }
         public string Rolle { get; set; }
+
+        public string Email { get; set; } 
     }
 
     [BindProperty]
     public BenutzerModel Benutzer { get; set; }
+
+    private readonly UserService userService;
+
+    public BenutzerverwaltungHinzufügenModel(UserService userService)
+    {
+        this.userService = userService;
+    }
+
 
 
     public IActionResult OnGet(int id)
@@ -48,6 +59,18 @@ public class BenutzerverwaltungHinzufügenModel : PageModel
         {
             return Page();
         }
+
+        var username = Request.Form["benutzername"];
+        var firstname = Request.Form["vorname"];
+        var lastname = Request.Form["nachname"];
+        var passwort = Request.Form["passwort"];
+        var role = Request.Form["rolle"];
+        var email = Request.Form["email"];
+
+
+        bool success = await userService.addUserAsync(username, firstname, lastname, passwort, email, role);
+
+        System.Diagnostics.Debug.WriteLine(success);
 
         return RedirectToPage("/Benutzerverwaltung");
     }

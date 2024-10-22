@@ -4,6 +4,7 @@ namespace MaReSy2.ConsumeModels
 {
     public class User
     {
+
         public int userId { get; set; }
 
 

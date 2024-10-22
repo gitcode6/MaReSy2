@@ -58,8 +58,7 @@
               "RelativeToolTip": "Data\\DataContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T09:51:02.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T09:51:02.598Z"
             },
             {
               "$type": "Document",
@@ -69,7 +68,7 @@
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAcwAUAAAAAAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAIwAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T16:20:22.994Z",
               "EditorCaption": ""
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Services\\UserManagementService.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAgwGMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T16:33:48.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T16:33:48.585Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Services\\IUserManagementService.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAA1wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T16:16:09.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T16:16:09.11Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Controllers\\ProductsController.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T16:37:56.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T16:37:56.485Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:29:24.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:29:24.832Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "Models\\DTO\\UserDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:28:28.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:28:28.095Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "Models\\MaReSyDbContext.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAqwCAAAAARAQAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:05:05.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T17:05:05.443Z"
             },
             {
               "$type": "Document",
@@ -162,8 +155,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T16:44:20.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T16:44:20.889Z"
             }
           ]
         }
