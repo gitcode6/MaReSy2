@@ -8269,19 +8269,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gindl\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
       "projectName": "MaReSy2_Api",
-      "projectPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
-      "packagesPath": "C:\\Users\\gindl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\obj\\",
+      "projectPath": "C:\\Users\\User\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gindl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8351,7 +8351,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

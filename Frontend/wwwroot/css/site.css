@@ -31,8 +31,7 @@ body {
 /*Für Schriftart, keine Ahnung*/
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('/fonts/MyCustomFont.woff2') format('woff2'), 
-         url('/fonts/MyCustomFont.woff') format('woff');
+    src: url('../lib/fonts/Dunant-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
