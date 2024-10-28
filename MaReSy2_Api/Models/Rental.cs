@@ -7,7 +7,7 @@ public partial class Rental
 {
     public int RentalId { get; set; }
 
-    public string Username { get; set; } = null!;
+    public int UserId { get; set; }
 
     public int? SetId { get; set; }
 
@@ -37,5 +37,5 @@ public partial class Rental
 
     public virtual Set? Set { get; set; }
 
-    public virtual User UsernameNavigation { get; set; } = null!;
+    public virtual User User { get; set; } = null!;
 }

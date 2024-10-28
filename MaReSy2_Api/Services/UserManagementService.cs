@@ -22,15 +22,15 @@ namespace MaReSy2_Api.Services
             _context = context;
         }
 
-        public string Username { get; set; } = null!;
+        //public string Username { get; set; } = null!;
 
-        public string Firstname { get; set; } = null!;
+        //public string Firstname { get; set; } = null!;
 
-        public string Lastname { get; set; } = null!;
+        //public string Lastname { get; set; } = null!;
 
-        public string Password { get; set; } = null!;
+        //public string Password { get; set; } = null!;
 
-        public string Email { get; set; } = null!;
+        //public string Email { get; set; } = null!;
 
         public async Task<List<IdentityResult>> AddUserAsync(string username, string firstname, string lastname, string password, string email, string role)
         {

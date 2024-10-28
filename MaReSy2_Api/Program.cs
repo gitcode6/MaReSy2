@@ -22,6 +22,8 @@ namespace MaReSy2_Api
             builder.Services.AddDbContext<MaReSyDbContext>();
 
             builder.Services.AddScoped<IUserManagementService, UserManagementService>();
+
+            builder.Services.AddScoped<IProductService, ProductService>();
             
 
             var app = builder.Build();
