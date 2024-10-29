@@ -9,7 +9,7 @@
         public string? Productdescription { get; set; }
 
 
-        public int Productactive { get; set; }
+        public bool Productactive { get; set; }
 
         public int Productamount { get; set; }
     }

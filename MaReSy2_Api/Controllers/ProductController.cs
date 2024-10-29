@@ -45,7 +45,7 @@ namespace MaReSy2_Api.Controllers
 
         // POST api/<ProductController>
         [HttpPost("")]
-        public async Task<ActionResult<ProductDTO>> createProduct(string Productname, string Productdescription, int Productactive, int Productamount)
+        public async Task<ActionResult<ProductDTO>> createProduct(string Productname, string Productdescription, bool Productactive, int Productamount)
         {
             var result  = await _productService.AddNewProduct(Productname, Productdescription, Productactive, Productamount);
 

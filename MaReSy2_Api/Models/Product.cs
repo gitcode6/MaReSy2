@@ -13,7 +13,7 @@ public partial class Product
 
     public byte[]? Productimage { get; set; }
 
-    public int Productactive { get; set; }
+    public bool Productactive { get; set; }
 
     public int Productamount { get; set; }
 

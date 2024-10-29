@@ -1,3 +1,5 @@
+using MaReSy2.ConsumeModels;
+using MaReSy2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -6,18 +8,17 @@ namespace MaReSy2.Pages
 {
     public class LagerverwaltungModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ProductService _productService;
 
-        public LagerverwaltungModel(ApplicationDbContext context)
+        public LagerverwaltungModel(ProductService productService)
         {
-            _context = context;
+            _productService = productService;
         }
-        
-        public IList<Produkte> ProduktListe { get; set; }
 
+        public List<Product> products { get; private set; }
         public async Task OnGetAsync()
         {
-            ProduktListe = await _context.Produkt.ToListAsync();
+            products = await _productService.GetProductsAsync();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿@page
-@model MaReSy2.Pages.MaterialreservierungModel
+@model MaterialreservierungModel
 @{
     ViewData["Title"] = "Materialreservierung";
 }
@@ -115,15 +115,27 @@
 
     <!-- Materialien -->
     <div class="container" id="materialContainer">
-        <div class="card">
+        @* <div class="card">
             <img src="~/images/reanimationspuppe.jpeg" alt="Material">
             <div class="text-container">
                 <h3>Reanimationspuppe</h3>
                 <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
             </div>
-        </div>
+        </div> *@
 
-        <div class="card">
+
+         @foreach(var e in Model.products)
+        {
+            <div class="card">
+                <img src="~/images/Übungsmedikament1.png" alt="Material">
+                <div class="text-container">
+                    <h3>@e.productname</h3>
+                    <a href="/MaterialreservierungDetails/@e.productId" class="btn">Reservieren</a>
+                </div>
+            </div>
+        }
+
+        @* <div class="card">
             <img src="~/images/Übungsmedikament1.png" alt="Material">
             <div class="text-container">
                 <h3>Keta 2</h3>
@@ -168,7 +180,7 @@
                 <h3>Materialname 4</h3>
                 <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
             </div>
-        </div>
+        </div> *@
     </div>
     <div style="clear: both;"></div>
     <!-- Suchleiste für Material -->

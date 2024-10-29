@@ -12,7 +12,7 @@ namespace MaReSy2_Api.Services
             _context = context;
         }
 
-        public async Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(string Productname, string Productdescription, int Productactive, int Productamount)
+        public async Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(string Productname, string Productdescription, bool Productactive, int Productamount)
         {
             var errors = new List<string>();
 
@@ -26,9 +26,9 @@ namespace MaReSy2_Api.Services
                 errors.Add("Productamount muss positiv (>= 0) sein.");
             }
 
-            if((Productactive != 0) &&  (Productactive != 1))
+            if((Productactive != true) &&  (Productactive != false))
             {
-                errors.Add("Productactive muss entweder 0 oder 1 sein.");
+                errors.Add("Productactive muss entweder true oder false sein.");
             }
 
 

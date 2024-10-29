@@ -8,7 +8,7 @@ namespace MaReSy2_Api.Services
 
         Task<ProductDTO?> GetProductByIdAsync(int productId);
 
-        Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(string Productname, string Productdescription, int Productactive, int Productamount);
+        Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(string Productname, string Productdescription, bool Productactive, int Productamount);
 
          Task<bool> ProductExistsAsync(int productId);
 

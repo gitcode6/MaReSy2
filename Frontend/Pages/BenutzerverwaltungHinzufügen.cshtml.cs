@@ -14,7 +14,6 @@ public class BenutzerverwaltungHinzufügenModel : PageModel
         public string Nachname { get; set; }
         public string Passwort { get; set; }
         public string Rolle { get; set; }
-
         public string Email { get; set; } 
     }
 
