@@ -1,8 +1,10 @@
 ﻿using MaReSy2_Api.Models;
+using MaReSy2_Api.Models.DTO.UserDTO;
 using MaReSy2_Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.ConstrainedExecution;
 
 namespace MaReSy2_Api.Controllers
@@ -54,19 +56,27 @@ namespace MaReSy2_Api.Controllers
         }
 
         [HttpPost ("")]
-        public async Task<ActionResult<UserDTO>> createUser(string username, string firstname, string lastname, string password, string email, string role)
+        public async Task<IActionResult> createUser( CreateUserDTO user)
         {
-            var result = await _userManagementService.AddUserAsync(username, firstname, lastname, password, email, role);
-
-            if(result.Contains(IdentityResult.Success))
+             Validator.ValidateObject(user, new ValidationContext(user), validateAllProperties: true);
+            if (ModelState.IsValid)
             {
-                return Ok(result);
+
+                var result = await _userManagementService.AddUserAsync(user);
+
+                if (result.Contains(IdentityResult.Success))
+                {
+                    return Ok(result);
+                }
+
+                else
+                {
+                    return BadRequest(result);
+                }
             }
 
-            else
-            {
-                return BadRequest(result);
-            }
+            return BadRequest();
+
         }
 
         [HttpPost("{id}/change-password")]

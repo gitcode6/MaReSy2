@@ -1,5 +1,6 @@
 ﻿
 using MaReSy2_Api.Models;
+using MaReSy2_Api.Models.DTO.UserDTO;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -32,20 +33,20 @@ namespace MaReSy2_Api.Services
 
         //public string Email { get; set; } = null!;
 
-        public async Task<List<IdentityResult>> AddUserAsync(string username, string firstname, string lastname, string password, string email, string role)
+        public async Task<List<IdentityResult>> AddUserAsync(CreateUserDTO user)
         {
             List<IdentityResult> errors = new List<IdentityResult>();
 
-            if (await EmailExistsAsync(email))
+            if (await EmailExistsAsync(user.Email))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Email wird bereits verwendet!" }));
             }
-            if(await UsernameExistsAsync(username))
+            if(await UsernameExistsAsync(user.Username))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Benutzername wird bereits verwendet" }));
             }
 
-            if (!_context.Roles.Select(x => x.Rolename.ToLower()).Contains(role.ToLower()))
+            if (!_context.Roles.Select(x => x.Rolename.ToLower()).Contains(user.Role.ToLower()))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Diese Rolle gibt es im System nicht" }));
             }
@@ -55,17 +56,17 @@ namespace MaReSy2_Api.Services
                 return errors;
             }
 
-            var user = new User()
+            var DBuser = new User()
             {
-                Username = username,
-                Email = email,
-                Password = password,
-                Firstname = firstname,
-                Lastname = lastname,
-                Role = _context.Roles.Where(x=>x.Rolename == role).First(),
+                Username = user.Username,
+                Email = user.Email,
+                Password = user.Password,
+                Firstname = user.Firstname,
+                Lastname = user.Lastname,
+                Role = _context.Roles.Where(x=>x.Rolename == user.Role).First(),
             };
 
-            var createdUser = await _context.Users.AddAsync(user);
+            var createdUser = await _context.Users.AddAsync(DBuser);
 
             if(createdUser != null)
             {

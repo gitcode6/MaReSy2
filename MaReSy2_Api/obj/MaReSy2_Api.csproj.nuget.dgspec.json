@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj": {}
+    "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj": {
+    "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+        "projectUniqueName": "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
         "projectName": "MaReSy2_Api",
-        "projectPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
-        "packagesPath": "C:\\Users\\gindl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\MaReSy2_Api\\obj\\",
+        "projectPath": "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+        "packagesPath": "C:\\Users\\tobias.lehner\\.nuget\\packages\\",
+        "outputPath": "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gindl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tobias.lehner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

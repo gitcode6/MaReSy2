@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MaReSy2_Api.Models.DTO.UserDTO;
+using Microsoft.AspNetCore.Identity;
 
 namespace MaReSy2_Api.Services
 {
@@ -13,7 +14,7 @@ namespace MaReSy2_Api.Services
 
         Task<bool> EmailExistsAsync(string email);
         Task<bool> UsernameExistsAsync(string username);
-        Task<List<IdentityResult>> AddUserAsync(string username, string firstname, string lastname, string password, string email, string role);
+        Task<List<IdentityResult>> AddUserAsync(CreateUserDTO user);
 
         Task<List<IdentityResult>> updateUser(int id, UserDTO user);
 
