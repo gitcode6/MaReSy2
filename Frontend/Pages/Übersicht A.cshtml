@@ -43,18 +43,16 @@
                         <option value="Zurückgegeben">Zurückgegeben</option>
                     </select>
                 </th>
-                <th><input type="text" id="searchInputBearbeiter" onkeyup="filterTable()" placeholder="Bearbeiter:in"></th>
                 <th></th>
             </tr>
             <tr style="vertical-align: middle;">
                 <th width="5%">ID</th>
                 <th width="10%">Anforderer:in</th>
-                <th width="25%">Material</th>
+                <th width="30%">Material</th>
                 <th width="5%">Anzahl</th>
                 <th width="20%">Zeitraum</th>
                 <th width="10%">Status</th>
-                <th width="15%">Bearbeiter:in</th>
-                <th width="15%">Tools</th>
+                <th width="20%">Tools</th>
             </tr>
         </thead>
         <tbody id="userTableBody" style="vertical-align: middle;">
@@ -65,10 +63,11 @@
                 <td>3</td>
                 <td>01.08.2024 - 31.08.2024</td>
                 <td>Freigegeben</td>
-                <td>Melanie Summer <br /> (m.summer)</td>
                 <td>
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+                    |
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
                 </td>
             </tr>
             <tr>
@@ -78,10 +77,11 @@
                 <td>5</td>
                 <td>10.10.2024 - 30.11.2024</td>
                 <td>Angefordert</td>
-                <td>Melanie Summer <br /> (m.summer)</td>
                 <td>
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+                    |
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
                 </td>
             </tr>
             <tr>
@@ -91,10 +91,11 @@
                 <td>1</td>
                 <td>10.08.2024 - 31.08.2024</td>
                 <td>Angefordert</td>
-                <td>Melanie Summer <br /> (m.summer)</td>
                 <td>
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+                    |
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
                 </td>
             </tr>
             <tr>
@@ -104,10 +105,11 @@
                 <td>3</td>
                 <td>25.02.2024 - 01.03.2024</td>
                 <td>Abgelehnt</td>
-                <td>Melanie Summer <br /> (m.summer)</td>
                 <td>
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+                    |
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
                 </td>
             </tr>
             <tr>
@@ -117,10 +119,11 @@
                 <td>1</td>
                 <td>08.08.2024 - 31.08.2024</td>
                 <td>Freigegeben</td>
-                <td>Patrick Lackner <br /> (p.lackner)</td>
                 <td>
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">←</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60;">→</a>
+                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+                    |
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
                 </td>
             </tr>
         </tbody>

@@ -56,42 +56,36 @@
             @foreach (var e in Model.products)
             {
                 <tr style="vertical-align: middle;">
-                    <td>@e.productId</td>
+                    <td>P @e.productId</td>
                     <td>@e.productname</td>
                     <td>@e.productdescription</td>
                     <td>@e.productamount</td>
                     <td>@(e.productactive ? "Aktiv" : "Inaktiv")</td>
                     <td>
                         <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                        <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="1" asp-route-produktname="Erste-Hilfe-Koffer" asp-route-produktbeschreibung="Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-menge="5" asp-route-status="Aktiv" style="background-color: #403A60;">Bearbeiten</a>
-                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #B70E0C;">Löschen</a>
+                        <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="@e.productId" asp-route-produktname="@e.productname" asp-route-produktbeschreibung="@e.productdescription" asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-menge="@e.productamount" asp-route-status="@(e.productactive ? "Aktiv" : "Inaktiv")" style="background-color: #403A60;border-color:#403A60;">Bearbeiten</a>
+                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="@e.productId" style="background-color: #B70E0C; border-color:#B70E0C;">Löschen</a>
                     </td>
                 </tr>
             }
- @*            <tr style="vertical-align: middle;">
-                <td>1</td>
-                <td>Erste-Hilfe-Koffer</td>
-                <td>Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.</td>
-                <td>5</td>
+
+            <!--HIER KOMMT ZWEITER FOREACH REIN-->
+            <tr style="vertical-align: middle;">
+                <td>S 1</td>
+                <td>BewerbsSet</td>
+                <td>Dies ist die optimale Konfiguration für den Bewerb.</td>
+                <td>3</td>
                 <td>Aktiv</td>
                 <td>
                     <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="1" asp-route-produktname="Erste-Hilfe-Koffer" asp-route-produktbeschreibung="Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-menge="5" asp-route-status="Aktiv" style="background-color: #403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #B70E0C;">Löschen</a>
+                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeitenSET" asp-route-id="S 1" asp-route-setname="BewerbSset" asp-route-setbeschreibung="Dies ist die optimale Konfiguration für den Bewerb." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-setmenge="3" asp-route-setstatus="Aktiv" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="S 1" style="background-color: #B70E0C; border-color:#B70E0C;">Löschen</a>
                 </td>
             </tr>
-            <tr style="vertical-align: middle;">
-                <td>2</td>
-                <td>Reanimationspuppe</td>
-                <td>Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.</td>
-                <td>3</td>
-                <td>Inaktiv</td>
-                <td>
-                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="2" asp-route-produktname="Reanimationspuppe" asp-route-produktbeschreibung="Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum." asp-route-pfadbild="~/images/reanimationspuppe.jpeg" asp-route-menge="3" asp-route-status="Inaktiv" style="background-color: #403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="2" style="background-color: #B70E0C;">Löschen</a>
-                </td>
-            </tr> *@
+
+
+
+
         </tbody>
     </table>
 </div>

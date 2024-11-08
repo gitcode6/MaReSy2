@@ -42,17 +42,15 @@
                         <option value="Zurückgegeben">Zurückgegeben</option>
                     </select>
                 </th>
-                <th><input type="text" id="searchInputBearbeiter" onkeyup="filterTable()" placeholder="Bearbeiter:in"></th>
                 <th></th>
             </tr>
             <tr style="vertical-align: middle;">
                 <th width="5%">ID</th>
-                <th width="25%">Material</th>
+                <th width="35%">Material</th>
                 <th width="5%">Anzahl</th>
                 <th width="20%">Zeitraum</th>
                 <th width="10%">Status</th>
-                <th width="15%">Bearbeiter:in</th>
-                <th width="15%">Tools</th>
+                <th width="20%">Tools</th>
             </tr>
         </thead>
         <tbody id="userTableBody" style="vertical-align: middle;">
@@ -62,9 +60,9 @@
                 <td>3</td>
                 <td>01.08.2024 - 31.08.2024</td>
                 <td>Angefordert</td>
-                <td>Melanie Summer <br /> (m.summer)</td>
                 <td>
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">🗑</a>
+                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">🗑</a>
                 </td>
             </tr>
             <tr>
@@ -73,9 +71,9 @@
                 <td>1</td>
                 <td>10.08.2024 - 31.08.2024</td>
                 <td>Freigegeben</td>
-                <td>Melanie Summer <br /> (m.summer)</td>
                 <td>
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C;">🗑</a>
+                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">🗑</a>
                 </td>
             </tr>
         </tbody>
