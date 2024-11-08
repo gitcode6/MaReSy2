@@ -55,6 +55,10 @@ namespace MaReSy2_Api.Services
             {
                 return errors;
             }
+            /**
+             * @todo Passwort verschlüsselt speichern implementieren
+             * @body Das Passwort muss noch verschlüsselt in der Datenbank gespeichert werden!
+             * */
 
             var DBuser = new User()
             {
