@@ -36,16 +36,16 @@ namespace MaReSy2.Services
             else { return new List<User>(); }
         }
 
-        public async Task<bool> addUserAsync(string username, string firstname, string lastname, string password, string email, string role)
+        public async Task<bool> addUserAsync(User user)
         {
             var client = _httpClientFactory.CreateClient("API");
 
             string baseUrl = "/api/users";
-            string requestUrl = $"{baseUrl}?username={username}&firstname={firstname}&lastname={lastname}&password={password}&email={email}&role={role}";
 
-            var response = await client.PostAsync(requestUrl, null);
+            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(user), Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync(baseUrl, stringContent);
             
-
 
             if (response.IsSuccessStatusCode)
             {

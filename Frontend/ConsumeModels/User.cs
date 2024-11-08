@@ -23,6 +23,8 @@ namespace MaReSy2.ConsumeModels
         [Required]
         public String role {  get; set; }
 
+        public String? password { get; set; }
+
         public User()
         {
             
@@ -36,6 +38,17 @@ namespace MaReSy2.ConsumeModels
            this. lastname = lastname;
             this.email = email;
             this.role = role;
+        }
+
+        public User(int Userid, string username, string firstname, string lastname, string email, string role, string password)
+        {
+            userId = Userid;
+            this.username = username;
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.email = email;
+            this.role = role;
+            this.password = password;
         }
     }
 }

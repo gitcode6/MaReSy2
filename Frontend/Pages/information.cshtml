@@ -1,5 +1,62 @@
 ﻿@page
 @model MaReSy2.Pages.informationModel
 @{
-    ViewData["Title"] = "Information";
+    ViewData["Title"] = "Einstellungen";
 }
+
+<style>
+    .sonstiges_sonstiges {
+        background-color: #403A60;
+        padding-top: 10px;
+        padding-bottom: 1px;
+        text-align: center;
+        font-family: Dunant;
+    }
+
+    .table_detail {
+        padding: 2%;
+        width: 100%;
+        font-family: Dunant;
+    }
+
+    .form-group {
+        margin: 20px;
+    }
+
+    .btnSpeichern {
+        color: white;
+        background-color: #B70E0C;
+    }
+
+    .sonstiges_einstellungen {
+        background-color: #99D6EA;
+        padding: 20px;
+        font-family: Dunant;
+    }
+</style>
+
+<div class="sonstiges_sonstiges">
+    <h1 style="color: white; font-size:50px;">Einstellungen</h1>
+</div>
+
+<br />
+<div class="sonstiges_einstellungen">
+    <h2 style="text-align: center;">Benutzer:in-Einstellungen</h2>
+
+    <h3>Passwort ändern</h3>
+
+    <div class="form-group">
+        <label for="Passwort">Passwort</label>
+        <input type="password" name="passwort1" id="Passwort" class="form-control" /> <!--asp-for="Benutzer.Passwort"-->
+    </div>
+    <div class="form-group">
+        <label for="Passwort">Passwort bestätigen</label>
+        <input type="password" name="passwort2" id="Passwort" class="form-control" /> <!--asp-for="Benutzer.Passwort"-->
+    </div>
+
+    <button type="submit" class="btn btnSpeichern" style="background-color: #403A60; border-color: #403A60">Speichern</button>
+
+    <h3></h3>
+</div>
+
+<br />

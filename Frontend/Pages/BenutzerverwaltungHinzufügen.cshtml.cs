@@ -1,3 +1,4 @@
+using MaReSy2.ConsumeModels;
 using MaReSy2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -66,8 +67,18 @@ public class BenutzerverwaltungHinzufügenModel : PageModel
         var role = Request.Form["rolle"];
         var email = Request.Form["email"];
 
+        User user = new User()
+        {
+            username = username,
+            firstname = username,
+            lastname = lastname,
+            password = passwort,
+            role = role,
+            email = email
+        };
 
-        bool success = await userService.addUserAsync(username, firstname, lastname, passwort, email, role);
+
+        bool success = await userService.addUserAsync(user);
 
         System.Diagnostics.Debug.WriteLine(success);
 

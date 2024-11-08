@@ -41,14 +41,17 @@ namespace MaReSy2.Services
 
         }
 
-        public async Task<bool> addProductAsync(string productname, string productdescription, bool productstatus, int productamount)
+        public async Task<bool> addProductAsync(Product product)
         {
             var client = _httpClientFactory.CreateClient("API");
 
             string baseUrl = "/api/products";
-            string requestUrl = $"{baseUrl}?Productname={productname}&Productdescription={productdescription}&Productactive={productstatus}&Productamount={productamount}";
 
-            var response = await client.PostAsync(requestUrl, null);
+
+            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(product), Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(baseUrl, stringContent);
+
+            
             
 
 

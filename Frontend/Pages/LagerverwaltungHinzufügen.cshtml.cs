@@ -1,3 +1,4 @@
+using MaReSy2.ConsumeModels;
 using MaReSy2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -84,7 +85,17 @@ public class LagerverwaltungHinzufügenModel : PageModel
         System.Diagnostics.Debug.WriteLine(produktstatus);
 
 
-        bool success = await _productService.addProductAsync(produktname, produktbezeichnung, Convert.ToBoolean(produktstatus), Convert.ToInt32(produktmenge));
+        Product produkt = new Product()
+        {
+            productname = produktname,
+            productdescription = produktbezeichnung,
+            productamount = Convert.ToInt32(produktmenge),
+            productactive = Convert.ToBoolean(produktstatus),
+
+        };
+
+
+        bool success = await _productService.addProductAsync(produkt);
 
         System.Diagnostics.Debug.WriteLine(success);
 
