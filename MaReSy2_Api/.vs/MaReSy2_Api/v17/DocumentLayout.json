@@ -1,27 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\",
+  "WorkspaceRootPath": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|\\\\schulserver\\schuelerprofile$\\hak\\tobias.lehner\\documents\\maresygit\\maresy2\\maresy2_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|\\\\schulserver\\schuelerprofile$\\hak\\tobias.lehner\\documents\\maresygit\\maresy2\\maresy2_api\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|\\\\schulserver\\schuelerprofile$\\hak\\tobias.lehner\\documents\\maresygit\\maresy2\\maresy2_api\\models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|\\\\schulserver\\schuelerprofile$\\hak\\tobias.lehner\\documents\\maresygit\\maresy2\\maresy2_api\\services\\iusermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|\\\\schulserver\\schuelerprofile$\\hak\\tobias.lehner\\documents\\maresygit\\maresy2\\maresy2_api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\dto\\productdto\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\productdto\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|\\\\schulserver\\schuelerprofile$\\hak\\tobias.lehner\\documents\\maresygit\\maresy2\\maresy2_api\\models\\dto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\dto\\productdto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\productdto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|\\\\schulserver\\schuelerprofile$\\hak\\tobias.lehner\\documents\\maresygit\\maresy2\\maresy2_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,82 +38,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 164,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MaReSyDbContext.cs",
-              "DocumentMoniker": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
-              "RelativeDocumentMoniker": "Models\\MaReSyDbContext.cs",
-              "ToolTip": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
-              "RelativeToolTip": "Models\\MaReSyDbContext.cs",
-              "ViewState": "AQIAABEAAACAmZmZmZkpwCEAAADtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:23:18.95Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 236,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserManagementService.cs",
-              "DocumentMoniker": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
-              "RelativeDocumentMoniker": "Services\\UserManagementService.cs",
-              "ToolTip": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
-              "RelativeToolTip": "Services\\UserManagementService.cs",
-              "ViewState": "AQIAAC8AAABgzMzMzMwnwDsAAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAgwDoAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:13:21.571Z",
+              "WhenOpened": "2024-11-08T16:00:01.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IUserManagementService.cs",
-              "DocumentMoniker": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Services\\IUserManagementService.cs",
-              "RelativeDocumentMoniker": "Services\\IUserManagementService.cs",
-              "ToolTip": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Services\\IUserManagementService.cs",
-              "RelativeToolTip": "Services\\IUserManagementService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAewBAAAABCAAAA",
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\IProductService.cs",
+              "RelativeToolTip": "Services\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:07:26.274Z",
+              "WhenOpened": "2024-11-08T15:47:53.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
+              "RelativeToolTip": "Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T15:45:26.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ProductDTO.cs",
-              "DocumentMoniker": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\\ProductDTO.cs",
-              "ToolTip": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO.cs",
-              "RelativeToolTip": "Models\\DTO\\ProductDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\ProductDTO\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\ProductDTO.cs",
+              "RelativeToolTip": "Models\\DTO\\ProductDTO\\ProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:08:06.206Z",
+              "WhenOpened": "2024-11-08T15:44:54.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\ProductService.cs",
+              "RelativeToolTip": "Services\\ProductService.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAQwDUAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T15:29:18.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAABKAAAA",
+              "Title": "MaReSyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\MaReSyDbContext.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
+              "RelativeToolTip": "Models\\MaReSyDbContext.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAD4vzYAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:28:05.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T15:08:32.555Z"
             }
           ]
         }
@@ -116,12 +125,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "d0a87df5-0691-440b-b43f-13c484e09d22",
+        "Id": "b61e0833-e82f-4062-bb02-8c2460a1d8f5",
         "Display": 1,
-        "X": 1194,
-        "Y": 203,
-        "Width": 731,
-        "Height": 766,
+        "X": 774,
+        "Y": 156,
+        "Width": 843,
+        "Height": 567,
         "WindowState": 2
       },
       "DocumentGroups": [
@@ -131,28 +140,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAACYAAAAAZWZmZmb+v04AAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:03:49.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "\\\\schulserver\\schuelerprofile$\\HAK\\Tobias.LEHNER\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:30:07.794Z",
+              "WhenOpened": "2024-11-08T15:30:26.525Z",
               "EditorCaption": ""
             }
           ]

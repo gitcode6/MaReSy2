@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MaReSy2_Api.Models.DTO.ProductDTO;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MaReSy2_Api.Services
@@ -12,21 +13,21 @@ namespace MaReSy2_Api.Services
             _context = context;
         }
 
-        public async Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(string Productname, string Productdescription, bool Productactive, int Productamount)
+        public async Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(CreateProductDTO product)
         {
             var errors = new List<string>();
 
-            if (string.IsNullOrWhiteSpace(Productname))
+            if (string.IsNullOrWhiteSpace(product.Productname))
             {
                 errors.Add("Der Productname ist erforderlich!");
             }
 
-            if (!int.IsPositive(Productamount))
+            if (!int.IsPositive(product.Productamount))
             {
                 errors.Add("Productamount muss positiv (>= 0) sein.");
             }
 
-            if((Productactive != true) &&  (Productactive != false))
+            if((product.Productactive != true) &&  (product.Productactive != false))
             {
                 errors.Add("Productactive muss entweder true oder false sein.");
             }
@@ -39,13 +40,13 @@ namespace MaReSy2_Api.Services
 
             var newProduct = new Product
             {
-                Productname = Productname,
-                Productdescription = Productdescription,
-                Productactive = Productactive,
-                Productamount = Productamount
+                Productname = product.Productname,
+                Productdescription = product.Productdescription,
+                Productactive = product.Productactive,
+                Productamount = product.Productamount,
             };
 
-            await _context.Products.AddAsync(newProduct);
+            var result = await _context.Products.AddAsync(newProduct);
             await _context.SaveChangesAsync();
 
             var createdProductDto = new ProductDTO

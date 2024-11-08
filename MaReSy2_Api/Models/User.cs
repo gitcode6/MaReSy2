@@ -19,7 +19,15 @@ public partial class User
 
     public int RoleId { get; set; }
 
-    public virtual ICollection<Rental> Rentals { get; set; } = new List<Rental>();
+    public virtual ICollection<Rental> RentalRentalAblehnungUserNavigations { get; set; } = new List<Rental>();
+
+    public virtual ICollection<Rental> RentalRentalAuslieferungUserNavigations { get; set; } = new List<Rental>();
+
+    public virtual ICollection<Rental> RentalRentalFreigabeUserNavigations { get; set; } = new List<Rental>();
+
+    public virtual ICollection<Rental> RentalRentalZurückgabeUserNavigations { get; set; } = new List<Rental>();
+
+    public virtual ICollection<Rental> RentalUsers { get; set; } = new List<Rental>();
 
     public virtual Role Role { get; set; } = null!;
 }

@@ -1,4 +1,4 @@
-﻿using MaReSy2_Api.Models.DTO;
+﻿using MaReSy2_Api.Models.DTO.ProductDTO;
 using MaReSy2_Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -45,9 +45,9 @@ namespace MaReSy2_Api.Controllers
 
         // POST api/<ProductController>
         [HttpPost("")]
-        public async Task<ActionResult<ProductDTO>> createProduct(string Productname, string Productdescription, bool Productactive, int Productamount)
+        public async Task<ActionResult<ProductDTO>> createProduct(CreateProductDTO product)
         {
-            var result  = await _productService.AddNewProduct(Productname, Productdescription, Productactive, Productamount);
+            var result  = await _productService.AddNewProduct(product);
 
             var (createdProduct, errors ) = result;
 

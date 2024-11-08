@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MaReSy2_Api.Models.DTO.ProductDTO;
+using Microsoft.AspNetCore.Identity;
 
 namespace MaReSy2_Api.Services
 {
@@ -8,7 +9,7 @@ namespace MaReSy2_Api.Services
 
         Task<ProductDTO?> GetProductByIdAsync(int productId);
 
-        Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(string Productname, string Productdescription, bool Productactive, int Productamount);
+        Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(CreateProductDTO product);
 
          Task<bool> ProductExistsAsync(int productId);
 

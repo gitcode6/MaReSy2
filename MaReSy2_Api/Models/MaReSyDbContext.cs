@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Elfie.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -27,19 +26,23 @@ public partial class MaReSyDbContext : DbContext
 
     public virtual DbSet<Set> Sets { get; set; }
 
+    public virtual DbSet<Status> Statuses { get; set; }
+
+    public virtual DbSet<Statusse> Statusses { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\schulserver\schuelerprofile$\HAK\tobias.lehner\Documents\MaReSyGit\MaReSy2\Datenbank\database_maresy2\database1_maresy2.mdf;Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\USERS\\TOBIAS.LEHNER\\SOURCE\\REPOS\\MARESY2\\DATENBANK\\DATABASE_MARESY2\\DATABASE1_MARESY2.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        var intToBoolConvert = new ValueConverter<bool, int>(
-            v => v ? 1 : 0,
-            v => v == 1
-            );
 
+        var intToBoolConvert = new ValueConverter<bool, int>(
+    v => v ? 1 : 0,
+    v => v == 1
+    );
 
 
 
@@ -87,55 +90,81 @@ public partial class MaReSyDbContext : DbContext
 
         modelBuilder.Entity<Rental>(entity =>
         {
-            entity.HasKey(e => e.RentalId).HasName("PK__rentals__016470CE8F37FF7A");
+            entity.HasKey(e => e.RentalId).HasName("PK__tmp_ms_x__016470CED75488D3");
 
             entity.ToTable("rentals");
 
             entity.Property(e => e.RentalId).HasColumnName("rentalID");
             entity.Property(e => e.ProductId).HasColumnName("productID");
+            entity.Property(e => e.RentalAblehnung)
+                .HasColumnType("datetime")
+                .HasColumnName("rentalAblehnung");
+            entity.Property(e => e.RentalAblehnungUser).HasColumnName("rentalAblehnungUser");
             entity.Property(e => e.RentalAmount).HasColumnName("rentalAmount");
-            entity.Property(e => e.RentalCanceled)
+            entity.Property(e => e.RentalAnforderung)
                 .HasColumnType("datetime")
-                .HasColumnName("rentalCanceled");
-            entity.Property(e => e.RentalCanceledUserName)
-                .HasMaxLength(30)
-                .HasColumnName("rentalCanceledUserName");
-            entity.Property(e => e.RentalCreated)
+                .HasColumnName("rentalAnforderung");
+            entity.Property(e => e.RentalAuslieferung)
                 .HasColumnType("datetime")
-                .HasColumnName("rentalCreated");
-            entity.Property(e => e.RentalDelivery)
-                .HasColumnType("datetime")
-                .HasColumnName("rentalDelivery");
+                .HasColumnName("rentalAuslieferung");
+            entity.Property(e => e.RentalAuslieferungUser).HasColumnName("rentalAuslieferungUser");
             entity.Property(e => e.RentalEnd)
                 .HasColumnType("datetime")
                 .HasColumnName("rentalEnd");
-            entity.Property(e => e.RentalFree)
+            entity.Property(e => e.RentalFreigabe)
                 .HasColumnType("datetime")
-                .HasColumnName("rentalFree");
+                .HasColumnName("rentalFreigabe");
+            entity.Property(e => e.RentalFreigabeUser).HasColumnName("rentalFreigabeUser");
             entity.Property(e => e.RentalNote)
                 .HasMaxLength(50)
                 .HasColumnName("rentalNote");
-            entity.Property(e => e.RentalReturned)
-                .HasColumnType("datetime")
-                .HasColumnName("rentalReturned");
             entity.Property(e => e.RentalStart)
                 .HasColumnType("datetime")
                 .HasColumnName("rentalStart");
+            entity.Property(e => e.RentalStornierung)
+                .HasColumnType("datetime")
+                .HasColumnName("rentalStornierung");
+            entity.Property(e => e.RentalZurückgabe)
+                .HasColumnType("datetime")
+                .HasColumnName("rentalZurückgabe");
+            entity.Property(e => e.RentalZurückgabeUser).HasColumnName("rentalZurückgabeUser");
             entity.Property(e => e.SetId).HasColumnName("setID");
+            entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.UserId).HasColumnName("userID");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Rentals)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__rentals__product__35BCFE0A");
+                .HasConstraintName("FK__rentals__product__6E01572D");
+
+            entity.HasOne(d => d.RentalAblehnungUserNavigation).WithMany(p => p.RentalRentalAblehnungUserNavigations)
+                .HasForeignKey(d => d.RentalAblehnungUser)
+                .HasConstraintName("FK__rentals__rentalA__70DDC3D8");
+
+            entity.HasOne(d => d.RentalAuslieferungUserNavigation).WithMany(p => p.RentalRentalAuslieferungUserNavigations)
+                .HasForeignKey(d => d.RentalAuslieferungUser)
+                .HasConstraintName("FK__rentals__rentalA__71D1E811");
+
+            entity.HasOne(d => d.RentalFreigabeUserNavigation).WithMany(p => p.RentalRentalFreigabeUserNavigations)
+                .HasForeignKey(d => d.RentalFreigabeUser)
+                .HasConstraintName("FK__rentals__rentalF__6FE99F9F");
+
+            entity.HasOne(d => d.RentalZurückgabeUserNavigation).WithMany(p => p.RentalRentalZurückgabeUserNavigations)
+                .HasForeignKey(d => d.RentalZurückgabeUser)
+                .HasConstraintName("FK__rentals__rentalZ__72C60C4A");
 
             entity.HasOne(d => d.Set).WithMany(p => p.Rentals)
                 .HasForeignKey(d => d.SetId)
-                .HasConstraintName("FK__rentals__setID__34C8D9D1");
+                .HasConstraintName("FK__rentals__setID__6D0D32F4");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Rentals)
+            entity.HasOne(d => d.StatusNavigation).WithMany(p => p.Rentals)
+                .HasForeignKey(d => d.Status)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__rentals__status__73BA3083");
+
+            entity.HasOne(d => d.User).WithMany(p => p.RentalUsers)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__rentals__userID__47DBAE45");
+                .HasConstraintName("FK__rentals__userID__6EF57B66");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -171,6 +200,26 @@ public partial class MaReSyDbContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("setname");
+        });
+
+        modelBuilder.Entity<Status>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC07BC5C7D48");
+
+            entity.ToTable("status");
+
+            entity.Property(e => e.Bezeichnung)
+                .HasMaxLength(25)
+                .HasColumnName("bezeichnung");
+        });
+
+        modelBuilder.Entity<Statusse>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__statusse__3214EC076F00AA89");
+
+            entity.ToTable("statusse");
+
+            entity.Property(e => e.Id).ValueGeneratedNever();
         });
 
         modelBuilder.Entity<User>(entity =>

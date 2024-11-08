@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\DTO\NewFolder\" />
     <Folder Include="NewFolder\" />
   </ItemGroup>
 

@@ -8274,11 +8274,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+      "projectUniqueName": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
       "projectName": "MaReSy2_Api",
-      "projectPath": "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+      "projectPath": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
       "packagesPath": "C:\\Users\\tobias.lehner\\.nuget\\packages\\",
-      "outputPath": "\\\\schulserver\\schuelerprofile$\\HAK\\tobias.lehner\\Documents\\MaReSyGit\\MaReSy2\\MaReSy2_Api\\obj\\",
+      "outputPath": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tobias.lehner\\AppData\\Roaming\\NuGet\\NuGet.Config",
