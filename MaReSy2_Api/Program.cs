@@ -4,7 +4,6 @@ global using MaReSy2_Api.Models.DTO;
 global using Microsoft.EntityFrameworkCore;
 using MaReSy2_Api.Services;
 
-
 namespace MaReSy2_Api
 {
     public class Program
@@ -19,12 +18,16 @@ namespace MaReSy2_Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Configuration.AddJsonFile("appsettings.json");
+
+
             builder.Services.AddDbContext<MaReSyDbContext>();
 
             builder.Services.AddScoped<IUserManagementService, UserManagementService>();
 
             builder.Services.AddScoped<IProductService, ProductService>();
-            
+
 
             var app = builder.Build();
 

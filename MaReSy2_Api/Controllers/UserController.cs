@@ -93,7 +93,7 @@ namespace MaReSy2_Api.Controllers
             }
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> updateUser(int id, UserDTO? user)
+        public async Task<IActionResult> updateUser(int id, UpdateUserDTO? user)
         {
             var result = await _userManagementService.updateUser(id, user);
 
@@ -107,7 +107,24 @@ namespace MaReSy2_Api.Controllers
                 return BadRequest(result);
             }
         }
-        
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> deactivateUser(int id)
+        {
+            var result = await _userManagementService.DeleteUserAsync(id);
+
+            if(result == IdentityResult.Success)
+            {
+                return Ok(result);
+            }
+
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+
 
 
     }

@@ -16,7 +16,8 @@ namespace MaReSy2_Api.Services
         Task<bool> UsernameExistsAsync(string username);
         Task<List<IdentityResult>> AddUserAsync(CreateUserDTO user);
 
-        Task<List<IdentityResult>> updateUser(int id, UserDTO user);
+        Task<List<IdentityResult>> updateUser(int id, UpdateUserDTO user);
+        Task <IdentityResult> DeleteUserAsync(int id);
 
         /*
          * 

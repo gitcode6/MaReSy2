@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.Data;
 
@@ -22,16 +23,6 @@ namespace MaReSy2_Api.Services
         {
             _context = context;
         }
-
-        //public string Username { get; set; } = null!;
-
-        //public string Firstname { get; set; } = null!;
-
-        //public string Lastname { get; set; } = null!;
-
-        //public string Password { get; set; } = null!;
-
-        //public string Email { get; set; } = null!;
 
         public async Task<List<IdentityResult>> AddUserAsync(CreateUserDTO user)
         {
@@ -55,10 +46,7 @@ namespace MaReSy2_Api.Services
             {
                 return errors;
             }
-            /**
-             * @todo Passwort verschlüsselt speichern implementieren
-             * @body Das Passwort muss noch verschlüsselt in der Datenbank gespeichert werden!
-             * */
+            // TODO: User-Passwort verschlüsselt in DB speichern
 
             var DBuser = new User()
             {
@@ -179,29 +167,32 @@ namespace MaReSy2_Api.Services
             return await _context.Users.AnyAsync(x=>x.Username.ToLower() == username.ToLower());
         }
 
-        public async Task<List<IdentityResult>> updateUser(int id, UserDTO user)
+        public async Task<List<IdentityResult>> updateUser(int id, UpdateUserDTO user)
         {
            List<IdentityResult> errors = new List<IdentityResult>();
-           
-            if (await _context.Users.FindAsync(id) == null)
+
+            var existingUser = await _context.Users.FindAsync(id);
+
+
+            if (existingUser == null)
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Benutzer nicht gefunden!" }));
 
                 return errors;
             }
 
-            if(await _context.Users.AnyAsync(u => u.Email == user.Email && u.UserId != user.UserId))
+            if(!string.IsNullOrEmpty(user.Email) && await _context.Users.AnyAsync(u => u.Email == user.Email && u.UserId != id))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "E-Mail wird bereits verwendet!" }));
             }
 
-            if (await _context.Users.AnyAsync(u => u.Username == user.Username && u.UserId != user.UserId))
+            if (!string.IsNullOrEmpty(user.Username) && await _context.Users.AnyAsync(u => u.Username == user.Username && u.UserId != id))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Benutzername wird bereits verwendet." }));
             }
 
-            var userRole = await _context.Roles.FirstOrDefaultAsync(r => r.Rolename.ToLower() == user.Role.ToLower());
-            if (userRole == null)
+            var userRole = user.Role != null ? await _context.Roles.FirstOrDefaultAsync(r => r.Rolename.ToLower() == user.Role.ToLower()) : null;
+            if (userRole == null && user.Role != null)
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Diese Rolle gibt es im System nicht." }));
             }
@@ -211,27 +202,46 @@ namespace MaReSy2_Api.Services
                 return errors;
             }
 
-            user.Username = user.Username;
-            user.Email = user.Email;
-            user.Firstname = user.Firstname;
-            user.Lastname = user.Lastname;
-            user.Role = user.Role;
+            //user.Username = user.Username;
+            //user.Email = user.Email;
+            //user.Firstname = user.Firstname;
+            //user.Lastname = user.Lastname;
+            //user.Role = user.Role;
 
-            User newUser  = new User()
-            {
-                Username = user.Username,
-                Email = user.Email,
-                Firstname = user.Firstname,
-                Lastname = user.Lastname,
-                Role = _context.Roles.Where(x => x.Rolename == user.Role).First(),
-            };
 
-            _context.Users.Update(newUser);
+            existingUser!.Username = user.Username ?? existingUser.Username;
+            existingUser!.Email = user.Email ?? existingUser.Email;
+            existingUser!.Firstname = user.Firstname ?? existingUser.Firstname;
+            existingUser!.Lastname = user.Lastname ?? existingUser.Lastname;
+            existingUser!.Role = userRole ?? existingUser.Role;
+            existingUser!.Password = user.Password ?? existingUser.Password;
+
+
+            
+
+            _context.Users.Update(existingUser);
             await _context.SaveChangesAsync();
 
             errors.Add(IdentityResult.Success);
             return errors;
 
+        }
+
+        public async Task<IdentityResult> DeleteUserAsync(int id)
+        {
+           var user = await _context.Users.FindAsync(id);
+
+            if(user == null)
+            {
+                return IdentityResult.Failed(new IdentityError() { Description = "Benutzer nicht gefunden!" });
+            }
+
+            user.Role = await _context.Roles.FirstOrDefaultAsync(x => x.Rolename.ToLower().Equals("inaktiv"));
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            return IdentityResult.Success;
         }
     }
 }

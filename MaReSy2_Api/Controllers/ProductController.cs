@@ -1,6 +1,7 @@
 ﻿using MaReSy2_Api.Models.DTO.ProductDTO;
 using MaReSy2_Api.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,10 +12,12 @@ namespace MaReSy2_Api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
+        private readonly MaReSyDbContext _maReSyDbContext;
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, MaReSyDbContext maReSyDbContext)
         {
             _productService = productService;
+            _maReSyDbContext = maReSyDbContext;
         }
 
 
@@ -45,7 +48,7 @@ namespace MaReSy2_Api.Controllers
 
         // POST api/<ProductController>
         [HttpPost("")]
-        public async Task<ActionResult<ProductDTO>> createProduct(CreateProductDTO product)
+        public async Task<ActionResult<ProductDTO>> CreateProduct(CreateProductDTO product)
         {
             var result  = await _productService.AddNewProduct(product);
 
@@ -60,6 +63,31 @@ namespace MaReSy2_Api.Controllers
 
         }
 
+        [HttpGet("{id}/image")]
+        public async Task<IActionResult> GetProductImage(int id)
+        {
+            var product = await _maReSyDbContext.Products.FindAsync(id);
+
+            if(product == null)
+            {
+                return NotFound("Produkt nicht gefunden");
+            }
+
+            if(product.Productimage == null || product.Productimage.Length == 0)
+            {
+                return NotFound($"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden.");
+            }
+
+            var imageType = "image/jpeg";
+
+            return File(product.Productimage, imageType);
+        }
+
+        //[HttpPost("{id}/image")]
+        //public async Task<IActionResult> UploadImage(int id)
+        //{
+            
+        //}
        
 
        
