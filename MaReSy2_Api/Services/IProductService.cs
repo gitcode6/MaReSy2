@@ -1,5 +1,6 @@
 ﻿using MaReSy2_Api.Models.DTO.ProductDTO;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace MaReSy2_Api.Services
 {
@@ -9,9 +10,14 @@ namespace MaReSy2_Api.Services
 
         Task<ProductDTO?> GetProductByIdAsync(int productId);
 
-        Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(CreateProductDTO product);
+        Task<List<IdentityResult>> AddNewProduct(CreateProductDTO product);
 
-         Task<bool> ProductExistsAsync(int productId);
+        Task<bool> ProductExistsAsync(int productId);
+        Task<bool> ProductExistsAsync(string productname);
+
+        Task<List<IdentityResult>> updateProduct(int id, UpdateProductDTO product);
+
+        Task<IdentityResult> deleteProductAsync(int productId);
 
 
     }

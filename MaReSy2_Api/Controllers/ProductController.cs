@@ -1,6 +1,8 @@
 ﻿using MaReSy2_Api.Models.DTO.ProductDTO;
 using MaReSy2_Api.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -25,7 +27,7 @@ namespace MaReSy2_Api.Controllers
         [HttpGet("")]
         public async Task<ActionResult<List<ProductDTO>>> Get()
         {
-            var products =  await _productService.GetProductsAsync();
+            var products = await _productService.GetProductsAsync();
 
             return Ok(products);
         }
@@ -36,9 +38,10 @@ namespace MaReSy2_Api.Controllers
         {
             var product = await _productService.GetProductByIdAsync(id);
 
-            if(product == null)
+            if (product == null)
             {
-                return BadRequest();
+               var errors = IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });
+                return BadRequest(errors);
             }
             else
             {
@@ -50,16 +53,35 @@ namespace MaReSy2_Api.Controllers
         [HttpPost("")]
         public async Task<ActionResult<ProductDTO>> CreateProduct(CreateProductDTO product)
         {
-            var result  = await _productService.AddNewProduct(product);
+            Validator.ValidateObject(product, new ValidationContext(product), validateAllProperties: true);
 
-            var (createdProduct, errors ) = result;
-
-            if (errors != null && errors.Any())
+            if (ModelState.IsValid)
             {
-                return BadRequest(new { Errors = errors });
+                var result = await _productService.AddNewProduct(product);
+
+                if (result.Contains(IdentityResult.Success))
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest(result);
+                }
             }
 
-            return CreatedAtAction(nameof(GetProductById), new { id = createdProduct.ProductId }, createdProduct);
+            return BadRequest();
+
+
+            
+
+            //var (createdProduct, errors) = result;
+
+            //if (errors != null && errors.Any())
+            //{
+            //    return BadRequest(new { Errors = errors });
+            //}
+
+            //return CreatedAtAction(nameof(GetProductById), new { id = createdProduct.ProductId }, createdProduct);
 
         }
 
@@ -68,14 +90,17 @@ namespace MaReSy2_Api.Controllers
         {
             var product = await _maReSyDbContext.Products.FindAsync(id);
 
-            if(product == null)
+            if (product == null)
             {
-                return NotFound("Produkt nicht gefunden");
+                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" })); 
+                    
+                    //NotFound("Produkt nicht gefunden");
             }
 
-            if(product.Productimage == null || product.Productimage.Length == 0)
+            if (product.Productimage == null || product.Productimage.Length == 0)
             {
-                return NotFound($"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden.");
+                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden." }));
+                    
             }
 
             var imageType = "image/jpeg";
@@ -83,13 +108,45 @@ namespace MaReSy2_Api.Controllers
             return File(product.Productimage, imageType);
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> deactivateProduct(int id)
+        {
+            var result = await _productService.deleteProductAsync(id);
+
+            if (result == IdentityResult.Success)
+            {
+                return Ok(result);
+            }
+
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> updateProduct(int id, UpdateProductDTO product)
+        {
+            var result = await _productService.updateProduct(id, product);
+
+            if(result.Contains(IdentityResult.Success))
+            {
+                return Ok(result);
+            }
+
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+
         //[HttpPost("{id}/image")]
         //public async Task<IActionResult> UploadImage(int id)
         //{
-            
-        //}
-       
 
-       
+        //}
+
+
+
     }
 }

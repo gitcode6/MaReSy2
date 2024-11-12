@@ -1,6 +1,8 @@
 ﻿using MaReSy2_Api.Models.DTO.ProductDTO;
+using MaReSy2_Api.Models.DTO.UserDTO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace MaReSy2_Api.Services
 {
@@ -13,29 +15,35 @@ namespace MaReSy2_Api.Services
             _context = context;
         }
 
-        public async Task<(ProductDTO? CreatedProduct, List<string>? errors)> AddNewProduct(CreateProductDTO product)
+        public async Task<List<IdentityResult>> AddNewProduct(CreateProductDTO product)
         {
-            var errors = new List<string>();
+            List<IdentityResult> errors = new List<IdentityResult>();
+
 
             if (string.IsNullOrWhiteSpace(product.Productname))
             {
-                errors.Add("Der Productname ist erforderlich!");
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Der Productname ist erforderlich!" }));
             }
 
             if (!int.IsPositive(product.Productamount))
             {
-                errors.Add("Productamount muss positiv (>= 0) sein.");
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Productamount muss positiv (>= 0) sein." }));
             }
 
-            if((product.Productactive != true) &&  (product.Productactive != false))
+            if ((product.Productactive != true) && (product.Productactive != false))
             {
-                errors.Add("Productactive muss entweder true oder false sein.");
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Productactive muss entweder true oder false sein." }));
+            }
+
+            if (await ProductExistsAsync(product.Productname))
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Der Produktname ist bereits vorhanden." }));
             }
 
 
             if (errors.Any())
             {
-                return (null, errors);
+                return errors;
             }
 
             var newProduct = new Product
@@ -49,17 +57,36 @@ namespace MaReSy2_Api.Services
             var result = await _context.Products.AddAsync(newProduct);
             await _context.SaveChangesAsync();
 
-            var createdProductDto = new ProductDTO
+            errors.Add(IdentityResult.Success);
+
+            //var createdProductDto = new ProductDTO
+            //{
+            //    ProductId = newProduct.ProductId,
+            //    Productname = newProduct.Productname,
+            //    Productdescription = newProduct.Productdescription,
+            //    Productactive = newProduct.Productactive,
+            //    Productamount = newProduct.Productamount
+            //};
+
+            return errors;
+
+        }
+
+        public async Task<IdentityResult> deleteProductAsync(int productId)
+        {
+            var product = await _context.Products.FindAsync(productId);
+
+            if (product == null)
             {
-                ProductId = newProduct.ProductId,
-                Productname = newProduct.Productname,
-                Productdescription = newProduct.Productdescription,
-                Productactive = newProduct.Productactive,
-                Productamount = newProduct.Productamount
-            };
+                return IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });
+            }
 
-            return (createdProductDto, null);
+            product.Productactive = false;
 
+            _context.Products.Update(product);
+            await _context.SaveChangesAsync();
+
+            return IdentityResult.Success;
         }
 
         public async Task<ProductDTO?> GetProductByIdAsync(int productId)
@@ -117,6 +144,69 @@ namespace MaReSy2_Api.Services
             {
                 return true;
             }
+
+
+        }
+
+        public async Task<bool> ProductExistsAsync(string productname)
+        {
+            var product = await _context.Products.AnyAsync(p=>p.Productname == productname);
+
+            if (!product)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+
+
+
+
+        public async Task<List<IdentityResult>> updateProduct(int id, UpdateProductDTO product)
+        {
+            List<IdentityResult> errors = new List<IdentityResult>();
+
+            var existingProduct = await _context.Products.FindAsync(id);
+
+
+            if (existingProduct == null)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Produkt nicht gefunden!" }));
+
+                return errors;
+            }
+
+            if (!string.IsNullOrEmpty(product.Productname) && await _context.Products.AnyAsync(p => p.Productname.ToLower() == product.Productname.ToLower() && p.ProductId != id))
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Der Produktname ist bereits vorhanden." }));
+            }
+
+            if (product.Productamount != null && !int.IsPositive(product.Productamount.Value))
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Die Produktanzahl muss positiv sein" }));
+            }
+
+            if (errors.Count > 0)
+            {
+                return errors;
+            }
+
+
+            existingProduct!.Productname = product.Productname ?? existingProduct.Productname;
+            existingProduct!.Productdescription = product.Productdescription ?? existingProduct.Productdescription;
+            existingProduct!.Productamount = product.Productamount ?? existingProduct.Productamount;
+            existingProduct!.Productactive = product.Productactive ?? existingProduct.Productactive;
+
+            _context.Products.Update(existingProduct);
+            await _context.SaveChangesAsync();
+
+            errors.Add(IdentityResult.Success);
+            return errors;
 
 
         }
