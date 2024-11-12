@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\MaReSy2.csproj": {}
+    "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\MaReSy2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\MaReSy2.csproj": {
+    "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\MaReSy2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\MaReSy2.csproj",
+        "projectUniqueName": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\MaReSy2.csproj",
         "projectName": "MaReSy2",
-        "projectPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\MaReSy2.csproj",
-        "packagesPath": "C:\\Users\\gindl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\obj\\",
+        "projectPath": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\MaReSy2.csproj",
+        "packagesPath": "C:\\Users\\a.schmidt3\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gindl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a.schmidt3\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

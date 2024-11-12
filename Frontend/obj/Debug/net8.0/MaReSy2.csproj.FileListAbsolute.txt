@@ -104,3 +104,39 @@ C:\Users\User\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\obj\Deb
 C:\Users\User\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\obj\Debug\net8.0\ref\MaReSy2.dll
 C:\Users\gindl\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\User\OneDrive - BHAK BHAS Feldbach\MaReSy2\Git\MaReSy2\Frontend\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\appsettings.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\MaReSy2.staticwebassets.runtime.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\MaReSy2.exe
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\MaReSy2.deps.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\MaReSy2.runtimeconfig.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\MaReSy2.dll
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\MaReSy2.pdb
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.csproj.AssemblyReference.cache
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.AssemblyInfoInputs.cache
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.AssemblyInfo.cs
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.csproj.CoreCompileInputs.cache
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.RazorAssemblyInfo.cache
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.RazorAssemblyInfo.cs
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.sourcelink.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\staticwebassets\msbuild.MaReSy2.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\staticwebassets\msbuild.build.MaReSy2.props
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MaReSy2.props
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MaReSy2.props
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\scopedcss\bundle\MaReSy2.styles.css
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\scopedcss\projectbundle\MaReSy2.bundle.scp.css
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.csproj.Up2Date
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.dll
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\refint\MaReSy2.dll
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.pdb
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\MaReSy2.genruntimeconfig.cache
+C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\obj\Debug\net8.0\ref\MaReSy2.dll
