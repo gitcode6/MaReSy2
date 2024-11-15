@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Elfie.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -27,23 +26,22 @@ public partial class MaReSyDbContext : DbContext
 
     public virtual DbSet<Set> Sets { get; set; }
 
-    public virtual DbSet<Status> Statuses { get; set; }
+    public virtual DbSet<SingleProduct> SingleProducts { get; set; }
 
-    public virtual DbSet<Statusse> Statusses { get; set; }
+    public virtual DbSet<Status> Statuses { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer(options=>optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Datenbank\\database_maresy2\\database1_maresy2.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True"));
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Datenbank\\database_maresy2\\database1_maresy2.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
         var intToBoolConvert = new ValueConverter<bool, int>(
-    v => v ? 1 : 0,
-    v => v == 1
-    );
+v => v ? 1 : 0,
+v => v == 1
+);
 
 
 
@@ -54,8 +52,7 @@ public partial class MaReSyDbContext : DbContext
             entity.ToTable("products");
 
             entity.Property(e => e.ProductId).HasColumnName("productID");
-            entity.Property(e => e.Productactive).HasColumnName("productactive").HasConversion(intToBoolConvert);
-            entity.Property(e => e.Productamount).HasColumnName("productamount");
+            entity.Property(e => e.ProductActive).HasColumnName("productActive").HasConversion(intToBoolConvert);
             entity.Property(e => e.Productdescription)
                 .HasMaxLength(200)
                 .HasColumnName("productdescription");
@@ -75,8 +72,8 @@ public partial class MaReSyDbContext : DbContext
 
             entity.Property(e => e.ProductSetId).HasColumnName("productSetID");
             entity.Property(e => e.ProductId).HasColumnName("productID");
-            entity.Property(e => e.Productamount).HasColumnName("productamount");
             entity.Property(e => e.SetId).HasColumnName("setID");
+            entity.Property(e => e.SingleProductAmount).HasColumnName("singleProductAmount");
 
             entity.HasOne(d => d.Product).WithMany(p => p.ProductsSets)
                 .HasForeignKey(d => d.ProductId)
@@ -96,7 +93,6 @@ public partial class MaReSyDbContext : DbContext
             entity.ToTable("rentals");
 
             entity.Property(e => e.RentalId).HasColumnName("rentalID");
-            entity.Property(e => e.ProductId).HasColumnName("productID");
             entity.Property(e => e.RentalAblehnung)
                 .HasColumnType("datetime")
                 .HasColumnName("rentalAblehnung");
@@ -129,13 +125,9 @@ public partial class MaReSyDbContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("rentalZurückgabe");
             entity.Property(e => e.RentalZurückgabeUser).HasColumnName("rentalZurückgabeUser");
-            entity.Property(e => e.SetId).HasColumnName("setID");
+            entity.Property(e => e.SingleProductId).HasColumnName("singleProductID");
             entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.UserId).HasColumnName("userID");
-
-            entity.HasOne(d => d.Product).WithMany(p => p.Rentals)
-                .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__rentals__product__6E01572D");
 
             entity.HasOne(d => d.RentalAblehnungUserNavigation).WithMany(p => p.RentalRentalAblehnungUserNavigations)
                 .HasForeignKey(d => d.RentalAblehnungUser)
@@ -153,9 +145,10 @@ public partial class MaReSyDbContext : DbContext
                 .HasForeignKey(d => d.RentalZurückgabeUser)
                 .HasConstraintName("FK__rentals__rentalZ__72C60C4A");
 
-            entity.HasOne(d => d.Set).WithMany(p => p.Rentals)
-                .HasForeignKey(d => d.SetId)
-                .HasConstraintName("FK__rentals__setID__6D0D32F4");
+            entity.HasOne(d => d.SingleProduct).WithMany(p => p.Rentals)
+                .HasForeignKey(d => d.SingleProductId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__rentals__singleP__14270015");
 
             entity.HasOne(d => d.StatusNavigation).WithMany(p => p.Rentals)
                 .HasForeignKey(d => d.Status)
@@ -203,6 +196,28 @@ public partial class MaReSyDbContext : DbContext
                 .HasColumnName("setname");
         });
 
+        modelBuilder.Entity<SingleProduct>(entity =>
+        {
+            entity.HasKey(e => e.SingleProductId).HasName("PK__singlePr__DE7B6268174A8667");
+
+            entity.ToTable("singleProducts");
+
+            entity.Property(e => e.SingleProductId).HasColumnName("singleProductID");
+            entity.Property(e => e.ProductId).HasColumnName("productID");
+            entity.Property(e => e.SingleProductActive).HasColumnName("singleProductActive");
+            entity.Property(e => e.SingleProductName)
+                .HasMaxLength(50)
+                .HasColumnName("singleProductName");
+            entity.Property(e => e.SingleProductNumber)
+                .HasMaxLength(50)
+                .HasColumnName("singleProductNumber");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.SingleProducts)
+                .HasForeignKey(d => d.ProductId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__singlePro__produ__02FC7413");
+        });
+
         modelBuilder.Entity<Status>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC07BC5C7D48");
@@ -212,15 +227,6 @@ public partial class MaReSyDbContext : DbContext
             entity.Property(e => e.Bezeichnung)
                 .HasMaxLength(25)
                 .HasColumnName("bezeichnung");
-        });
-
-        modelBuilder.Entity<Statusse>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__statusse__3214EC076F00AA89");
-
-            entity.ToTable("statusse");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
         });
 
         modelBuilder.Entity<User>(entity =>

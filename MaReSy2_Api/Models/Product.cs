@@ -13,11 +13,9 @@ public partial class Product
 
     public byte[]? Productimage { get; set; }
 
-    public bool Productactive { get; set; }
-
-    public int Productamount { get; set; }
+    public bool ProductActive { get; set; }
 
     public virtual ICollection<ProductsSet> ProductsSets { get; set; } = new List<ProductsSet>();
 
-    public virtual ICollection<Rental> Rentals { get; set; } = new List<Rental>();
+    public virtual ICollection<SingleProduct> SingleProducts { get; set; } = new List<SingleProduct>();
 }

@@ -13,8 +13,5 @@ namespace MaReSy2_Api.Models.DTO.ProductDTO
         [Required]
         public bool Productactive { get; set; }
 
-        [Required]
-        public int Productamount { get; set; }
-
     }
 }

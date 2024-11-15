@@ -9,9 +9,7 @@ public partial class Rental
 
     public int UserId { get; set; }
 
-    public int? SetId { get; set; }
-
-    public int? ProductId { get; set; }
+    public int SingleProductId { get; set; }
 
     public int RentalAmount { get; set; }
 
@@ -43,8 +41,6 @@ public partial class Rental
 
     public string? RentalNote { get; set; }
 
-    public virtual Product? Product { get; set; }
-
     public virtual User? RentalAblehnungUserNavigation { get; set; }
 
     public virtual User? RentalAuslieferungUserNavigation { get; set; }
@@ -53,7 +49,7 @@ public partial class Rental
 
     public virtual User? RentalZurückgabeUserNavigation { get; set; }
 
-    public virtual Set? Set { get; set; }
+    public virtual SingleProduct SingleProduct { get; set; } = null!;
 
     public virtual Status StatusNavigation { get; set; } = null!;
 

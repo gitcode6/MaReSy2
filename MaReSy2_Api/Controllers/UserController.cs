@@ -28,7 +28,7 @@ namespace MaReSy2_Api.Controllers
         //{
         //    return Ok(await context.Users.Include(u=>u.Role).ToListAsync());
         //}
-
+        
         [HttpGet("")]
         public async Task<ActionResult<List<UserDTO>>> getUsers(string searchOption=null)
         {
@@ -79,21 +79,21 @@ namespace MaReSy2_Api.Controllers
 
         }
 
-        [HttpPost("{id}/change-password")]
-        public async Task<IActionResult> updatePassword(int id, string newPassword)
-        {
-            bool success = (bool)await _userManagementService.ChangePasswordAsync(id, newPassword);
-            if(success)
-            {
-                return Ok(IdentityResult.Success);
-            }
-            else
-            {
-                return BadRequest(id);
-            }
-        }
+        //[HttpPost("{id}/change-password")]
+        //public async Task<IActionResult> updatePassword(int id, string newPassword)
+        //{
+        //    bool success = (bool)await _userManagementService.ChangePasswordAsync(id, newPassword);
+        //    if(success)
+        //    {
+        //        return Ok(IdentityResult.Success);
+        //    }
+        //    else
+        //    {
+        //        return BadRequest(id);
+        //    }
+        //}
         [HttpPut("{id}")]
-        public async Task<IActionResult> updateUser(int id, UpdateUserDTO? user)
+        public async Task<IActionResult> updateUser(int id, UpdateUserDTO user)
         {
             var result = await _userManagementService.updateUser(id, user);
 

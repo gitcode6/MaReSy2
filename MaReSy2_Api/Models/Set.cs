@@ -16,6 +16,4 @@ public partial class Set
     public int Setactive { get; set; }
 
     public virtual ICollection<ProductsSet> ProductsSets { get; set; } = new List<ProductsSet>();
-
-    public virtual ICollection<Rental> Rentals { get; set; } = new List<Rental>();
 }

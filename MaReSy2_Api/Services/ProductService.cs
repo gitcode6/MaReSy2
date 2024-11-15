@@ -25,15 +25,15 @@ namespace MaReSy2_Api.Services
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Der Productname ist erforderlich!" }));
             }
 
-            if (!int.IsPositive(product.Productamount))
-            {
-                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Productamount muss positiv (>= 0) sein." }));
-            }
+            //if (!int.IsPositive(product.Productamount))
+            //{
+            //    errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Productamount muss positiv (>= 0) sein." }));
+            //}
 
-            if ((product.Productactive != true) && (product.Productactive != false))
-            {
-                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Productactive muss entweder true oder false sein." }));
-            }
+            //if ((product.Productactive != true) && (product.Productactive != false))
+            //{
+            //    errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Productactive muss entweder true oder false sein." }));
+            //}
 
             if (await ProductExistsAsync(product.Productname))
             {
@@ -50,8 +50,7 @@ namespace MaReSy2_Api.Services
             {
                 Productname = product.Productname,
                 Productdescription = product.Productdescription,
-                Productactive = product.Productactive,
-                Productamount = product.Productamount,
+                ProductActive = product.Productactive,
             };
 
             var result = await _context.Products.AddAsync(newProduct);
@@ -81,7 +80,7 @@ namespace MaReSy2_Api.Services
                 return IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });
             }
 
-            product.Productactive = false;
+            product.ProductActive = false;
 
             _context.Products.Update(product);
             await _context.SaveChangesAsync();
@@ -105,8 +104,7 @@ namespace MaReSy2_Api.Services
                         ProductId = product_fromDb.ProductId,
                         Productname = product_fromDb.Productname,
                         Productdescription = product_fromDb.Productdescription,
-                        Productactive = product_fromDb.Productactive,
-                        Productamount = product_fromDb.Productamount,
+                        Productactive = product_fromDb.ProductActive
                     };
                 }
 
@@ -127,8 +125,8 @@ namespace MaReSy2_Api.Services
                 ProductId = product.ProductId,
                 Productname = product.Productname,
                 Productdescription = product.Productdescription,
-                Productactive = product.Productactive,
-                Productamount = product.Productamount,
+                Productactive = product.ProductActive,
+                ProductimageLink = product.Productimage != null && product.Productimage.Length != 0 ? $"/api/products/{product.ProductId}/image" : null,
             });
         }
 
@@ -186,10 +184,10 @@ namespace MaReSy2_Api.Services
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Der Produktname ist bereits vorhanden." }));
             }
 
-            if (product.Productamount != null && !int.IsPositive(product.Productamount.Value))
-            {
-                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Die Produktanzahl muss positiv sein" }));
-            }
+            //if (product.Productamount != null && !int.IsPositive(product.Productamount.Value))
+            //{
+            //    errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Die Produktanzahl muss positiv sein" }));
+            //}
 
             if (errors.Count > 0)
             {
@@ -199,8 +197,7 @@ namespace MaReSy2_Api.Services
 
             existingProduct!.Productname = product.Productname ?? existingProduct.Productname;
             existingProduct!.Productdescription = product.Productdescription ?? existingProduct.Productdescription;
-            existingProduct!.Productamount = product.Productamount ?? existingProduct.Productamount;
-            existingProduct!.Productactive = product.Productactive ?? existingProduct.Productactive;
+            existingProduct!.ProductActive = product.Productactive ?? existingProduct.ProductActive;
 
             _context.Products.Update(existingProduct);
             await _context.SaveChangesAsync();

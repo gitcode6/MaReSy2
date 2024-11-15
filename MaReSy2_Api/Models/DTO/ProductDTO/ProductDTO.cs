@@ -10,6 +10,8 @@
 
         public bool Productactive { get; set; }
 
-        public int Productamount { get; set; }
+        public string? ProductimageLink { get; set; }
+
+        //public int Productamount { get; set; }
     }
 }

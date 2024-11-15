@@ -11,7 +11,7 @@ public partial class ProductsSet
 
     public int ProductId { get; set; }
 
-    public int Productamount { get; set; }
+    public int SingleProductAmount { get; set; }
 
     public virtual Product Product { get; set; } = null!;
 
