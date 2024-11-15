@@ -81,6 +81,14 @@
       "PackagePath": "staticwebassets\\images\\sonstiges_information.jpg"
     },
     {
+      "Id": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\verbot.png",
+      "PackagePath": "staticwebassets\\images\\verbot.png"
+    },
+    {
+      "Id": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\verbot.svg",
+      "PackagePath": "staticwebassets\\images\\verbot.svg"
+    },
+    {
       "Id": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\verwaltung_auszuege.JPG",
       "PackagePath": "staticwebassets\\images\\verwaltung_auszuege.JPG"
     },
