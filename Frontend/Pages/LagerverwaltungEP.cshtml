@@ -1,0 +1,128 @@
+﻿@page
+@model MaReSy2.Pages.LagerverwaltungEPModel
+@{
+    ViewData["Title"] = "LagerverwaltungEP";
+}
+
+
+<style>
+    .lagerverwaltung_lagerverwaltung {
+        background-color: #403A60;
+        padding-top: 10px;
+        padding-bottom: 1px;
+        text-align: center;
+        font-family: Dunant;
+    }
+
+    .table_detail {
+        padding: 2%;
+        width: 100%;
+        font-family: Dunant;
+    }
+</style>
+
+<div class="lagerverwaltung_lagerverwaltung">
+    <h1 style="color: white; font-size:50px;">Lager-Verwaltung</h1>
+</div>
+
+<div class="table_detail">
+    <table class="table">
+        <thead>
+            <tr style="vertical-align: middle;">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>
+                    <a class="btn btn-primary" asp-page="/Lagerverwaltung" style="background-color: #403A60; border: #403A60;">Produkte/Sets verwalten</a>
+                </th>
+            </tr>
+            <tr style="vertical-align: middle;">
+                <th>Filter</th>
+                <th><input type="text" id="searchInputBezeichnung" onkeyup="filterTable()" placeholder="Bezeichnung"></th>
+                <th><input type="text" id="searchInputBeschreibung" onkeyup="filterTable()" placeholder="Beschreibung"></th>
+                <th></th>
+                <th>
+                    <select id="statusFilter" onchange="filterTable()">
+                        <option value="">Alle</option>
+                        <option value="Aktiv">Aktiv</option>
+                        <option value="Inaktiv">Inaktiv</option>
+                    </select>
+                </th>
+                
+                <th>
+                <a class="btn btn-primary" asp-page="/LagerverwaltungEPHinzu" style="background-color: #A0DAB3; border: #A0DAB3;">Einzelprodukt hinzufügen</a>
+            </tr>
+            <tr style="vertical-align: middle;">
+                <th width="4%">ID</th>
+                <th width="21%">Bezeichnung</th>
+                <th width="20%">Serien-Nr.</th>
+                <th width="20%">Kategorie</th>
+                <th width="4%">Status</th>
+                <th width="24%">Tools</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <tr style="vertical-align: middle;">
+                <td>P 1</td>
+                <td>Reanimationspuppe ANNE</td>
+                <td>1258-8547-8954</td>
+                <td>Reanimationspuppe</td>
+                <td>Aktiv</td>
+                <td>
+                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
+                    <a class="btn btn-primary" asp-page="/LagerverwaltungEPBearb" asp-route-id="P 1" asp-route-setname="Reanimationspuppe" asp-route-setbeschreibung="Dies ist die optimale Konfiguration für die Reanimation." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-setstatus="Aktiv" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
+                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="S 1" style="background-color: #B70E0C; border-color:#B70E0C;">Löschen</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function filterTable() {
+        // Variablen
+        var inputBezeichnung = document.getElementById("searchInputBezeichnung").value.toUpperCase();
+        var inputBeschreibung = document.getElementById("searchInputBeschreibung").value.toUpperCase();
+        var statusFilter = document.getElementById("statusFilter").value;
+        var table = document.getElementById("userTableBody");
+        var tr = table.getElementsByTagName("tr");
+
+        // Schleife über alle Zeilen in der Tabelle
+        for (var i = 0; i < tr.length; i++) {
+            var tdBezeichnung = tr[i].getElementsByTagName("td")[1];
+            var tdBeschreibung = tr[i].getElementsByTagName("td")[2];
+            var tdStatus = tr[i].getElementsByTagName("td")[4];
+            var match = true; // Initialisiere match als true
+
+            // Überprüfen auf Übereinstimmungen für Bezeichnung und Beschreibung
+            if (tdBezeichnung) {
+                var txtBezeichnung = tdBezeichnung.textContent || tdBezeichnung.innerText;
+                if (txtBezeichnung.toUpperCase().indexOf(inputBezeichnung) === -1) {
+                    match = false;
+                }
+            }
+
+            if (tdBeschreibung) {
+                var txtBeschreibung = tdBeschreibung.textContent || tdBeschreibung.innerText;
+                if (txtBeschreibung.toUpperCase().indexOf(inputBeschreibung) === -1) {
+                    match = false;
+                }
+            }
+
+            // Überprüfen auf Status-Übereinstimmung
+            if (tdStatus && statusFilter) {
+                var txtStatus = tdStatus.textContent || tdStatus.innerText;
+                if (txtStatus !== statusFilter) {
+                    match = false;
+                }
+            }
+
+            // Zeile ein- oder ausblenden
+            tr[i].style.display = match ? "" : "none";
+        }
+    }
+
+</script>

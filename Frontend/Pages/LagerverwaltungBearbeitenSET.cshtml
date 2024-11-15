@@ -5,17 +5,11 @@
     ViewData["Title"] = "SET bearbeiten";
 }
 <style>
-
     .btnSpeichern {
         color: white;
         background-color: #B70E0C;
     }
 
-    .product-image {
-        width: 200px;
-        height: auto;
-        margin: 20px 0;
-    }
     .lagerverwaltung_lagerverwaltung {
         background-color: #403A60;
         padding-top: 10px;
@@ -49,44 +43,39 @@
 <div class="lagerverwaltung_bearbeitung">
     <h2 style="text-align: center;">SET Bearbeitung</h2>
     <form method="post">
-        @* <div class="form-group">
-        <input type="file" id="produktbild" class="form-control" onchange="previewImage(event)" asp-for="Produkt.Produktbild" />
-        <br>
-        <img id="imagePreview" src="" alt="Bildvorschau" style="display:none; width:25%" />
-        </div> *@
+        <div class="form-group">
+            <input type="file" id="Produktbild" class="form-control" onchange="previewImage(event)" /> <!--   asp-for="Produkt.Produktbild" Bernd Stadlhofer: Image lässt sich nicht als Standard anzeigen -->
+            <br>
+            <img id="imagePreview" src="" alt="Bildvorschau" style="display:none; width:25%" />
+        </div>
         <div class="form-group">
             <label for="Setname">Setname</label>
-            <input type="text" name="setname" id="setname" class="form-control"> <!-- asp-for="Produkt.Produktname" / -->
+            <input type="text" name="setname" id="setname" class="form-control">
         </div>
         <div class="form-group">
             <label for="Setbeschreibung">Beschreibung</label>
-            <input type="text" name="setbeschreibung" id="setbeschreibung" class="form-control"> <!-- asp-for="Produkt.Produktbeschreibung"/ -->
-        </div>
-        <div class="form-group">
-            <label for="Setmenge">Menge</label>
-            <input type="number" name="setmenge" id="setmenge" class="form-control" placeholder=""> <!-- asp-for="Produkt.Produktmenge"/ -->
+            <input type="text" name="setbeschreibung" id="setbeschreibung" class="form-control">
         </div>
         <div class="form-group">
             <label for="Setstatus">Status</label>
             <select name="setstatus" id="setstatus" class="form-control">
-                <!-- asp-for="Produkt.Produktstatus"/ -->
                 <option name="aktiv" value="true" selected>Aktiv</option>
                 <option name="inaktiv" value="false">Inaktiv</option>
             </select>
         </div>
         <br />
-        <h2>Produkte auswählen</h2>
 
+        <!-- Produkte auswählen Tabelle -->
+        <h2>Produkte auswählen</h2>
         <div class="table_detail">
             <table class="table">
                 <thead>
                     <tr style="vertical-align: middle;">
                         <th>Filter</th>
-                        <th><input type="text" id="filterBezeichnung" placeholder="Bezeichnung" oninput="filterTable()"></th>
-                        <th><input type="text" id="filterBeschreibung" placeholder="Beschreibung" oninput="filterTable()"></th>
-                        <th></th>
+                        <th><input type="text" id="filterBezeichnungAuswahl" placeholder="Bezeichnung" oninput="filterProdukteAuswaehlen()"></th>
+                        <th><input type="text" id="filterBeschreibungAuswahl" placeholder="Beschreibung" oninput="filterProdukteAuswaehlen()"></th>
                         <th>
-                            <select id="statusFilter" onchange="filterTable()">
+                            <select id="statusFilterAuswahl" onchange="filterProdukteAuswaehlen()">
                                 <option value="">Alle</option>
                                 <option value="Aktiv">Aktiv</option>
                                 <option value="Inaktiv">Inaktiv</option>
@@ -97,56 +86,45 @@
                         <th width="4%">ID</th>
                         <th width="21%">Bezeichnung</th>
                         <th width="40%">Beschreibung</th>
-                        <th width="7%">Menge</th>
-                        <th width="4%">Status</th>
+                        <th width="7%">Status</th>
                         <th width="24%">Tools</th>
                     </tr>
                 </thead>
-                <tbody id="userTableBody">
-                    <!-- Tabelleinträge hier hinzufügen -->
+                <tbody id="userTableBodyAuswahl">
                     <tr style="vertical-align: middle;">
                         <td>1</td>
                         <td>Produkt A</td>
                         <td>Ein Beispielprodukt</td>
-                        <td>10</td>
                         <td>Aktiv</td>
                         <td>
                             <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;">Produkt hinzufügen</a>
                         </td>
                     </tr>
-
-                    @*
-                    @foreach (var e in Model.products)
-                    {
                     <tr style="vertical-align: middle;">
-                    <td>@e.productId</td>
-                    <td>@e.productname</td>
-                    <td>@e.productdescription</td>
-                    <td>@e.productamount</td>
-                    <td>@(e.productactive ? "Aktiv" : "Inaktiv")</td>
-                    <td>
-                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="1" asp-route-produktname="Erste-Hilfe-Koffer" asp-route-produktbeschreibung="Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-menge="5" asp-route-status="Aktiv" style="background-color: #403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #B70E0C;">Löschen</a>
-                    </td>
+                        <td>2</td>
+                        <td>Produkt B</td>
+                        <td>Ein anderes Beispielprodukt</td>
+                        <td>Inaktiv</td>
+                        <td>
+                            <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;">Produkt hinzufügen</a>
+                        </td>
                     </tr>
-                    } *@
                 </tbody>
             </table>
         </div>
-
         <br />
+
+        <!-- Anzahl definieren Tabelle -->
         <h2>Anzahl definieren</h2>
         <div class="table_detail">
             <table class="table">
                 <thead>
                     <tr style="vertical-align: middle;">
                         <th>Filter</th>
-                        <th><input type="text" id="filterBezeichnung" placeholder="Bezeichnung" oninput="filterTable()"></th>
-                        <th><input type="text" id="filterBeschreibung" placeholder="Beschreibung" oninput="filterTable()"></th>
+                        <th><input type="text" id="filterBezeichnungAnzahl" placeholder="Bezeichnung" oninput="filterAnzahlDefinieren()"></th>
+                        <th><input type="text" id="filterBeschreibungAnzahl" placeholder="Beschreibung" oninput="filterAnzahlDefinieren()"></th>
                         <th></th>
-                        <th>
-                        </th>
+                        <th></th>
                     </tr>
                     <tr style="vertical-align: middle;">
                         <th width="4%">ID</th>
@@ -156,8 +134,7 @@
                         <th width="24%">Tools</th>
                     </tr>
                 </thead>
-                <tbody id="userTableBody">
-                    <!-- Tabelleinträge hier hinzufügen -->
+                <tbody id="userTableBodyAnzahl">
                     <tr style="vertical-align: middle;">
                         <td>3</td>
                         <td>Produkt B</td>
@@ -167,23 +144,6 @@
                             <a class="btn btn-primary" style="background-color: #B70E0C; border: #B70E0C;">Produkt entfernen</a>
                         </td>
                     </tr>
-
-                    @*
-                    @foreach (var e in Model.products)
-                    {
-                    <tr style="vertical-align: middle;">
-                    <td>@e.productId</td>
-                    <td>@e.productname</td>
-                    <td>@e.productdescription</td>
-                    <td>@e.productamount</td>
-                    <td>@(e.productactive ? "Aktiv" : "Inaktiv")</td>
-                    <td>
-                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="1" asp-route-produktname="Erste-Hilfe-Koffer" asp-route-produktbeschreibung="Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-menge="5" asp-route-status="Aktiv" style="background-color: #403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #B70E0C;">Löschen</a>
-                    </td>
-                    </tr>
-                    } *@
                 </tbody>
             </table>
         </div>
@@ -194,6 +154,43 @@
 </div>
 
 <script>
+    function filterProdukteAuswaehlen() {
+        const filterBezeichnung = document.getElementById("filterBezeichnungAuswahl").value.toLowerCase();
+        const filterBeschreibung = document.getElementById("filterBeschreibungAuswahl").value.toLowerCase();
+        const filterStatus = document.getElementById("statusFilterAuswahl").value;
+
+        const rows = document.querySelectorAll("#userTableBodyAuswahl tr");
+
+        rows.forEach(row => {
+            const bezeichnung = row.cells[1].textContent.toLowerCase();
+            const beschreibung = row.cells[2].textContent.toLowerCase();
+            const status = row.cells[3].textContent;
+
+            const matchBezeichnung = !filterBezeichnung || bezeichnung.includes(filterBezeichnung);
+            const matchBeschreibung = !filterBeschreibung || beschreibung.includes(filterBeschreibung);
+            const matchStatus = !filterStatus || status === filterStatus;
+
+            row.style.display = matchBezeichnung && matchBeschreibung && matchStatus ? "" : "none";
+        });
+    }
+
+    function filterAnzahlDefinieren() {
+        const filterBezeichnung = document.getElementById("filterBezeichnungAnzahl").value.toLowerCase();
+        const filterBeschreibung = document.getElementById("filterBeschreibungAnzahl").value.toLowerCase();
+
+        const rows = document.querySelectorAll("#userTableBodyAnzahl tr");
+
+        rows.forEach(row => {
+            const bezeichnung = row.cells[1].textContent.toLowerCase();
+            const beschreibung = row.cells[2].textContent.toLowerCase();
+
+            const matchBezeichnung = !filterBezeichnung || bezeichnung.includes(filterBezeichnung);
+            const matchBeschreibung = !filterBeschreibung || beschreibung.includes(filterBeschreibung);
+
+            row.style.display = matchBezeichnung && matchBeschreibung ? "" : "none";
+        });
+    }
+
     function previewImage(event) {
         const file = event.target.files[0]; // Die ausgewählte Datei
         const reader = new FileReader();

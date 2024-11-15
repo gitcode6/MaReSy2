@@ -41,13 +41,13 @@
 </div>
 <br />
 <div class="lagerverwaltung_hinzufügen">
-    <h2 style="text-align: center;">Hinzufügung</h2>
+    <h2 style="text-align: center;">PRODUKT Hinzufügung</h2>
     <form method="post">
-        @* <div class="form-group">
+        <div class="form-group">
             <input type="file" id="produktbild" class="form-control" onchange="previewImage(event)" asp-for="Produkt.Produktbild" />
             <br>
             <img id="imagePreview" src="" alt="Bildvorschau" style="display:none; width:25%" />
-        </div> *@
+        </div>
         <div class="form-group">
             <label for="Produktname">Produktname</label>
             <input type="text" name = "produktname" id="Produktname" class="form-control" asp-for="Produkt.Produktname" />
@@ -55,10 +55,6 @@
         <div class="form-group">
             <label for="Produktbeschreibung">Beschreibung</label>
             <input type="text" name = "produktbeschreibung" id="Produktbeschreibung" class="form-control" asp-for="Produkt.Produktbeschreibung" />
-        </div>
-        <div class="form-group">
-            <label for="Produktmenge">Menge</label>
-            <input type="number" name = "produktmenge" id="Produktmenge" class="form-control" asp-for="Produkt.Produktmenge" />
         </div>
         <div class="form-group">
             <label for="Produktstatus">Status</label>
