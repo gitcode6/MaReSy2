@@ -26,10 +26,6 @@ namespace MaReSy2.Services
 
             System.Diagnostics.Debug.WriteLine(response);
 
-
-
-
-
             var responseContent = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)

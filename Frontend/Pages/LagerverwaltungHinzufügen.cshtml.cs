@@ -89,7 +89,6 @@ public class LagerverwaltungHinzufügenModel : PageModel
         {
             productname = produktname,
             productdescription = produktbezeichnung,
-            productamount = Convert.ToInt32(produktmenge),
             productactive = Convert.ToBoolean(produktstatus),
 
         };

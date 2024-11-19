@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\images\\verwaltung_materialreservierung.JPG"
     },
     {
+      "Id": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\wlan.svg",
+      "PackagePath": "staticwebassets\\images\\wlan.svg"
+    },
+    {
       "Id": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\Übungsmedikament1.png",
       "PackagePath": "staticwebassets\\images\\Übungsmedikament1.png"
     },

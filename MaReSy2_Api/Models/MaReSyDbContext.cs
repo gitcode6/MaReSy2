@@ -204,7 +204,7 @@ v => v == 1
 
             entity.Property(e => e.SingleProductId).HasColumnName("singleProductID");
             entity.Property(e => e.ProductId).HasColumnName("productID");
-            entity.Property(e => e.SingleProductActive).HasColumnName("singleProductActive");
+            entity.Property(e => e.SingleProductActive).HasColumnName("singleProductActive").HasConversion(intToBoolConvert);
             entity.Property(e => e.SingleProductName)
                 .HasMaxLength(50)
                 .HasColumnName("singleProductName");

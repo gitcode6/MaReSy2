@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\UserController.cs" />
+    <Compile Remove="Pages\Benutzer.cs" />
     <Compile Remove="Pages\Materialreservierung2.cshtml.cs" />
+    <Compile Remove="Pages\Produkte.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="Pages\Materialreservierung2.cshtml" />
+    <Content Remove="Pages\ZOffline.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,11 +24,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
     <Folder Include="Data\" />
     <Folder Include="Pages\MainPages\" />
     <Folder Include="Pages\NewFolder\" />
     <Folder Include="Pages\Shared\Models\" />
     <Folder Include="Pages\Shared\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\ZOffline.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\ZOffline.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\ZOffline.cshtml" />
   </ItemGroup>
 
 </Project>
