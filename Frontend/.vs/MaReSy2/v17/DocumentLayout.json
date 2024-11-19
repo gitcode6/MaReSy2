@@ -1,12 +1,88 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\frontend\\pages\\benutzerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\frontend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\frontend\\pages\\benutzerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 164,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAEwEQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T19:27:00.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T19:33:05.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Benutzerverwaltung.cshtml",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Benutzerverwaltung.cshtml",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml",
+              "RelativeToolTip": "Pages\\Benutzerverwaltung.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAArwDAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T18:22:16.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Benutzerverwaltung.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Benutzerverwaltung.cshtml.cs",
+              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml.cs",
+              "RelativeToolTip": "Pages\\Benutzerverwaltung.cshtml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA1wB8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T18:21:48.032Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -9,127 +9,127 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MaReSy2
 build_property.RootNamespace = MaReSy2
-build_property.ProjectDir = C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\
+build_property.ProjectDir = C:\Users\tobias.lehner\source\repos\MaReSy2\Frontend\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend
+build_property.MSBuildProjectDirectory = C:\Users\tobias.lehner\source\repos\MaReSy2\Frontend
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Auszüge.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Auszüge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXVzesO8Z2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Benutzerverwaltung.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Benutzerverwaltung.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVudXR6ZXJ2ZXJ3YWx0dW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/BenutzerverwaltungBearbeiten.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/BenutzerverwaltungBearbeiten.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVudXR6ZXJ2ZXJ3YWx0dW5nQmVhcmJlaXRlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/BenutzerverwaltungHinzufügen.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/BenutzerverwaltungHinzufügen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVudXR6ZXJ2ZXJ3YWx0dW5nSGluenVmw7xnZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Dashboard.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Datenschutz.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Datenschutz.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0ZW5zY2h1dHouY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Error.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Handbuch.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Handbuch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGFuZGJ1Y2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Impressum.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Impressum.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1wcmVzc3VtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/information.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/information.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcaW5mb3JtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Lagerverwaltung.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Lagerverwaltung.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/LagerverwaltungBearbeiten.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/LagerverwaltungBearbeiten.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nQmVhcmJlaXRlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/LagerverwaltungBearbeitenSET.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/LagerverwaltungBearbeitenSET.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nQmVhcmJlaXRlblNFVC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/LagerverwaltungEP.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/LagerverwaltungEP.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nRVAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/LagerverwaltungEPBearb.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/LagerverwaltungEPBearb.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nRVBCZWFyYi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/LagerverwaltungEPHinzu.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/LagerverwaltungEPHinzu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nRVBIaW56dS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/LagerverwaltungHinzufügen.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/LagerverwaltungHinzufügen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nSGluenVmw7xnZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/LagerverwaltungHinzufügungSet.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/LagerverwaltungHinzufügungSet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFnZXJ2ZXJ3YWx0dW5nSGluenVmw7xndW5nU2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Login.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Materialreservierung.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Materialreservierung.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0ZXJpYWxyZXNlcnZpZXJ1bmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/MaterialreservierungDetails.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/MaterialreservierungDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0ZXJpYWxyZXNlcnZpZXJ1bmdEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/ReservierungDetail.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/ReservierungDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2aWVydW5nRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/ZugriffVerweigert.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/ZugriffVerweigert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcWnVncmlmZlZlcndlaWdlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/_ViewImports.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/_ViewStart.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Übersicht A.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Übersicht A.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcw5xiZXJzaWNodCBBLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Übersicht U.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Übersicht U.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcw5xiZXJzaWNodCBVLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/a.schmidt3/Documents/GitHub/MaReSy2/Frontend/Pages/Shared/_Layout.cshtml]
+[C:/Users/tobias.lehner/source/repos/MaReSy2/Frontend/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-q358rncc34

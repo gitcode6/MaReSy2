@@ -13,8 +13,8 @@
         text-align: center;
         font-family: Dunant;
     }
-    .table_detail
-    {
+
+    .table_detail {
         padding: 2%;
         width: 100%;
         font-family: Dunant;
@@ -29,39 +29,56 @@
     <table class="table">
         <thead>
             <tr style="vertical-align: middle;">
-            <th>Filter</th>
-            <th><input type="text" id="searchInputUsername" onkeyup="filterTable()" placeholder="Benutzername"></th>
-            <th><input type="text" id="searchInputVorname" onkeyup="filterTable()" placeholder="Vorname"></th>
-            <th><input type="text" id="searchInputNachname" onkeyup="filterTable()" placeholder="Nachname"></th>
-            <th></th>
-            <th><a class="btn btn-primary" asp-page="/BenutzerverwaltungHinzufügen" style="background-color: #A0DAB3; border: #A0DAB3;">Benutzer hinzufügen</a></th>
-        </tr>
-        <tr style="vertical-align: middle;">
-            <th width="4%">ID</th>
-            <th width="21%">Benutzername</th>
-            <th width="20%">Vorname</th>
-            <th width="20%">Nachname</th>
-            <th width="7%">Rolle</th>
-            <th width="28%">Tools</th>
-        </tr>
+                <th>Filter</th>
+                <th><input type="text" id="searchInputUsername" onkeyup="filterTable()" placeholder="Benutzername"></th>
+                <th><input type="text" id="searchInputVorname" onkeyup="filterTable()" placeholder="Vorname"></th>
+                <th><input type="text" id="searchInputNachname" onkeyup="filterTable()" placeholder="Nachname"></th>
+                <th></th>
+                <th><a class="btn btn-primary" asp-page="/BenutzerverwaltungHinzufügen" style="background-color: #A0DAB3; border: #A0DAB3;">Benutzer hinzufügen</a></th>
+            </tr>
+            <tr style="vertical-align: middle;">
+                <th width="4%">ID</th>
+                <th width="21%">Benutzername</th>
+                <th width="20%">Vorname</th>
+                <th width="20%">Nachname</th>
+                <th width="7%">Rolle</th>
+                <th width="28%">Tools</th>
+            </tr>
         </thead>
         <tbody id="userTableBody">
-            @foreach (var r in Model.users)
+            @if (Model.users.Count > 0)
             {
-                <tr style="vertical-align: middle">
-                    <td>@r.userId</td>
-                    <td>@r.username</td>
-                    <td>@r.firstname</td>
-                    <td>@r.lastname</td>
-                    <td>@r.role</td>
-                    <td>
-                        <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="@r.userId" asp-route-benutzername="@r.username" asp-route-vorname="@r.firstname" asp-route-nachname="@r.lastname" asp-route-rolle="@r.role" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
-                        <a class="btn btn-danger" style="background-color: #B70E0C; border-color:#B70E0C;" asp-page-handler="Delete" onclick="document.getElementById('delete-form-@r.userId').submit();">Löschen</a>
-                       <form id="delete-form-@r.userId" method="post" asp-page-handler="delete" asp-route-id="@r.userId" style="display: none;">
-                            
-                        </form>
-                    </td>
-                </tr>
+                @foreach (var r in Model.users)
+                {
+                    <tr style="vertical-align: middle">
+                        <td>@r.userId</td>
+                        <td>@r.username</td>
+                        <td>@r.firstname</td>
+                        <td>@r.lastname</td>
+                        <td>@r.role</td>
+                        <td>
+                            <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="@r.userId" asp-route-benutzername="@r.username" asp-route-vorname="@r.firstname" asp-route-nachname="@r.lastname" asp-route-rolle="@r.role" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
+
+                            <form id="deleteForm-@r.userId"
+                                  method="post"
+                                  asp-route-id="@r.userId"
+                                  asp-page-handler="Delete"
+                                  style="display: none;">
+                                <button id="btn-deleteUser-@r.userId" type="submit"></button>
+                            </form>
+
+                            <a class="btn btn-danger"
+                               style="background-color: #B70E0C; border-color:#B70E0C;"
+                               onclick="document.getElementById('btn-deleteUser-@r.userId').click();">
+                                Löschen
+                            </a>
+
+
+
+
+                        </td>
+                    </tr>
+                }
             }
         </tbody>
     </table>
