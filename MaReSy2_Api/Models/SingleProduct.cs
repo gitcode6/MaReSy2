@@ -11,7 +11,7 @@ public partial class SingleProduct
 
     public string SingleProductNumber { get; set; } = null!;
 
-    public int SingleProductActive { get; set; }
+    public bool SingleProductActive { get; set; }
 
     public int ProductId { get; set; }
 
