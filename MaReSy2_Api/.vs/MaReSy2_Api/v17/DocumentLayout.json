@@ -1,70 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\",
+  "WorkspaceRootPath": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\services\\singleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\singleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\dto\\singleproductdto\\createsingleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\singleproductdto\\createsingleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\controllers\\singleproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\singleproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\services\\isingleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\isingleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\dto\\productdto\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\productdto\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\dto\\singleproductdto\\singleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\singleproductdto\\singleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\dto\\productdto\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\productdto\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\singleproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\singleproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\services\\singleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\singleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias.lehner\\source\\repos\\maresy2\\maresy2_api\\models\\dto\\productdto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\productdto\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\models\\dto\\singleproductdto\\createsingleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\singleproductdto\\createsingleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\controllers\\singleproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\singleproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\services\\isingleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\isingleproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\models\\dto\\productdto\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\productdto\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\models\\dto\\singleproductdto\\singleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\singleproductdto\\singleproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\models\\dto\\productdto\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\productdto\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\models\\singleproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\singleproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\maresy2_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,15 +62,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 164,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SingleProductService.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
               "RelativeDocumentMoniker": "Services\\SingleProductService.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
               "RelativeToolTip": "Services\\SingleProductService.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAArwDgAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -91,24 +79,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ISingleProductService.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\ISingleProductService.cs",
-              "RelativeDocumentMoniker": "Services\\ISingleProductService.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\ISingleProductService.cs",
-              "RelativeToolTip": "Services\\ISingleProductService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAYwA0AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T13:41:19.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CreateSingleProductDTO.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\CreateSingleProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\CreateSingleProductDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\SingleProductDTO\\CreateSingleProductDTO.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\CreateSingleProductDTO.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\CreateSingleProductDTO.cs",
               "RelativeToolTip": "Models\\DTO\\SingleProductDTO\\CreateSingleProductDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -117,11 +92,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SingleProductController.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Controllers\\SingleProductController.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\SingleProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\SingleProductController.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Controllers\\SingleProductController.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\SingleProductController.cs",
               "RelativeToolTip": "Controllers\\SingleProductController.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAA7wCYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -130,11 +105,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "CreateProductDTO.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
               "RelativeToolTip": "Models\\DTO\\ProductDTO\\CreateProductDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -143,11 +118,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\IProductService.cs",
               "RelativeDocumentMoniker": "Services\\IProductService.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\IProductService.cs",
               "RelativeToolTip": "Services\\IProductService.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAuwAYAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -156,11 +131,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "MaReSyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\MaReSyDbContext.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
+              "RelativeToolTip": "Models\\MaReSyDbContext.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAMwCQAAAD7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T14:31:22.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISingleProductService.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ISingleProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ISingleProductService.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ISingleProductService.cs",
+              "RelativeToolTip": "Services\\ISingleProductService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAYwA0AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T13:41:19.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SingleProductDTO.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\SingleProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\SingleProductDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\SingleProductDTO\\SingleProductDTO.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\SingleProductDTO.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SingleProductDTO\\SingleProductDTO.cs",
               "RelativeToolTip": "Models\\DTO\\SingleProductDTO\\SingleProductDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -169,11 +170,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "UpdateProductDTO.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\UpdateProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\UpdateProductDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\ProductDTO\\UpdateProductDTO.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\UpdateProductDTO.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\UpdateProductDTO.cs",
               "RelativeToolTip": "Models\\DTO\\ProductDTO\\UpdateProductDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -182,11 +183,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "UserManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
               "RelativeDocumentMoniker": "Services\\UserManagementService.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\UserManagementService.cs",
               "RelativeToolTip": "Services\\UserManagementService.cs",
               "ViewState": "AQIAAIIAAAAAAAAAAAAvwH4AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -195,11 +196,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAQwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -208,11 +209,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "SingleProduct.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\SingleProduct.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\SingleProduct.cs",
               "RelativeDocumentMoniker": "Models\\SingleProduct.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\SingleProduct.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\SingleProduct.cs",
               "RelativeToolTip": "Models\\SingleProduct.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAQwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -221,88 +222,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MaReSyDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
-              "RelativeDocumentMoniker": "Models\\MaReSyDbContext.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
-              "RelativeToolTip": "Models\\MaReSyDbContext.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAnwM4AAAB7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T14:31:22.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Program.cs",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAzwB4AAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T14:23:26.018Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "c32c1588-a0e9-4cb9-a38b-5b4a9f90faca",
-        "Display": 1,
-        "X": 1128,
-        "Y": 338,
-        "Width": 920,
-        "Height": 567,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProductDTO.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\ProductDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\\ProductDTO\\ProductDTO.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\ProductDTO\\ProductDTO.cs",
-              "RelativeToolTip": "Models\\DTO\\ProductDTO\\ProductDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T13:49:19.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAYwBIAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T14:24:23.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\MaReSy2_Api\\Services\\ProductService.cs",
-              "RelativeToolTip": "Services\\ProductService.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAApwJQAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T14:02:56.22Z",
               "EditorCaption": ""
             }
           ]

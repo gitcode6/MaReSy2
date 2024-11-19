@@ -58,5 +58,15 @@ namespace MaReSy2.Services
             }
 
         }
+
+        public async Task<bool> deleteUserAsync(int userId)
+        {
+            var client = _httpClientFactory.CreateClient("API");
+            string url = $"/api/users/delete/{userId}";
+
+            var response  = await client.DeleteAsync(url);
+
+            return response.IsSuccessStatusCode;
+        }
     }
 }
