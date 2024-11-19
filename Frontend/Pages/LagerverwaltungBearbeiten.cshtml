@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int}/{produktname}/{produktbeschreibung}/{produktbild}/{status}"
 @model LagerverwaltungBearbeitenModel
 
 @{
@@ -48,7 +48,8 @@
 
 <div class="lagerverwaltung_bearbeitung">
     <h2 style="text-align: center;">PRODUKT Bearbeitung</h2>
-    <form method="post" enctype="multipart/form-data">
+
+    <form method="post">
         <div class="form-group">
             <input type="file" id="Produktbild" class="form-control" onchange="previewImage(event)" asp-for="Produkt.Produktbild" /> <!-- Bernd Stadlhofer: Image lässt sich nicht als Standard anzeigen -->
             <br>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tj0oFr8gBgAB6eSSU8gExN5yPU6Y/3kSf885nIxZdm0=",
+  "Hash": "qjpO1IdNhR6HSE7zvO3z4gKba4RQBU0xfwHfp51NwkY=",
   "Source": "MaReSy2",
   "BasePath": "_content/MaReSy2",
   "Mode": "Default",
@@ -547,6 +547,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\verwaltung_materialreservierung.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\wlan.svg",
+      "SourceId": "MaReSy2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\",
+      "BasePath": "_content/MaReSy2",
+      "RelativePath": "images/wlan.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\wlan.svg"
     },
     {
       "Identity": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\js\\site.js",

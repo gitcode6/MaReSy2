@@ -12,14 +12,13 @@ public class LagerverwaltungBearbeitenModel : PageModel
         public string Produktbeschreibung { get; set; }
         public string Produktbild { get; set; }
         public string Produktstatus { get; set; }
-        public int Produktmenge { get; set; }
     }
 
     [BindProperty]
     public ProduktModel Produkt { get; set; }
 
 
-    public IActionResult OnGet(int id, string produktname, string produktbeschreibung, string produktbild, int menge, string status)
+    public IActionResult OnGet(int id, string produktname, string produktbeschreibung, string produktbild, string status)
     {
 
         // Beispielprodukt
@@ -29,7 +28,6 @@ public class LagerverwaltungBearbeitenModel : PageModel
             Produktname = produktname,
             Produktbeschreibung = produktbeschreibung,
             Produktbild = produktbild,
-            Produktmenge = menge,
             Produktstatus = status,
         };
 

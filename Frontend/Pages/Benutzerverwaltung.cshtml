@@ -53,48 +53,11 @@
                     <td>@r.lastname</td>
                     <td>@r.role</td>
                     <td>
-                        <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="2" asp-route-benutzername="EliastStinkt" asp-route-vorname="Elias" asp-route-nachname="Gindl" asp-route-rolle="User" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
-                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="2" style="background-color: #B70E0C; border-color:#B70E0C;">Löschen</a>
+                        <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="@r.userId" asp-route-benutzername="@r.username" asp-route-vorname="@r.firstname" asp-route-nachname="@r.lastname" asp-route-rolle="@r.role" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
+                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="@r.userId" style="background-color: #B70E0C; border-color:#B70E0C;">Löschen</a>
                     </td>
                 </tr>
             }
-
-@*             <tr style="vertical-align: middle;">
-                <td>1</td>
-                <td>alexschmidt12</td>
-                <td>Ali</td>
-                <td>Schmiddi</td>
-                <td>Admin</td>
-                <td>
-                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="1" asp-route-benutzername="alexschmidt12" asp-route-vorname="Ali" asp-route-nachname="Schmiddi" asp-route-rolle="Admin" style="background-color: #403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #B70E0C;">Löschen</a>
-                </td>
-            </tr>
-            <tr style="vertical-align: middle;">
-                <td>2</td>
-                <td>EliasStinkt</td>
-                <td>Elias</td>
-                <td>Gindl</td>
-                <td>User</td>
-                <td>
-                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="2" asp-route-benutzername="EliastStinkt" asp-route-vorname="Elias" asp-route-nachname="Gindl" asp-route-rolle="User" style="background-color: #403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="2" style="background-color: #B70E0C;">Löschen</a>
-                </td>
-            </tr>
-            <tr style="vertical-align: middle;">
-                <td>3</td>
-                <td>Koarli</td>
-                <td>Karl</td>
-                <td>Heinz</td>
-                <td>User</td>
-                <td>
-                    <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="3" asp-route-benutzername="Koarli" asp-route-vorname="Karl" asp-route-nachname="Heinz" asp-route-rolle="User" style="background-color: #403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="2" style="background-color: #B70E0C;">Löschen</a>
-                </td>
-            </tr> *@
         </tbody>
     </table>
 </div>

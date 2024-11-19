@@ -25,6 +25,5 @@ namespace MaReSy2.Pages
             users = await userService.GetUsersAsync();
         }
 
-        public IList<Benutzer> BenutzerListe { get; set; }
     }
 }

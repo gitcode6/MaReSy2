@@ -84,9 +84,9 @@
     </div>
     <br />
 
-    <div class="materialreservierung_detail style="">
+    <div class="materialreservierung_detail">
         <h2 style="text-align: center;">Detail</h2>
-
+        
         <div style="display: flex; justify-content: space-between;">
         <div style="display: flex; justify-content: left; width: fit-content;">
             <img src="/images/Übungsmedikament1.png" alt="Material">
@@ -104,27 +104,36 @@
 
             <div style="display: flex; justify-content: left;">
                 <form id="reservierungsForm" method="post" >
-                    
-
-                    <label for="startDatum">Von:</label>
-                    <input type="date" id="startDatum" name="startDatum" required>
-
-                    <label for="endDatum">Bis:</label>
-                    <input type="date" id="endDatum" name="endDatum" required>
 
 
-                    <label for="anzahl">Anzahl:</label>
-                    <input type="number" id="anzahl" name="anzahl" min="1" value="1" required>
+                    <table>
+                        <tr style="width: 100%">
+                                <td style="width: 50%">
+                                    <label for="startDatum">Von:</label></td>
+                                <td><input type="date" id="startDatum" name="startDatum" required></td>
+                        </tr>
+                        <tr style="width: 100%">
+                                <td style="width: 50%"><label for="startDatum">Bis:</label></td>
+                                <td><input type="date" id="endDatum" name="endDatum" required></td>
+                        </tr>
+                        <tr style="width: 100%">
+                                <td style="width: 50%"><label for="anzahl">Anzahl:</label></td>
+                                <td><input type="number" id="anzahl" name="anzahl" min="1" value="1" required style="width:100%"></td>
+                        </tr>
+                        
 
-                    <br /><br />
-                    <p style="text-align: center;">Verfügbarkeit:</p>
-
+                    </table>
+                        <tr style="width: 100%">
+                            <td style="width: 50%"><label for="rentalnote">Kommentare:</label></td>
+                            <br>
+                            <textarea id="rentalnote" name="rentalnote" style="width:300%; height: 25%"></textarea>
+                        </tr>
+                       
                     <div style="display: flex; align-content: space-between; width: 100%;">
-                    <button type="submit" class="btnReservieren" style="background-color: #403A60;">Reservieren</button>
-                    <a href="/Materialreservierung" class="btnZurück" style="background-color: #B70E0C;">Abbrechen</a>
-
-                        </div>
-                </form>
+                            <button type="submit" class="btnReservieren" style="background-color: #403A60;">Reservieren</button>&nbsp&nbsp
+                            <a href="/Materialreservierung" class="btnZurück" style="background-color: #B70E0C;">Abbrechen</a>
+                    </div>
+                    </form>
             </div>
         </div>
         </div>
