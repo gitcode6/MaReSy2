@@ -69,26 +69,54 @@ namespace MaReSy2_Api.Controllers
 
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> deactivateProduct(int id)
+        {
+            var result = await _singleProductService.deleteSingleProductAsync(id);
 
+            if (result == IdentityResult.Success)
+            {
+                return Ok(result);
+            }
 
+            else
+            {
+                return BadRequest(result);
+            }
+        }
 
+        //GET api/<ProductController>/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ProductDTO>> GetProductById(int id)
+        {
+            var product = await _singleProductService.GetSingleProductAsync(id);
 
-        // GET api/<ProductController>/5
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<ProductDTO>> GetProductById(int id)
-        //{
-        //    var product = await _productService.GetProductByIdAsync(id);
+            if (product == null)
+            {
+                var errors = IdentityResult.Failed(new IdentityError() { Description = "Singleproduct wurde nicht gefunden!" });
+                return BadRequest(errors);
+            }
+            else
+            {
+                return Ok(product);
+            }
+        }
 
-        //    if (product == null)
-        //    {
-        //       var errors = IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });
-        //        return BadRequest(errors);
-        //    }
-        //    else
-        //    {
-        //        return Ok(product);
-        //    }
-        //}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> updateProduct(int id, UpdateSingleProductDTO product)
+        {
+            var result = await _singleProductService.updateSingleProduct(id, product);
+
+            if (result.Contains(IdentityResult.Success))
+            {
+                return Ok(result);
+            }
+
+            else
+            {
+                return BadRequest(result);
+            }
+        }
 
         //// POST api/<ProductController>
         //[HttpPost("")]
@@ -149,21 +177,7 @@ namespace MaReSy2_Api.Controllers
         //    return File(product.Productimage, imageType);
         //}
 
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> deactivateProduct(int id)
-        //{
-        //    var result = await _productService.deleteProductAsync(id);
 
-        //    if (result == IdentityResult.Success)
-        //    {
-        //        return Ok(result);
-        //    }
-
-        //    else
-        //    {
-        //        return BadRequest(result);
-        //    }
-        //}
 
         //[HttpPut("{id}")]
         //public async Task<IActionResult> updateProduct(int id, UpdateProductDTO product)

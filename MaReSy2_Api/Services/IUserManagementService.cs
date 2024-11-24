@@ -8,7 +8,7 @@ namespace MaReSy2_Api.Services
 
         Task<IEnumerable<UserDTO>> GetUsersAsync(string searchOption);
 
-        Task<UserDTO> FindUserAsync(int userId);
+        Task<UserDTO?> FindUserAsync(int userId);
 
         Task<bool?> ChangePasswordAsync(int userId, string newPassword);
 

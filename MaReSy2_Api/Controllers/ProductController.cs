@@ -38,6 +38,8 @@ namespace MaReSy2_Api.Controllers
         {
             var product = await _productService.GetProductByIdAsync(id);
 
+
+            //TODO: Produktvalidierung in den Service verschieben??
             if (product == null)
             {
                var errors = IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });

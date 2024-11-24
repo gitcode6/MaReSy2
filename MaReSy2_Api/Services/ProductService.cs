@@ -97,16 +97,16 @@ namespace MaReSy2_Api.Services
             {
                 var product_fromDb = await _context.Products.FirstAsync(p => p.ProductId == productId);
 
-                if (product_fromDb != null)
+
+                product = new ProductDTO
                 {
-                    product = new ProductDTO
-                    {
-                        ProductId = product_fromDb.ProductId,
-                        Productname = product_fromDb.Productname,
-                        Productdescription = product_fromDb.Productdescription,
-                        Productactive = product_fromDb.ProductActive
-                    };
-                }
+                    ProductId = product_fromDb.ProductId,
+                    Productname = product_fromDb.Productname,
+                    Productdescription = product_fromDb.Productdescription,
+                    Productactive = product_fromDb.ProductActive,
+                    ProductimageLink = product_fromDb.Productimage != null && product_fromDb.Productimage.Length != 0 ? $"/api/products/{product_fromDb.ProductId}/image" : null,
+                };
+
 
 
             }
@@ -148,7 +148,7 @@ namespace MaReSy2_Api.Services
 
         public async Task<bool> ProductExistsAsync(string productname)
         {
-            var product = await _context.Products.AnyAsync(p=>p.Productname == productname);
+            var product = await _context.Products.AnyAsync(p => p.Productname == productname);
 
             if (!product)
             {

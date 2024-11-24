@@ -99,7 +99,7 @@ namespace MaReSy2_Api.Services
 
         }
 
-        public async Task<UserDTO> FindUserAsync(int userId)
+        public async Task<UserDTO?> FindUserAsync(int userId)
         {
             var user = await _context.Users
                 .Include(u => u.Role)

@@ -1,4 +1,5 @@
-﻿using MaReSy2_Api.Models.DTO.ProductDTO;
+﻿using MaReSy2_Api.Models;
+using MaReSy2_Api.Models.DTO.ProductDTO;
 using MaReSy2_Api.Models.DTO.SingleProductDTO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -39,7 +40,7 @@ namespace MaReSy2_Api.Services
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Das Produkt mit dieser Id gibt es nicht!" }));
             }
 
-            if (await ProductSerialNumberExists(singleProduct.SingleProductSerialNumber))
+            if (await ProductSerialNumberExists(singleProduct.SingleProductSerialNumber.ToLower().Trim()))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Die Produkt-Serien-Nr. existiert bereits!" }));
             }
@@ -68,6 +69,46 @@ namespace MaReSy2_Api.Services
 
 
 
+        }
+
+        public async Task<IdentityResult> deleteSingleProductAsync(int productId)
+        {
+            var singleProduct = await _context.SingleProducts.FindAsync(productId);
+
+
+            if (singleProduct == null)
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "Singleproduct wurde nicht gefunden!" });
+            }
+
+            singleProduct.SingleProductActive = false;
+
+            _context.SingleProducts.Update(singleProduct);
+            await _context.SaveChangesAsync();
+
+            return IdentityResult.Success;
+        }
+
+        public async Task<SingleProductDTO?> GetSingleProductAsync(int productId)
+        {
+            var result = await SingleProductExistsAsync(productId);
+            SingleProductDTO? singleProduct = null;
+
+            if (result == true)
+            {
+                var product = await _context.SingleProducts.Include(x => x.Product).FirstAsync(x => x.SingleProductId == productId);
+                singleProduct = new SingleProductDTO
+                {
+                    SingleProductId = product.SingleProductId,
+                    SingleProductName = product.SingleProductName,
+                    SingleProductActive = product.SingleProductActive,
+                    SingleProductSerialNumber = product.SingleProductNumber,
+                    MainProduct = product.Product.Productname
+                };
+
+            }
+
+            return singleProduct;
         }
 
         public async Task<IEnumerable<SingleProductDTO>> GetSingleProductsAsync()
@@ -100,6 +141,70 @@ namespace MaReSy2_Api.Services
             {
                 return true;
             }
+        }
+
+        public async Task<bool> SingleProductExistsAsync(int productId)
+        {
+            var product = await _context.SingleProducts.FindAsync(productId);
+
+            if (product == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public async Task<List<IdentityResult>> updateSingleProduct(int productId, UpdateSingleProductDTO product)
+        {
+            List<IdentityResult> errors = new List<IdentityResult>();
+
+            var existingSingleProduct = await _context.SingleProducts.FindAsync(productId);
+
+
+            if (existingSingleProduct == null)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Singleproduct nicht gefunden!" }));
+
+                return errors;
+            }
+
+
+            //TODO: DARF EIN SINGLEPRODUKT MIT DEM GLEICHEN NAMEN EXISITIEREN?
+            if (!string.IsNullOrWhiteSpace(product.SingleProductName) && await _context.SingleProducts.AnyAsync(p => p.SingleProductName.ToLower() == product.SingleProductName.ToLower().Trim() && p.ProductId != productId))
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Der Produktname ist bereits vorhanden." }));
+            }
+
+            if (!string.IsNullOrWhiteSpace(product.SingleProductSerialNumber) && await _context.SingleProducts.AnyAsync(p => p.SingleProductNumber.ToLower() == product.SingleProductSerialNumber.ToLower().Trim() && p.SingleProductId != productId))
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Die Produkt-Serien-Nr. existiert bereits!" }));
+            }
+
+            if (product.ProductId.HasValue && !await _productService.ProductExistsAsync((int)product.ProductId))
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Das Produkt mit dieser Id gibt es nicht!" }));
+            }
+
+
+            if (errors.Count > 0)
+            {
+                return errors;
+            }
+
+
+            existingSingleProduct!.SingleProductName = product.SingleProductName ?? existingSingleProduct.SingleProductName;
+            existingSingleProduct!.SingleProductNumber = product.SingleProductSerialNumber ?? existingSingleProduct.SingleProductNumber;
+            existingSingleProduct!.SingleProductActive = product.SingleProductActive ?? existingSingleProduct.SingleProductActive;
+            existingSingleProduct!.ProductId = product.ProductId ?? existingSingleProduct.ProductId;
+
+            _context.SingleProducts.Update(existingSingleProduct);
+            await _context.SaveChangesAsync();
+
+            errors.Add(IdentityResult.Success);
+            return errors;
         }
     }
 }

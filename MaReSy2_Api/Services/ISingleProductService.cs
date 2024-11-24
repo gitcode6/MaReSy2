@@ -9,9 +9,16 @@ namespace MaReSy2_Api.Services
     {
         Task<IEnumerable<SingleProductDTO>> GetSingleProductsAsync();
 
+        Task<SingleProductDTO?> GetSingleProductAsync(int productId);
+
         Task<List<IdentityResult>> AddNewSingleProduct(CreateSingleProductDTO singleProduct);
 
         Task<bool> ProductSerialNumberExists(string serialNumber);
+        Task<bool> SingleProductExistsAsync(int productId);
+
+        Task<List<IdentityResult>> updateSingleProduct(int productId, UpdateSingleProductDTO product);
+
+        Task<IdentityResult> deleteSingleProductAsync(int productId);
         
 
         //Task<ProductDTO?> GetProductByIdAsync(int productId);
