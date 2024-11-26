@@ -1,8 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model LagerverwaltungModel
 @{
     ViewData["Title"] = "Lagerverwaltung";
 }
+@attribute [Authorize(Policy = "AdminsOnly")]
 <style>
     .lagerverwaltung_lagerverwaltung {
         background-color: #403A60;

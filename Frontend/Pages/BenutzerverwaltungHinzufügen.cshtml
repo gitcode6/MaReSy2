@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model BenutzerverwaltungHinzufügenModel
 @{
     ViewData["Title"] = "Benutzer hinzufügen";
 }
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 <style>
     .benutzerverwaltung_benutzerverwaltung {
         background-color: #403A60;

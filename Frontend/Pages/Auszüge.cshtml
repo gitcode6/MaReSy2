@@ -1,8 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.AuszügeModel
 @{
     ViewData["Title"] = "Auszüge";
 }
+@attribute [Authorize(Policy = "AdminsOnly")]
 <!DOCTYPE html>
 <html lang="en">
     <head>
