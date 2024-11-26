@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.LagerverwaltungEPModel
 @{
     ViewData["Title"] = "LagerverwaltungEP";
 }
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 
 <style>
     .lagerverwaltung_lagerverwaltung {

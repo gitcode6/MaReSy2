@@ -1,6 +1,7 @@
 ﻿@page "{id:int}/{produktname}/{produktbeschreibung}/{produktbild}/{status}"
+@using Microsoft.AspNetCore.Authorization
 @model LagerverwaltungBearbeitenModel
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 @{
     ViewData["Title"] = "Produkt bearbeiten";
 }

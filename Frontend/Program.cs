@@ -8,12 +8,18 @@ builder.Services.AddRazorPages(options =>
     //options.Conventions.AuthorizeFolder("/"); // Schützt alle Seiten
     //options.Conventions.AllowAnonymousToPage("/Login"); // Login explizit freigeben
 });
+
 builder.Services.AddAuthentication("MyCookieAuth")
     .AddCookie("MyCookieAuth", options =>
     {
         options.LoginPath = "/Login"; // Pfad zur Login-Seite
+        options.AccessDeniedPath = "/ZugriffVerweigert";
     });
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminsOnly", policy => policy.RequireRole("Admin"));
+});
+
 builder.Services.AddHttpClient("API", client => { client.BaseAddress = new Uri("https://localhost:7162/api"); });
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductService>();
@@ -37,6 +43,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.MapRazorPages();
 
 // Routen registrieren
 app.UseEndpoints(endpoints =>

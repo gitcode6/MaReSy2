@@ -19,24 +19,33 @@ public class LoginModel : PageModel
 		// Überprüfen der Anmeldeinformationen (dies ist nur ein Beispiel)
 		if (Benutzername == "admin" && Passwort == "password")
 		{
-
-			/*var claims = new List<Claim>
+			var claims = new List<Claim>
 			{
-				new Claim(ClaimTypes.Name, Benutzername)
+				new Claim(ClaimTypes.Name, "admin"),
+				new Claim(ClaimTypes.Role, "Admin")
 			};
 
-			var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-			var authProperties = new AuthenticationProperties
-			{
-				IsPersistent = true
-			};
-
-			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-			*/
+			var identity = new ClaimsIdentity(claims, "AuthType");
+			var principal = new ClaimsPrincipal(identity);
+			await HttpContext.SignInAsync(principal);
 
 			return RedirectToPage("/Dashboard");
 		}
-		else
+        else if (Benutzername == "user" && Passwort == "password")
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, "user"),
+                new Claim(ClaimTypes.Role, "User")
+            };
+
+            var identity = new ClaimsIdentity(claims, "AuthType");
+            var principal = new ClaimsPrincipal(identity);
+            await HttpContext.SignInAsync(principal);
+
+            return RedirectToPage("/Dashboard");
+        }
+        else
 		{
 			if(Benutzername == "")
 			{

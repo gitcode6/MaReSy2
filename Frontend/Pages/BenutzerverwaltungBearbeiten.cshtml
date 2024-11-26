@@ -1,6 +1,7 @@
 ﻿@page "{id:int}/{benutzername}/{vorname}/{nachname}/{rolle}"
+@using Microsoft.AspNetCore.Authorization
 @model BenutzerverwaltungBearbeitenModel
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 @{
     ViewData["Title"] = "Benutzer bearbeiten";
 }

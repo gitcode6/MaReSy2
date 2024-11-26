@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.LagerverwaltungEPBearbModel
 @{
     ViewData["Title"] = "Einzelprodukt bearbeiten";
 }
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 <style>
     .lagerverwaltung_lagerverwaltung {
         background-color: #403A60;

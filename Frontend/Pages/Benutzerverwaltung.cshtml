@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model BenutzerverwaltungModel
 @{
     ViewData["Title"] = "Benutzerverwaltung";
 }
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 
 <style>
     .benutzerverwaltung_benutzerverwaltung {

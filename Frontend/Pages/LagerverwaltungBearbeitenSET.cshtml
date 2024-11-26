@@ -1,6 +1,7 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.LagerverwaltungBearbeitenSETModel
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 @{
     ViewData["Title"] = "SET bearbeiten";
 }

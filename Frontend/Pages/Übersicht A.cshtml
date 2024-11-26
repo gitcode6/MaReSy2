@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model Übersicht_AModel
 @{
     ViewData["Title"] = "Übersicht A";
 }
-
+@attribute [Authorize(Policy = "AdminsOnly")]
 <style>
     .verwaltung_materialreservierung {
         background-color: #403A60;
