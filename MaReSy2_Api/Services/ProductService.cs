@@ -134,14 +134,7 @@ namespace MaReSy2_Api.Services
         {
             var product = await _context.Products.FindAsync(productId);
 
-            if (product == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return product != null;
 
 
         }

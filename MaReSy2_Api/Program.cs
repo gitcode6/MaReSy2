@@ -30,6 +30,7 @@ namespace MaReSy2_Api
 
             builder.Services.AddScoped<ISingleProductService, SingleProductService>();
 
+            builder.Services.AddScoped<ISetService, SetService>();
 
             var app = builder.Build();
 

@@ -182,7 +182,8 @@ v => v == 1
             entity.ToTable("sets");
 
             entity.Property(e => e.SetId).HasColumnName("setID");
-            entity.Property(e => e.Setactive).HasColumnName("setactive");
+            entity.Property(e => e.Setactive).HasColumnName("setactive")
+            .HasConversion(intToBoolConvert);
             entity.Property(e => e.Setdescription)
                 .HasMaxLength(200)
                 .IsUnicode(false)

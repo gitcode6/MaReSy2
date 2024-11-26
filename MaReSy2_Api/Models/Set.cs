@@ -13,7 +13,7 @@ public partial class Set
 
     public byte[]? Setimage { get; set; }
 
-    public int Setactive { get; set; }
+    public bool Setactive { get; set; }
 
     public virtual ICollection<ProductsSet> ProductsSets { get; set; } = new List<ProductsSet>();
 }
