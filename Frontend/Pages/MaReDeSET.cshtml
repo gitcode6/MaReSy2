@@ -1,0 +1,185 @@
+﻿@page
+@model MaReSy2.Pages.MaReDeSETModel
+@{
+    ViewData["Title"] = "SET-Detail";
+}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Dunant;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Mindesthöhe des Viewports */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1; /* Füllt den verfügbaren Platz */
+            padding-bottom: 50px; /* Platz für die Fußzeile */
+        }
+
+        .card {
+            background-color: white;
+            width: 50%;
+            margin: 10px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+
+            .card h2 {
+                font-size: 24px;
+                margin: 15px;
+                text-align: center;
+            }
+
+            .card p {
+                font-size: 16px;
+                color: #555;
+                margin: 0 15px 15px;
+                text-align: center;
+            }
+
+        .btnZurück,
+        .btnReservieren {
+            display: block;
+            width: 80%;
+            margin: 15px auto;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            .btnZurück:hover {
+                background-color: #B70E0C;
+                color: white;
+            }
+
+        .materialreservierung_detail {
+            background-color: #99D6EA;
+            padding: 20px;
+            font-family: Dunant;
+        }
+
+        .materialreservierung_materialreservierung {
+            background-color: #403A60;
+            padding-top: 10px;
+            padding-bottom: 1px;
+            text-align: center;
+            font-family: Dunant;
+        }
+
+        .table_detail {
+            padding: 2%;
+            width: 100%;
+            font-family: Dunant;
+        }
+
+        footer {
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="materialreservierung_materialreservierung">
+            <h1 style="color: white; font-size:50px;">Materialreservierung</h1>
+        </div>
+        <br />
+
+        <div class="materialreservierung_detail">
+            <h2 style="text-align: center;">SET Detail</h2>
+
+            <div style="display: flex; justify-content: space-between;">
+                <div style="display: flex; justify-content: left; width: fit-content;">
+                    <img src="/images/Übungsmedikament1.png" alt="Material">
+                </div>
+
+                <div style="display: flex; flex-direction: column;  width: 70%;">
+
+                    <div style="display: flex; ">
+                        <h2>Materialname</h2>
+                    </div>
+
+                    <div style="display: flex;">
+                        <p>Materialbeschreibung</p>
+                    </div>
+
+                    <div style="display: flex; justify-content: left;">
+                        <form id="reservierungsForm" method="post">
+                            <table>
+                                <tr style="width: 100%">
+                                    <td style="width: 50%">
+                                        <label for="startDatum">Von:</label>
+                                    </td>
+                                    <td><input type="date" id="startDatum" name="startDatum" required></td>
+                                </tr>
+                                <tr style="width: 100%">
+                                    <td style="width: 50%"><label for="startDatum">Bis:</label></td>
+                                    <td><input type="date" id="endDatum" name="endDatum" required></td>
+                                </tr>
+                                <tr style="width: 100%">
+                                    <td style="width: 50%"><label for="anzahl">Anzahl:</label></td>
+                                    <td><input type="number" id="anzahl" name="anzahl" min="1" value="1" required style="width:100%"></td>
+                                </tr>
+
+
+                            </table>
+                            <tr style="width: 100%">
+                                <td style="width: 50%"><label for="rentalnote">Kommentare:</label></td>
+                                <br>
+                                <textarea id="rentalnote" name="rentalnote" style="width:300%; height: 25%"></textarea>
+                            </tr>
+
+                            <div style="display: flex; align-content: space-between; width: 100%;">
+                                <button type="submit" class="btnReservieren" style="background-color: #403A60;">Reservieren</button>&nbsp&nbsp
+                                <a href="/Materialreservierung" class="btnZurück" style="background-color: #B70E0C;">Abbrechen</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="materialreservierung_detail">
+            <h2 style="text-align: center;">SET Inhalt</h2>
+            <div class="table_detail">
+                <table class="table">
+                    <thead>
+                    <th>Produktname</th>
+                    <th>Produktanzahl</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Beispielprodukt</td>
+                        <td>2</td>
+                    </tr>
+                        <tr>
+                            <td>Das Produkt</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br /><br />
+</body>
+</html>
+

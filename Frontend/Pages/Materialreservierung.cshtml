@@ -113,17 +113,6 @@
         <input type="text" id="searchInput" placeholder="Materialien durchsuchen..." onkeyup="filterMaterials()">
     </div>
 
-    <!-- Materialien -->
-    <div class="container" id="materialContainer">
-        @* <div class="card">
-            <img src="~/images/reanimationspuppe.jpeg" alt="Material">
-            <div class="text-container">
-                <h3>Reanimationspuppe</h3>
-                <a href="/MaterialreservierungDetails/@Model" class="btn">Reservieren</a>
-            </div>
-        </div> *@
-
-
          @foreach(var e in Model.products)
         {
             <div class="card">
@@ -135,8 +124,15 @@
             </div>
         }
 
-       
+    <div class="card">
+        <img src="~/images/Übungsmedikament1.png" alt="Material">
+        <div class="text-container">
+            <h3>TestSet</h3>
+            <a href="/MaReDeSET/" class="btn">Reservieren</a>
+        </div>
     </div>
+
+      
     <div style="clear: both;"></div>
     <!-- Suchleiste für Material -->
     <script>
