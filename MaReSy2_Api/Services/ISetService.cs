@@ -10,6 +10,8 @@ namespace MaReSy2_Api.Services
         Task<SetDTO?> GetSetByIdAsync(int setId);
         Task<bool> SetExistsAsync(int setId);
         Task<List<IdentityResult>> AddNewSetAsync(CreateSetDTO set);
+        Task<List<IdentityResult>> UpdateSetAsync(UpdateSetDTO set, int setId);
+        Task<IdentityResult> deleteSetAsync(int setId);
 
     }
 }
