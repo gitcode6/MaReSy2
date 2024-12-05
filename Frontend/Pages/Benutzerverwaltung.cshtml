@@ -58,7 +58,7 @@
                         <td>@r.lastname</td>
                         <td>@r.role</td>
                         <td>
-                            <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="@r.userId" asp-route-benutzername="@r.username" asp-route-vorname="@r.firstname" asp-route-nachname="@r.lastname" asp-route-rolle="@r.role" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
+                            <a class="btn btn-primary" asp-page="/BenutzerverwaltungBearbeiten" asp-route-id="@r.userId" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
 
                             <form id="deleteForm-@r.userId"
                                   method="post"
@@ -73,10 +73,6 @@
                                onclick="document.getElementById('btn-deleteUser-@r.userId').click();">
                                 Löschen
                             </a>
-
-
-
-
                         </td>
                     </tr>
                 }

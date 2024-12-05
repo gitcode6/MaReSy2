@@ -1,5 +1,6 @@
 ﻿using MaReSy2.ConsumeModels;
 using Newtonsoft.Json;
+using System;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Runtime.CompilerServices;
@@ -67,6 +68,43 @@ namespace MaReSy2.Services
             var response  = await client.DeleteAsync(url);
 
             return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> bearbeitenUserAsync(User user)
+        {
+            var client = _httpClientFactory.CreateClient("API");
+            string baseUrl = $"/api/users/{user.userId}";
+
+            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(user), Encoding.UTF8, "application/json");
+            var response = await client.PutAsync(baseUrl, stringContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Debug.WriteLine(response.Content.ReadAsStringAsync());
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<ConsumeModels.User?> GetUserAsync(int userID)
+        {
+            var client = _httpClientFactory.CreateClient("API");
+
+
+            var response = await client.GetAsync($"/api/users/{userID}");
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.WriteLine(responseContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return System.Text.Json.JsonSerializer.Deserialize<User>(responseContent);
+
+            }
+            else { return null;  }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@page "{id:int}/{benutzername}/{vorname}/{nachname}/{rolle}"
+﻿@page "{id:int}"
 @using Microsoft.AspNetCore.Authorization
 @model BenutzerverwaltungBearbeitenModel
 @attribute [Authorize(Policy = "AdminsOnly")]
@@ -40,27 +40,30 @@
 <br />
 <div class="benutzerverwaltung_bearbeitung">
     <h2 style="text-align: center;">Bearbeitung</h2>
-
     <form method="post">
-        <div class="form-group">
+        <div class="form-group" >
             <label for="Benutzername">Benutzername</label>
-            <input type="text" id="Benutzername" class="form-control" asp-for="Benutzer.Benutzername" />
+            <input type="text" id="Benutzername" class="form-control" asp-for="meinUser.username" />
         </div>
         <div class="form-group">
             <label for="Vorname">Vorname</label>
-            <input type="text" id="Vorname" class="form-control" asp-for="Benutzer.Vorname" />
+            <input type="text" id="Vorname" class="form-control" asp-for="meinUser.firstname" />
         </div>
         <div class="form-group">
             <label for="Nachname">Nachname</label>
-            <input type="text" id="Nachname" class="form-control" asp-for="Benutzer.Nachname" />
+            <input type="text" id="Nachname" class="form-control" asp-for="meinUser.lastname" />
+        </div>
+        <div class="form-group">
+            <label for="EMailAdresse">E-Mail-Adresse</label>
+            <input type="email" id="EMailAdresse" class="form-control" asp-for="meinUser.email" />
         </div>
         <div class="form-group">
             <label for="Passwort">Passwort (nur überschreiben möglich)</label>
-            <input type="password" id="Passwort" class="form-control" asp-for="Benutzer.Passwort" />
+            <input type="password" id="Passwort" class="form-control" asp-for="meinUser.password" />
         </div>
         <div class="form-group">
             <label for="Rolle">Rolle</label>
-            <select id="Rolle" class="form-control" asp-for="Benutzer.Rolle">
+            <select id="Rolle" class="form-control" asp-for="meinUser.role">
                 <option value="Admin">Admin</option>
                 <option value="User">User</option>
                 <option value="Inaktiv">Inaktiv</option>

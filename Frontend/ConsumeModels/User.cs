@@ -7,7 +7,6 @@ namespace MaReSy2.ConsumeModels
 
         public int userId { get; set; }
 
-
         [Required]
         public string username { get; set; }
 

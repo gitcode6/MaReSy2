@@ -1,42 +1,29 @@
+using MaReSy2.ConsumeModels;
+using MaReSy2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using System.Threading.Tasks;
 
 public class BenutzerverwaltungBearbeitenModel : PageModel
 {
-    // Benutzerinformationen
-    public class BenutzerModel
-    {
-        public int BenutzerID { get; set; }
-        public string Benutzername { get; set; }
-        public string Vorname { get; set; }
-        public string Nachname { get; set; }
-        public string Passwort { get; set; }
-        public string Rolle { get; set; }
-    }
+    private readonly UserService userService;
 
     [BindProperty]
-    public BenutzerModel Benutzer { get; set; }
+    public User meinUser { get; set; }
+    // [TempData]
+    // public int UserID { get; set; }
 
-   
-    public IActionResult OnGet(int id, string benutzername, string vorname, string nachname, string rolle)
+    public BenutzerverwaltungBearbeitenModel(UserService userService)
     {
-        
-        // Beispielbenutzer
-        Benutzer = new BenutzerModel
-        {
-            BenutzerID = id,
-            Benutzername = benutzername,
-            Vorname = vorname,
-            Nachname = nachname,
-            Passwort = "",
-            Rolle = rolle
-        };
+        this.userService = userService;
+    }
 
-        if (Benutzer == null)
-        {
-            return NotFound();
-        }
+    public async Task<IActionResult> OnGet(int id)
+    {
+        meinUser = await userService.GetUserAsync(id);
+
+        TempData["UserID"] = meinUser.userId;
 
         return Page();
     }
@@ -48,6 +35,9 @@ public class BenutzerverwaltungBearbeitenModel : PageModel
         {
             return Page();
         }
+
+        meinUser.userId = Convert.ToInt32(TempData["UserID"]);
+        await userService.bearbeitenUserAsync(meinUser);
 
         return RedirectToPage("/Benutzerverwaltung");
     }

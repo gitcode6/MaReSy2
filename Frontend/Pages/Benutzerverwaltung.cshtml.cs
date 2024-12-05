@@ -31,6 +31,5 @@ namespace MaReSy2.Pages
             bool success = await userService.deleteUserAsync(id);
             return RedirectToPage();
         }
-
     }
 }
