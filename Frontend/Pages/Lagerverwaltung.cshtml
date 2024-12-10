@@ -71,11 +71,15 @@
                     <td>@e.productdescription</td>
                     <td>@(e.productactive ? "Aktiv" : "Inaktiv")</td>
                     <td>
-                        <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="@e.productId" asp-route-produktname="@e.productname" asp-route-produktbeschreibung="@e.productdescription" asp-route-produktbild="C:\Users\a.schmidt3\Documents\GitHub\MaReSy2\Frontend\wwwroot\images\Übungsmedikament1.png" asp-route-status="@(e.productactive ? "Aktiv" : "Inaktiv")" style="background-color: #403A60;border-color:#403A60;">Bearbeiten</a>
-                        <a class="btn btn-danger" asp-page="/Delete" asp-route-id="@e.productId" style="background-color: #B70E0C; border-color:#B70E0C;">Löschen</a>
-
-
-
+                        <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeiten" asp-route-id="@e.productId" style="background-color: #403A60;border-color:#403A60;">Bearbeiten</a>
+                        <form id="deleteForm-@e.productId"
+                              method="post"
+                              asp-route-id="@e.productId"
+                              asp-page-handler="Delete"
+                              style="display: none;">
+                            <button id="btn-deleteProduct-@e.productId" type="submit"></button>
+                        </form>
+                        <a class="btn btn-danger" style="background-color: #B70E0C; border-color:#B70E0C;" onclick="document.getElementById('btn-deleteProduct-@e.productId').click();">Löschen</a>
                     </td>
                 </tr>
             }

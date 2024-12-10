@@ -1,4 +1,4 @@
-﻿@page "{id:int}/{produktname}/{produktbeschreibung}/{produktbild}/{status}"
+﻿@page "{id:int}"
 @using Microsoft.AspNetCore.Authorization
 @model LagerverwaltungBearbeitenModel
 @attribute [Authorize(Policy = "AdminsOnly")]
@@ -51,24 +51,24 @@
     <h2 style="text-align: center;">PRODUKT Bearbeitung</h2>
 
     <form method="post">
-        <div class="form-group">
-            <input type="file" id="Produktbild" class="form-control" onchange="previewImage(event)" asp-for="Produkt.Produktbild" /> <!-- Bernd Stadlhofer: Image lässt sich nicht als Standard anzeigen -->
+        @*<div class="form-group">
+            <input type="file" id="Produktbild" class="form-control" onchange="previewImage(event)" asp-for="meinProduct." /> <!-- Bernd Stadlhofer: Image lässt sich nicht als Standard anzeigen -->
             <br>
             <img id="imagePreview" src="" alt="Bildvorschau" style="display:none; width:25%" />
-        </div>
+        </div>*@
         <div class="form-group">
             <label for="Produktname">Bezeichnung</label>
-            <input type="text" id="Produktname" class="form-control" asp-for="Produkt.Produktname" />
+            <input type="text" id="Produktname" class="form-control" asp-for="meinProduct.productname" />
         </div>
         <div class="form-group">
             <label for="Produktbeschreibung">Beschreibung</label>
-            <input type="text" id="Produktbeschreibung" class="form-control" asp-for="Produkt.Produktbeschreibung" />
+            <input type="text" id="Produktbeschreibung" class="form-control" asp-for="meinProduct.productdescription" />
         </div>
         <div class="form-group">
             <label for="Produktstatus">Status</label>
-            <select id="Produktstatus" class="form-control" asp-for="Produkt.Produktstatus">
-                <option value="Inaktiv">Inaktiv</option>
-                <option value="Aktiv">Aktiv</option>
+            <select id="Produktstatus" class="form-control" asp-for="meinProduct.productactive">
+                <option value="false">Inaktiv</option>
+                <option value="true">Aktiv</option>
             </select>
         </div>
 

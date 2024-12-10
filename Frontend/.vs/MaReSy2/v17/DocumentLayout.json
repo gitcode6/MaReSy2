@@ -1,126 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\pages\\benutzerverwaltungbearbeiten.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltungbearbeiten.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\pages\\benutzerverwaltungbearbeiten.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltungbearbeiten.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\consumemodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:consumemodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\pages\\benutzerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Benutzerverwaltung.cshtml",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Benutzerverwaltung.cshtml",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml",
-              "RelativeToolTip": "Pages\\Benutzerverwaltung.cshtml",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAADwAAAB2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T13:32:36.703Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "36b1b571-81d8-41f5-a0d8-c951e41c0136",
-        "Display": 0,
-        "X": 644,
-        "Y": -49,
-        "Width": 1932,
-        "Height": 1043,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAwwE4AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T13:32:48.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\ConsumeModels\\User.cs",
-              "RelativeDocumentMoniker": "ConsumeModels\\User.cs",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\ConsumeModels\\User.cs",
-              "RelativeToolTip": "ConsumeModels\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T13:55:04.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BenutzerverwaltungBearbeiten.cshtml",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "RelativeToolTip": "Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T14:02:54.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BenutzerverwaltungBearbeiten.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "RelativeToolTip": "Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAYwCYAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T14:04:37.747Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

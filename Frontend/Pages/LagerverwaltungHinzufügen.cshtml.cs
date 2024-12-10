@@ -55,33 +55,19 @@ public class LagerverwaltungHinzufügenModel : PageModel
 
     public async Task<IActionResult> OnPostAsync()
     {
-        //System.Diagnostics.Debug.WriteLine("Produktname: " + Produkt.Produktname);
-        //System.Diagnostics.Debug.WriteLine("Produktbeschreibung: " + Produkt.Produktbeschreibung);
-        //System.Diagnostics.Debug.WriteLine("Produktmenge: " + Produkt.Produktmenge);
-        //System.Diagnostics.Debug.WriteLine("Produktstatus: " + Produkt.Produktstatus);
-
-
         if (!ModelState.IsValid)
         {
-            /*var errors = ModelState.Values.SelectMany(x => x.Errors);
-
-            foreach(var error in errors)
-            {
-                System.Diagnostics.Debug.WriteLine(error.ErrorMessage);
-            }*/
             return Page();
         }
 
         var produktname = Request.Form["produktname"];
         var produktbezeichnung = Request.Form["produktbeschreibung"];
-        var produktmenge = Request.Form["produktmenge"];
         var produktstatus = Request.Form["produktstatus"];
 
 
         //Schreibe alle parameter vom Form in den Debugger
         System.Diagnostics.Debug.WriteLine(produktname);
         System.Diagnostics.Debug.WriteLine(produktbezeichnung);
-        System.Diagnostics.Debug.WriteLine(produktmenge);
         System.Diagnostics.Debug.WriteLine(produktstatus);
 
 

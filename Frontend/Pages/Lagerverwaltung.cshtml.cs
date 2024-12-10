@@ -20,5 +20,11 @@ namespace MaReSy2.Pages
         {
             products = await _productService.GetProductsAsync();
         }
+
+        public async Task<IActionResult> OnPostDelete(int id)
+        {
+            bool success = await _productService.deleteProductAsync(id);
+            return RedirectToPage();
+        }
     }
 }
