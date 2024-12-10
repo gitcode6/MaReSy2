@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Dashboard";
 }
-
+@attribute [Authorize(Policy = "LoggedIn")]
 <!DOCTYPE html>
 <html lang="en">
 <head>

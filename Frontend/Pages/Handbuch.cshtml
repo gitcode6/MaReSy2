@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.HandbuchModel
 @{
     ViewData["Title"] = "Handbuch";
 }
-
+@attribute [Authorize(Policy = "LoggedIn")]
 
 <style>
     .sonstiges_sonstiges {

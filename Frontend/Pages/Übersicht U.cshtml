@@ -1,8 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model Übersicht_UModel
 @{
     ViewData["Title"] = "Übersicht U";
 }
+@attribute [Authorize(Policy = "LoggedIn")]
 
 <style>
     .verwaltung_materialreservierung {

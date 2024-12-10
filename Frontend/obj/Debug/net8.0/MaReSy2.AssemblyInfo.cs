@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MaReSy2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dacb4a520d7183d7592cdbaa8753a76f87315f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5321017b81f6b525c8c2d5c7affc3ca45b96e232")]
 [assembly: System.Reflection.AssemblyProductAttribute("MaReSy2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MaReSy2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
