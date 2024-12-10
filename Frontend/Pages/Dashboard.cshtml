@@ -33,33 +33,35 @@
         <h1 style="color: white; font-size:50px;">Dashboard</h1>
     </div>
     <br />
-    <div class="dashboard_allgemein">
-    <h2 style="font-size:32px;" ;>Admin-Tools</h2>
-    <div class="images_dashboard">
-        <a href="/Benutzerverwaltung">
-            <img src="~/images/verwaltung_benutzer.jpg" alt="Login Image" width="180" height="auto" />
-        </a>
-    </div>
-    <div class="images_dashboard">
-        <a href="/Lagerverwaltung">
-            <img src="~/images/verwaltung_lager.jpg" alt="Login Image" width="180" height="auto" />
-        </a>
-    </div>
-    <div class="images_dashboard">
-        <a href="/Übersicht A">
-            <img src="~/images/verwaltung_materialreservierung.jpg" alt="Login Image" width="180" height="auto" />
-        </a>
-    </div>
-    <div class="images_dashboard">
-        <a href="/auszüge">
-            <img src="~/images/verwaltung_auszuege.jpg" alt="Login Image" width="180" height="auto" />
-        </a>
-    </div>
-    
-    <div style="clear: both;"></div>
-    </div>
-    <br />
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="dashboard_allgemein">
+            <h2 style="font-size:32px;" ;>Admin-Tools</h2>
+            <div class="images_dashboard">
+                <a href="/Benutzerverwaltung">
+                    <img src="~/images/verwaltung_benutzer.jpg" alt="Login Image" width="180" height="auto" />
+                </a>
+            </div>
+            <div class="images_dashboard">
+                <a href="/Lagerverwaltung">
+                    <img src="~/images/verwaltung_lager.jpg" alt="Login Image" width="180" height="auto" />
+                </a>
+            </div>
+            <div class="images_dashboard">
+                <a href="/Übersicht A">
+                    <img src="~/images/verwaltung_materialreservierung.jpg" alt="Login Image" width="180" height="auto" />
+                </a>
+            </div>
+            <div class="images_dashboard">
+                <a href="/auszüge">
+                    <img src="~/images/verwaltung_auszuege.jpg" alt="Login Image" width="180" height="auto" />
+                </a>
+            </div>
 
+            <div style="clear: both;"></div>
+        </div>
+        <br />
+    }
     <div class="dashboard_allgemein">
         <h2 style="font-size:32px;" ;>User-Tools</h2>
     <div class="images_dashboard">
