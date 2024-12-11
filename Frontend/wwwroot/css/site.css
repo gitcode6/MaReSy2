@@ -30,12 +30,12 @@ body {
 
 /*Für Schriftart, keine Ahnung*/
 @font-face {
-    font-family: 'MyCustomFont';
+    font-family: 'Dunant';
     src: url('../lib/fonts/Dunant-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'MyCustomFont', Arial, sans-serif;
+    font-family: 'Dunant', Arial, sans-serif;
 }
