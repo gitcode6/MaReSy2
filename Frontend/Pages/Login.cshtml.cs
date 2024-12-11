@@ -14,6 +14,21 @@ public class LoginModel : PageModel
 	[BindProperty]
 	public string Passwort { get; set; }
 
+    public async Task<IActionResult> OnGet()
+    {
+        var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, "gast"),
+                new Claim(ClaimTypes.Role, "Gast")
+            };
+
+        var identity = new ClaimsIdentity(claims, "AuthType");
+        var principal = new ClaimsPrincipal(identity);
+        await HttpContext.SignInAsync(principal);
+
+        return Page();
+    }
+
 	public async Task<IActionResult> OnPostAsync()
 	{
 		// Überprüfen der Anmeldeinformationen (dies ist nur ein Beispiel)
@@ -36,7 +51,7 @@ public class LoginModel : PageModel
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, "user"),
-                new Claim(ClaimTypes.Role, "User")
+                new Claim(ClaimTypes.Role, "User2")
             };
 
             var identity = new ClaimsIdentity(claims, "AuthType");
@@ -45,16 +60,31 @@ public class LoginModel : PageModel
 
             return RedirectToPage("/Dashboard");
         }
+        else if (Benutzername == "gast" && Passwort == "password")
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, "gast"),
+                new Claim(ClaimTypes.Role, "Gast")
+            };
+
+            var identity = new ClaimsIdentity(claims, "AuthType");
+            var principal = new ClaimsPrincipal(identity);
+            await HttpContext.SignInAsync(principal);
+
+            return RedirectToPage("/Login");
+        }
         else
 		{
 			if(Benutzername == "")
 			{
 				ModelState.AddModelError(string.Empty, "Benutzername leer");
-			}
+                
+            }
 			if (Passwort == "")
 			{
 				ModelState.AddModelError(string.Empty, "Passwort leer");
-			}
+            }
 		}
 
 		

@@ -1,44 +1,29 @@
+using MaReSy2.ConsumeModels;
+using MaReSy2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Threading.Tasks;
 
 public class LagerverwaltungBearbeitenModel : PageModel
 {
-    // Produktinfos
-    public class ProduktModel
-    {
-        public int ProduktID { get; set; }
-        public string Produktname { get; set; }
-        public string Produktbeschreibung { get; set; }
-        public string Produktbild { get; set; }
-        public string Produktstatus { get; set; }
-    }
+    private readonly ProductService productService;
 
     [BindProperty]
-    public ProduktModel Produkt { get; set; }
+    public Product meinProduct { get; set; }
 
-
-    public IActionResult OnGet(int id, string produktname, string produktbeschreibung, string produktbild, string status)
+    public LagerverwaltungBearbeitenModel(ProductService productService)
     {
+        this.productService = productService;
+    }
 
-        // Beispielprodukt
-        Produkt = new ProduktModel
-        {
-            ProduktID = id,
-            Produktname = produktname,
-            Produktbeschreibung = produktbeschreibung,
-            Produktbild = produktbild,
-            Produktstatus = status,
-        };
+    public async Task<IActionResult> OnGet(int id)
+    {
+        meinProduct = await productService.GetProductAsync(id);
 
-        if (Produkt == null)
-        {
-            return NotFound();
-        }
+        TempData["ProductID"] = meinProduct.productId;
 
         return Page();
     }
-
     
     public async Task<IActionResult> OnPostAsync()
     {
@@ -46,6 +31,9 @@ public class LagerverwaltungBearbeitenModel : PageModel
         {
             return Page();
         }
+
+        meinProduct.productId = Convert.ToInt32(TempData["ProductID"]);
+        await productService.bearbeitenProductAsync(meinProduct);
 
         return RedirectToPage("/Lagerverwaltung");
     }

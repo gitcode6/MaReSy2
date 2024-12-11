@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model MaterialreservierungModel
 @{
     ViewData["Title"] = "Materialreservierung";
 }
-
+@attribute [Authorize(Policy = "LoggedIn")]
 <!DOCTYPE html>
 <html lang="de">
 <head>

@@ -1,11 +1,12 @@
 using MaReSy2.Services;
+using Microsoft.AspNetCore.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Services hinzufügen
 builder.Services.AddRazorPages(options =>
 {
-    //options.Conventions.AuthorizeFolder("/"); // Schützt alle Seiten
+    options.Conventions.AuthorizeFolder("/"); // Schützt alle Seiten
     //options.Conventions.AllowAnonymousToPage("/Login"); // Login explizit freigeben
 });
 
@@ -18,6 +19,7 @@ builder.Services.AddAuthentication("MyCookieAuth")
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminsOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("LoggedIn", policy => policy.RequireRole("Admin", "User2"));
 });
 
 builder.Services.AddHttpClient("API", client => { client.BaseAddress = new Uri("https://localhost:7162/api"); });

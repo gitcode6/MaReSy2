@@ -1,9 +1,10 @@
 ﻿@page
+@using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.informationModel
 @{
     ViewData["Title"] = "Einstellungen";
 }
-
+@attribute [Authorize(Policy = "LoggedIn")]
 <style>
     .sonstiges_sonstiges {
         background-color: #403A60;

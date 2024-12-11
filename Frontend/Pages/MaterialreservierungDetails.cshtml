@@ -1,8 +1,11 @@
 ﻿@page "{id}"
+@using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.MaterialreservierungDetailsModel
 @{
     ViewData["Title"] = "Materialdetails";
 }
+@attribute [Authorize(Policy = "LoggedIn")]
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
