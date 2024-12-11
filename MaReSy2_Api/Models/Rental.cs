@@ -9,9 +9,7 @@ public partial class Rental
 
     public int UserId { get; set; }
 
-    public int SingleProductId { get; set; }
-
-    public int RentalAmount { get; set; }
+    public int? SetId { get; set; }
 
     public DateTime RentalStart { get; set; }
 
@@ -49,9 +47,11 @@ public partial class Rental
 
     public virtual User? RentalZurückgabeUserNavigation { get; set; }
 
-    public virtual SingleProduct SingleProduct { get; set; } = null!;
+    public virtual Set? Set { get; set; }
 
     public virtual Status StatusNavigation { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
+
+    public virtual ICollection<SingleProduct> SingleProducts { get; set; } = new List<SingleProduct>();
 }

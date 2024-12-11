@@ -32,6 +32,8 @@ namespace MaReSy2_Api
 
             builder.Services.AddScoped<ISetService, SetService>();
 
+            builder.Services.AddScoped<IRentalService, RentalService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

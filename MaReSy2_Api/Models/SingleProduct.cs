@@ -17,5 +17,5 @@ public partial class SingleProduct
 
     public virtual Product Product { get; set; } = null!;
 
-    public virtual ICollection<Rental> Rentals { get; set; } = new List<Rental>();
+    public virtual ICollection<Rental> Res { get; set; } = new List<Rental>();
 }

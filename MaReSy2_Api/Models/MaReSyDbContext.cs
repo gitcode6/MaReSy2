@@ -34,7 +34,7 @@ public partial class MaReSyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Datenbank\\database_maresy2\\database1_maresy2.mdf\"; Integrated Security=True;Connect Timeout=30;Encrypt=True");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\tobias.lehner\\source\\repos\\MaReSy2\\Datenbank\\database_maresy2\\database1_maresy2.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -42,7 +42,6 @@ public partial class MaReSyDbContext : DbContext
 v => v ? 1 : 0,
 v => v == 1
 );
-
 
 
         modelBuilder.Entity<Product>(entity =>
@@ -88,7 +87,7 @@ v => v == 1
 
         modelBuilder.Entity<Rental>(entity =>
         {
-            entity.HasKey(e => e.RentalId).HasName("PK__tmp_ms_x__016470CED75488D3");
+            entity.HasKey(e => e.RentalId).HasName("PK__tmp_ms_x__016470CE8C354C47");
 
             entity.ToTable("rentals");
 
@@ -97,7 +96,6 @@ v => v == 1
                 .HasColumnType("datetime")
                 .HasColumnName("rentalAblehnung");
             entity.Property(e => e.RentalAblehnungUser).HasColumnName("rentalAblehnungUser");
-            entity.Property(e => e.RentalAmount).HasColumnName("rentalAmount");
             entity.Property(e => e.RentalAnforderung)
                 .HasColumnType("datetime")
                 .HasColumnName("rentalAnforderung");
@@ -125,40 +123,58 @@ v => v == 1
                 .HasColumnType("datetime")
                 .HasColumnName("rentalZurückgabe");
             entity.Property(e => e.RentalZurückgabeUser).HasColumnName("rentalZurückgabeUser");
-            entity.Property(e => e.SingleProductId).HasColumnName("singleProductID");
+            entity.Property(e => e.SetId).HasColumnName("setId");
             entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.UserId).HasColumnName("userID");
 
             entity.HasOne(d => d.RentalAblehnungUserNavigation).WithMany(p => p.RentalRentalAblehnungUserNavigations)
                 .HasForeignKey(d => d.RentalAblehnungUser)
-                .HasConstraintName("FK__rentals__rentalA__70DDC3D8");
+                .HasConstraintName("FK__rentals__rentalA__3F115E1A");
 
             entity.HasOne(d => d.RentalAuslieferungUserNavigation).WithMany(p => p.RentalRentalAuslieferungUserNavigations)
                 .HasForeignKey(d => d.RentalAuslieferungUser)
-                .HasConstraintName("FK__rentals__rentalA__71D1E811");
+                .HasConstraintName("FK__rentals__rentalA__40058253");
 
             entity.HasOne(d => d.RentalFreigabeUserNavigation).WithMany(p => p.RentalRentalFreigabeUserNavigations)
                 .HasForeignKey(d => d.RentalFreigabeUser)
-                .HasConstraintName("FK__rentals__rentalF__6FE99F9F");
+                .HasConstraintName("FK__rentals__rentalF__3E1D39E1");
 
             entity.HasOne(d => d.RentalZurückgabeUserNavigation).WithMany(p => p.RentalRentalZurückgabeUserNavigations)
                 .HasForeignKey(d => d.RentalZurückgabeUser)
-                .HasConstraintName("FK__rentals__rentalZ__72C60C4A");
+                .HasConstraintName("FK__rentals__rentalZ__40F9A68C");
 
-            entity.HasOne(d => d.SingleProduct).WithMany(p => p.Rentals)
-                .HasForeignKey(d => d.SingleProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__rentals__singleP__14270015");
+            entity.HasOne(d => d.Set).WithMany(p => p.Rentals)
+                .HasForeignKey(d => d.SetId)
+                .HasConstraintName("FK__rentals__setId__42E1EEFE");
 
             entity.HasOne(d => d.StatusNavigation).WithMany(p => p.Rentals)
                 .HasForeignKey(d => d.Status)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__rentals__status__73BA3083");
+                .HasConstraintName("FK__rentals__status__41EDCAC5");
 
             entity.HasOne(d => d.User).WithMany(p => p.RentalUsers)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__rentals__userID__6EF57B66");
+                .HasConstraintName("FK__rentals__userID__3D2915A8");
+
+            entity.HasMany(d => d.SingleProducts).WithMany(p => p.Res)
+                .UsingEntity<Dictionary<string, object>>(
+                    "RentalDetail",
+                    r => r.HasOne<SingleProduct>().WithMany()
+                        .HasForeignKey("SingleProductId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__rentalDet__Singl__2DE6D218"),
+                    l => l.HasOne<Rental>().WithMany()
+                        .HasForeignKey("ResId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__rentalDet__ResID__3C34F16F"),
+                    j =>
+                    {
+                        j.HasKey("ResId", "SingleProductId");
+                        j.ToTable("rentalDetail");
+                        j.IndexerProperty<int>("ResId").HasColumnName("ResID");
+                        j.IndexerProperty<int>("SingleProductId").HasColumnName("SingleProductID");
+                    });
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -182,8 +198,7 @@ v => v == 1
             entity.ToTable("sets");
 
             entity.Property(e => e.SetId).HasColumnName("setID");
-            entity.Property(e => e.Setactive).HasColumnName("setactive")
-            .HasConversion(intToBoolConvert);
+            entity.Property(e => e.Setactive).HasColumnName("setactive").HasConversion(intToBoolConvert);
             entity.Property(e => e.Setdescription)
                 .HasMaxLength(200)
                 .IsUnicode(false)
