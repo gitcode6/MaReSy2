@@ -19,9 +19,6 @@ namespace MaReSy2_Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Configuration.AddJsonFile("appsettings.json");
-
-
             builder.Services.AddDbContext<MaReSyDbContext>();
 
             builder.Services.AddScoped<IUserManagementService, UserManagementService>();
