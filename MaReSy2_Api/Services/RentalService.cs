@@ -1,5 +1,6 @@
 ﻿using MaReSy2_Api.Models.DTO.RentalDTO;
 using MaReSy2_Api.Models.DTO.SingleProductDTO;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
@@ -13,7 +14,20 @@ namespace MaReSy2_Api.Services
             _context = context;
         }
 
+        public Task<List<IdentityResult>> AddNewRentalAsync(CreateRentalDTO rental)
+        {
+            List<IdentityResult> errors = new List<IdentityResult>();
 
+            //setId != null und setId mit 0 ignorieren
+
+            //productId != null und productAmount mit 0 ignorieren
+
+            //productamount != null und productAmount mit 0 --> fehler
+
+            //product erst wenn setId == null
+
+            return null;
+        }
 
         public async Task<IEnumerable<RentalDTO>> GetAllRentalsAsync()
         {
