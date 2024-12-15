@@ -9,6 +9,9 @@
         public int? productId { get; set; }
         public int? productAmount { get; set; }
 
+        public DateOnly fromDate { get; set; } = DateOnly.MaxValue;
+        public DateOnly endDate { get; set; } = DateOnly.MaxValue;
+
         //rental for user
         public int userId { get; set; }
 

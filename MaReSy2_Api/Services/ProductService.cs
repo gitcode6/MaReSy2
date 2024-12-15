@@ -1,4 +1,7 @@
-﻿using MaReSy2_Api.Models.DTO.ProductDTO;
+﻿using System.ComponentModel;
+using MaReSy2_Api.Models;
+using MaReSy2_Api.Models.DTO.ProductDTO;
+using MaReSy2_Api.Models.DTO.RentalDTO;
 using MaReSy2_Api.Models.DTO.UserDTO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -198,5 +201,25 @@ namespace MaReSy2_Api.Services
 
 
         }
+
+
+        public async Task<List<ProductWithAmount>> GetProductsForSet(int setId)
+        {
+                        return await _context.ProductsSets
+            .Where(ps => ps.SetId == setId)
+            .Select(ps => new ProductWithAmount
+            {
+                product = ps.Product,
+                productAmount = ps.SingleProductAmount
+            })
+            .ToListAsync();
+        }
+        //TODO: zu Interface hinzufügen
+        public bool SetContainsInactiveProduct(List<ProductWithAmount> products)
+        {
+            return products.Any(product => product.product.ProductActive == false);
+        }
+
+
     }
 }

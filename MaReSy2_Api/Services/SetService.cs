@@ -118,13 +118,13 @@ namespace MaReSy2_Api.Services
                 Setdescription = set_fromDb.Setdescription,
                 Setactive = set_fromDb.Setactive,
                 ProductimageLink = null,
-                Products = setfromDb!.ProductsSets.Select(ps=> new AssignedProductDTO
+                Products = setfromDb!.ProductsSets.Select(ps => new AssignedProductDTO
                 {
                     ProductId = ps.ProductId,
                     Productname = ps.Product.Productname,
                     Productdescription = ps.Product.Productdescription ?? null,
                     Productamount = ps.SingleProductAmount,
-                    
+
                 }).ToList(),
             };
 
@@ -237,8 +237,8 @@ namespace MaReSy2_Api.Services
 
             errors.Add(IdentityResult.Success);
             return errors;
-
-
         }
+
+      
     }
 }

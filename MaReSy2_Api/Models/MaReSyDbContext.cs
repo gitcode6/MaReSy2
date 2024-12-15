@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MaReSy2_Api.Models;
 
 public partial class MaReSyDbContext : DbContext
 {
+    //TODO: Change the int to bool and add the conversion
+
+
     public MaReSyDbContext()
     {
     }
@@ -32,28 +36,36 @@ public partial class MaReSyDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:TobiasLeih");
+        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:Tobias");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        var intToBoolConvert = new ValueConverter<bool, int>(
+            v => v ? 1 : 0,
+            v => v == 1
+        );
+
+
         modelBuilder.Entity<Product>(entity =>
-        {
-            entity.HasKey(e => e.ProductId).HasName("PK__products__2D10D14A0E64F62F");
+             {
+                 entity.HasKey(e => e.ProductId).HasName("PK__products__2D10D14A0E64F62F");
 
-            entity.ToTable("products");
+                 entity.ToTable("products");
 
-            entity.Property(e => e.ProductId).HasColumnName("productID");
-            entity.Property(e => e.ProductActive).HasColumnName("productActive");
-            entity.Property(e => e.Productdescription)
-                .HasMaxLength(200)
-                .HasColumnName("productdescription");
-            entity.Property(e => e.Productimage)
-                .HasColumnType("image")
-                .HasColumnName("productimage");
-            entity.Property(e => e.Productname)
-                .HasMaxLength(50)
-                .HasColumnName("productname");
-        });
+                 entity.Property(e => e.ProductId).HasColumnName("productID");
+                 entity.Property(e => e.ProductActive)
+                     .HasColumnName("productActive")
+                     .HasConversion(intToBoolConvert);
+                 entity.Property(e => e.Productdescription)
+                     .HasMaxLength(200)
+                     .HasColumnName("productdescription");
+                 entity.Property(e => e.Productimage)
+                     .HasColumnType("image")
+                     .HasColumnName("productimage");
+                 entity.Property(e => e.Productname)
+                     .HasMaxLength(50)
+                     .HasColumnName("productname");
+             });
 
         modelBuilder.Entity<ProductsSet>(entity =>
         {
@@ -190,7 +202,9 @@ public partial class MaReSyDbContext : DbContext
             entity.ToTable("sets");
 
             entity.Property(e => e.SetId).HasColumnName("setID");
-            entity.Property(e => e.Setactive).HasColumnName("setactive");
+            entity.Property(e => e.Setactive)
+                .HasColumnName("setactive")
+                .HasConversion(intToBoolConvert);
             entity.Property(e => e.Setdescription)
                 .HasMaxLength(200)
                 .IsUnicode(false)
@@ -212,7 +226,9 @@ public partial class MaReSyDbContext : DbContext
 
             entity.Property(e => e.SingleProductId).HasColumnName("singleProductID");
             entity.Property(e => e.ProductId).HasColumnName("productID");
-            entity.Property(e => e.SingleProductActive).HasColumnName("singleProductActive");
+            entity.Property(e => e.SingleProductActive)
+                .HasColumnName("singleProductActive")
+                .HasConversion(intToBoolConvert);
             entity.Property(e => e.SingleProductName)
                 .HasMaxLength(50)
                 .HasColumnName("singleProductName");

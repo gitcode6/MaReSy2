@@ -1,4 +1,5 @@
 ﻿using MaReSy2_Api.Models.DTO.ProductDTO;
+using MaReSy2_Api.Models.DTO.RentalDTO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
@@ -18,6 +19,8 @@ namespace MaReSy2_Api.Services
         Task<List<IdentityResult>> updateProduct(int id, UpdateProductDTO product);
 
         Task<IdentityResult> deleteProductAsync(int productId);
+
+        Task<List<ProductWithAmount>> GetProductsForSet(int setId);
 
 
     }

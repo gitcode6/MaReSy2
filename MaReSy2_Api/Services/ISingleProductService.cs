@@ -19,7 +19,12 @@ namespace MaReSy2_Api.Services
         Task<List<IdentityResult>> updateSingleProduct(int productId, UpdateSingleProductDTO product);
 
         Task<IdentityResult> deleteSingleProductAsync(int productId);
-        
+
+       Task<List<SingleProduct>> GetRentedSingleproducts(int productId);
+
+        Task<List<SingleProduct>> GetSingleproductsForProduct(int productId);
+
+        Task<List<SingleProduct>> GetRentableSingleproducts(int productId);
 
         //Task<ProductDTO?> GetProductByIdAsync(int productId);
 

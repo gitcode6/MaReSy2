@@ -206,5 +206,55 @@ namespace MaReSy2_Api.Services
             errors.Add(IdentityResult.Success);
             return errors;
         }
+
+        public async Task<List<SingleProduct>> GetSingleproductsForProduct(int productId)
+        {
+            return await _context.SingleProducts
+            .Where(singleProduct => singleProduct.ProductId == productId).ToListAsync();
+        }
+
+        public async Task<List<SingleProduct>> GetRentedSingleproducts(int productId)
+        {
+            return await _context.Rentals
+                            .Include(rentals => rentals.SingleProducts)
+                            .Where(rental =>
+                            rental.SingleProducts.Any(sp => sp.ProductId == productId
+                            && rental.Status != 3
+                            && rental.Status != 5
+                            && rental.Status != 6
+                            ))
+                            .SelectMany(rental => rental.SingleProducts)
+                            .ToListAsync();
+                          
+        }
+
+        public async Task<List<SingleProduct>> GetRentableSingleproducts(int productId)
+        {
+            var singleProducts = await GetSingleproductsForProduct (productId);
+
+            var rentedSingleProducts = await GetRentedSingleproducts(productId);
+
+            var inactiveSingleProducts = singleProducts.Where(sp => sp.SingleProductActive == false).ToList();
+
+
+            if (rentedSingleProducts.Any())
+            {
+                foreach (var sp in rentedSingleProducts)
+                {
+                    singleProducts.Remove(sp);
+                }
+            }
+
+            if (inactiveSingleProducts.Any())
+            {
+                foreach (var sp in inactiveSingleProducts)
+                {
+                    singleProducts.Remove(sp);
+                }
+            }
+
+            return singleProducts;
+             
+        }
     }
 }
