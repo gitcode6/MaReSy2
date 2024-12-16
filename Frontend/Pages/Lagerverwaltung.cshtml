@@ -84,18 +84,28 @@
                 </tr>
             }
 
-            <!--HIER KOMMT ZWEITER FOREACH REIN-->
-            <tr style="vertical-align: middle;">
-                <td>S 1</td>
-                <td>BewerbsSet</td>
-                <td>Dies ist die optimale Konfiguration für den Bewerb.</td>
-                <td>Aktiv</td>
+            @foreach (var x in Model.sets)
+            {
+                <tr style="vertical-align: middle;">
+                <td>S @x.setId</td>
+                <td>@x.setname</td>
+                <td>@x.setdescription</td>
+                <td>@(x.setactive ? "Aktiv" : "Inaktiv")</td>
                 <td>
                     <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
                     <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeitenSET" asp-route-id="S 1" asp-route-setname="BewerbSset" asp-route-setbeschreibung="Dies ist die optimale Konfiguration für den Bewerb." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-setmenge="3" asp-route-setstatus="Aktiv" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="S 1" style="background-color: #B70E0C; border-color:#B70E0C;">Löschen</a>
+                        <form id="deleteForm-@x.setId"
+                              method="post"
+                              asp-route-id="@x.setId"
+                              asp-page-handler="DeleteSET"
+                              style="display: none;">
+                            <button id="btn-deleteSET-@x.setId" type="submit"></button>
+                        </form>
+                    <a class="btn btn-danger" style="background-color: #B70E0C; border-color:#B70E0C;" onclick="document.getElementById('btn-deleteSET-@x.setId').click();">Löschen</a>
                 </td>
             </tr>
+            }
+            <!--HIER KOMMT ZWEITER FOREACH REIN-->
         </tbody>
     </table>
 </div>
