@@ -2,88 +2,98 @@
 @using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.LagerverwaltungEPHinzuModel
 @{
-    ViewData["Title"] = "Einzelprodukt hinzufügen";
+	ViewData["Title"] = "Einzelprodukt hinzufügen";
 }
 @attribute [Authorize(Policy = "AdminsOnly")]
 <style>
-    .lagerverwaltung_lagerverwaltung {
-        background-color: #403A60;
-        padding-top: 10px;
-        padding-bottom: 1px;
-        text-align: center;
-        font-family: Dunant;
-    }
+	.lagerverwaltung_lagerverwaltung {
+		background-color: #403A60;
+		padding-top: 10px;
+		padding-bottom: 1px;
+		text-align: center;
+		font-family: Dunant;
+	}
 
-    .table_detail {
-        padding: 2%;
-        width: 100%;
-        font-family: Dunant;
-    }
+	.table_detail {
+		padding: 2%;
+		width: 100%;
+		font-family: Dunant;
+	}
 
-    .form-group {
-        margin: 20px;
-    }
+	.form-group {
+		margin: 20px;
+	}
 
-    .btnSpeichern {
-        color: white;
-        background-color: #B70E0C;
-    }
+	.btnSpeichern {
+		color: white;
+		background-color: #B70E0C;
+	}
 
-    .lagerverwaltung_hinzufügen {
-        background-color: #99D6EA;
-        padding: 20px;
-        font-family: Dunant;
-    }
+	.lagerverwaltung_hinzufügen {
+		background-color: #99D6EA;
+		padding: 20px;
+		font-family: Dunant;
+	}
 </style>
 
 
 <div class="lagerverwaltung_lagerverwaltung">
-    <h1 style="color: white; font-size:50px;">Lager-Verwaltung</h1>
+	<h1 style="color: white; font-size:50px;">Lager-Verwaltung</h1>
 </div>
 <br />
 <div class="lagerverwaltung_hinzufügen">
-    <h2 style="text-align: center;">EINZELPRODUKT Hinzufügung</h2>
-    <form method="post">
-        <div class="form-group">
-            <label for="Produktname">Einzelproduktname</label>
-            <input type="text" name = "produktname" id="Produktname" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label for="Produktname">Seriennummer</label>
-            <input type="text" name="produktname" id="Produktname" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label for="EPKategorie">Kategorie</label>
-            <select name="epkategorie" id="epkategorie" class="form-control">
-                <option name="aktiv" value="true" selected>AUS PRODUKT TABELLE</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Produktstatus">Status</label>
-            <select name="produktstatus" id="produktstatus" class="form-control" >
-                <option name="aktiv" value="true" selected>Aktiv</option>
-                <option name="inaktiv" value="false">Inaktiv</option>
-            </select>
-        </div>
+	<h2 style="text-align: center;">EINZELPRODUKT Hinzufügung</h2>
+	<form method="post">
+		<div class="form-group">
+			<label for="Produktname">Einzelproduktname</label>
+			<input type="text" id="Produktname" class="form-control" asp-for="singleproduct.singleProductName" />
+		</div>
+		<div class="form-group">
+			<label for="Produktname">Seriennummer</label>
+			<input type="text" id="Produktname" class="form-control" asp-for="singleproduct.singleProductSerialNumber" />
+		</div>
+		<div class="form-group">
+			<label for="EPKategorie">Kategorie</label>
+			<select id="epkategorie" class="form-control" asp-for="singleproduct.productId">
+                @* <option name="aktiv" value="true" selected>AUS PRODUKT TABELLE</option> *@
+				@if (Model.products != null && Model.products.Any())
+				{
+					@foreach (var product in Model.products)
+					{
+						<option name="@product.productId" value="@product.productId">@product.productname</option>
+					}
+				}
+				else{
+					<option disabled>Keine Produkte verfügbar</option>
+				}
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="Produktstatus">Status</label>
+			<select id="produktstatus" class="form-control" asp-for="singleproduct.singleProductActive">
+				<option name="aktiv" value="true" selected>Aktiv</option>
+				<option name="inaktiv" value="false">Inaktiv</option>
+			</select>
+		</div>
 
-        <button type="submit" class="btn btnSpeichern" style="background-color: #403A60;">Speichern</button>
-        <a asp-page="/LagerverwaltungEP" class="btn btn-secondary" style="background-color: #B70E0C;">Abbrechen</a>
-    </form>
-</<div>
+		<button type="submit" class="btn btnSpeichern" style="background-color: #403A60;">Speichern</button>
+		<a asp-page="/LagerverwaltungEP" class="btn btn-secondary" style="background-color: #B70E0C;">Abbrechen</a>
+	</form>
+	</<div>
 
-<script>
-            function previewImage(event) {
-                const file = event.target.files[0]; // Die ausgewählte Datei
-                const reader = new FileReader();
+		<script>
+			function previewImage(event) {
+				const file = event.target.files[0]; // Die ausgewählte Datei
+				const reader = new FileReader();
 
-                reader.onload = function () {
-                    const imagePreview = document.getElementById('imagePreview');
-                    imagePreview.src = reader.result; // Setze die Quelle des Bildes auf das gelesene Ergebnis
-                    imagePreview.style.display = 'block'; // Zeige das Bild an
-                }
+				reader.onload = function () {
+					const imagePreview = document.getElementById('imagePreview');
+					imagePreview.src = reader.result; // Setze die Quelle des Bildes auf das gelesene Ergebnis
+					imagePreview.style.display = 'block'; // Zeige das Bild an
+				}
 
-                if (file) {
-                    reader.readAsDataURL(file); // Lese die Datei als Data-URL
-                }
-            }
-</script>
+				if (file) {
+					reader.readAsDataURL(file); // Lese die Datei als Data-URL
+				}
+			}
+		</script>

@@ -33,7 +33,7 @@ namespace MaReSy2.Services
 
         }
 
-        public async Task<bool> addSingleProductAsync(SingleProduct singleProduct)
+        public async Task<bool> addSingleProductAsync(CreateSingleProductModel singleProduct)
         {
             var client = _httpClientFactory.CreateClient("API");
 

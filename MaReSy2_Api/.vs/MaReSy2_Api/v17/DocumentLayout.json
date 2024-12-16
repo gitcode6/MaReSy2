@@ -91,7 +91,7 @@
               "RelativeDocumentMoniker": "Services\\ProductService.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ProductService.cs",
               "RelativeToolTip": "Services\\ProductService.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAywNwAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAYwFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T15:55:40.63Z",
               "EditorCaption": ""
@@ -106,8 +106,7 @@
               "RelativeToolTip": "Services\\IProductService.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAYwBYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:55:26.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:55:26.621Z"
             },
             {
               "$type": "Document",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "Models\\ProductsSet.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:34:10.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:34:10.851Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "Models\\Rental.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAowA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:34:06.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:34:06.596Z"
             },
             {
               "$type": "Document",
@@ -145,8 +142,7 @@
               "RelativeToolTip": "Services\\RentalService.cs",
               "ViewState": "AgIAAJ0AAAAAAAAAAADwv6QAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:40:03.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T13:40:03.262Z"
             },
             {
               "$type": "Document",
@@ -158,8 +154,7 @@
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:34:16.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:34:16.49Z"
             },
             {
               "$type": "Document",
@@ -171,8 +166,7 @@
               "RelativeToolTip": "Models\\Set.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA1wA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:41.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:41.491Z"
             },
             {
               "$type": "Document",
@@ -184,8 +178,7 @@
               "RelativeToolTip": "Models\\DTO\\RentalDTO\\CreateRentalDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:42:44.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:42:44.029Z"
             },
             {
               "$type": "Document",
@@ -197,8 +190,7 @@
               "RelativeToolTip": "Controllers\\RentalController.cs",
               "ViewState": "AgIAAKYAAAAAAAAAAAAwwMQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:49:54.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:49:54.72Z"
             },
             {
               "$type": "Document",
@@ -210,8 +202,7 @@
               "RelativeToolTip": "Services\\IRentalService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:59:33.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:59:33.051Z"
             },
             {
               "$type": "Document",
@@ -223,8 +214,7 @@
               "RelativeToolTip": "Services\\SetService.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAUwDkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:45:34.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:45:34.669Z"
             },
             {
               "$type": "Document",
@@ -236,8 +226,7 @@
               "RelativeToolTip": "Models\\SingleProduct.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwA0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:49.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:49.282Z"
             },
             {
               "$type": "Document",
@@ -249,8 +238,7 @@
               "RelativeToolTip": "Models\\MaReSyDbContext.cs",
               "ViewState": "AgIAANAAAAAAAAAAAAAUwNsAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:27:46.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:27:46.725Z"
             },
             {
               "$type": "Document",
@@ -262,8 +250,7 @@
               "RelativeToolTip": "Models\\Status.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:56.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:56.434Z"
             },
             {
               "$type": "Document",
@@ -275,8 +262,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:57.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:57.218Z"
             },
             {
               "$type": "Document",
@@ -288,8 +274,7 @@
               "RelativeToolTip": "Services\\ISetService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T14:52:12.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T14:52:12.979Z"
             },
             {
               "$type": "Document",
@@ -301,8 +286,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\d0a12d8b-c0b4-4c2d-b3a5-1e52e56f6120\\secrets.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-16T14:17:30.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T14:17:30.774Z"
             }
           ]
         }
@@ -333,7 +317,7 @@
               "RelativeDocumentMoniker": "Services\\SingleProductService.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
               "RelativeToolTip": "Services\\SingleProductService.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAArwAcBAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcBAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T14:47:24.089Z",
               "EditorCaption": ""
