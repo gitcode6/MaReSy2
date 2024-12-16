@@ -91,24 +91,18 @@
                     </tr>
                 </thead>
                 <tbody id="userTableBodyAuswahl">
-                    <tr style="vertical-align: middle;">
-                        <td>1</td>
-                        <td>Produkt A</td>
-                        <td>Ein Beispielprodukt</td>
-                        <td>Aktiv</td>
-                        <td>
-                            <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;">Produkt hinzufügen</a>
-                        </td>
-                    </tr>
-                    <tr style="vertical-align: middle;">
-                        <td>2</td>
-                        <td>Produkt B</td>
-                        <td>Ein anderes Beispielprodukt</td>
-                        <td>Inaktiv</td>
-                        <td>
-                            <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;">Produkt hinzufügen</a>
-                        </td>
-                    </tr>
+                    @foreach (var e in Model.products)
+                    {
+                        <tr style="vertical-align: middle;">
+                            <td>@e.productId</td>
+                            <td>@e.productname</td>
+                            <td>@e.productdescription</td>
+                            <td>@(e.productactive ? "Aktiv" : "Inaktiv")</td>
+                            <td>
+                                <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;">Produkt hinzufügen</a>
+                            </td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
