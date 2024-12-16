@@ -1,6 +1,7 @@
 ﻿using MaReSy2.ConsumeModels;
 using System.Diagnostics;
 using System.Text;
+using static MaReSy2.Pages.LagerverwaltungEPHinzuModel;
 
 namespace MaReSy2.Services
 {
@@ -34,6 +35,7 @@ namespace MaReSy2.Services
         }
 
         public async Task<bool> addSingleProductAsync(CreateSingleProductModel singleProduct)
+
         {
             var client = _httpClientFactory.CreateClient("API");
 

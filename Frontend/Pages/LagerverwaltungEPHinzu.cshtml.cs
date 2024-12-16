@@ -1,3 +1,4 @@
+
 using System.Diagnostics;
 using MaReSy2.ConsumeModels;
 using MaReSy2.Services;
@@ -27,7 +28,6 @@ namespace MaReSy2.Pages
 
             return Page();
         }
-
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -60,7 +60,6 @@ namespace MaReSy2.Pages
 
             var result = singleProductService.addSingleProductAsync(productModel);
             Debug.WriteLine(result);
-
 
             return RedirectToPage("/LagerverwaltungEP");
         }
