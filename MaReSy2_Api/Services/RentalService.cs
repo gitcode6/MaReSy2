@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using NuGet.Packaging;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MaReSy2_Api.Services
@@ -58,6 +59,11 @@ namespace MaReSy2_Api.Services
 
             }
 
+            if (rental.fromDate < DateOnly.FromDateTime(DateTime.Today))
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Nachträglich kann keine Reservierung angelegt werden!" }));
+            }
+
             else if (!datesGiven && (rental.fromDate > rental.endDate || rental.endDate < rental.fromDate))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Das Startdatum darf nicht nach dem Enddatum liegen bzw. Das Enddatum darf nicht vor dem Startdatum liegen" }));
@@ -98,7 +104,7 @@ namespace MaReSy2_Api.Services
 
                 if (productExists == null)
                 {
-                    errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Das Proudkt mit der angegebenen ProductId existiert nicht!" }));
+                    errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Das Produkt mit der angegebenen ProductId existiert nicht!" }));
                 }
 
                 else if (productExists != null && productExists.Productactive == false)
@@ -108,6 +114,11 @@ namespace MaReSy2_Api.Services
             }
 
             var result = await checkAvailabilityAndMakeRental(rental);
+
+            if(result.Count > 0)
+            {
+                errors.AddRange(result);
+            } 
 
             return errors;
         }
@@ -120,46 +131,90 @@ namespace MaReSy2_Api.Services
             {
                 var set = await _context.Sets.Where(set => set.SetId == rental.setId).FirstAsync();
 
-
+                if (await _productService.SetContainsInactiveProduct(set.SetId))
+                {
                     errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Da das Set ein inaktives Produkt enthält, kann es nicht reserviert werden" }));
 
-                var setProducts = _productService.GetProductsForSet((int) rental.setId);
-
-                foreach (var product in await setProducts.ConfigureAwait(false))
-                {
-                    Debug.WriteLine("Produkt: " + product.product.Productname + "(ID:" + product.product.ProductId + ")");
-                    Debug.WriteLine("Amount: " + product.productAmount);
                 }
 
-                var rentable = await _singleProductService.GetRentableSingleproducts(22);
+                if (errors.Any()) return errors;
+
+                var setProducts = await _productService.GetProductsForSet((int)rental.setId);
+
+                List<SingleProduct> singleProductsForRental = new List<SingleProduct>();
+
+
+                foreach (var product in setProducts)
+                {
+                    int neededAmount = product.productAmount;
+                    Product needed_product = product.product;
+
+                    var rentable = await _singleProductService.GetRentableSingleproducts(needed_product.ProductId);
+
+
+
+                    if (!(rentable.Count >= neededAmount))
+                    {
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Es sind nicht mehr genug Einheiten von {needed_product.Productname} (ID: {needed_product.ProductId}) verfügbar, daher kann das Set ({set.Setname} (setId: {set.SetId})" }));
+
+                        return errors;
+                    }
+
+                    else
+                    {
+                        var neededSingleproducts = await _singleProductService.GetNeededSingleProducts(needed_product.ProductId, neededAmount);
+
+                        singleProductsForRental.AddRange(neededSingleproducts);
+                    }
+                }
+
+                Rental newRental = new Rental()
+                {
+                    UserId = rental.userId,
+                    SetId = set.SetId,
+                    RentalStart = rental.fromDate,
+                    RentalEnd = rental.endDate,
+                    RentalAnforderung = DateTime.UtcNow,
+                    Status = 1,
+                    RentalNote = rental.rentalNote
+                    
+                };
+                
+                newRental.SingleProducts.AddRange(singleProductsForRental);
+
+                await _context.Rentals.AddAsync(newRental);
+                await _context.SaveChangesAsync();
+
+
+                errors.Add(IdentityResult.Success);
 
                 return errors;
 
-                        //var availableAmount = singleProducts.Count - rentedSingleProducts.Count;
+                //var availableAmount = singleProducts.Count - rentedSingleProducts.Count;
 
-                        //var productWithAmount = productsInSet.Where(x => x.Product.ProductId == product.Product.ProductId).First();
+                //var productWithAmount = productsInSet.Where(x => x.Product.ProductId == product.Product.ProductId).First();
 
-                        //if (productWithAmount.Amount < availableAmount)
-                        //{
-                        //    errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Vom Produkt {productWithAmount.Product.Productname} (ID: {productWithAmount.Product.ProductId}) gibt es nicht mehr genug Einheiten!" }));
+                //if (productWithAmount.Amount < availableAmount)
+                //{
+                //    errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Vom Produkt {productWithAmount.Product.Productname} (ID: {productWithAmount.Product.ProductId}) gibt es nicht mehr genug Einheiten!" }));
 
-                        //    return errors;
-                        //}
-             }
+                //    return errors;
+                //}
+            }
             return errors;
 
-                }
+        }
 
 
-                //next step: get the singleproducts of the product and check for rentals
-                //
+        //next step: get the singleproducts of the product and check for rentals
+        //
 
 
 
-                //and if there is an uncompleted rental (noch nicht vorbei, wurde noch nicht zurückgebracht)
-                //oder wenn abgelehnt auch frei
-                //schauen welche singleproducts in den uncompleted rentals sind und diese für neue rentals ausschließen
-                //schauen ob genügend singleproducts von diesem product da sind, wenn ja rental durchführen
+        //and if there is an uncompleted rental (noch nicht vorbei, wurde noch nicht zurückgebracht)
+        //oder wenn abgelehnt auch frei
+        //schauen welche singleproducts in den uncompleted rentals sind und diese für neue rentals ausschließen
+        //schauen ob genügend singleproducts von diesem product da sind, wenn ja rental durchführen
 
         public async Task<IEnumerable<RentalDTO>> GetAllRentalsAsync()
         {
@@ -189,8 +244,8 @@ namespace MaReSy2_Api.Services
                 setId = rental.Set != null ? rental.Set.SetId : null,
                 setname = rental.Set != null ? rental.Set.Setname : null,
 
-                rentalStart = DateOnly.FromDateTime(rental.RentalStart),
-                rentalEnd = DateOnly.FromDateTime(rental.RentalEnd),
+                rentalStart = rental.RentalStart,
+                rentalEnd = rental.RentalEnd,
 
                 rentalAnforderung = rental.RentalAnforderung,
 
@@ -271,8 +326,8 @@ namespace MaReSy2_Api.Services
                 setId = rental.Set != null ? rental.Set.SetId : null,
                 setname = rental.Set != null ? rental.Set.Setname : null,
 
-                rentalStart = DateOnly.FromDateTime(rental.RentalStart),
-                rentalEnd = DateOnly.FromDateTime(rental.RentalEnd),
+                rentalStart = rental.RentalStart,
+                rentalEnd = rental.RentalEnd,
 
                 rentalAnforderung = rental.RentalAnforderung,
 

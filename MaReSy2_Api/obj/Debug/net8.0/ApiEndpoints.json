@@ -146,7 +146,7 @@
   },
   {
     "ContainingType": "MaReSy2_Api.Controllers.RentalController",
-    "Method": "CreateSet",
+    "Method": "CreateRental",
     "RelativePath": "api/rentals",
     "HttpMethod": "POST",
     "IsController": true,

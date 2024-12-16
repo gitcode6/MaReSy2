@@ -215,9 +215,10 @@ namespace MaReSy2_Api.Services
             .ToListAsync();
         }
         //TODO: zu Interface hinzufügen
-        public bool SetContainsInactiveProduct(List<ProductWithAmount> products)
+        public async Task<bool> SetContainsInactiveProduct(int setId)
         {
-            return products.Any(product => product.product.ProductActive == false);
+            var productsWithAmount = await GetProductsForSet (setId);
+            return productsWithAmount.Any(x => x.product.ProductActive == false);
         }
 
 

@@ -256,5 +256,12 @@ namespace MaReSy2_Api.Services
             return singleProducts;
              
         }
+
+        public async Task<List<SingleProduct>> GetNeededSingleProducts(int productId, int amount)
+        {
+            var sp = await GetRentableSingleproducts(productId);
+            var needed = sp.Take(amount).ToList();
+            return needed;
+        }
     }
 }

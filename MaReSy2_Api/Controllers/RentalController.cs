@@ -62,7 +62,7 @@ namespace MaReSy2_Api.Controllers
 
         // POST api/<ProductController>
         [HttpPost("")]
-        public async Task<ActionResult<ProductDTO>> CreateSet(CreateRentalDTO rental)
+        public async Task<ActionResult<ProductDTO>> CreateRental(CreateRentalDTO rental)
         {
             Validator.ValidateObject(rental, new ValidationContext(rental), validateAllProperties: true);
 
@@ -81,8 +81,6 @@ namespace MaReSy2_Api.Controllers
             }
 
             return BadRequest();
-
-            //}
 
 
 

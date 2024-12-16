@@ -11,9 +11,9 @@ public partial class Rental
 
     public int? SetId { get; set; }
 
-    public DateTime RentalStart { get; set; }
+    public DateOnly RentalStart { get; set; }
 
-    public DateTime RentalEnd { get; set; }
+    public DateOnly RentalEnd { get; set; }
 
     public DateTime RentalAnforderung { get; set; }
 

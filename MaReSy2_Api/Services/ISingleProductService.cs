@@ -26,6 +26,8 @@ namespace MaReSy2_Api.Services
 
         Task<List<SingleProduct>> GetRentableSingleproducts(int productId);
 
+        Task<List<SingleProduct>> GetNeededSingleProducts(int productId, int amount);
+
         //Task<ProductDTO?> GetProductByIdAsync(int productId);
 
         //Task<List<IdentityResult>> AddNewSingleProduct(CreateProductDTO product);

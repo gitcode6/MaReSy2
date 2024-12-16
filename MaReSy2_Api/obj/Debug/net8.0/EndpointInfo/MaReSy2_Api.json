@@ -1132,6 +1132,10 @@
           "endDate": {
             "$ref": "#/components/schemas/DateOnly"
           },
+          "rentalNote": {
+            "type": "string",
+            "nullable": true
+          },
           "userId": {
             "type": "integer",
             "format": "int32"

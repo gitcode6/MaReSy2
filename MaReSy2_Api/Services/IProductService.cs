@@ -21,6 +21,8 @@ namespace MaReSy2_Api.Services
         Task<IdentityResult> deleteProductAsync(int productId);
 
         Task<List<ProductWithAmount>> GetProductsForSet(int setId);
+        Task<bool> SetContainsInactiveProduct(int setId);
+
 
 
     }
