@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\pages\\lagerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\lagerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\pages\\lagerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\lagerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\services\\setservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:services\\setservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\a.schmidt3\\documents\\github\\maresy2\\frontend\\pages\\lagerverwaltungep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\lagerverwaltungep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
+          "Children": []
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "1484cb3d-b9b5-406a-ab5c-bfdbca60002a",
+        "Display": 1,
+        "X": 493,
+        "Y": 410,
+        "Width": 1205,
+        "Height": 792,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SetService.cs",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\SetService.cs",
-              "RelativeDocumentMoniker": "Services\\SetService.cs",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\SetService.cs",
-              "RelativeToolTip": "Services\\SetService.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowDQAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:23:37.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Lagerverwaltung.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Lagerverwaltung.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Lagerverwaltung.cshtml.cs",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Lagerverwaltung.cshtml.cs",
-              "RelativeToolTip": "Pages\\Lagerverwaltung.cshtml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:23:27.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Lagerverwaltung.cshtml",
-              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Lagerverwaltung.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Lagerverwaltung.cshtml",
-              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Lagerverwaltung.cshtml",
-              "RelativeToolTip": "Pages\\Lagerverwaltung.cshtml",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAAGMAAAA6AAAA",
+              "Title": "LagerverwaltungEP.cshtml",
+              "DocumentMoniker": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEP.cshtml",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEP.cshtml",
+              "ToolTip": "C:\\Users\\a.schmidt3\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEP.cshtml",
+              "RelativeToolTip": "Pages\\LagerverwaltungEP.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T15:13:17.116Z",
+              "WhenOpened": "2024-12-16T16:01:06.267Z",
               "EditorCaption": ""
             }
           ]
