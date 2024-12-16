@@ -25,6 +25,8 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddHttpClient("API", client => { client.BaseAddress = new Uri("https://localhost:7162/api"); });
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<SetService>();
+builder.Services.AddScoped<SingleProductService>();
 builder.Services.AddControllers();
 
 var app = builder.Build();

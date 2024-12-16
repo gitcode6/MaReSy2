@@ -86,10 +86,6 @@ public class LoginModel : PageModel
 				ModelState.AddModelError(string.Empty, "Passwort leer");
             }
 		}
-
-		
-
-
 		return Page();
 	}
 }

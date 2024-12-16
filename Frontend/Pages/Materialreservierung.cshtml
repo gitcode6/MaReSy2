@@ -125,15 +125,17 @@
             </div>
         }
 
-    <div class="card">
-        <img src="~/images/Übungsmedikament1.png" alt="Material">
-        <div class="text-container">
-            <h3>TestSet</h3>
-            <a href="/MaReDeSET/" class="btn">Reservieren</a>
+    @foreach (var x in Model.sets)
+    {
+        <div class="card">
+            <img src="~/images/Übungsmedikament1.png" alt="Material">
+            <div class="text-container">
+                <h3>@x.setname</h3>
+                <a href="/MaReDeSET/@x.setname" class="btn">Reservieren</a>
+            </div>
         </div>
-    </div>
+    }
 
-      
     <div style="clear: both;"></div>
     <!-- Suchleiste für Material -->
     <script>
