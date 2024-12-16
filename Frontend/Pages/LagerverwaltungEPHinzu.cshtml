@@ -45,22 +45,25 @@
     <h2 style="text-align: center;">EINZELPRODUKT Hinzufügung</h2>
     <form method="post">
         <div class="form-group">
-            <label for="Produktname">Einzelproduktname</label>
-            <input type="text" name = "produktname" id="Produktname" class="form-control" />
+            <label for="Einzelproduktname">Einzelproduktname</label>
+            <input type="text" name="einzelproduktname" id="SingleProductName" class="form-control" asp-for="SingleProdukt.SingleProductName"/>
         </div>
         <div class="form-group">
-            <label for="Produktname">Seriennummer</label>
-            <input type="text" name="produktname" id="Produktname" class="form-control" />
+            <label for="Seriennummer">Seriennummer</label>
+            <input type="text" name="seriennummer" id="SingleProductSerialNumber" class="form-control" asp-for="SingleProdukt.SingleProductSerialNumber" />
         </div>
         <div class="form-group">
             <label for="EPKategorie">Kategorie</label>
-            <select name="epkategorie" id="epkategorie" class="form-control">
-                <option name="aktiv" value="true" selected>AUS PRODUKT TABELLE</option>
+            <select name="epkategorie" id="mainProduct" class="form-control" asp-for="SingleProdukt.productId">
+                @foreach (var e in Model.products)
+                {
+                    <option name="@e.productname" value="@e.productId" selected>(P @e.productId) @e.productname</option>
+                } 
             </select>
         </div>
         <div class="form-group">
             <label for="Produktstatus">Status</label>
-            <select name="produktstatus" id="produktstatus" class="form-control" >
+            <select name="produktstatus" id="produktstatus" class="form-control" asp-for="SingleProdukt.SingleProductStatus">
                 <option name="aktiv" value="true" selected>Aktiv</option>
                 <option name="inaktiv" value="false">Inaktiv</option>
             </select>
