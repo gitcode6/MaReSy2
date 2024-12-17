@@ -297,7 +297,7 @@
         }
       }
     },
-    "/api/rentals/{userId}": {
+    "/api/rentals/userrentals/{userId}": {
       "get": {
         "tags": [
           "Rental"
@@ -338,6 +338,122 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/RentalDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rentals/{rentalId}": {
+      "get": {
+        "tags": [
+          "Rental"
+        ],
+        "parameters": [
+          {
+            "name": "rentalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RentalDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RentalDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RentalDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rentals/{rentalId}/cancel": {
+      "delete": {
+        "tags": [
+          "Rental"
+        ],
+        "parameters": [
+          {
+            "name": "rentalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IdentityResult"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IdentityResult"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IdentityResult"
                   }
                 }
               }
@@ -1280,6 +1396,38 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "IdentityError": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentityResult": {
+        "type": "object",
+        "properties": {
+          "succeeded": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IdentityError"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
       },
       "ProductDTO": {
         "type": "object",

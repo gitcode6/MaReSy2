@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing;
+using System.Net;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -34,12 +35,28 @@ namespace MaReSy2_Api.Controllers
             return Ok(rentals);
         }
 
-        [HttpGet("{userId}")]
+        [HttpGet("userrentals/{userId}")]
         public async Task<ActionResult<List<RentalDTO>>> Get(int userId)
         {
             var rentals = await _rentalService.GetAllUserRentalsAsync(userId);
 
             return Ok(rentals);
+        }
+
+        [HttpGet("{rentalId}")]
+        public async Task<ActionResult<List<RentalDTO>>> GetSingleRental(int rentalId, [Required] int userId)
+        {
+            var rental = await _rentalService.GetRentalAsync(rentalId, userId);
+
+            if(rental != null)
+            {
+                return Ok(rental);
+            }
+
+            else
+            {
+                return Unauthorized();
+            }
         }
 
         //// GET api/<ProductController>/5
@@ -81,120 +98,138 @@ namespace MaReSy2_Api.Controllers
             }
 
             return BadRequest();
-
-
-
-
-            //[HttpPut("{id}")]
-            //public async Task<IActionResult> updateSet(int id, UpdateSetDTO set)
-            //{
-            //    var result = await _rentalService.UpdateSetAsync(set, id);
-
-            //    if (result.Contains(IdentityResult.Success))
-            //    {
-            //        return Ok(result);
-            //    }
-
-            //    else
-            //    {
-            //        return BadRequest(result);
-            //    }
-            //}
-
-            //[HttpDelete("{id}")]
-            //public async Task<IActionResult> deactivateProduct(int id)
-            //{
-            //    var result = await _rentalService.deleteSetAsync(id);
-
-            //    if (result == IdentityResult.Success)
-            //    {
-            //        return Ok(result);
-            //    }
-
-            //    else
-            //    {
-            //        return BadRequest(result);
-            //    }
-            //}
-
-
-
-
-            //    //var (createdProduct, errors) = result;
-
-            //    //if (errors != null && errors.Any())
-            //    //{
-            //    //    return BadRequest(new { Errors = errors });
-            //    //}
-
-            //    //return CreatedAtAction(nameof(GetProductById), new { id = createdProduct.ProductId }, createdProduct);
-
-            //}
-
-            //[HttpGet("{id}/image")]
-            //public async Task<IActionResult> GetProductImage(int id)
-            //{
-            //    var product = await _maReSyDbContext.Products.FindAsync(id);
-
-            //    if (product == null)
-            //    {
-            //        return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" })); 
-
-            //            //NotFound("Produkt nicht gefunden");
-            //    }
-
-            //    if (product.Productimage == null || product.Productimage.Length == 0)
-            //    {
-            //        return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden." }));
-
-            //    }
-
-            //    var imageType = "image/jpeg";
-
-            //    return File(product.Productimage, imageType);
-            //}
-
-            //[HttpDelete("{id}")]
-            //public async Task<IActionResult> deactivateProduct(int id)
-            //{
-            //    var result = await _productService.deleteProductAsync(id);
-
-            //    if (result == IdentityResult.Success)
-            //    {
-            //        return Ok(result);
-            //    }
-
-            //    else
-            //    {
-            //        return BadRequest(result);
-            //    }
-            //}
-
-            //[HttpPut("{id}")]
-            //public async Task<IActionResult> updateProduct(int id, UpdateProductDTO product)
-            //{
-            //    var result = await _productService.updateProduct(id, product);
-
-            //    if(result.Contains(IdentityResult.Success))
-            //    {
-            //        return Ok(result);
-            //    }
-
-            //    else
-            //    {
-            //        return BadRequest(result);
-            //    }
-            //}
-
-            ////[HttpPost("{id}/image")]
-            ////public async Task<IActionResult> UploadImage(int id)
-            ////{
-
-            ////}
-
-
-
         }
+
+
+        [HttpDelete("{rentalId}/cancel")]
+        public async Task<ActionResult<List<IdentityResult>>> CancelRental(int rentalId, [Required] int userId)
+        {
+
+
+            var result = await _rentalService.userCancelRental(rentalId, userId);
+
+            if (result.Contains(IdentityResult.Success))
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+
+
+
+
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> updateSet(int id, UpdateSetDTO set)
+        //{
+        //    var result = await _rentalService.UpdateSetAsync(set, id);
+
+        //    if (result.Contains(IdentityResult.Success))
+        //    {
+        //        return Ok(result);
+        //    }
+
+        //    else
+        //    {
+        //        return BadRequest(result);
+        //    }
+        //}
+
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> deactivateProduct(int id)
+        //{
+        //    var result = await _rentalService.deleteSetAsync(id);
+
+        //    if (result == IdentityResult.Success)
+        //    {
+        //        return Ok(result);
+        //    }
+
+        //    else
+        //    {
+        //        return BadRequest(result);
+        //    }
+        //}
+
+
+
+
+        //    //var (createdProduct, errors) = result;
+
+        //    //if (errors != null && errors.Any())
+        //    //{
+        //    //    return BadRequest(new { Errors = errors });
+        //    //}
+
+        //    //return CreatedAtAction(nameof(GetProductById), new { id = createdProduct.ProductId }, createdProduct);
+
+        //}
+
+        //[HttpGet("{id}/image")]
+        //public async Task<IActionResult> GetProductImage(int id)
+        //{
+        //    var product = await _maReSyDbContext.Products.FindAsync(id);
+
+        //    if (product == null)
+        //    {
+        //        return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" })); 
+
+        //            //NotFound("Produkt nicht gefunden");
+        //    }
+
+        //    if (product.Productimage == null || product.Productimage.Length == 0)
+        //    {
+        //        return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden." }));
+
+        //    }
+
+        //    var imageType = "image/jpeg";
+
+        //    return File(product.Productimage, imageType);
+        //}
+
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> deactivateProduct(int id)
+        //{
+        //    var result = await _productService.deleteProductAsync(id);
+
+        //    if (result == IdentityResult.Success)
+        //    {
+        //        return Ok(result);
+        //    }
+
+        //    else
+        //    {
+        //        return BadRequest(result);
+        //    }
+        //}
+
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> updateProduct(int id, UpdateProductDTO product)
+        //{
+        //    var result = await _productService.updateProduct(id, product);
+
+        //    if(result.Contains(IdentityResult.Success))
+        //    {
+        //        return Ok(result);
+        //    }
+
+        //    else
+        //    {
+        //        return BadRequest(result);
+        //    }
+        //}
+
+        ////[HttpPost("{id}/image")]
+        ////public async Task<IActionResult> UploadImage(int id)
+        ////{
+
+        ////}
+
+
+
     }
 }
 

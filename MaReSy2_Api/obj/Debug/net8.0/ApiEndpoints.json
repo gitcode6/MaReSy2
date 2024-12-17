@@ -172,8 +172,70 @@
   },
   {
     "ContainingType": "MaReSy2_Api.Controllers.RentalController",
+    "Method": "GetSingleRental",
+    "RelativePath": "api/rentals/{rentalId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MaReSy2_Api.Models.DTO.RentalDTO.RentalDTO, MaReSy2_Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MaReSy2_Api.Controllers.RentalController",
+    "Method": "CancelRental",
+    "RelativePath": "api/rentals/{rentalId}/cancel",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Identity.IdentityResult, Microsoft.Extensions.Identity.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MaReSy2_Api.Controllers.RentalController",
     "Method": "Get",
-    "RelativePath": "api/rentals/{userId}",
+    "RelativePath": "api/rentals/userrentals/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

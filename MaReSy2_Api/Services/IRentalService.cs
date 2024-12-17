@@ -9,5 +9,8 @@ namespace MaReSy2_Api.Services
         Task<IEnumerable<RentalDTO>> GetAllRentalsAsync();
         Task<IEnumerable<RentalDTO>> GetAllUserRentalsAsync(int userId);
         Task<List<IdentityResult>> AddNewRentalAsync(CreateRentalDTO rental);
+        Task<IEnumerable<IdentityResult>> UpdateRental(ActionDTO rentalAction);
+        Task<List<IdentityResult>> userCancelRental(int rentalId, int userId);
+        Task<RentalDTO?> GetRentalAsync(int rentalId, int userId);
     }
 }

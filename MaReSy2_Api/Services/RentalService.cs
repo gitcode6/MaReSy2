@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using MaReSy2_Api.Data.Models;
 using MaReSy2_Api.Models;
 using MaReSy2_Api.Models.DTO.RentalDTO;
 using MaReSy2_Api.Models.DTO.SingleProductDTO;
@@ -115,10 +116,10 @@ namespace MaReSy2_Api.Services
 
             var result = await checkAvailabilityAndMakeRental(rental);
 
-            if(result.Count > 0)
+            if (result.Count > 0)
             {
                 errors.AddRange(result);
-            } 
+            }
 
             return errors;
         }
@@ -126,6 +127,8 @@ namespace MaReSy2_Api.Services
         private async Task<List<IdentityResult>> checkAvailabilityAndMakeRental(CreateRentalDTO rental)
         {
             List<IdentityResult> errors = new List<IdentityResult>();
+            List<SingleProduct> singleProductsForRental = new List<SingleProduct>();
+
 
             if (rental.setId != null)
             {
@@ -141,9 +144,6 @@ namespace MaReSy2_Api.Services
 
                 var setProducts = await _productService.GetProductsForSet((int)rental.setId);
 
-                List<SingleProduct> singleProductsForRental = new List<SingleProduct>();
-
-
                 foreach (var product in setProducts)
                 {
                     int neededAmount = product.productAmount;
@@ -156,8 +156,6 @@ namespace MaReSy2_Api.Services
                     if (!(rentable.Count >= neededAmount))
                     {
                         errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Es sind nicht mehr genug Einheiten von {needed_product.Productname} (ID: {needed_product.ProductId}) verfügbar, daher kann das Set ({set.Setname} (setId: {set.SetId})" }));
-
-                        return errors;
                     }
 
                     else
@@ -174,12 +172,12 @@ namespace MaReSy2_Api.Services
                     SetId = set.SetId,
                     RentalStart = rental.fromDate,
                     RentalEnd = rental.endDate,
-                    RentalAnforderung = DateTime.UtcNow,
+                    RentalAnforderung = DateTime.Now,
                     Status = 1,
                     RentalNote = rental.rentalNote
-                    
+
                 };
-                
+
                 newRental.SingleProducts.AddRange(singleProductsForRental);
 
                 await _context.Rentals.AddAsync(newRental);
@@ -201,21 +199,49 @@ namespace MaReSy2_Api.Services
                 //    return errors;
                 //}
             }
+
+            if (rental.productId != null || rental.productId != 0)
+            {
+                var needed_product = await _context.Products.Where(product => product.ProductId == rental.productId).FirstOrDefaultAsync();
+
+                var rentable = await _singleProductService.GetRentableSingleproducts(needed_product!.ProductId);
+
+                if (!(rentable.Count >= rental.productAmount))
+                {
+
+                    errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Es sind nicht mehr genug Einheiten von {needed_product.Productname} (ID: {needed_product.ProductId}) verfügbar, daher kann das Produkt derzeit nicht reserviert werden!" }));
+                    return errors;
+
+                }
+                else
+                {
+                    singleProductsForRental.AddRange(await _singleProductService.GetNeededSingleProducts(needed_product.ProductId, (int)rental.productAmount));
+
+                    Rental newRental = new Rental()
+                    {
+                        UserId = rental.userId,
+                        RentalStart = rental.fromDate,
+                        RentalEnd = rental.endDate,
+                        RentalAnforderung = DateTime.Now,
+                        Status = 1,
+                        RentalNote = rental.rentalNote
+                    };
+
+                    newRental.SingleProducts.AddRange(singleProductsForRental);
+
+                    await _context.AddAsync(newRental);
+                    await _context.SaveChangesAsync();
+
+
+                    errors.Add(IdentityResult.Success);
+
+
+                }
+
+            }
             return errors;
 
         }
-
-
-        //next step: get the singleproducts of the product and check for rentals
-        //
-
-
-
-        //and if there is an uncompleted rental (noch nicht vorbei, wurde noch nicht zurückgebracht)
-        //oder wenn abgelehnt auch frei
-        //schauen welche singleproducts in den uncompleted rentals sind und diese für neue rentals ausschließen
-        //schauen ob genügend singleproducts von diesem product da sind, wenn ja rental durchführen
-
         public async Task<IEnumerable<RentalDTO>> GetAllRentalsAsync()
         {
             var rentals = _context.Rentals
@@ -294,6 +320,95 @@ namespace MaReSy2_Api.Services
             }).ToListAsync();
 
             return allRentals;
+        }
+
+        public async Task<RentalDTO?> GetRentalAsync(int rentalId, int userId)
+        {
+            var rental = await _context.Rentals
+                .Include(rental => rental.User)
+                .Include(rental => rental.Set)
+                .Include(rental => rental.RentalFreigabeUserNavigation)
+                .Include(rental => rental.RentalAblehnungUserNavigation)
+                .Include(rental => rental.RentalAuslieferungUserNavigation)
+                .Include(rental => rental.RentalZurückgabeUserNavigation)
+                .Include(rental => rental.StatusNavigation)
+                .Include(rental => rental.SingleProducts)
+                    .ThenInclude(singpleproduct => singpleproduct.Product)
+                .Where(rental => rental.RentalId == rentalId).FirstOrDefaultAsync();
+
+            var user = await _context.Users
+                .Include(users => users.Role)
+                .Where(user => user.UserId == userId).FirstOrDefaultAsync();
+
+
+            if (rental == null || user == null || (user.Role.Rolename.ToLower() != "admin"  && rental.UserId != userId))
+            {
+                return null;
+            }
+
+
+            var userRental = new RentalDTO
+            {
+                rentalId = rental.RentalId,
+
+                user = new RentalUserDTO
+                {
+                    userId = rental.User.UserId,
+                    username = rental.User.Username
+                },
+                setId = rental.Set != null ? rental.Set.SetId : null,
+                setname = rental.Set != null ? rental.Set.Setname : null,
+
+                rentalStart = rental.RentalStart,
+                rentalEnd = rental.RentalEnd,
+
+                rentalAnforderung = rental.RentalAnforderung,
+
+                rentalFreigabe = rental.RentalFreigabe ?? null,
+                rentalFreigabeUser = rental.RentalFreigabeUserNavigation != null ? new RentalUserDTO
+                {
+                    userId = rental.RentalFreigabeUserNavigation.UserId,
+                    username = rental.RentalFreigabeUserNavigation.Username,
+                } : null,
+
+                rentalAblehnung = rental.RentalAblehnung ?? null,
+                rentalAblehnungUser = rental.RentalAblehnungUserNavigation != null ? new RentalUserDTO
+                {
+                    userId = rental.RentalAblehnungUserNavigation.UserId,
+                    username = rental.RentalAblehnungUserNavigation.Username,
+                } : null,
+
+                rentalAuslieferung = rental.RentalAuslieferung ?? null,
+                rentalAuslieferungUser = rental.RentalAuslieferungUserNavigation != null ? new RentalUserDTO
+                {
+                    userId = rental.RentalAuslieferungUserNavigation.UserId,
+                    username = rental.RentalAuslieferungUserNavigation.Username,
+                } : null,
+
+                rentalZuereck = rental.RentalZurückgabe ?? null,
+                rentalZuereckUser = rental.RentalZurückgabeUserNavigation != null ? new RentalUserDTO
+                {
+                    userId = rental.RentalZurückgabeUserNavigation.UserId,
+                    username = rental.RentalZurückgabeUserNavigation.Username,
+                } : null,
+
+                rentalStornierung = rental.RentalStornierung ?? null,
+
+                status = rental.StatusNavigation.Bezeichnung,
+
+                rentalNote = rental.RentalNote ?? null,
+
+                singleProducts = rental.SingleProducts.Select(singleproduct => new RentalSingleProductDTO
+                {
+                    singleProductId = singleproduct.ProductId,
+                    singleProductName = singleproduct.SingleProductName,
+                    singleProductNumber = singleproduct.SingleProductNumber,
+                    singleProductCategory = singleproduct.Product.Productname
+                }).ToList(),
+
+            };
+
+            return userRental;
         }
 
         public async Task<IEnumerable<RentalDTO>> GetAllUserRentalsAsync(int userId)
@@ -379,7 +494,247 @@ namespace MaReSy2_Api.Services
 
         }
 
+        public async Task<IEnumerable<IdentityResult>> UpdateRental(ActionDTO rentalAction)
+        {
+            List<IdentityResult> errors = new List<IdentityResult>();
 
+            var rental = await _context.Rentals
+                .Include(rental => rental.StatusNavigation)
+                .Where(rental => rental.RentalId == rentalAction.rentalId).FirstOrDefaultAsync();
+
+            var actionUser = await _context.Users.Where(user => user.UserId == rentalAction.actionUserId).FirstOrDefaultAsync();
+
+            if (rental == null)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Es gibt kein Rental mit der angegebenen Id" }));
+                return errors;
+            }
+
+            if (actionUser == null)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Der ActionUser mit der angegebenen Id existiert nicht" }));
+            }
+
+
+
+            switch (rentalAction.action)
+            {
+                case 1:
+                    //ablehnen
+                    //möglich wenn
+                    /**
+                     * angefordert
+                     * freigegeben
+                     */
+
+                    if (rental.Status == 1 || rental.Status == 2)
+                    {
+                        rental.Status = 3;
+                        rental.RentalFreigabe = DateTime.Now;
+                        rental.RentalFreigabeUser = rentalAction.actionUserId;
+                        _context.Rentals.Update(rental);
+                        await _context.SaveChangesAsync();
+                        errors.Add(IdentityResult.Success);
+                    }
+                    else
+                    {
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht mehr abgelehnt werden!" }));
+                    }
+                    break;
+
+                case 2:
+                    //freigeben
+                    //möglich wenn
+                    /**
+                     * angefordert
+                     * abgelehnt
+                     */
+
+                    if (rental.Status == 1 || rental.Status == 3)
+                    {
+                        rental.Status = 2;
+                        rental.RentalFreigabe = DateTime.Now;
+                        rental.RentalFreigabeUser = rentalAction.actionUserId;
+                        _context.Rentals.Update(rental);
+                        await _context.SaveChangesAsync();
+                        errors.Add(IdentityResult.Success);
+                    }
+                    else
+                    {
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental ({rental.RentalId}) befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht mehr freigegeben werden werden!" }));
+                    }
+                    break;
+
+
+                case 3:
+                    //ausliefern
+                    //möglich wenn
+                    /**
+                     * freigegeben 
+                     */
+                    if (rental.Status == 2)
+                    {
+                        rental.Status = 4;
+                        rental.RentalFreigabe = DateTime.Now;
+                        rental.RentalFreigabeUser = rentalAction.actionUserId;
+                        _context.Rentals.Update(rental);
+                        await _context.SaveChangesAsync();
+                        errors.Add(IdentityResult.Success);
+                    }
+
+                    else
+                    {
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es noch nicht/nicht mehr ausgeliefert werden!" }));
+                    }
+
+                    break;
+
+
+                case 4:
+                    //zurücknehmen
+                    //möglich wenn
+                    /**
+                     * ausgeliefert
+                     */
+
+                    if (rental.Status == 4)
+                    {
+                        rental.Status = 5;
+                        rental.RentalFreigabe = DateTime.Now;
+                        rental.RentalFreigabeUser = rentalAction.actionUserId;
+                        _context.Rentals.Update(rental);
+                        await _context.SaveChangesAsync();
+                        errors.Add(IdentityResult.Success);
+                    }
+
+                    else
+                    {
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es noch nicht/nicht mehr zurückgenommen werden!" }));
+                    }
+
+
+                    break;
+
+
+                default:
+                    errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Die angegebene Action gibt es nicht." }));
+
+                    break;
+            }
+
+            return errors;
+
+        }
+
+        public async Task<List<IdentityResult>> userCancelRental(int rentalId, int userId)
+        {
+            List<IdentityResult> errors = new List<IdentityResult>();
+
+            var rental = await _context.Rentals
+                .Where(rental => rental.RentalId == rentalId).FirstOrDefaultAsync();
+
+            var user = await _context.Users.Where(user=>user.UserId == userId).FirstOrDefaultAsync();
+
+
+            if(rental == null)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental mit der ID {rentalId} gibt es nicht!" }));
+            }
+
+
+            if(user == null)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Den User mit der ID {userId} gibt es nicht!" }));
+            }
+
+            if(rental != null && user != null && rental.UserId != userId)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Die Rental befindet sich nicht im Besitz von {user.Username}, daher kann Sie nicht storniert werden!" }));
+            }
+
+            if (errors.Any()) return errors;
+
+            rental!.RentalStornierung = DateTime.Now;
+            rental!.Status = 6;
+
+            _context.Rentals.Update(rental);
+            await _context.SaveChangesAsync();
+            errors.Add(IdentityResult.Success);
+
+            return errors;
+
+
+
+
+
+
+        }
+
+
+
+
+        public async Task<bool> clearFreigabeFields(int rentalId)
+        {
+            var rental = await _context.Rentals.Where(rental => rental.RentalId == rentalId).FirstOrDefaultAsync();
+
+            if (rental != null)
+            {
+                rental.RentalFreigabe = null;
+                rental.RentalFreigabeUser = null;
+                _context.Rentals.Update(rental);
+                return Convert.ToBoolean(await _context.SaveChangesAsync());
+            }
+
+            return false;
+        }
+
+        public async Task<bool> clearAblehnungFields(int rentalId)
+        {
+            var rental = await _context.Rentals.Where(rental => rental.RentalId == rentalId).FirstOrDefaultAsync();
+
+            if (rental != null)
+            {
+                rental.RentalAblehnung = null;
+                rental.RentalAblehnungUser = null;
+                _context.Rentals.Update(rental);
+                return Convert.ToBoolean(await _context.SaveChangesAsync());
+            }
+
+            return false;
+        }
+
+        public async Task<bool> clearAuslieferungFields(int rentalId)
+        {
+            var rental = await _context.Rentals.Where(rental => rental.RentalId == rentalId).FirstOrDefaultAsync();
+
+            if (rental != null)
+            {
+                rental.RentalAuslieferung = null;
+                rental.RentalAuslieferungUser = null;
+                _context.Rentals.Update(rental);
+                return Convert.ToBoolean(await _context.SaveChangesAsync());
+            }
+
+            return false;
+
+
+        }
+
+        public async Task<bool> clearZurückgabeFields(int rentalId)
+        {
+            var rental = await _context.Rentals.Where(rental => rental.RentalId == rentalId).FirstOrDefaultAsync();
+
+            if (rental != null)
+            {
+                rental.RentalZurückgabe = null;
+                rental.RentalZurückgabe = null;
+                _context.Rentals.Update(rental);
+                return Convert.ToBoolean(await _context.SaveChangesAsync());
+            }
+
+            return false;
+
+        }
 
 
     }
