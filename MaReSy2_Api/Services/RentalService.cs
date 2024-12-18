@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.Identity.Client;
 using NuGet.Packaging;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -341,7 +342,7 @@ namespace MaReSy2_Api.Services
                 .Where(user => user.UserId == userId).FirstOrDefaultAsync();
 
 
-            if (rental == null || user == null || (user.Role.Rolename.ToLower() != "admin"  && rental.UserId != userId))
+            if (rental == null || user == null || (user.Role.Rolename.ToLower() != "admin" && rental.UserId != userId))
             {
                 return null;
             }
@@ -507,110 +508,111 @@ namespace MaReSy2_Api.Services
             if (rental == null)
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Es gibt kein Rental mit der angegebenen Id" }));
-                return errors;
             }
 
             if (actionUser == null)
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Der ActionUser mit der angegebenen Id existiert nicht" }));
+                return errors;
             }
 
+            if (actionUser!.RoleId != 2)
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Der User {actionUser.Username} hat keine Berechtigung diese Aktion auszuführen." }));
+                return errors;
+            }
 
 
             switch (rentalAction.action)
             {
                 case 1:
                     //ablehnen
-                    //möglich wenn
-                    /**
-                     * angefordert
-                     * freigegeben
-                     */
-
-                    if (rental.Status == 1 || rental.Status == 2)
+                    if (rental!.Status == 1)
                     {
-                        rental.Status = 3;
-                        rental.RentalFreigabe = DateTime.Now;
-                        rental.RentalFreigabeUser = rentalAction.actionUserId;
+                        rental!.Status = 3;
+                        rental.RentalAblehnung = DateTime.Now;
+                        rental.RentalAblehnungUser = rentalAction.actionUserId;
                         _context.Rentals.Update(rental);
                         await _context.SaveChangesAsync();
                         errors.Add(IdentityResult.Success);
                     }
                     else
                     {
-                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht mehr abgelehnt werden!" }));
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht abgelehnt werden!" }));
                     }
+
+
+
                     break;
 
                 case 2:
                     //freigeben
-                    //möglich wenn
-                    /**
-                     * angefordert
-                     * abgelehnt
-                     */
 
-                    if (rental.Status == 1 || rental.Status == 3)
+                    if (rental!.Status == 1 || rental!.Status == 3 || rental!.Status == 4)
                     {
-                        rental.Status = 2;
+                        rental!.Status = 2;
                         rental.RentalFreigabe = DateTime.Now;
                         rental.RentalFreigabeUser = rentalAction.actionUserId;
                         _context.Rentals.Update(rental);
                         await _context.SaveChangesAsync();
                         errors.Add(IdentityResult.Success);
                     }
-                    else
+
+                    if (rental!.Status == 3)
                     {
-                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental ({rental.RentalId}) befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht mehr freigegeben werden werden!" }));
+                        await clearFreigabeFields(rental.RentalId);
                     }
+
+                    if (rental!.Status == 4)
+                    {
+                        await clearAuslieferungFields(rental.RentalId);
+                    }
+
                     break;
 
 
                 case 3:
                     //ausliefern
-                    //möglich wenn
-                    /**
-                     * freigegeben 
-                     */
-                    if (rental.Status == 2)
+                    //freigabe oder rückgabe
+                    if (rental!.Status == 2 || rental!.Status == 5)
                     {
-                        rental.Status = 4;
-                        rental.RentalFreigabe = DateTime.Now;
-                        rental.RentalFreigabeUser = rentalAction.actionUserId;
+                        rental!.Status = 4;
+                        rental.RentalAuslieferung = DateTime.Now;
+                        rental.RentalAuslieferungUser = rentalAction.actionUserId;
                         _context.Rentals.Update(rental);
                         await _context.SaveChangesAsync();
-                        errors.Add(IdentityResult.Success);
                     }
-
                     else
                     {
-                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es noch nicht/nicht mehr ausgeliefert werden!" }));
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht ausgeliefert werden!" }));
                     }
+
+                    if (rental!.Status == 5)
+                    {
+                        await clearZurückgabeFields(rental.RentalId);
+                    }
+
+                    errors.Add(IdentityResult.Success);
 
                     break;
 
 
                 case 4:
                     //zurücknehmen
-                    //möglich wenn
-                    /**
-                     * ausgeliefert
-                     */
-
-                    if (rental.Status == 4)
+                    if(rental!.Status == 4)
                     {
-                        rental.Status = 5;
+                        rental!.Status = 5;
                         rental.RentalFreigabe = DateTime.Now;
                         rental.RentalFreigabeUser = rentalAction.actionUserId;
                         _context.Rentals.Update(rental);
                         await _context.SaveChangesAsync();
-                        errors.Add(IdentityResult.Success);
                     }
-
                     else
                     {
-                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es noch nicht/nicht mehr zurückgenommen werden!" }));
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht zurückgenommen werden!" }));
                     }
+
+                    errors.Add(IdentityResult.Success);
 
 
                     break;
@@ -633,33 +635,45 @@ namespace MaReSy2_Api.Services
             var rental = await _context.Rentals
                 .Where(rental => rental.RentalId == rentalId).FirstOrDefaultAsync();
 
-            var user = await _context.Users.Where(user=>user.UserId == userId).FirstOrDefaultAsync();
+            var user = await _context.Users.Where(user => user.UserId == userId).FirstOrDefaultAsync();
 
 
-            if(rental == null)
+            if (rental == null)
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental mit der ID {rentalId} gibt es nicht!" }));
             }
 
 
-            if(user == null)
+            if (user == null)
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Den User mit der ID {userId} gibt es nicht!" }));
             }
 
-            if(rental != null && user != null && rental.UserId != userId)
+            if (rental != null && user != null && rental.UserId != userId)
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Die Rental befindet sich nicht im Besitz von {user.Username}, daher kann Sie nicht storniert werden!" }));
             }
 
             if (errors.Any()) return errors;
 
-            rental!.RentalStornierung = DateTime.Now;
-            rental!.Status = 6;
+            //nur möglich, wenn reservierung im Status angefordert
 
-            _context.Rentals.Update(rental);
-            await _context.SaveChangesAsync();
-            errors.Add(IdentityResult.Success);
+            if(rental!.Status == 1)
+            {
+                rental!.RentalStornierung = DateTime.Now;
+                rental!.Status = 6;
+
+                _context.Rentals.Update(rental);
+                await _context.SaveChangesAsync();
+                errors.Add(IdentityResult.Success);
+            }
+
+            else
+            {
+                errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht mehr storniert werden!" }));
+            }
+
+
 
             return errors;
 

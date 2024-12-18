@@ -171,13 +171,6 @@ namespace MaReSy2_Api.Services
                 return errors;
             }
 
-
-            //TODO: DARF EIN SINGLEPRODUKT MIT DEM GLEICHEN NAMEN EXISITIEREN?
-            if (!string.IsNullOrWhiteSpace(product.SingleProductName) && await _context.SingleProducts.AnyAsync(p => p.SingleProductName.ToLower() == product.SingleProductName.ToLower().Trim() && p.ProductId != productId))
-            {
-                errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Der Produktname ist bereits vorhanden." }));
-            }
-
             if (!string.IsNullOrWhiteSpace(product.SingleProductSerialNumber) && await _context.SingleProducts.AnyAsync(p => p.SingleProductNumber.ToLower() == product.SingleProductSerialNumber.ToLower().Trim() && p.SingleProductId != productId))
             {
                 errors.Add(IdentityResult.Failed(new IdentityError() { Description = "Die Produkt-Serien-Nr. existiert bereits!" }));
