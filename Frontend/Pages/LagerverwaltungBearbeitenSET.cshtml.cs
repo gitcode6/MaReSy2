@@ -80,7 +80,7 @@ namespace MaReSy2.Pages
                 setname = setname,
                 setdescription = setbeschreibung,
                 setactive = Convert.ToBoolean(setstatus),
-                products = null,
+                setProductAssignDTOs = null,
             };
 
             if (!string.IsNullOrEmpty(AnzahlDefinierenDaten))
@@ -88,7 +88,7 @@ namespace MaReSy2.Pages
                 // JSON-Daten in ein C#-Objekt deserialisieren
                 var produktListe = JsonConvert.DeserializeObject<List<CreateSetProductAmount>>(AnzahlDefinierenDaten);
 
-                if (produktListe.Count != null && produktListe.Any()) { newSet.products = produktListe; }
+                if (produktListe.Count != null && produktListe.Any()) { newSet.setProductAssignDTOs = produktListe; }
 
             }
 

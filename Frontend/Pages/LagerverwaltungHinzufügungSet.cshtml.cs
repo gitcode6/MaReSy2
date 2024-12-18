@@ -66,14 +66,12 @@ namespace MaReSy2.Pages
             var setbeschreibung = Request.Form["setbeschreibung"];
             var setstatus = Request.Form["setstatus"];
 
-
-
             CreateSetModel newSet = new CreateSetModel()
             {
                 setname = setname,
                 setdescription = setbeschreibung,
                 setactive = Convert.ToBoolean(setstatus),
-                products = null
+                setProductAssignDTOs = null,
             };
 
             if (!string.IsNullOrEmpty(AnzahlDefinierenDaten))
@@ -81,7 +79,7 @@ namespace MaReSy2.Pages
                 // JSON-Daten in ein C#-Objekt deserialisieren
                 var produktListe = JsonConvert.DeserializeObject<List<CreateSetProductAmount>>(AnzahlDefinierenDaten);
 
-                if (produktListe.Count > 0) { newSet.products = produktListe; }
+                if (produktListe.Count > 0) { newSet.setProductAssignDTOs = produktListe; }
             }
 
             bool success = await _setService.addSetAsync(newSet);
