@@ -121,8 +121,7 @@
               "RelativeToolTip": "Controllers\\SetController.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAcwDoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:43:36.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:43:36.805Z"
             },
             {
               "$type": "Document",
@@ -180,7 +179,7 @@
               "RelativeDocumentMoniker": "Services\\SetService.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SetService.cs",
               "RelativeToolTip": "Services\\SetService.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAvwMkAAACbAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwMkAAACbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T15:45:34.669Z",
               "EditorCaption": ""
@@ -195,8 +194,7 @@
               "RelativeToolTip": "Services\\ProductService.cs",
               "ViewState": "AgIAAHEAAAAAAAAAAAAWwI4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:55:40.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:55:40.63Z"
             },
             {
               "$type": "Document",
@@ -220,8 +218,7 @@
               "RelativeToolTip": "Models\\MaReSyDbContext.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAWwA4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:27:46.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:27:46.725Z"
             },
             {
               "$type": "Document",
@@ -233,8 +230,7 @@
               "RelativeToolTip": "Models\\Set.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:41.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:41.491Z"
             },
             {
               "$type": "Document",
@@ -246,8 +242,7 @@
               "RelativeToolTip": "Models\\ProductsSet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:34:10.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:34:10.851Z"
             },
             {
               "$type": "Document",

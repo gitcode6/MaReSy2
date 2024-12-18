@@ -1,6 +1,11 @@
+using MaReSy2.pdfReports.Produkte;
+using MaReSy2.pdfReports.Sets;
 using MaReSy2.Services;
 using Microsoft.AspNetCore.Authorization;
+using QuestPDF.Infrastructure;
 
+
+QuestPDF.Settings.License = LicenseType.Community;
 var builder = WebApplication.CreateBuilder(args);
 
 // Services hinzufügen
@@ -24,9 +29,22 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddHttpClient("API", client => { client.BaseAddress = new Uri("https://localhost:7162/api"); });
 builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<SetService>();
 builder.Services.AddScoped<SingleProductService>();
+builder.Services.AddScoped<ProductService>();
+
+
+
+//Produkteauszug
+builder.Services.AddScoped<ProdukteAuszugPdfGenerator>();
+builder.Services.AddScoped<ProduktAuszugPdfUseCase>();
+
+//Setauszug
+builder.Services.AddScoped<SetsAuszugPdfGenerator>();
+builder.Services.AddScoped<SetAuszugPdfUseCase>();
+
+
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
