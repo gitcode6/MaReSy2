@@ -81,7 +81,7 @@ namespace MaReSy2.Services
         public async Task<bool> bearbeitenSETAsync(CreateSetModel set, int setid)
         {
             var client = _httpClientFactory.CreateClient("API");
-            string baseUrl = $"/api/products/{setid}";
+            string baseUrl = $"/api/sets/{setid}";
 
             using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(set), Encoding.UTF8, "application/json");
             var response = await client.PutAsync(baseUrl, stringContent);

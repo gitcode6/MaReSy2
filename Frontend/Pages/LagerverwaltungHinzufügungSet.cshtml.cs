@@ -82,11 +82,6 @@ namespace MaReSy2.Pages
                 var produktListe = JsonConvert.DeserializeObject<List<CreateSetProductAmount>>(AnzahlDefinierenDaten);
 
                 if (produktListe.Count > 0) { newSet.products = produktListe; }
-
-                //foreach (var produkt in produktListe)
-                //{
-                //    newSet.products.Add(produkt);
-                //}
             }
 
             bool success = await _setService.addSetAsync(newSet);

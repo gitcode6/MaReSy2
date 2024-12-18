@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int}"
 @using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.LagerverwaltungBearbeitenSETModel
 @attribute [Authorize(Policy = "AdminsOnly")]
@@ -44,22 +44,22 @@
 <div class="lagerverwaltung_bearbeitung">
     <h2 style="text-align: center;">SET Bearbeitung</h2>
     <form method="post">
-        <div class="form-group">
-            <input type="file" id="Produktbild" class="form-control" onchange="previewImage(event)" /> <!--   asp-for="Produkt.Produktbild" Bernd Stadlhofer: Image lässt sich nicht als Standard anzeigen -->
-            <br>
-            <img id="imagePreview" src="" alt="Bildvorschau" style="display:none; width:25%" />
-        </div>
+        @*<div class="form-group">
+        <input type="file" id="Produktbild" class="form-control" onchange="previewImage(event)" /> <!--   asp-for="Produkt.Produktbild" Bernd Stadlhofer: Image lässt sich nicht als Standard anzeigen -->
+        <br>
+        <img id="imagePreview" src="" alt="Bildvorschau" style="display:none; width:25%" />
+        </div>*@
         <div class="form-group">
             <label for="Setname">Setname</label>
-            <input type="text" name="setname" id="setname" class="form-control">
+            <input type="text" name="setname" id="setname" class="form-control" asp-for="meinSet.setname">
         </div>
         <div class="form-group">
             <label for="Setbeschreibung">Beschreibung</label>
-            <input type="text" name="setbeschreibung" id="setbeschreibung" class="form-control">
+            <input type="text" name="setbeschreibung" id="setbeschreibung" class="form-control" asp-for="meinSet.setdescription">
         </div>
         <div class="form-group">
             <label for="Setstatus">Status</label>
-            <select name="setstatus" id="setstatus" class="form-control">
+            <select name="setstatus" id="setstatus" class="form-control" asp-for="meinSet.setactive">
                 <option name="aktiv" value="true" selected>Aktiv</option>
                 <option name="inaktiv" value="false">Inaktiv</option>
             </select>
@@ -92,24 +92,21 @@
                     </tr>
                 </thead>
                 <tbody id="userTableBodyAuswahl">
-                    <tr style="vertical-align: middle;">
-                        <td>1</td>
-                        <td>Produkt A</td>
-                        <td>Ein Beispielprodukt</td>
-                        <td>Aktiv</td>
-                        <td>
-                            <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;">Produkt hinzufügen</a>
-                        </td>
-                    </tr>
-                    <tr style="vertical-align: middle;">
-                        <td>2</td>
-                        <td>Produkt B</td>
-                        <td>Ein anderes Beispielprodukt</td>
-                        <td>Inaktiv</td>
-                        <td>
-                            <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;">Produkt hinzufügen</a>
-                        </td>
-                    </tr>
+                    @if (Model.products != null && Model.products.Any())
+                    {
+                        @foreach (var e in Model.products)
+                        {
+                            <tr style="vertical-align: middle;">
+                                <td>@e.productId</td>
+                                <td>@e.productname</td>
+                                <td>@e.productdescription</td>
+                                <td>@(e.productactive ? "Aktiv" : "Inaktiv")</td>
+                                <td>
+                                    <a class="btn btn-primary" style="background-color: #A0DAB3; border: #A0DAB3;" onclick="produktHinzufuegen(this.closest('tr'));">Produkt hinzufügen</a>
+                                </td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
         </div>
@@ -136,20 +133,13 @@
                     </tr>
                 </thead>
                 <tbody id="userTableBodyAnzahl">
-                    <tr style="vertical-align: middle;">
-                        <td>3</td>
-                        <td>Produkt B</td>
-                        <td>Ein Beispielprodukt</td>
-                        <td><input type="text" id="mengeprodukt" placeholder="Menge"></td>
-                        <td>
-                            <a class="btn btn-primary" style="background-color: #B70E0C; border: #B70E0C;">Produkt entfernen</a>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
 
-        <button type="submit" class="btn btnSpeichern" style="background-color: #403A60;">Speichern</button>
+        <input type="hidden" id="anzahlDefinierenDaten" name="anzahlDefinierenDaten"/>
+
+        <button type="submit" class="btn btnSpeichern" style="background-color: #403A60;" onclick="return speicherDaten()">Speichern</button>
         <a asp-page="/Lagerverwaltung" class="btn btn-secondary" style="background-color: #B70E0C;">Abbrechen</a>
     </form>
 </div>
@@ -206,4 +196,64 @@
             reader.readAsDataURL(file); // Lese die Datei als Data-URL
         }
     }
+
+    function produktHinzufuegen(row) {
+        // Zeilen-Daten aus der Tabelle "Produkte auswählen" extrahieren
+        const productId = row.cells[0].innerText;
+        const productName = row.cells[1].innerText;
+        const productDescription = row.cells[2].innerText;
+
+        // Prüfen, ob das Produkt schon in der unteren Tabelle existiert
+        const anzahlTable = document.getElementById("userTableBodyAnzahl");
+        const existingRow = Array.from(anzahlTable.rows).find(r => r.cells[0].innerText === productId);
+
+        if (existingRow) {
+            alert("Das Produkt ist bereits in der unteren Tabelle!");
+            return;
+        }
+
+        // Neue Zeile für die Tabelle "Anzahl definieren" erstellen
+        const newRow = anzahlTable.insertRow();
+
+        newRow.innerHTML = `
+                        <td>${productId}</td>
+                        <td>${productName}</td>
+                        <td>${productDescription}</td>
+                        <td><input type="text" placeholder="Menge" class="form-control"></td>
+                        <td>
+                            <a class="btn btn-primary" style="background-color: #B70E0C; border: #B70E0C;" onclick="produktEntfernen(this)">Produkt entfernen</a>
+                        </td>
+                    `;
+    }
+
+    function produktEntfernen(button) {
+        // Zeile aus der Tabelle entfernen
+        const row = button.closest('tr');
+        row.remove();
+    }
+
+    function speicherDaten() {
+        const tableBody = document.getElementById("userTableBodyAnzahl");
+        const rows = Array.from(tableBody.rows);
+
+        // Serialisiere die Daten aus der unteren Tabelle
+        const tableData = rows.map(row => ({
+            productId: row.cells[0].innerText.trim(),
+            productAmount: row.cells[3].querySelector("input").value.trim()
+        }));
+
+        // Speichere die Daten in das versteckte Eingabefeld
+        const hiddenInput = document.getElementById("anzahlDefinierenDaten");
+        hiddenInput.value = JSON.stringify(tableData);
+
+        // Optionale Validierung: Stelle sicher, dass alle Mengen eingegeben wurden
+        const invalidRow = tableData.find(row => !row.productAmount || isNaN(row.productAmount));
+        if (invalidRow) {
+            alert("Bitte alle Mengen korrekt eingeben!");
+            return false; // Verhindert das Absenden des Formulars
+        }
+
+        return true; // Formular wird abgesendet
+    }
+
 </script>

@@ -93,7 +93,7 @@
                 <td>@(x.setactive ? "Aktiv" : "Inaktiv")</td>
                 <td>
                     <!-- BEARBEITEN UND LÖSCHEN BUTTONS -->
-                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeitenSET" asp-route-id="S 1" asp-route-setname="BewerbSset" asp-route-setbeschreibung="Dies ist die optimale Konfiguration für den Bewerb." asp-route-pfadbild="~/images/Übungsmedikament1.JPG" asp-route-setmenge="3" asp-route-setstatus="Aktiv" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
+                    <a class="btn btn-primary" asp-page="/LagerverwaltungBearbeitenSET" asp-route-id="@x.setId" style="background-color: #403A60; border-color:#403A60;">Bearbeiten</a>
                         <form id="deleteForm-@x.setId"
                               method="post"
                               asp-route-id="@x.setId"
