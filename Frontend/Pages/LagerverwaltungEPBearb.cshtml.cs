@@ -26,6 +26,11 @@ namespace MaReSy2.Pages
         public async Task<IActionResult> OnGet(int id)
         {
             meinproduct = await singleProductService.GetSingleProductAsync(id);
+
+            if (meinproduct == null)
+            {
+                return NotFound();
+            }
             products = await productService.GetProductsAsync();
 
             TempData["SingleProductID"] = meinproduct.singleProductId;

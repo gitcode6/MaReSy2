@@ -1,4 +1,6 @@
 ﻿using MaReSy2.ConsumeModels;
+using System.Diagnostics;
+using System.Text;
 
 namespace MaReSy2.Services
 {
@@ -51,6 +53,48 @@ namespace MaReSy2.Services
             var response = await client.DeleteAsync(url);
 
             return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> addSetAsync(CreateSetModel set)
+        {
+            var client = _httpClientFactory.CreateClient("API");
+
+            string baseUrl = "/api/sets";
+
+
+            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(set), Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(baseUrl, stringContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Debug.WriteLine(response.Content.ReadAsStringAsync());
+                return true;
+            }
+            else
+            {
+                Debug.WriteLine(response.Content.ReadAsStringAsync());
+                return false;
+            }
+
+        }
+
+        public async Task<bool> bearbeitenSETAsync(CreateSetModel set, int setid)
+        {
+            var client = _httpClientFactory.CreateClient("API");
+            string baseUrl = $"/api/sets/{setid}";
+
+            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(set), Encoding.UTF8, "application/json");
+            var response = await client.PutAsync(baseUrl, stringContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Debug.WriteLine(response.Content.ReadAsStringAsync());
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
