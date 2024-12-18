@@ -76,7 +76,6 @@ public class LagerverwaltungHinzufügenModel : PageModel
             productname = produktname,
             productdescription = produktbezeichnung,
             productactive = Convert.ToBoolean(produktstatus),
-
         };
 
 

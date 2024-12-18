@@ -85,4 +85,39 @@
                     reader.readAsDataURL(file); // Lese die Datei als Data-URL
                 }
             }
+
+            function produktHinzufuegen(row) {
+                // Zeilen-Daten aus der Tabelle "Produkte auswählen" extrahieren
+                const productId = row.cells[0].innerText;
+                const productName = row.cells[1].innerText;
+                const productDescription = row.cells[2].innerText;
+
+                // Prüfen, ob das Produkt schon in der unteren Tabelle existiert
+                const anzahlTable = document.getElementById("userTableBodyAnzahl");
+                const existingRow = Array.from(anzahlTable.rows).find(r => r.cells[0].innerText === productId);
+
+                if (existingRow) {
+                    alert("Das Produkt ist bereits in der unteren Tabelle!");
+                    return;
+                }
+
+                // Neue Zeile für die Tabelle "Anzahl definieren" erstellen
+                const newRow = anzahlTable.insertRow();
+
+                newRow.innerHTML = `
+                        <td>${productId}</td>
+                        <td>${productName}</td>
+                        <td>${productDescription}</td>
+                        <td><input type="text" placeholder="Menge" class="form-control"></td>
+                        <td>
+                            <a class="btn btn-primary" style="background-color: #B70E0C; border: #B70E0C;" onclick="produktEntfernen(this)">Produkt entfernen</a>
+                        </td>
+                    `;
+            }
+
+            function produktEntfernen(button) {
+                // Zeile aus der Tabelle entfernen
+                const row = button.closest('tr');
+                row.remove();
+            }
 </script>
