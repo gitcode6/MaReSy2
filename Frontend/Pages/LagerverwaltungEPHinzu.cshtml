@@ -60,7 +60,7 @@
 				{
 					@foreach (var product in Model.products)
 					{
-						<option name="@product.productId" value="@product.productId">@product.productname</option>
+						<option name="@product.productId" value="@product.productId">(@product.productId) @product.productname</option>
 					}
 				}
 				else{
