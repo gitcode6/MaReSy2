@@ -1,6 +1,7 @@
 ﻿using MaReSy2.ConsumeModels;
 using System.Diagnostics;
 using System.Text;
+using System.Text.Json;
 using static MaReSy2.Pages.LagerverwaltungEPHinzuModel;
 
 namespace MaReSy2.Services
@@ -57,10 +58,15 @@ namespace MaReSy2.Services
 
         }
 
-        public async Task<bool> bearbeitenSingleProductAsync(SingleProduct singleProduct)
+        public async Task<bool> bearbeitenSingleProductAsync(CreateSingleProductModel singleProduct, int singleProductId)
         {
             var client = _httpClientFactory.CreateClient("API");
-            string baseUrl = $"/api/singleproducts/{singleProduct.singleProductId}";
+            string baseUrl = $"/api/singleproducts/{singleProductId}";
+
+            var jsonOptions = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull // Ignoriere null-Werte
+            };
 
             using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(singleProduct), Encoding.UTF8, "application/json");
             var response = await client.PutAsync(baseUrl, stringContent);
@@ -77,30 +83,30 @@ namespace MaReSy2.Services
         }
 
         public async Task<ConsumeModels.SingleProduct?> GetSingleProductAsync(int singleProductID)
-        {
-            var client = _httpClientFactory.CreateClient("API");
-
-            var response = await client.GetAsync($"/api/singleproducts/{singleProductID}");
-
-            var responseContent = await response.Content.ReadAsStringAsync();
-            System.Diagnostics.Debug.WriteLine(responseContent);
-
-            if (response.IsSuccessStatusCode)
             {
-                return System.Text.Json.JsonSerializer.Deserialize<SingleProduct>(responseContent);
+                var client = _httpClientFactory.CreateClient("API");
+
+                var response = await client.GetAsync($"/api/singleproducts/{singleProductID}");
+
+                var responseContent = await response.Content.ReadAsStringAsync();
+                System.Diagnostics.Debug.WriteLine(responseContent);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return System.Text.Json.JsonSerializer.Deserialize<SingleProduct>(responseContent);
+                }
+                else { return null; }
             }
-            else { return null; }
-        }
 
-        public async Task<bool> deleteSingleProductAsync(int singleProductID)
-        {
-            var client = _httpClientFactory.CreateClient("API");
-            string url = $"/api/singleproducts/{singleProductID}";
+            public async Task<bool> deleteSingleProductAsync(int singleProductID)
+            {
+                var client = _httpClientFactory.CreateClient("API");
+                string url = $"/api/singleproducts/{singleProductID}";
 
-            var response = await client.DeleteAsync(url);
+                var response = await client.DeleteAsync(url);
 
-            return response.IsSuccessStatusCode;
-        }
-
+                return response.IsSuccessStatusCode;
+            }
+        
     }
 }

@@ -46,21 +46,33 @@
     <form method="post">
         <div class="form-group">
             <label for="Produktname">Einzelproduktname</label>
-            <input type="text" name = "produktname" id="Produktname" class="form-control" />
+            <input type="text" id="Produktname" class="form-control" asp-for="meinproduct.singleProductName" />
         </div>
         <div class="form-group">
             <label for="Produktname">Seriennummer</label>
-            <input type="text" name="produktname" id="Produktname" class="form-control" />
+            <input type="text"  id="Produktname" class="form-control" asp-for="meinproduct.singleProductSerialNumber" />
         </div>
         <div class="form-group">
             <label for="EPKategorie">Kategorie</label>
-            <select name="epkategorie" id="epkategorie" class="form-control">
-                <option name="aktiv" value="true" selected>AUS PRODUKT TABELLE</option>
+            <select id="epkategorie" class="form-control" asp-for="meinproduct.mainProduct">
+            @if (Model.products != null && Model.products.Any())
+            {
+                @foreach (var product in Model.products)
+                {
+                   <option name="@product.productId" value="@product.productId">
+                (@product.productId) @product.productname
+                   </option>
+                }
+            }
+            else
+            {
+                <option disabled>Keine Produkte verfügbar</option>
+            }
             </select>
         </div>
         <div class="form-group">
             <label for="Produktstatus">Status</label>
-            <select name="produktstatus" id="produktstatus" class="form-control" >
+            <select id="produktstatus" class="form-control" asp-for="meinproduct.singleProductActive">
                 <option name="aktiv" value="true" selected>Aktiv</option>
                 <option name="inaktiv" value="false">Inaktiv</option>
             </select>
