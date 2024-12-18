@@ -13,7 +13,7 @@ namespace MaReSy2_Api.Models.DTO.SetDTO
 
         public bool Setactive { get; set; }
 
-        public string? ProductimageLink { get; set; }
+        public string? SetimageLink { get; set; }
 
         public List<AssignedProductDTO>? Products { get; set; }
 

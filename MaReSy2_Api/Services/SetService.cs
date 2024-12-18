@@ -109,24 +109,29 @@ namespace MaReSy2_Api.Services
             SetDTO? set = null;
 
 
-            var set_fromDb = await _context.Sets.FirstAsync(x => x.SetId == setId);
+            var set_fromDb = await _context.Sets.Where(x => x.SetId == setId).FirstOrDefaultAsync();
 
-            set = new SetDTO
+            if(set_fromDb != null)
             {
-                SetId = set_fromDb.SetId,
-                Setname = set_fromDb.Setname,
-                Setdescription = set_fromDb.Setdescription,
-                Setactive = set_fromDb.Setactive,
-                ProductimageLink = null,
-                Products = setfromDb!.ProductsSets.Select(ps => new AssignedProductDTO
+                set = new SetDTO
                 {
-                    ProductId = ps.ProductId,
-                    Productname = ps.Product.Productname,
-                    Productdescription = ps.Product.Productdescription ?? null,
-                    Productamount = ps.SingleProductAmount,
+                    SetId = set_fromDb.SetId,
+                    Setname = set_fromDb.Setname,
+                    Setdescription = set_fromDb.Setdescription,
+                    Setactive = set_fromDb.Setactive,
+                    SetimageLink = set_fromDb.Setimage != null && set_fromDb.Setimage.Length != 0 ? $"/api/sets/{set_fromDb.SetId}/image" : null,
+                    Products = setfromDb!.ProductsSets.Select(ps => new AssignedProductDTO
+                    {
+                        ProductId = ps.ProductId,
+                        Productname = ps.Product.Productname,
+                        Productdescription = ps.Product.Productdescription ?? null,
+                        Productamount = ps.SingleProductAmount,
 
-                }).ToList(),
-            };
+                    }).ToList(),
+                };
+            }
+
+           
 
             return set;
         }
@@ -141,6 +146,7 @@ namespace MaReSy2_Api.Services
                 Setname = set.Setname,
                 Setdescription = set.Setdescription ?? null,
                 Setactive = set.Setactive,
+                SetimageLink = set.Setimage != null && set.Setimage.Length != 0 ? $"/api/sets/{set.SetId}/image" : null,
             });
         }
 
@@ -239,6 +245,6 @@ namespace MaReSy2_Api.Services
             return errors;
         }
 
-      
+
     }
 }
