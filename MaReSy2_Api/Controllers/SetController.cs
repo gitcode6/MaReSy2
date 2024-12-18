@@ -15,11 +15,13 @@ namespace MaReSy2_Api.Controllers
     public class SetController : ControllerBase
     {
         private readonly ISetService _setService;
+        private readonly IImageUploadService _imageUploadService;
         private readonly MaReSyDbContext _maReSyDbContext;
 
-        public SetController(ISetService setService, MaReSyDbContext maReSyDbContext)
+        public SetController(ISetService setService, IImageUploadService imageUploadService, MaReSyDbContext maReSyDbContext)
         {
             _setService = setService;
+            _imageUploadService = imageUploadService;
             _maReSyDbContext = maReSyDbContext;
         }
 
@@ -108,6 +110,55 @@ namespace MaReSy2_Api.Controllers
             {
                 return BadRequest(result);
             }
+        }
+
+        [HttpPost("{id}/upload-image")]
+        public async Task<IActionResult> UploadSetImage(int id, [FromForm] IFormFile image)
+        {
+            try
+            {
+                var imageBytes = await _imageUploadService.ValidateAndProcessImageAsync(image);
+                var set = await _maReSyDbContext.Sets.FindAsync(id);
+
+                if (set == null) return NotFound("Das Set wurde nicht gefunden");
+
+                set.Setimage = imageBytes;
+                _maReSyDbContext.Sets.Update(set);
+                await _maReSyDbContext.SaveChangesAsync();
+
+                return Ok("Bild erfolgreich hochgeladen!");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch
+            {
+                return StatusCode(500, "Ein unerwarteter Fehler ist aufgetreten.");
+            }
+        }
+
+        [HttpGet("{id}/image")]
+        public async Task<IActionResult> GetProductImage(int id)
+        {
+            var set = await _maReSyDbContext.Sets.FindAsync(id);
+
+            if (set == null)
+            {
+                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Set wurde nicht gefunden!" }));
+
+                //NotFound("Produkt nicht gefunden");
+            }
+
+            if (set.Setimage == null || set.Setimage.Length == 0)
+            {
+                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Setbild für Set (ID: {set.SetId}) vorhanden." }));
+
+            }
+
+            var imageType = "image/jpeg";
+
+            return File(set.Setimage, imageType);
         }
 
 

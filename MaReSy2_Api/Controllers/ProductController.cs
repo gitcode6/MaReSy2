@@ -1,7 +1,10 @@
-﻿using MaReSy2_Api.Models.DTO.ProductDTO;
+﻿using MaReSy2_Api.Models;
+using MaReSy2_Api.Models.DTO.ProductDTO;
 using MaReSy2_Api.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.Identity.Client;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 
@@ -14,12 +17,14 @@ namespace MaReSy2_Api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
+        private readonly IImageUploadService _imageUploadService;
         private readonly MaReSyDbContext _maReSyDbContext;
 
-        public ProductController(IProductService productService, MaReSyDbContext maReSyDbContext)
+        public ProductController(IProductService productService, MaReSyDbContext maReSyDbContext, IImageUploadService imageUploadService)
         {
             _productService = productService;
             _maReSyDbContext = maReSyDbContext;
+            _imageUploadService = imageUploadService;
         }
 
 
@@ -42,7 +47,7 @@ namespace MaReSy2_Api.Controllers
             //TODO: Produktvalidierung in den Service verschieben??
             if (product == null)
             {
-               var errors = IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });
+                var errors = IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });
                 return BadRequest(errors);
             }
             else
@@ -74,7 +79,7 @@ namespace MaReSy2_Api.Controllers
             return BadRequest();
 
 
-            
+
 
             //var (createdProduct, errors) = result;
 
@@ -94,20 +99,46 @@ namespace MaReSy2_Api.Controllers
 
             if (product == null)
             {
-                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" })); 
-                    
-                    //NotFound("Produkt nicht gefunden");
+                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" }));
+
+                //NotFound("Produkt nicht gefunden");
             }
 
             if (product.Productimage == null || product.Productimage.Length == 0)
             {
                 return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden." }));
-                    
+
             }
 
             var imageType = "image/jpeg";
 
             return File(product.Productimage, imageType);
+        }
+
+        [HttpPost("{id}/upload-image")]
+        public async Task<IActionResult> UploadProductImage(int id, [FromForm] IFormFile image)
+        {
+            try
+            {
+                var imageBytes = await _imageUploadService.ValidateAndProcessImageAsync(image);
+                var product = await _maReSyDbContext.Products.FindAsync(id);
+
+                if(product == null) return NotFound("Das Produkt wurde nicht gefunden");
+
+                product.Productimage = imageBytes;
+                _maReSyDbContext.Products.Update(product);
+                await _maReSyDbContext.SaveChangesAsync();
+
+                return Ok("Bild erfolgreich hochgeladen!");
+            }
+            catch(ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch
+            {
+                return StatusCode(500, "Ein unerwarteter Fehler ist aufgetreten.");
+            }
         }
 
         [HttpDelete("{id}")]
@@ -131,7 +162,7 @@ namespace MaReSy2_Api.Controllers
         {
             var result = await _productService.updateProduct(id, product);
 
-            if(result.Contains(IdentityResult.Success))
+            if (result.Contains(IdentityResult.Success))
             {
                 return Ok(result);
             }
