@@ -21,13 +21,6 @@ namespace MaReSy2.Pages
             this.productService = productService;
         }
 
-        public class ProduktModel
-        {
-            public int productId { get; set; }
-            public int productAmount { get; set; }
-
-        }
-
         public List<Product> products { get; private set; }
 
         public async Task<IActionResult> OnGet(int id)

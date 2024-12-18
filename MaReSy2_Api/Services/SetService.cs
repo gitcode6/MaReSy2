@@ -196,6 +196,11 @@ namespace MaReSy2_Api.Services
                     {
                         errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Produkt mit der ID {setitem.productId} muss eine positive Anzahl haben!" }));
                     }
+
+                    if(setitem.productAmount == 0)
+                    {
+                        errors.Add(IdentityResult.Failed(new IdentityError() { Description = $"Das Produkt mit der ID {setitem.productId} darf nicht 0 sein!" }));
+                    }
                 }
             }
 

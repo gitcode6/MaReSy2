@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\setservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\setservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\controllers\\setcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\setcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\setservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\setservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\productsset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\productsset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\imageuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,20 +79,8 @@
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\dto\\rentaldto\\createrentaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\maresydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\productsset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\productsset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,50 +109,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 164,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SetController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\SetController.cs",
               "RelativeDocumentMoniker": "Controllers\\SetController.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\SetController.cs",
               "RelativeToolTip": "Controllers\\SetController.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAqwJoAAABqAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAcwDoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T14:43:36.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ImageUploadService.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ImageUploadService.cs",
-              "RelativeDocumentMoniker": "Services\\ImageUploadService.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ImageUploadService.cs",
-              "RelativeToolTip": "Services\\ImageUploadService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAQwDoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T12:30:46.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SingleProductService.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
-              "RelativeDocumentMoniker": "Services\\SingleProductService.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
-              "RelativeToolTip": "Services\\SingleProductService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAIA1wBcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T09:44:09.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "IRentalService.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\IRentalService.cs",
               "RelativeDocumentMoniker": "Services\\IRentalService.cs",
@@ -164,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ActionDTO.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\RentalDTO\\ActionDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\RentalDTO\\ActionDTO.cs",
@@ -176,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "ISetService.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ISetService.cs",
               "RelativeDocumentMoniker": "Services\\ISetService.cs",
@@ -184,12 +158,11 @@
               "RelativeToolTip": "Services\\ISetService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T14:52:12.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T14:52:12.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "RentalService.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\RentalService.cs",
               "RelativeDocumentMoniker": "Services\\RentalService.cs",
@@ -197,38 +170,37 @@
               "RelativeToolTip": "Services\\RentalService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAO0CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:40:03.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T13:40:03.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SetService.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SetService.cs",
               "RelativeDocumentMoniker": "Services\\SetService.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SetService.cs",
               "RelativeToolTip": "Services\\SetService.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAgwF0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAvwMkAAACbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T15:45:34.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Services\\ProductService.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ProductService.cs",
               "RelativeToolTip": "Services\\ProductService.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAWwIMAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAWwI4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T15:55:40.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -236,12 +208,74 @@
               "RelativeToolTip": "Controllers\\ProductController.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAUwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T10:41:19.868Z",
+              "WhenOpened": "2024-12-18T10:41:19.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MaReSyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\MaReSyDbContext.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
+              "RelativeToolTip": "Models\\MaReSyDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAWwA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:27:46.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Set.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\Set.cs",
+              "RelativeDocumentMoniker": "Models\\Set.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\Set.cs",
+              "RelativeToolTip": "Models\\Set.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:33:41.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsSet.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\ProductsSet.cs",
+              "RelativeDocumentMoniker": "Models\\ProductsSet.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\ProductsSet.cs",
+              "RelativeToolTip": "Models\\ProductsSet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:34:10.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SingleProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
+              "RelativeDocumentMoniker": "Services\\SingleProductService.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\SingleProductService.cs",
+              "RelativeToolTip": "Services\\SingleProductService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAIA1wBcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T09:44:09.996Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "ImageUploadService.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ImageUploadService.cs",
+              "RelativeDocumentMoniker": "Services\\ImageUploadService.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\ImageUploadService.cs",
+              "RelativeToolTip": "Services\\ImageUploadService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwDoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T12:30:46.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "SetDTO.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\SetDTO\\SetDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\SetDTO\\SetDTO.cs",
@@ -249,12 +283,11 @@
               "RelativeToolTip": "Models\\DTO\\SetDTO\\SetDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:54:51.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:54:51.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "SingleProductController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\SingleProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\SingleProductController.cs",
@@ -266,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -274,12 +307,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T12:39:18.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T12:39:18.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
@@ -287,12 +319,11 @@
               "RelativeToolTip": "Controllers\\ProductsController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:29:50.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:29:50.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "RentalController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\RentalController.cs",
               "RelativeDocumentMoniker": "Controllers\\RentalController.cs",
@@ -304,19 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Set.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\Set.cs",
-              "RelativeDocumentMoniker": "Models\\Set.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\Set.cs",
-              "RelativeToolTip": "Models\\Set.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:41.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "CreateRentalDTO.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\RentalDTO\\CreateRentalDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\RentalDTO\\CreateRentalDTO.cs",
@@ -340,31 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MaReSyDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
-              "RelativeDocumentMoniker": "Models\\MaReSyDbContext.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\MaReSyDbContext.cs",
-              "RelativeToolTip": "Models\\MaReSyDbContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:27:46.725Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "ProductsSet.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\ProductsSet.cs",
-              "RelativeDocumentMoniker": "Models\\ProductsSet.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\ProductsSet.cs",
-              "RelativeToolTip": "Models\\ProductsSet.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:34:10.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\IProductService.cs",
               "RelativeDocumentMoniker": "Services\\IProductService.cs",

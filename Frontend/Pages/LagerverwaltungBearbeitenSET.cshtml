@@ -1,5 +1,7 @@
 ﻿@page "{id:int}"
+@using MaReSy2.ConsumeModels
 @using Microsoft.AspNetCore.Authorization
+@using System.Text.Json
 @model MaReSy2.Pages.LagerverwaltungBearbeitenSETModel
 @attribute [Authorize(Policy = "AdminsOnly")]
 @{
@@ -145,6 +147,11 @@
 </div>
 
 <script>
+
+
+
+
+
     function filterProdukteAuswaehlen() {
         const filterBezeichnung = document.getElementById("filterBezeichnungAuswahl").value.toLowerCase();
         const filterBeschreibung = document.getElementById("filterBeschreibungAuswahl").value.toLowerCase();
@@ -197,6 +204,26 @@
         }
     }
 
+    const setProducts = @Html.Raw(JsonSerializer.Serialize(Model.meinSet.products ?? new List<Product>()));
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const anzahlTable = document.getElementById("userTableBodyAnzahl");
+
+        setProducts.forEach(product=>{
+            const newRow = anzahlTable.insertRow();
+            newRow.innerHTML = `
+            <td>${product.productId}</td>
+            <td>${product.productname}</td>
+            <td>${product.productdescription}</td>
+            <td><input type="number" placeholder="Menge" class="form-control" value="${product.productamount}"></td>
+            <td>
+                <a class="btn btn-primary" style="background-color: #B70E0C; border: #B70E0C;" onclick="produktEntfernen(this)">Produkt entfernen</a>
+            </td>
+            `;
+        });
+
+    });
+
     function produktHinzufuegen(row) {
         // Zeilen-Daten aus der Tabelle "Produkte auswählen" extrahieren
         const productId = row.cells[0].innerText;
@@ -219,7 +246,7 @@
                         <td>${productId}</td>
                         <td>${productName}</td>
                         <td>${productDescription}</td>
-                        <td><input type="text" placeholder="Menge" class="form-control"></td>
+                        <td><input type="number" placeholder="Menge" class="form-control"></td>
                         <td>
                             <a class="btn btn-primary" style="background-color: #B70E0C; border: #B70E0C;" onclick="produktEntfernen(this)">Produkt entfernen</a>
                         </td>

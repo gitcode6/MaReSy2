@@ -4,7 +4,9 @@
     {
         public int productId {  get; set; }
         public string productname { get; set; }
-        public string productdescription { get; set; }
+        public string? productdescription { get; set; }
         public bool productactive { get; set; }
+
+        public int? productamount { get; set; }
     }
 }
