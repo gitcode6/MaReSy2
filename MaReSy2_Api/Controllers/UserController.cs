@@ -1,7 +1,9 @@
 ﻿using MaReSy2_Api.Models;
 using MaReSy2_Api.Models.DTO.UserDTO;
-using MaReSy2_Api.Services;
+using MaReSy2_Api.Services.UserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -11,6 +13,7 @@ namespace MaReSy2_Api.Controllers
 {
     [Route("api/users")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IUserManagementService _userManagementService;
@@ -23,108 +26,64 @@ namespace MaReSy2_Api.Controllers
             this._userManagementService = userManagementService;
         }
 
-        //[HttpGet]
-        //public async Task<ActionResult<List<User>>> GetUsers()
-        //{
-        //    return Ok(await context.Users.Include(u=>u.Role).ToListAsync());
-        //}
-        
-        [HttpGet("")]
-        public async Task<ActionResult<List<UserDTO>>> getUsers(string searchOption=null)
-        {
-            var users = await _userManagementService.GetUsersAsync(searchOption);
 
-            if(users == null)
-            {
-                return NotFound();
-            }
-            else
-            {
-                return Ok(users);
-            }
+
+        [HttpGet("")]
+        public async Task<ActionResult<APIResponse<IEnumerable<UserDTO>>>> getUsers(string searchOption = null)
+        {
+            var result = await _userManagementService.GetUsersAsync(searchOption);
+
+            return helperMethod.ToActionResult(result, this);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDTO>> getUser(int id)
+        public async Task<ActionResult<APIResponse<UserDTO?>>> getUser(int id)
         {
-            var user = await _userManagementService.FindUserAsync(id);
-            if(user == null)
-            {
-                return NotFound();
-            }
-            return user;
+            var result = await _userManagementService.FindUserAsync(id);
+            return helperMethod.ToActionResult(result, this);
         }
 
-        [HttpPost ("")]
-        public async Task<IActionResult> createUser( CreateUserDTO user)
+        [HttpPost("")]
+        public async Task<ActionResult<APIResponse<string>>> createUser(CreateUserDTO user)
         {
-             Validator.ValidateObject(user, new ValidationContext(user), validateAllProperties: true);
-            if (ModelState.IsValid)
+            // Validator.ValidateObject(user, new ValidationContext(user), validateAllProperties: true);
+            //if (ModelState.IsValid)
             {
 
                 var result = await _userManagementService.AddUserAsync(user);
 
-                if (result.Contains(IdentityResult.Success))
-                {
-                    return Ok(result);
-                }
+                return helperMethod.ToActionResultBasic(result, this);
 
-                else
-                {
-                    return BadRequest(result);
-                }
+                //}
+
             }
-
-            return BadRequest();
-
         }
 
-        //[HttpPost("{id}/change-password")]
-        //public async Task<IActionResult> updatePassword(int id, string newPassword)
-        //{
-        //    bool success = (bool)await _userManagementService.ChangePasswordAsync(id, newPassword);
-        //    if(success)
-        //    {
-        //        return Ok(IdentityResult.Success);
-        //    }
-        //    else
-        //    {
-        //        return BadRequest(id);
-        //    }
-        //}
         [HttpPut("{id}")]
-        public async Task<IActionResult> updateUser(int id, UpdateUserDTO user)
+        public async Task<ActionResult<APIResponse<string>>> updateUser(int id, UpdateUserDTO user)
         {
             var result = await _userManagementService.updateUser(id, user);
 
-            if (result.Contains(IdentityResult.Success))
-            {
-                return Ok(result);
-            }
+            return helperMethod.ToActionResultBasic(result, this);
 
-            else
-            {
-                return BadRequest(result);
-            }
         }
 
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> deactivateUser(int id)
+        public async Task<ActionResult<APIResponse<string>>> deactivateUser(int id)
         {
             var result = await _userManagementService.DeleteUserAsync(id);
 
-            if(result == IdentityResult.Success)
-            {
-                return Ok(result);
-            }
+            return helperMethod.ToActionResultBasic(result, this);
 
-            else
-            {
-                return BadRequest(result);
-            }
         }
 
+        [HttpPut("me/change-password")]
+        public async Task<ActionResult<APIResponse<bool>>> ChangeUserPassword(PasswordChangeDTO passwordChange)
+        {
+            var result = await _userManagementService.ChangePasswordAsync(_userManagementService.getLoggedInUserId(), passwordChange.confirmPassword, passwordChange.newPassword);
+            return helperMethod.ToActionResultBasic(result, this);
+        }
 
 
 

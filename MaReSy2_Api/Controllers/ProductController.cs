@@ -1,8 +1,12 @@
-﻿using MaReSy2_Api.Models;
+﻿using Azure;
+using MaReSy2_Api.Models;
 using MaReSy2_Api.Models.DTO.ProductDTO;
-using MaReSy2_Api.Services;
+using MaReSy2_Api.Services.ImageService;
+using MaReSy2_Api.Services.ProductService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.Identity.Client;
 using System.ComponentModel.DataAnnotations;
@@ -14,6 +18,7 @@ namespace MaReSy2_Api.Controllers
 {
     [Route("api/products")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -30,83 +35,59 @@ namespace MaReSy2_Api.Controllers
 
         // GET: api/<ProductController>
         [HttpGet("")]
-        public async Task<ActionResult<List<ProductDTO>>> Get()
+        public async Task<ActionResult<APIResponse<IEnumerable<ProductDTO>>>> Get()
         {
-            var products = await _productService.GetProductsAsync();
+            var result = await _productService.GetProductsAsync();
 
-            return Ok(products);
+            return helperMethod.ToActionResult(result, this);
         }
 
         // GET api/<ProductController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ProductDTO>> GetProductById(int id)
+        public async Task<ActionResult<APIResponse<ProductDTO>>> GetProductById(int id)
         {
             var product = await _productService.GetProductByIdAsync(id);
 
-
-            //TODO: Produktvalidierung in den Service verschieben??
-            if (product == null)
-            {
-                var errors = IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" });
-                return BadRequest(errors);
-            }
-            else
-            {
-                return Ok(product);
-            }
+            return helperMethod.ToActionResult(product, this);
         }
 
         // POST api/<ProductController>
         [HttpPost("")]
-        public async Task<ActionResult<ProductDTO>> CreateProduct(CreateProductDTO product)
+        public async Task<ActionResult<APIResponse<bool>>> CreateProduct(CreateProductDTO product)
         {
-            Validator.ValidateObject(product, new ValidationContext(product), validateAllProperties: true);
+            var result = await _productService.AddNewProduct(product);
 
-            if (ModelState.IsValid)
-            {
-                var result = await _productService.AddNewProduct(product);
-
-                if (result.Contains(IdentityResult.Success))
-                {
-                    return Ok(result);
-                }
-                else
-                {
-                    return BadRequest(result);
-                }
-            }
-
-            return BadRequest();
-
-
-
-
-            //var (createdProduct, errors) = result;
-
-            //if (errors != null && errors.Any())
-            //{
-            //    return BadRequest(new { Errors = errors });
-            //}
-
-            //return CreatedAtAction(nameof(GetProductById), new { id = createdProduct.ProductId }, createdProduct);
-
+            return helperMethod.ToActionResultBasic(result, this);
         }
 
         [HttpGet("{id}/image")]
-        public async Task<IActionResult> GetProductImage(int id)
+        public async Task<ActionResult<APIResponse<byte[]>>> GetProductImage(int id)
         {
+
+            var result = new APIResponse<byte[]>();
+
             var product = await _maReSyDbContext.Products.FindAsync(id);
 
             if (product == null)
             {
-                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" }));
-
-                //NotFound("Produkt nicht gefunden");
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "ProductId",
+                    Error = "Produkt wurde nicht gefunden!"
+                });
+                result.StatusCode = 404;
+                return helperMethod.ToActionResult(result, this);
             }
 
             if (product.Productimage == null || product.Productimage.Length == 0)
             {
-                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden." }));
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "ProductImage",
+                    Error = $"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden."
+                });
+                result.StatusCode = 400;
+                return helperMethod.ToActionResult(result, this);
 
             }
 
@@ -116,28 +97,53 @@ namespace MaReSy2_Api.Controllers
         }
 
         [HttpPost("{id}/upload-image")]
-        public async Task<IActionResult> UploadProductImage(int id, [FromForm] IFormFile image)
+        public async Task<ActionResult<APIResponse<string>>> UploadProductImage(int id, IFormFile image)
         {
+            var result = new APIResponse<string>();
+
+
             try
             {
                 var imageBytes = await _imageUploadService.ValidateAndProcessImageAsync(image);
                 var product = await _maReSyDbContext.Products.FindAsync(id);
 
-                if(product == null) return NotFound("Das Produkt wurde nicht gefunden");
-
+                if (product == null)
+                {
+                    result.Errors.Add(new ErrorDetail
+                    {
+                        Field = "ProductId",
+                        Error = "Das Produkt wurde nicht gefunden."
+                    });
+                    result.StatusCode = 404;
+                    return helperMethod.ToActionResult(result, this);
+                }
                 product.Productimage = imageBytes;
                 _maReSyDbContext.Products.Update(product);
                 await _maReSyDbContext.SaveChangesAsync();
 
-                return Ok("Bild erfolgreich hochgeladen!");
+                result.Data = "Bild erfolgreich hochgeladen!";
+                result.StatusCode = 200;
+                return helperMethod.ToActionResultBasic(result, this);
             }
-            catch(ArgumentException ex)
+            catch (ArgumentException ex)
             {
-                return BadRequest(ex.Message);
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "Image",
+                    Error = ex.Message
+                });
+                result.StatusCode = 400;
+                return helperMethod.ToActionResult(result, this);
             }
             catch
             {
-                return StatusCode(500, "Ein unerwarteter Fehler ist aufgetreten.");
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "General",
+                    Error = "Ein unerwarteter Fehler ist aufgetreten."
+                });
+                result.StatusCode = 500;
+                return helperMethod.ToActionResult(result, this);
             }
         }
 
@@ -146,15 +152,7 @@ namespace MaReSy2_Api.Controllers
         {
             var result = await _productService.deleteProductAsync(id);
 
-            if (result == IdentityResult.Success)
-            {
-                return Ok(result);
-            }
-
-            else
-            {
-                return BadRequest(result);
-            }
+            return StatusCode(result.StatusCode ?? 400, result);
         }
 
         [HttpPut("{id}")]
@@ -162,22 +160,8 @@ namespace MaReSy2_Api.Controllers
         {
             var result = await _productService.updateProduct(id, product);
 
-            if (result.Contains(IdentityResult.Success))
-            {
-                return Ok(result);
-            }
-
-            else
-            {
-                return BadRequest(result);
-            }
+            return StatusCode(result.StatusCode ?? 400, result);
         }
-
-        //[HttpPost("{id}/image")]
-        //public async Task<IActionResult> UploadImage(int id)
-        //{
-
-        //}
 
 
 

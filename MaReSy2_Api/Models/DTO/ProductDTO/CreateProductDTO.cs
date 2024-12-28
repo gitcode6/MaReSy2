@@ -4,13 +4,13 @@ namespace MaReSy2_Api.Models.DTO.ProductDTO
 {
     public class CreateProductDTO
     {
-        [Required]
+        //[Required]
         public string Productname { get; set; }
 
-        [Required]
+        //[Required]
         public string Productdescription { get; set; }
 
-        [Required]
+        //[Required]
         public bool Productactive { get; set; }
 
     }

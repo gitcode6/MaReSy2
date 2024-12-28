@@ -1,6 +1,8 @@
 ﻿using MaReSy2_Api.Models.DTO.ProductDTO;
 using MaReSy2_Api.Models.DTO.SetDTO;
 using MaReSy2_Api.Services;
+using MaReSy2_Api.Services.ImageService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -12,6 +14,7 @@ namespace MaReSy2_Api.Controllers
 {
     [Route("api/sets")]
     [ApiController]
+    [Authorize]
     public class SetController : ControllerBase
     {
         private readonly ISetService _setService;
@@ -26,54 +29,37 @@ namespace MaReSy2_Api.Controllers
         }
 
 
-        // GET: api/<ProductController>
+        // GET: api/sets
         [HttpGet("")]
-        public async Task<ActionResult<List<SetDTO>>> Get()
+        public async Task<ActionResult<APIResponse<IEnumerable<SetDTO>>>> Get()
         {
-            var products = await _setService.GetSetsAsync();
+            var result = await _setService.GetSetsAsync();
 
-            return Ok(products);
+            return helperMethod.ToActionResult(result, this);
         }
 
         // GET api/<ProductController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SetDTO>> GetSetById(int id)
+        public async Task<ActionResult<APIResponse<SetDTO>>> GetSetById(int id)
         {
-            var set = await _setService.GetSetByIdAsync(id);
+            var result = await _setService.GetSetByIdAsync(id);
 
-
-            if (set == null)
-            {
-                var errors = IdentityResult.Failed(new IdentityError() { Description = "Set wurde nicht gefunden!" });
-                return BadRequest(errors);
-            }
-            else
-            {
-                return Ok(set);
-            }
+            return helperMethod.ToActionResult(result, this);
         }
 
         // POST api/<ProductController>
         [HttpPost("")]
-        public async Task<ActionResult<ProductDTO>> CreateSet(CreateSetDTO set)
+        public async Task<ActionResult<APIResponse<string>>> CreateSet(CreateSetDTO set)
         {
-            Validator.ValidateObject(set, new ValidationContext(set), validateAllProperties: true);
+            //Validator.ValidateObject(set, new ValidationContext(set), validateAllProperties: true);
 
-            if (ModelState.IsValid)
-            {
-                var result = await _setService.AddNewSetAsync(set);
+            //if (ModelState.IsValid)
+            //{
+            var result = await _setService.AddNewSetAsync(set);
 
-                if (result.Contains(IdentityResult.Success))
-                {
-                    return Ok(result);
-                }
-                else
-                {
-                    return BadRequest(result);
-                }
-            }
+            return helperMethod.ToActionResultBasic(result, this);
+            //}
 
-            return BadRequest();
 
         }
 
@@ -81,78 +67,101 @@ namespace MaReSy2_Api.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> updateSet(int id, UpdateSetDTO set)
+        public async Task<ActionResult<APIResponse<string>>> updateSet(int id, UpdateSetDTO set)
         {
             var result = await _setService.UpdateSetAsync(set, id);
-
-            if (result.Contains(IdentityResult.Success))
-            {
-                return Ok(result);
-            }
-
-            else
-            {
-                return BadRequest(result);
-            }
+            return helperMethod.ToActionResultBasic(result, this);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> deactivateProduct(int id)
+        public async Task<ActionResult<APIResponse<string>>> deactivateProduct(int id)
         {
             var result = await _setService.deleteSetAsync(id);
 
-            if (result == IdentityResult.Success)
-            {
-                return Ok(result);
-            }
-
-            else
-            {
-                return BadRequest(result);
-            }
+            return helperMethod.ToActionResultBasic(result, this);
         }
 
         [HttpPost("{id}/upload-image")]
-        public async Task<IActionResult> UploadSetImage(int id, [FromForm] IFormFile image)
+        public async Task<ActionResult<APIResponse<string>>> UploadSetImage(int id, IFormFile image)
         {
+            var result = new APIResponse<string>();
+
             try
             {
                 var imageBytes = await _imageUploadService.ValidateAndProcessImageAsync(image);
                 var set = await _maReSyDbContext.Sets.FindAsync(id);
 
-                if (set == null) return NotFound("Das Set wurde nicht gefunden");
+                if (set == null)
+                {
+                    result.Errors.Add(new ErrorDetail
+                    {
+                        Field = "SetId",
+                        Error = "Das Set wurde nicht gefunden."
+                    });
+                    result.StatusCode = 404;
+                    return helperMethod.ToActionResult(result, this);
+                }
 
                 set.Setimage = imageBytes;
                 _maReSyDbContext.Sets.Update(set);
                 await _maReSyDbContext.SaveChangesAsync();
 
-                return Ok("Bild erfolgreich hochgeladen!");
+
+                result.Data = "Bild erfolgreich hochgeladen!";
+                result.StatusCode = 200;
+                return helperMethod.ToActionResultBasic(result, this);
+
             }
             catch (ArgumentException ex)
             {
-                return BadRequest(ex.Message);
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "Image",
+                    Error = ex.Message
+                });
+                result.StatusCode = 400;
+                return helperMethod.ToActionResult(result, this);
             }
             catch
             {
-                return StatusCode(500, "Ein unerwarteter Fehler ist aufgetreten.");
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "General",
+                    Error = "Ein unerwarteter Fehler ist aufgetreten."
+                });
+                result.StatusCode = 500;
+                return helperMethod.ToActionResult(result, this);
             }
         }
 
         [HttpGet("{id}/image")]
-        public async Task<IActionResult> GetProductImage(int id)
+        public async Task<ActionResult<APIResponse<byte[]>>> GetSetImage(int id)
         {
+            var result = new APIResponse<byte[]>();
+
+
             var set = await _maReSyDbContext.Sets.FindAsync(id);
 
             if (set == null)
             {
-                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Set wurde nicht gefunden!" }));
-
-                //NotFound("Produkt nicht gefunden");
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "SetId",
+                    Error = "Set wurde nicht gefunden!"
+                });
+                result.StatusCode = 404;
+                return helperMethod.ToActionResult(result, this);
             }
 
             if (set.Setimage == null || set.Setimage.Length == 0)
             {
-                return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Setbild für Set (ID: {set.SetId}) vorhanden." }));
+                result.Errors.Add(new ErrorDetail
+                {
+                    Field = "SetImage",
+                    Error = $"Kein Setbild für Set (ID: {set.SetId}) vorhanden."
+                });
+                result.StatusCode = 400;
+                return helperMethod.ToActionResult(result, this);
 
             }
 
@@ -160,81 +169,6 @@ namespace MaReSy2_Api.Controllers
 
             return File(set.Setimage, imageType);
         }
-
-
-
-
-        //    //var (createdProduct, errors) = result;
-
-        //    //if (errors != null && errors.Any())
-        //    //{
-        //    //    return BadRequest(new { Errors = errors });
-        //    //}
-
-        //    //return CreatedAtAction(nameof(GetProductById), new { id = createdProduct.ProductId }, createdProduct);
-
-        //}
-
-        //[HttpGet("{id}/image")]
-        //public async Task<IActionResult> GetProductImage(int id)
-        //{
-        //    var product = await _maReSyDbContext.Products.FindAsync(id);
-
-        //    if (product == null)
-        //    {
-        //        return BadRequest(IdentityResult.Failed(new IdentityError() { Description = "Produkt wurde nicht gefunden!" })); 
-
-        //            //NotFound("Produkt nicht gefunden");
-        //    }
-
-        //    if (product.Productimage == null || product.Productimage.Length == 0)
-        //    {
-        //        return BadRequest(IdentityResult.Failed(new IdentityError() { Description = $"Kein Produktbild für Produkt (ID: {product.ProductId}) vorhanden." }));
-
-        //    }
-
-        //    var imageType = "image/jpeg";
-
-        //    return File(product.Productimage, imageType);
-        //}
-
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> deactivateProduct(int id)
-        //{
-        //    var result = await _productService.deleteProductAsync(id);
-
-        //    if (result == IdentityResult.Success)
-        //    {
-        //        return Ok(result);
-        //    }
-
-        //    else
-        //    {
-        //        return BadRequest(result);
-        //    }
-        //}
-
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> updateProduct(int id, UpdateProductDTO product)
-        //{
-        //    var result = await _productService.updateProduct(id, product);
-
-        //    if(result.Contains(IdentityResult.Success))
-        //    {
-        //        return Ok(result);
-        //    }
-
-        //    else
-        //    {
-        //        return BadRequest(result);
-        //    }
-        //}
-
-        ////[HttpPost("{id}/image")]
-        ////public async Task<IActionResult> UploadImage(int id)
-        ////{
-
-        ////}
 
 
 

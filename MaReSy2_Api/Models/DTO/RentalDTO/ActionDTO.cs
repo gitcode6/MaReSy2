@@ -6,13 +6,9 @@
         /*
         1 --> ablehnen,
         2 --> freigeben,
-        2 --> ausliefern,
-        3 --> zurücknahme,
+        3 --> ausliefern,
+        4 --> zurücknahme,
          */
-
-
-
         public int rentalId { get; set; }
-        public int actionUserId { get; set; }
     }
 }

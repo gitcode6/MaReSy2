@@ -1776,3 +1776,4 @@ C:\Users\Tobias\Documents\GitHub\MaReSy2\MaReSy2_Api\obj\Debug\net8.0\MaReSy2_Ap
 C:\Users\Tobias\Documents\GitHub\MaReSy2\MaReSy2_Api\obj\Debug\net8.0\MaReSy2_Api.genruntimeconfig.cache
 C:\Users\Tobias\Documents\GitHub\MaReSy2\MaReSy2_Api\obj\Debug\net8.0\ref\MaReSy2_Api.dll
 C:\Users\Tobias\Documents\GitHub\MaReSy2\MaReSy2_Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Tobias\Documents\GitHub\MaReSy2\MaReSy2_Api\bin\Debug\net8.0\BCrypt.Net-Next.dll

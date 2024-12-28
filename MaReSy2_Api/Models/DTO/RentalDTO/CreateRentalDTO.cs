@@ -16,7 +16,7 @@
         public string? rentalNote { get; set; }
 
         //rental for user
-        public int userId { get; set; }
+       // public int userId { get; set; }
 
 
 
