@@ -62,15 +62,12 @@
             
             <form method="post">
                 <div class="form-group">
-                    <label asp-for="Benutzername"></label>
-                    <input asp-for="Benutzername" class="form-control" />
-                    <span asp-validation-for="Benutzername" class="text-danger"></span>
+                    <label for="Benutzername">Benutzername</label>
+                    <input type="text" id="Benutzername" class="form-control" asp-for="meinUser.username" />
                 </div>
-                <br />
                 <div class="form-group">
-                    <label asp-for="Passwort"></label>
-                    <input asp-for="Passwort" type="password" class="form-control" />
-                    <span asp-validation-for="Passwort" class="text-danger"></span>
+                    <label for="Password">Beschreibung</label>
+                    <input type="password" id="Password" class="form-control" asp-for="meinUser.password" />
                 </div>
                 <div class="form-group mt-3">
                     <button type="submit" class="btn btn-primary" style="background-color: #403A60; border-color: #403A60">Login</button>
