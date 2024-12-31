@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\services\\rentalservice\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:services\\rentalservice\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD8EAF70-B336-420B-98D1-E72EBA67ED8B}|MaReSy2_Api.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\maresy2_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -137,37 +137,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 164,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IRentalService.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\RentalService\\IRentalService.cs",
-              "RelativeDocumentMoniker": "Services\\RentalService\\IRentalService.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\RentalService\\IRentalService.cs",
-              "RelativeToolTip": "Services\\RentalService\\IRentalService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAtwA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T15:03:42.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "RentalService.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\RentalService\\RentalService.cs",
               "RelativeDocumentMoniker": "Services\\RentalService\\RentalService.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\RentalService\\RentalService.cs",
               "RelativeToolTip": "Services\\RentalService\\RentalService.cs",
-              "ViewState": "AgIAADsCAAAAAAAAAAAcwJMBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-28T15:00:55.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CreateRentalDTO.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\DTO\\RentalDTO\\CreateRentalDTO.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\RentalDTO\\CreateRentalDTO.cs",
@@ -175,8 +162,7 @@
               "RelativeToolTip": "Models\\DTO\\RentalDTO\\CreateRentalDTO.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAgwBIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T15:00:34.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T15:00:34.935Z"
             },
             {
               "$type": "Document",
@@ -188,8 +174,7 @@
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T13:08:41.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T13:08:41.778Z"
             },
             {
               "$type": "Document",
@@ -201,12 +186,11 @@
               "RelativeToolTip": "Services\\ImageService\\ImageUploadService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T12:10:20.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T12:10:20.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RentalController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\RentalController.cs",
               "RelativeDocumentMoniker": "Controllers\\RentalController.cs",
@@ -214,25 +198,36 @@
               "RelativeToolTip": "Controllers\\RentalController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAWwDUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T10:04:09.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T10:04:09.821Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAjwGYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwEoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-28T14:26:14.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "IRentalService.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\RentalService\\IRentalService.cs",
+              "RelativeDocumentMoniker": "Services\\RentalService\\IRentalService.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Services\\RentalService\\IRentalService.cs",
+              "RelativeToolTip": "Services\\RentalService\\IRentalService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAtwA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T15:03:42.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Rental.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Models\\Rental.cs",
               "RelativeDocumentMoniker": "Models\\Rental.cs",
@@ -240,12 +235,11 @@
               "RelativeToolTip": "Models\\Rental.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T14:52:47.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T14:52:47.004Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -253,8 +247,7 @@
               "RelativeToolTip": "Controllers\\ProductController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T09:57:20.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T09:57:20.325Z"
             },
             {
               "$type": "Document",
@@ -266,8 +259,7 @@
               "RelativeToolTip": "Services\\UserService\\UserManagementService.cs",
               "ViewState": "AgIAACQBAAAAAAAAAAAAwOkAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:37:57.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T13:37:57.491Z"
             },
             {
               "$type": "Document",
@@ -279,8 +271,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T09:40:16.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T09:40:16.36Z"
             },
             {
               "$type": "Document",
@@ -292,8 +283,7 @@
               "RelativeToolTip": "Controllers\\SingleProductController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T09:47:18.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T09:47:18.135Z"
             },
             {
               "$type": "Document",
@@ -305,8 +295,7 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAApwFMAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T13:59:40.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T13:59:40.048Z"
             },
             {
               "$type": "Document",
@@ -318,8 +307,7 @@
               "RelativeToolTip": "Controllers\\SetController.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAiwFQAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:00:29.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T14:00:29.27Z"
             },
             {
               "$type": "Document",
@@ -331,8 +319,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T12:45:53.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T12:45:53.659Z"
             },
             {
               "$type": "Document",
@@ -344,8 +331,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\d0a12d8b-c0b4-4c2d-b3a5-1e52e56f6120\\secrets.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T10:51:59.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T10:51:59.819Z"
             },
             {
               "$type": "Document",
@@ -356,8 +342,7 @@
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
               "RelativeToolTip": "MaReSy2_Api.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-28T10:41:03.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T10:41:03.865Z"
             },
             {
               "$type": "Document",
@@ -369,8 +354,7 @@
               "RelativeToolTip": "Services\\ImageService\\IImageUploadService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T11:22:54.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:22:54.877Z"
             },
             {
               "$type": "Document",
@@ -382,8 +366,7 @@
               "RelativeToolTip": "MaReSy2_Api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-12-28T10:10:30.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T10:10:30.111Z"
             },
             {
               "$type": "Document",
@@ -395,8 +378,7 @@
               "RelativeToolTip": "Services\\SetService\\SetService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T14:58:55.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T14:58:55.131Z"
             },
             {
               "$type": "Document",
@@ -408,8 +390,7 @@
               "RelativeToolTip": "Models\\APIResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T20:32:26.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T20:32:26.215Z"
             },
             {
               "$type": "Document",
@@ -421,8 +402,7 @@
               "RelativeToolTip": "Services\\ProductService\\IProductService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAUwA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:55:26.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:55:26.621Z"
             },
             {
               "$type": "Document",
@@ -434,8 +414,7 @@
               "RelativeToolTip": "Services\\SetService\\ISetService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T12:03:16.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T12:03:16.257Z"
             },
             {
               "$type": "Document",
@@ -447,8 +426,7 @@
               "RelativeToolTip": "Models\\MaReSyDbContext.cs",
               "ViewState": "AgIAAAoBAAAAAAAAAAAnwBcBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:27:46.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:27:46.725Z"
             },
             {
               "$type": "Document",
@@ -460,8 +438,7 @@
               "RelativeToolTip": "Models\\DTO\\SingleProductDTO\\CreateSingleProductDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T11:52:56.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:52:56.352Z"
             },
             {
               "$type": "Document",
@@ -473,8 +450,7 @@
               "RelativeToolTip": "Services\\SingleProductService\\SingleProductService.cs",
               "ViewState": "AgIAABgBAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T11:47:43.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:47:43.876Z"
             },
             {
               "$type": "Document",
@@ -486,8 +462,7 @@
               "RelativeToolTip": "Models\\DTO\\ProductDTO\\UpdateProductDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T13:30:28.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T13:30:28.445Z"
             },
             {
               "$type": "Document",
@@ -499,8 +474,7 @@
               "RelativeToolTip": "Models\\ProductsSet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:34:10.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:34:10.851Z"
             },
             {
               "$type": "Document",
@@ -512,8 +486,7 @@
               "RelativeToolTip": "Models\\DTO\\SetDTO\\SetDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:54:51.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T14:54:51.455Z"
             },
             {
               "$type": "Document",
@@ -525,8 +498,7 @@
               "RelativeToolTip": "Models\\SingleProduct.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwA0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:49.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:49.282Z"
             },
             {
               "$type": "Document",
@@ -538,8 +510,7 @@
               "RelativeToolTip": "Models\\Status.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:56.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:56.434Z"
             },
             {
               "$type": "Document",
@@ -551,8 +522,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T15:33:57.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:33:57.218Z"
             }
           ]
         }

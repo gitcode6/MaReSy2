@@ -26,9 +26,9 @@ namespace MaReSy2_Api.Controllers
 
 
         [HttpPost("login")]
-        public async Task<ActionResult<APIResponse<string>>> Login(LoginDTO login)
+        public async Task<ActionResult<APIResponse<LoginSuccess>>> Login(LoginDTO login)
         {
-            var result = new APIResponse<string>();
+            var result = new APIResponse<LoginSuccess>();
 
             var user = await _maReSyDbContext.Users
                 .Include(user=> user.Role)
@@ -60,10 +60,19 @@ namespace MaReSy2_Api.Controllers
 
             var token = GenerateJwtToken(user);
 
-            result.Data = token;
+            result.Data = new LoginSuccess
+            {
+                Token = token,
+                User = new Models.DTO.UserDTO.UserDTO
+                {
+                    UserId = user.UserId,
+                    Username = user.Username,
+                    Role = user.Role.Rolename,
+                }
+            };
             result.StatusCode = 200;
 
-            return helperMethod.ToActionResultBasic(result, this);
+            return helperMethod.ToActionResult(result, this);
 
         }
 

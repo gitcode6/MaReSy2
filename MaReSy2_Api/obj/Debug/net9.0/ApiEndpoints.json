@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MaReSy2_Api.Models.APIResponse\u00601[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "MaReSy2_Api.Models.APIResponse\u00601[[MaReSy2_Api.Models.DTO.Auth.LoginSuccess, MaReSy2_Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
