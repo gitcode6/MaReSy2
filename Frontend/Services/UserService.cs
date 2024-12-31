@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
+using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
@@ -106,5 +107,50 @@ namespace MaReSy2.Services
             }
             else { return null;  }
         }
+
+        public class LoginResponse
+        {
+            public User User { get; set; }
+            public string Token { get; set; }
+        }
+
+
+        public async Task<ConsumeModels.User?> GetLoginAsync(User meinUser)
+        {
+            var client = _httpClientFactory.CreateClient("API");
+
+            string baseUrl = "/api/auth/login";
+
+            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(meinUser), Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync(baseUrl, stringContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine(responseContent);
+
+                // Deserialisiere die Antwort in das LoginResponse-Objekt
+                var loginResponse = System.Text.Json.JsonSerializer.Deserialize<LoginResponse>(responseContent);
+
+                if (loginResponse != null)
+                {
+                    // Speichere das Token, falls notwendig (z.B. im Header für zukünftige Anfragen)
+                    string token = loginResponse.Token;
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", loginResponse.Token);
+
+                    // Gib den User zurück
+                    return loginResponse.User;
+                }
+            }
+            else
+            {
+                Debug.WriteLine("Login failed with status code: " + response.StatusCode);
+                return null;
+            }
+
+            return null;
+        }
+
     }
 }

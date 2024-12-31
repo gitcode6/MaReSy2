@@ -1,3 +1,5 @@
+using MaReSy2.ConsumeModels;
+using MaReSy2.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +10,15 @@ using System.Threading.Tasks;
 
 public class LoginModel : PageModel
 {
-	[BindProperty]
+    private readonly UserService _userService;
+
+    [BindProperty]
+    public User meinUser { get; set; }
+    [BindProperty]
+    public User meinLoginUser { get; set; }
+
+
+    [BindProperty]
 	public string Benutzername { get; set; }
 
 	[BindProperty]
@@ -31,8 +41,19 @@ public class LoginModel : PageModel
 
 	public async Task<IActionResult> OnPostAsync()
 	{
-		// Überprüfen der Anmeldeinformationen (dies ist nur ein Beispiel)
-		if (Benutzername == "admin" && Passwort == "password")
+        User user = await _userService.GetLoginAsync(meinUser);
+
+        return RedirectToPage();
+
+
+
+
+
+
+
+
+        // Überprüfen der Anmeldeinformationen (dies ist nur ein Beispiel)
+        if (Benutzername == "admin" && Passwort == "password")
 		{
 			var claims = new List<Claim>
 			{
