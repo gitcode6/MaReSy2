@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\alexander.schmidt\\documents\\github\\maresy2\\frontend\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\alexander.schmidt\\documents\\github\\maresy2\\frontend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Login.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Login.cshtml",
-              "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Login.cshtml",
-              "RelativeToolTip": "Pages\\Login.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAA8AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T17:22:44.068Z",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T19:57:34.431Z",
               "EditorCaption": ""
             },
             {
@@ -41,7 +41,7 @@
               "RelativeDocumentMoniker": "Pages\\Login.cshtml.cs",
               "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Login.cshtml.cs",
               "RelativeToolTip": "Pages\\Login.cshtml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wCYAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCQAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-31T19:37:53.619Z",
               "EditorCaption": ""

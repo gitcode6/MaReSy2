@@ -5,22 +5,17 @@ namespace MaReSy2.ConsumeModels
     public class User
     {
 
-        public int userId { get; set; }
+        public int? userId { get; set; }
 
-        [Required]
-        public string username { get; set; }
+        public string? username { get; set; }
 
-        [Required]
-        public string firstname { get; set; }
+        public string? firstname { get; set; }
 
-        [Required]
-        public string lastname { get; set; }
+        public string? lastname { get; set; }
 
-        [Required]
-        public string email { get; set; }
+        public string? email { get; set; }
 
-        [Required]
-        public String role {  get; set; }
+        public String? role {  get; set; }
 
         public String? password { get; set; }
 
