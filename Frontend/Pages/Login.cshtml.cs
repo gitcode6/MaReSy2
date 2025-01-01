@@ -13,6 +13,11 @@ public class LoginModel : PageModel
 {
     private readonly UserService _userService;
 
+    public LoginModel(UserService userService)
+    {
+        _userService = userService;
+    }
+
     [BindProperty]
     public User meinUser { get; set; }
     [BindProperty]
@@ -42,7 +47,7 @@ public class LoginModel : PageModel
         {
             meinLoginUser = await _userService.GetLoginAsync(meinUser); //HIER KOMMT NULL ZURÜCK!!! FEHLER!!!
 
-            if (meinLoginUser.role == "Admin")
+            if (meinLoginUser != null && meinLoginUser.role == "Admin")
             {
                 var claims = new List<Claim>
             {

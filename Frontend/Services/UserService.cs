@@ -110,8 +110,8 @@ namespace MaReSy2.Services
 
         public class LoginResponse
         {
-            public User User { get; set; }
-            public string Token { get; set; }
+            public User user { get; set; }
+            public string token { get; set; }
         }
 
 
@@ -136,11 +136,11 @@ namespace MaReSy2.Services
                 if (loginResponse != null)
                 {
                     // Speichere das Token, falls notwendig (z.B. im Header für zukünftige Anfragen)
-                    string token = loginResponse.Token;
-                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", loginResponse.Token);
+                    string token = loginResponse.token;
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", loginResponse.token);
 
                     // Gib den User zurück
-                    return loginResponse.User;
+                    return loginResponse.user;
                 }
             }
             else
