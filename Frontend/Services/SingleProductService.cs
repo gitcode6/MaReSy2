@@ -133,19 +133,37 @@ namespace MaReSy2.Services
 
         public async Task<ConsumeModels.SingleProduct?> GetSingleProductAsync(int singleProductID)
             {
-                var client = _httpClientFactory.CreateClient("API");
+            var client = _httpClientFactory.CreateClient("API");
 
-                var response = await client.GetAsync($"/api/singleproducts/{singleProductID}");
+            // Hole den Token (angenommen, du hast ihn irgendwo gespeichert, z.B. im TokenManager)
+            string token = TokenManager.GetToken();  // Beispiel für eine Klasse, die den Token speichert
 
-                var responseContent = await response.Content.ReadAsStringAsync();
-                System.Diagnostics.Debug.WriteLine(responseContent);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    return System.Text.Json.JsonSerializer.Deserialize<SingleProduct>(responseContent);
-                }
-                else { return null; }
+            if (string.IsNullOrEmpty(token))
+            {
+                Debug.WriteLine("Kein Token gefunden. Bitte zuerst anmelden.");
+                return null;  // Falls kein Token vorhanden ist, gib null zurück
             }
+
+            // Setze den Authorization-Header mit dem Bearer-Token
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            // Führe die GET-Anfrage aus, um das Produkt abzurufen
+            var response = await client.GetAsync($"/api/singleproducts/{singleProductID}");
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            System.Diagnostics.Debug.WriteLine(responseContent);
+
+            // Wenn die Anfrage erfolgreich war, deserialisiere die Antwort in das Product-Objekt
+            if (response.IsSuccessStatusCode)
+            {
+                return System.Text.Json.JsonSerializer.Deserialize<ConsumeModels.SingleProduct>(responseContent);
+            }
+            else
+            {
+                return null;  // Gib null zurück, wenn die Anfrage fehlschlägt
+            }
+
+        }
 
         public async Task<bool> deleteSingleProductAsync(int singleProductID)
         {

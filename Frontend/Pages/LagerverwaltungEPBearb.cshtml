@@ -56,12 +56,20 @@
             <label for="EPKategorie">Kategorie</label>
             <select id="epkategorie" class="form-control" asp-for="meinproduct.mainProduct">
             @if (Model.products != null && Model.products.Any())
-            {
-                @foreach (var product in Model.products)
                 {
-                   <option name="@product.productId" value="@product.productId">
-                (@product.productId) @product.productname
-                   </option>
+                    @foreach (var product in Model.products)
+                    {
+                        if(product.productname == Model.meinproduct.mainProduct)
+                        {
+                            <option selected name="@product.productId" value="@product.productId">
+                                (@product.productId) @product.productname
+                            </option>
+                        }
+                        else{
+                            <option name="@product.productId" value="@product.productId">
+                                (@product.productId) @product.productname
+                            </option>
+                        }
                 }
             }
             else
