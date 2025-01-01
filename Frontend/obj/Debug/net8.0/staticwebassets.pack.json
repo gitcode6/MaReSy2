@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\images\\anwendung_meineReservierungen.JPG"
     },
     {
+      "Id": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\api.svg",
+      "PackagePath": "staticwebassets\\images\\api.svg"
+    },
+    {
       "Id": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\auszug_lagerstand.JPG",
       "PackagePath": "staticwebassets\\images\\auszug_lagerstand.JPG"
     },

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Sockets;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -27,6 +28,19 @@ public class LoginModel : PageModel
     {
         await HttpContext.SignOutAsync();
         return Page();
+
+        try
+        {
+            // Versuche, eine Verbindung aufzubauen (z.B. über einen Socket)
+            var client = new TcpClient("/api", 80);
+            await HttpContext.SignOutAsync();
+            return Page();
+        }
+        catch (SocketException ex)
+        {
+            return RedirectToPage("/APIError");
+        }
+       
     }
 
 	public async Task<IActionResult> OnPostAsync()

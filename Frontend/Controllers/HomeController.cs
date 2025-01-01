@@ -16,9 +16,12 @@ namespace MaReSy2.Controllers
             {
                 return View(); // Diese View wird angezeigt, wenn ein Fehler wie 500 auftritt
             }
-
-            // Fehlerseite für 404 (Seite nicht gefunden)
-            public IActionResult SeiteNichtGefunden()
+        public IActionResult APIError()
+        {
+            return View(); // Diese View wird angezeigt, wenn ein API-Fehler auftritt
+        }
+        // Fehlerseite für 404 (Seite nicht gefunden)
+        public IActionResult SeiteNichtGefunden()
             {
                 return View(); // Diese View wird angezeigt, wenn ein 404-Fehler auftritt
             }

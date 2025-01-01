@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qL74Bt18OCwArkPm+ueH146q34/maJ17O+Dx3Ifyq+4=",
+  "Hash": "MeVE6CNictfmmfheq2IWetzCEVSIFWd0PlKyB3Nj9Aw=",
   "Source": "MaReSy2",
   "BasePath": "_content/MaReSy2",
   "Mode": "Default",
@@ -141,6 +141,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\anwendung_meineReservierungen.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\api.svg",
+      "SourceId": "MaReSy2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\",
+      "BasePath": "_content/MaReSy2",
+      "RelativePath": "images/api#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tnb0rtrzo8",
+      "Integrity": "CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\api.svg"
     },
     {
       "Identity": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\auszug_lagerstand.JPG",
@@ -2569,6 +2590,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-p6U0giPyhNne+IQSET/4O7X0IOO6z53feQNlJ6CTels="
+        }
+      ]
+    },
+    {
+      "Route": "images/api.svg",
+      "AssetFile": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\api.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1096"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:59:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo="
+        }
+      ]
+    },
+    {
+      "Route": "images/api.tnb0rtrzo8.svg",
+      "AssetFile": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\api.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1096"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:59:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tnb0rtrzo8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/api.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo="
         }
       ]
     },

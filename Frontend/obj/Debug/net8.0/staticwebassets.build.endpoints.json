@@ -823,6 +823,88 @@
       ]
     },
     {
+      "Route": "images/api.svg",
+      "AssetFile": "images/api.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1096"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:59:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo="
+        }
+      ]
+    },
+    {
+      "Route": "images/api.tnb0rtrzo8.svg",
+      "AssetFile": "images/api.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1096"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:59:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tnb0rtrzo8"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo="
+        },
+        {
+          "Name": "label",
+          "Value": "images/api.svg"
+        }
+      ]
+    },
+    {
       "Route": "images/auszug_lagerstand.JPG",
       "AssetFile": "images/auszug_lagerstand.JPG",
       "Selectors": [],

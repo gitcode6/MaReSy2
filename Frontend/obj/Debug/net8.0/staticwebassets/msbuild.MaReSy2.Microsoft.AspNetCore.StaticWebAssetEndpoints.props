@@ -48,6 +48,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"psd2svfha9"},{"Name":"integrity","Value":"sha256-p6U0giPyhNne\u002BIQSET/4O7X0IOO6z53feQNlJ6CTels="},{"Name":"label","Value":"_content/MaReSy2/images/anwendung_meineReservierungen.JPG"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"149681"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022p6U0giPyhNne\u002BIQSET/4O7X0IOO6z53feQNlJ6CTels=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Dec 2024 23:10:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MaReSy2/images/api.svg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\api.svg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1096"},{"Name":"Content-Type","Value":"image/svg\u002Bxml"},{"Name":"ETag","Value":"\u0022CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo=\u0022"},{"Name":"Last-Modified","Value":"Wed, 01 Jan 2025 14:59:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MaReSy2/images/api.tnb0rtrzo8.svg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\api.svg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tnb0rtrzo8"},{"Name":"integrity","Value":"sha256-CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo="},{"Name":"label","Value":"_content/MaReSy2/images/api.svg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1096"},{"Name":"Content-Type","Value":"image/svg\u002Bxml"},{"Name":"ETag","Value":"\u0022CTrqHipfkzcuR3Fxzli9167vuyTxCiRtjaX0WUvZflo=\u0022"},{"Name":"Last-Modified","Value":"Wed, 01 Jan 2025 14:59:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MaReSy2/images/auszug_lagerstand.JPG">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\auszug_lagerstand.JPG'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

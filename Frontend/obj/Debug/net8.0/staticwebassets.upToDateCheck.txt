@@ -2,6 +2,7 @@ wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\anwendung_materialreservierung.JPG
 wwwroot\images\anwendung_meineReservierungen.JPG
+wwwroot\images\api.svg
 wwwroot\images\auszug_lagerstand.JPG
 wwwroot\images\auszug_materialreservierung.JPG
 wwwroot\images\auszug_produkte.JPG

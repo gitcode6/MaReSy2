@@ -15,6 +15,7 @@ builder.Services.AddRazorPages(options =>
     options.Conventions.AllowAnonymousToPage("/Login");
     options.Conventions.AllowAnonymousToPage("/Impressum");
     options.Conventions.AllowAnonymousToPage("/Datenschutz");// Login explizit freigeben
+    options.Conventions.AllowAnonymousToPage("/APIError");
 });
 
 builder.Services.AddAuthentication("MyCookieAuth")
@@ -54,14 +55,15 @@ var app = builder.Build();
 // Middleware konfigurieren
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
     app.UseHsts();
     app.UseDeveloperExceptionPage();
 }
 else
 {
-    app.UseExceptionHandler("/Error");  // Standard-Fehlerseite bei unerwarteten Fehlern
+    app.UseExceptionHandler("/Error");
+    app.UseStatusCodePagesWithReExecute("/APIError");
     app.UseStatusCodePagesWithReExecute("/SeiteNichtGefunden");
+
     app.UseDeveloperExceptionPage();
 }
 
