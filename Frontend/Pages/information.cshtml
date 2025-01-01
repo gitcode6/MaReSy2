@@ -54,37 +54,39 @@
             <tbody>
                 <tr>
                     <td>Benutzername:</td>
-                    <td>alexander.schmidt</td>
+                    <td>@Model.angemeldeterUser.username</td>
                 </tr>
                 <tr>
                     <td>Vorname:</td>
-                    <td>Alexander</td>
+                    <td>@Model.angemeldeterUser.firstname</td>
                 </tr>
                 <tr>
                     <td>Nachname:</td>
-                    <td>Schmidt</td>
+                    <td>@Model.angemeldeterUser.lastname</td>
                 </tr>
                 <tr>
                     <td>E-Mail-Adresse:</td>
-                    <td>alexander.schmidt@st.roteskreuz.at</td>
+                    <td>@Model.angemeldeterUser.email</td>
                 </tr>
                 <tr>
                     <td>Rolle:</td>
-                    <td>Admin</td>
+                    <td>@Model.angemeldeterUser.role</td>
                 </tr>
             </tbody>
         </table>
     </div>
     <h3>Passwort ändern</h3>
+    <form method="post">
     <div class="form-group">
-        <label for="Passwort">Passwort</label>
-        <input type="password" name="passwort1" id="Passwort" class="form-control" /> <!--asp-for="Benutzer.Passwort"-->
+        <label for="Passwort1">Passwort</label>
+        <input type="password" id="Passwort1" class="form-control" asp-for="angemeldeterUser.newPassword" />
     </div>
     <div class="form-group">
-        <label for="Passwort">Passwort bestätigen</label>
-        <input type="password" name="passwort2" id="Passwort" class="form-control" /> <!--asp-for="Benutzer.Passwort"-->
+        <label for="Passwort2">Passwort bestätigen</label>
+        <input type="password" id="Passwort2" class="form-control" asp-for="angemeldeterUser.confirmPassword" />
     </div>
     <button type="submit" class="btn btnSpeichern" style="background-color: #403A60; border-color: #403A60">Speichern</button>
     <h3></h3>
+    </form>
 </div>
 <br />

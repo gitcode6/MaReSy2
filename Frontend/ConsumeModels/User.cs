@@ -19,6 +19,9 @@ namespace MaReSy2.ConsumeModels
 
         public String? password { get; set; }
 
+        public String? confirmPassword { get; set; }
+        public String? newPassword { get; set; }
+
         public User()
         {
             

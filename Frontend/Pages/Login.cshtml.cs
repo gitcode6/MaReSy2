@@ -61,7 +61,7 @@ public class LoginModel : PageModel
 
                 return RedirectToPage("/Dashboard");
             }
-            else if (meinLoginUser.role == "User")
+            else if (meinLoginUser!= null && meinLoginUser.role == "User")
             {
                 var claims = new List<Claim>
             {
