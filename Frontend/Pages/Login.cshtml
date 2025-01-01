@@ -43,11 +43,16 @@
             align-items: center;
         }
 
+        .custom-alert {
+            width: 50%; /* Passe die Breite nach Bedarf an */
+            margin: 0 auto; /* Zentriert das Element horizontal */
+            text-align: center; /* Zentriert den Text */
+        }
+
     </style>
 </head>
 <body>
     <div class="login-container">
-        
 
         <div class="card mt-3 p-4">
             
@@ -72,6 +77,18 @@
             </form>
         </div>
     </div>
+    @if (TempData["FehlerMeldungRot"] != null)
+    {
+        <div class="alert alert-success custom-alert" role="alert" style="background-color: #B70E0C; color: white;">
+            @TempData["FehlerMeldungRot"]
+        </div>
+    }
+    @if (TempData["FehlerMeldungGrün"] != null)
+    {
+        <div class="alert alert-success custom-alert" role="alert" style="background-color: #A0DAB3; color: white;">
+            @TempData["FehlerMeldungGrün"]
+        </div>
+    }
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

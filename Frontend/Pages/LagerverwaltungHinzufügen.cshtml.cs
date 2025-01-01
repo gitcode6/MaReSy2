@@ -80,7 +80,12 @@ public class LagerverwaltungHinzufügenModel : PageModel
 
 
         bool success = await _productService.addProductAsync(produkt);
-
+        if (success == true)
+        { TempData["FehlerMeldungGrün"] = "Produkt-Erstellung war erfolgreich!"; }
+        else
+        {
+            TempData["FehlerMeldungRot"] = "Produkt-Erstellung war nicht erfolgreich!";
+        }
         System.Diagnostics.Debug.WriteLine(success);
 
         return RedirectToPage("/Lagerverwaltung");

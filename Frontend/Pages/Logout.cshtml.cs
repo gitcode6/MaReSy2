@@ -10,6 +10,7 @@ namespace MaReSy2.Pages
         {
             // Benutzer abmelden
             await HttpContext.SignOutAsync();
+            TempData["FehlerMeldungGrün"] = "Abmeldung war erfolgreich!";
 
             // Weiterleitung zur Login-Seite
             return RedirectToPage("/Login");

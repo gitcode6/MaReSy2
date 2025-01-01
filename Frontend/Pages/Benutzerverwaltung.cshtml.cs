@@ -29,6 +29,12 @@ namespace MaReSy2.Pages
         public async Task<IActionResult> OnPostDelete(int id)
         {
             bool success = await userService.deleteUserAsync(id);
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "Benutzer:in-Löschung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "Benutzer:in-Löschung war nicht erfolgreich!";
+            }
             return RedirectToPage();
         }
     }

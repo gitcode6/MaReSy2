@@ -28,12 +28,24 @@ namespace MaReSy2.Pages
 
         public async Task<IActionResult> OnPostDelete(int id)
         {
-            bool success = await _productService.deleteProductAsync(id);
+            bool success = await _productService.deleteProductAsync(id); 
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "Produkt-Löschung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "Produkt-Löschung war nicht erfolgreich!";
+            }
             return RedirectToPage();
         }
         public async Task<IActionResult> OnPostDeleteSET(int id)
         {
             bool success = await _setService.deleteSetAsync(id);
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "SET-Löschung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "SET-Löschung war nicht erfolgreich!";
+            }
             return RedirectToPage();
         }
     }

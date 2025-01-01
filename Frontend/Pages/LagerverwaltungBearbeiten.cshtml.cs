@@ -33,8 +33,13 @@ public class LagerverwaltungBearbeitenModel : PageModel
         }
 
         meinProduct.productId = Convert.ToInt32(TempData["ProductID"]);
-        await productService.bearbeitenProductAsync(meinProduct);
-
+        bool success = await productService.bearbeitenProductAsync(meinProduct);
+        if (success == true)
+        { TempData["FehlerMeldungGrün"] = "Produkt-Bearbeitung war erfolgreich!"; }
+        else
+        {
+            TempData["FehlerMeldungRot"] = "Produkt-Bearbeitung war nicht erfolgreich!";
+        }
         return RedirectToPage("/Lagerverwaltung");
     }
 }

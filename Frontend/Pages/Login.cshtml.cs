@@ -91,15 +91,8 @@ public class LoginModel : PageModel
                 {
                     ModelState.AddModelError(string.Empty, "Passwort leer");
                 }
-                var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, "gast"),
-                new Claim(ClaimTypes.Role, "Gast")
-            };
 
-                var identity = new ClaimsIdentity(claims, "AuthType");
-                var principal = new ClaimsPrincipal(identity);
-                await HttpContext.SignInAsync(principal);
+                TempData["FehlerMeldungRot"] = "Login war nicht erfolgreich!";
 
                 return RedirectToPage("/Login");
             }

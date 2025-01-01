@@ -34,8 +34,13 @@ namespace MaReSy2.Pages
             }
 
             angemeldeterUser.userId = Convert.ToInt32(TempData["UserID"]);
-            await userService.passwordBearbeiten(angemeldeterUser);
-
+            bool success = await userService.passwordBearbeiten(angemeldeterUser);
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "Passwort-Änderung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "Passwort-Änderung war nicht erfolgreich!";
+            }
             return RedirectToPage("/Information");
         }
 

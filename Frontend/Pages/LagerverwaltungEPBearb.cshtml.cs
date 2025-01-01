@@ -81,8 +81,14 @@ namespace MaReSy2.Pages
                 meinproduct2.productId = Convert.ToInt32(meinproduct.mainProduct);
             }
 
-            await singleProductService.bearbeitenSingleProductAsync(meinproduct2, meinproduct.singleProductId);
+            bool success = await singleProductService.bearbeitenSingleProductAsync(meinproduct2, meinproduct.singleProductId);
 
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "Einzelprodukt-Bearbeitung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "Einzelprodukt-Bearbeitung war nicht erfolgreich!";
+            }
             return RedirectToPage("/LagerverwaltungEP");
         }
     }

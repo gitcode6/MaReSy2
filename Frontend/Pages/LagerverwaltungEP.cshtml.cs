@@ -26,6 +26,12 @@ namespace MaReSy2.Pages
         public async Task<IActionResult> OnPostDelete(int id)
         {
             bool success = await _singleproductService.deleteSingleProductAsync(id);
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "Einzelprodukt-Löschung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "Einzelprodukt-Löschung war nicht erfolgreich!";
+            }
             return RedirectToPage();
         }
     }

@@ -19,6 +19,12 @@
         width: 100%;
         font-family: Dunant;
     }
+
+    .custom-alert {
+        width: 50%; /* Passe die Breite nach Bedarf an */
+        margin: 0 auto; /* Zentriert das Element horizontal */
+        text-align: center; /* Zentriert den Text */
+    }
 </style>
 
 <div class="lagerverwaltung_lagerverwaltung">
@@ -108,6 +114,18 @@
             <!--HIER KOMMT ZWEITER FOREACH REIN-->
         </tbody>
     </table>
+    @if (TempData["FehlerMeldungRot"] != null)
+    {
+        <div class="alert alert-success custom-alert" role="alert" style="background-color: #B70E0C; color: white;">
+            @TempData["FehlerMeldungRot"]
+        </div>
+    }
+    @if (TempData["FehlerMeldungGrün"] != null)
+    {
+        <div class="alert alert-success custom-alert" role="alert" style="background-color: #A0DAB3; color: white;">
+            @TempData["FehlerMeldungGrün"]
+        </div>
+    }
 </div>
 
 <script>

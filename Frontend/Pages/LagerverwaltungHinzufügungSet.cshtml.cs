@@ -82,7 +82,13 @@ namespace MaReSy2.Pages
                 if (produktListe.Count > 0) { newSet.setProductAssignDTOs = produktListe; }
             }
 
-            bool success = await _setService.addSetAsync(newSet);
+            bool success = await _setService.addSetAsync(newSet); 
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "SET-Erstellung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "SET-Erstellung war nicht erfolgreich!";
+            }
 
             System.Diagnostics.Debug.WriteLine(success);
 

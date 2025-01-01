@@ -86,8 +86,13 @@ namespace MaReSy2.Pages
             }
 
             meinSet.setId = Convert.ToInt32(TempData["SetID"]);
-            await setService.bearbeitenSETAsync(newSet, meinSet.setId);
-
+            bool success = await setService.bearbeitenSETAsync(newSet, meinSet.setId);
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "SET-Bearbeitung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "SET-Bearbeitung war nicht erfolgreich!";
+            }
             return RedirectToPage("/Lagerverwaltung");
         }
     }

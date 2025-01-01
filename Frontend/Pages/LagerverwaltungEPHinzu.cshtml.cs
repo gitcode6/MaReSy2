@@ -58,8 +58,13 @@ namespace MaReSy2.Pages
                 productId = singleproduct.productId,
             };
 
-            var result = singleProductService.addSingleProductAsync(productModel);
-            Debug.WriteLine(result);
+            bool success = await singleProductService.addSingleProductAsync(productModel);
+            if (success == true)
+            { TempData["FehlerMeldungGrün"] = "Einzelprodukt-Erstellung war erfolgreich!"; }
+            else
+            {
+                TempData["FehlerMeldungRot"] = "Einzelprodukt-Erstellung war nicht erfolgreich!";
+            }
 
             return RedirectToPage("/LagerverwaltungEP");
         }

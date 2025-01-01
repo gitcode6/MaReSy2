@@ -37,8 +37,13 @@ public class BenutzerverwaltungBearbeitenModel : PageModel
         }
 
         meinUser.userId = Convert.ToInt32(TempData["UserID"]);
-        await userService.bearbeitenUserAsync(meinUser);
-
+        bool success = await userService.bearbeitenUserAsync(meinUser);
+        if (success == true)
+        { TempData["FehlerMeldungGrün"] = "Benutzer:in-Bearbeitung war erfolgreich!"; }
+        else
+        {
+            TempData["FehlerMeldungRot"] = "Benutzer:in-Bearbeitung war nicht erfolgreich!";
+        }
         return RedirectToPage("/Benutzerverwaltung");
     }
 }

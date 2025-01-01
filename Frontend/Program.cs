@@ -53,19 +53,19 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 // Middleware konfigurieren
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseHsts();
+    // Entwicklungsmodus - Zeigt detaillierte Fehler an
     app.UseDeveloperExceptionPage();
 }
 else
 {
+    // Produktionsmodus - Zeigt benutzerdefinierte Fehlerseiten an
     app.UseExceptionHandler("/Error");
     app.UseStatusCodePagesWithReExecute("/APIError");
     app.UseStatusCodePagesWithReExecute("/SeiteNichtGefunden");
-
-    app.UseDeveloperExceptionPage();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

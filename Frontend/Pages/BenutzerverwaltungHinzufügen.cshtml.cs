@@ -70,7 +70,7 @@ public class BenutzerverwaltungHinzufügenModel : PageModel
         User user = new User()
         {
             username = username,
-            firstname = username,
+            firstname = firstname,
             lastname = lastname,
             password = passwort,
             role = role,
@@ -79,6 +79,12 @@ public class BenutzerverwaltungHinzufügenModel : PageModel
 
 
         bool success = await userService.addUserAsync(user);
+        if(success == true)
+        { TempData["FehlerMeldungGrün"] = "Benutzer:in-Erstellung war erfolgreich!"; }
+        else
+        {
+          TempData["FehlerMeldungRot"] = "Benutzer:in-Erstellung war nicht erfolgreich!";
+        }
 
         System.Diagnostics.Debug.WriteLine(success);
 
