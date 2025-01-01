@@ -7,7 +7,7 @@ using QuestPDF.Infrastructure;
 
 QuestPDF.Settings.License = LicenseType.Community;
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddControllersWithViews();
 // Services hinzufügen
 builder.Services.AddRazorPages(options =>
 {
@@ -56,9 +56,12 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
     app.UseHsts();
+    app.UseDeveloperExceptionPage();
 }
 else
 {
+    app.UseExceptionHandler("/Error");  // Standard-Fehlerseite bei unerwarteten Fehlern
+    app.UseStatusCodePagesWithReExecute("/SeiteNichtGefunden");
     app.UseDeveloperExceptionPage();
 }
 
@@ -81,4 +84,9 @@ app.UseEndpoints(endpoints =>
 });
 
 app.Run();
+
+
+
+
+
 

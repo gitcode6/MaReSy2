@@ -1,0 +1,65 @@
+﻿@page
+@model MaReSy2.Pages.SeiteNichtGefundenModel
+@{
+    ViewData["Title"] = "Seite nicht gefunden";
+}
+<style>
+    .zugriff {
+        display: flex;
+        height: 50vh; /* Setzt die Höhe auf 20% der Ansichtsfensterhöhe */
+        width: auto; /* Setzt die Breite auf 25% der Ansichtsfensterbreite */
+        align-items: center;
+        justify-content: center;
+        color: #B70E0C;
+    }
+
+        .zugriff img {
+            width: 40%; /* Bild passt sich der Breite des Containers an */
+            height: auto; /* Bild passt sich der Höhe des Containers an */
+            object-fit: contain; /* Behält das Seitenverhältnis des Bildes bei */
+        }
+
+    .zugrifftext {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #B70E0C;
+    }
+
+        .zugrifftext h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #B70E0C;
+            font-size: 72px;
+        }
+
+    .zugrifftext2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+    }
+
+        .zugrifftext2 p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-size: 24px;
+        }
+</style>
+
+<div class="zugriff">
+    <img src="~/images/suche.svg" />
+</div>
+<div class="zugrifftext">
+    <h1><strong>Seite nicht gefunden</strong></h1>
+</div>
+<div class="zugrifftext2">
+    <p>Bei Fragen oder Problemen bitte an das Support-Team (<a href="mailto:maresy2@st.roteskreuz.at" style="text-decoration: none; color: #B70E0C;">maresy2@st.roteskreuz.at</a>) wenden.</p>
+
+</div>
+<div class="zugrifftext2">
+    <p><a asp-area="" asp-page="/Login" style="background-color: #403A60; color: white; text-decoration: none; padding: 10px; border-radius: 5px;">Login</a></p>
+</div>

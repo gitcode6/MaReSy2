@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\images\\sonstiges_information.jpg"
     },
     {
+      "Id": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\suche.svg",
+      "PackagePath": "staticwebassets\\images\\suche.svg"
+    },
+    {
       "Id": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\verbot.png",
       "PackagePath": "staticwebassets\\images\\verbot.png"
     },

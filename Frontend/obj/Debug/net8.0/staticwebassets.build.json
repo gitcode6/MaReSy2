@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0B7cSqYAq9ZkrkyzRLj8hbLYWNlNgjQJ4FUCzl2+pAk=",
+  "Hash": "qL74Bt18OCwArkPm+ueH146q34/maJ17O+Dx3Ifyq+4=",
   "Source": "MaReSy2",
   "BasePath": "_content/MaReSy2",
   "Mode": "Default",
@@ -456,6 +456,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\sonstiges_information.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\suche.svg",
+      "SourceId": "MaReSy2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\",
+      "BasePath": "_content/MaReSy2",
+      "RelativePath": "images/suche#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hydqtfq29p",
+      "Integrity": "KcJ602XIyPZAmwJaKBY1PiTVcm1TvQf6rbx6piWO75M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\suche.svg"
     },
     {
       "Identity": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\Übungsmedikament1.png",
@@ -3778,6 +3799,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-675UVhntcg3W9LkPTuNe0hnkbKSV17c90X19o8XwGCU="
+        }
+      ]
+    },
+    {
+      "Route": "images/suche.hydqtfq29p.svg",
+      "AssetFile": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\suche.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KcJ602XIyPZAmwJaKBY1PiTVcm1TvQf6rbx6piWO75M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:24:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hydqtfq29p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/suche.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KcJ602XIyPZAmwJaKBY1PiTVcm1TvQf6rbx6piWO75M="
+        }
+      ]
+    },
+    {
+      "Route": "images/suche.svg",
+      "AssetFile": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\suche.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KcJ602XIyPZAmwJaKBY1PiTVcm1TvQf6rbx6piWO75M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 01 Jan 2025 14:24:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KcJ602XIyPZAmwJaKBY1PiTVcm1TvQf6rbx6piWO75M="
         }
       ]
     },

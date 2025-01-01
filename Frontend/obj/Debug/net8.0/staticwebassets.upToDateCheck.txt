@@ -17,6 +17,7 @@ wwwroot\images\sonstiges_abmeldung.jpg
 wwwroot\images\sonstiges_einstellungen.jpg
 wwwroot\images\sonstiges_handbuch.jpg
 wwwroot\images\sonstiges_information.jpg
+wwwroot\images\suche.svg
 wwwroot\images\Übungsmedikament1.png
 wwwroot\images\verbot.png
 wwwroot\images\verbot.svg
