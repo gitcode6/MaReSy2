@@ -12,7 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages(options =>
 {
     options.Conventions.AuthorizeFolder("/"); // Schützt alle Seiten
-    options.Conventions.AllowAnonymousToPage("/Login"); // Login explizit freigeben
+    options.Conventions.AllowAnonymousToPage("/Login");
+    options.Conventions.AllowAnonymousToPage("/Impressum");
+    options.Conventions.AllowAnonymousToPage("/Datenschutz");// Login explizit freigeben
 });
 
 builder.Services.AddAuthentication("MyCookieAuth")

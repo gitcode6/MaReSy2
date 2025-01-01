@@ -25,16 +25,7 @@ public class LoginModel : PageModel
 
     public async Task<IActionResult> OnGet()
     {
-        var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, "gast"),
-                new Claim(ClaimTypes.Role, "Gast")
-            };
-
-        var identity = new ClaimsIdentity(claims, "AuthType");
-        var principal = new ClaimsPrincipal(identity);
-        await HttpContext.SignInAsync(principal);
-
+        await HttpContext.SignOutAsync();
         return Page();
     }
 
@@ -45,7 +36,7 @@ public class LoginModel : PageModel
 
         if (ModelState.IsValid)
         {
-            meinLoginUser = await _userService.GetLoginAsync(meinUser); //HIER KOMMT NULL ZURÜCK!!! FEHLER!!!
+            meinLoginUser = await _userService.GetLoginAsync(meinUser);
 
             if (meinLoginUser != null && meinLoginUser.role == "Admin")
             {
