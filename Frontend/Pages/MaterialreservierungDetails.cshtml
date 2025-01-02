@@ -1,4 +1,4 @@
-﻿@page "{id}"
+﻿@page "{id:int}"
 @using Microsoft.AspNetCore.Authorization
 @model MaReSy2.Pages.MaterialreservierungDetailsModel
 @{
@@ -92,8 +92,10 @@
         
         <div style="display: flex; justify-content: space-between;">
         <div style="display: flex; justify-content: left; width: fit-content;">
-            <img src="/images/Übungsmedikament1.png" alt="Material">
+             @*   <img src="@Url.Page(@"MaterialreservierungDetails", new {handler = "getImageUrl"})" alt="Material">*@
         </div>
+
+            
 
         <div style="display: flex; flex-direction: column;  width: 70%;">
 
@@ -104,6 +106,8 @@
             <div style="display: flex;">
                 <p>@Model.Description</p>
             </div>
+
+
 
             <div style="display: flex; justify-content: left;">
                 <form id="reservierungsForm" method="post" >

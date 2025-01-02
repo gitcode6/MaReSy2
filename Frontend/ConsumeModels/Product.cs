@@ -8,5 +8,7 @@
         public bool productactive { get; set; }
 
         public int? productamount { get; set; }
+
+        public string? productimageLink { get; set; }
     }
 }

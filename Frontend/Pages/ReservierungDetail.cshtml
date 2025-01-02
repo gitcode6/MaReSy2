@@ -6,87 +6,95 @@
 @attribute [Authorize(Policy = "LoggedIn")]
 
 <style>
-    .btnSpeichern {
-        color: white;
-        background-color: #B70E0C;
-    }
+	.btnSpeichern {
+		color: white;
+		background-color: #B70E0C;
+	}
 
-    body {
-        font-family: Dunant;
-    }
+	body {
+		font-family: Dunant;
+	}
 
-    .materialreservierung_head {
-        background-color: #403A60;
-        padding-top: 10px;
-        padding-bottom: 1px;
-        text-align: center;
-        font-family: Dunant;
-    }
+	.materialreservierung_head {
+		background-color: #403A60;
+		padding-top: 10px;
+		padding-bottom: 1px;
+		text-align: center;
+		font-family: Dunant;
+	}
 
-    .lagerverwaltung_detail {
-        background-color: #99D6EA;
-        padding: 20px;
-        font-family: Dunant;
-    }
+	.lagerverwaltung_detail {
+		background-color: #99D6EA;
+		padding: 20px;
+		font-family: Dunant;
+	}
 
-    .table_detail {
-        padding: 2%;
-        width: 100%;
-        font-family: Dunant;
-    }
+	.table_detail {
+		padding: 2%;
+		width: 100%;
+		font-family: Dunant;
+	}
 </style>
 <div class="materialreservierung_head">
-    <h1 style="color: white; font-size:50px;">Materialreservierung</h1>
+	<h1 style="color: white; font-size:50px;">Materialreservierung</h1>
 </div>
 <br />
 <div class="lagerverwaltung_detail">
-    <h2 style="text-align: center;">Detail</h2>
-    <div class="table_detail">
-    <table class="table">
-        <thead>
-        <tr style="vertical-align: middle;">
-            <th width="33%">Art</th>
-            <th width="33%">Datum</th>
-            <th width="33%">User</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Anforderung</td>
-                <td>15.05.2024 10:15:33</td>
-                <td>Elias Gindl (elias.gindl)</td>
-            </tr>
-            <tr>
-                <td>Freigabe</td>
-                <td>16.05.2024 18:13:25</td>
-                <td>Alexander Schmidt (alexander.schmidt)</td>
-            </tr>
-            <tr>
-                <td>Ablehnung</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Auslieferung</td>
-                <td>20.05.2024 21:05:11</td>
-                <td>Melanie Summer (melanie.summer)</td>
-            </tr>
-            <tr>
-                <td>Rückgabe</td>
-                <td>30.06.2024 10:25:11</td>
-                <td>Melanie Summer (melanie.summer)</td>
-            </tr>
-            <tr>
-                <td>Stornierung</td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table><br />
-        <p>Kommentare:<br />Hier ist der Nikolaus. Der bringt viele Geschenke.</p>
-    </div>
+	<h2 style="text-align: center;">Detail von Reservierung (ID: @Model.rental.rentalId)</h2>
+	<div class="table_detail">
+		<table class="table">
+			<thead>
+				<tr style="vertical-align: middle;">
+					<th width="33%">Art</th>
+					<th width="33%">Datum</th>
+					<th width="33%">User</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Anforderung</td>
+					<td>@Model.rental.rentalAnforderung</td>
+					<td>@Model.rental.user.username</td>
+				</tr>
+				<tr>
+					<td>Freigabe</td>
+					<td>@Model.rental?.rentalFreigabe</td>
+					<td>@Model.rental?.rentalFreigabeUser?.username</td>
+				</tr>
+				<tr>
+					<td>Ablehnung</td>
+					<td>@Model.rental?.rentalAblehnung</td>
+					<td>@Model.rental?.rentalAblehnungUser?.username</td>
+				</tr>
+				<tr>
+					<td>Auslieferung</td>
+					<td>@Model.rental?.rentalAuslieferung</td>
+					<td>@Model.rental?.rentalAuslieferungUser?.username</td>
+				</tr>
+				<tr>
+					<td>Rückgabe</td>
+					<td>@Model.rental?.rentalZuereck</td>
+					<td>@Model.rental?.rentalZuereckUser?.username</td>
+				</tr>
+				<tr>
+					<td>Stornierung</td>
+					<td>
+						@{
+							var canceled = Model.rental?.rentalStornierung != null ? true : false;
+						}  @Model.rental?.rentalStornierung
+					</td>
+					<td>@{
+						var output = 
+						canceled == true ? Model.rental?.user.username : "";} @output</td>
+				</tr>
+			</tbody>
+		</table><br />
+		<p>Kommentare:<br />@{
+			var note = String.IsNullOrEmpty(Model.rental.rentalNote) != true ? Model.rental.rentalNote : "Keine Anmerkungen verfügbar";
+			}@note</p>
+	</div>
 
 
-    <button onclick="history.back()" class="btn btnSpeichern" style="background-color: #403A60;">Zurück</button>
+	<button onclick="history.back()" class="btn btnSpeichern" style="background-color: #403A60;">Zurück</button>
 </div>
 

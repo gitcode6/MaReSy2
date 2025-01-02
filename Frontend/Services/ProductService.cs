@@ -1,8 +1,10 @@
 ﻿using MaReSy2.ConsumeModels;
 using Newtonsoft.Json;
+using QuestPDF.Infrastructure;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Net.Http.Headers;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
@@ -190,6 +192,40 @@ namespace MaReSy2.Services
 
             // Gib true zurück, wenn die Anfrage erfolgreich war, ansonsten false
             return response.IsSuccessStatusCode;
+        }
+
+        public async Task<byte[]?> GetProductImageAsync(int id)
+        {
+            var client = _httpClientFactory.CreateClient("API");
+
+            // Hole den Token (angenommen, du hast ihn irgendwo gespeichert, z.B. im TokenManager)
+            string token = TokenManager.GetToken();  // Beispiel für eine Klasse, die den Token speichert
+
+            if (string.IsNullOrEmpty(token))
+            {
+                Debug.WriteLine("Kein Token gefunden. Bitte zuerst anmelden.");
+                return null;  // Falls kein Token vorhanden ist, gebe false zurück
+            }
+
+            // Setze den Authorization-Header mit dem Bearer-Token
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            // Erstelle die URL für die DELETE-Anfrage
+            string url = $"/api/products/{id}/image";
+
+            // Führe die DELETE-Anfrage aus, um das Produkt zu löschen
+            var response = await client.GetAsync(url);
+
+            // Wenn die Anfrage erfolgreich war, deserialisiere die Antwort in das Product-Objekt
+            if (response.IsSuccessStatusCode)
+            {
+                var imageBytes = await response.Content.ReadAsByteArrayAsync();
+                return imageBytes;
+            }
+            else
+            {
+                return null;
+            }
         }
 
 

@@ -2,140 +2,165 @@
 @using Microsoft.AspNetCore.Authorization
 @model Übersicht_AModel
 @{
-    ViewData["Title"] = "Übersicht A";
+	ViewData["Title"] = "Übersicht A";
 }
 @attribute [Authorize(Policy = "AdminsOnly")]
 <style>
-    .verwaltung_materialreservierung {
-        background-color: #403A60;
-        padding-top: 10px;
-        padding-bottom: 1px;
-        text-align: center;
-        font-family: Dunant;
-    }
+	.verwaltung_materialreservierung {
+		background-color: #403A60;
+		padding-top: 10px;
+		padding-bottom: 1px;
+		text-align: center;
+		font-family: Dunant;
+	}
 
-    .table_detail {
-        padding: 2%;
-        width: 100%;
-        font-family: Dunant;
-    }
+	.table_detail {
+		padding: 2%;
+		width: 100%;
+		font-family: Dunant;
+	}
 </style>
 
 <div class="verwaltung_materialreservierung">
-    <h1 style="color: white; font-size:50px;">Materialreservierung-Verwaltung</h1>
+	<h1 style="color: white; font-size:50px;">Materialreservierung-Verwaltung</h1>
 </div>
 
 <div class="table_detail">
-    <table class="table">
-        <thead>
-            <tr style="vertical-align: middle;">
-                <th>Filter</th>
-                <th><input type="text" id="searchInputAnforderer" onkeyup="filterTable()" placeholder="Anforderer:in"></th>
-                <th><input type="text" id="searchInputMaterial" onkeyup="filterTable()" placeholder="Material"></th>
-                <th><input type="text" id="searchInputZeitraum" onkeyup="filterTable()" placeholder="Zeitraum"></th>
-                <th>
-                    <select id="searchInputStatus" onchange="filterTable()">
-                        <option value="">Alle Status</option>
-                        <option value="Anforderung">Anforderung</option>
-                        <option value="Freigabe">Freigabe</option>
-                        <option value="Ablehnung">Ablehnung</option>
-                        <option value="Auslieferung">Auslieferung</option>
-                        <option value="Rückgabe">Rückgabe</option>
-                        <option value="Stornierung">Stornierung</option>
-                    </select>
-                </th>
-                <th></th>
-            </tr>
-            <tr style="vertical-align: middle;">
-                <th width="5%">ID</th>
-                <th width="10%">Anforderer:in</th>
-                <th width="30%">Material</th>
-                <th width="20%">Zeitraum</th>
-                <th width="10%">Status</th>
-                <th width="20%">Tools</th>
-            </tr>
-        </thead>
-        <tbody id="userTableBody" style="vertical-align: middle;">
-            <tr>
-                <td>1</td>
-                <td>Alexander Schmidt <br /> (a.schmidt3)</td>
-                <td>Reanimationspuppe</td>
-                <td>01.08.2024 - 31.08.2024</td>
-                <td>Freigabe</td>
-                <td>
-                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
-                    |
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Harald Dinger <br /> (h.dinger)</td>
-                <td>Schleife "Bewerter:in"</td>
-                <td>10.10.2024 - 30.11.2024</td>
-                <td>Anforderung</td>
-                <td>
-                    <a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
-                    |
-                    <a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
-                    <a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+	<table class="table">
+		<thead>
+			<tr style="vertical-align: middle;">
+				<th>Filter</th>
+				<th><input type="text" id="searchInputAnforderer" onkeyup="filterTable()" placeholder="Anforderer:in"></th>
+				<th><input type="text" id="searchInputMaterial" onkeyup="filterTable()" placeholder="Material"></th>
+				<th><input type="text" id="searchInputZeitraum" onkeyup="filterTable()" placeholder="Zeitraum"></th>
+				<th>
+					<select id="searchInputStatus" onchange="filterTable()">
+						<option value="">Alle Status</option>
+						<option value="Anforderung">Anforderung</option>
+						<option value="Freigabe">Freigabe</option>
+						<option value="Ablehnung">Ablehnung</option>
+						<option value="Auslieferung">Auslieferung</option>
+						<option value="Rückgabe">Rückgabe</option>
+						<option value="Stornierung">Stornierung</option>
+					</select>
+				</th>
+				<th></th>
+			</tr>
+			<tr style="vertical-align: middle;">
+				<th width="5%">ID</th>
+				<th width="10%">Anforderer:in</th>
+				<th width="30%">Material</th>
+				<th width="20%">Zeitraum</th>
+				<th width="10%">Status</th>
+				<th width="20%">Tools</th>
+			</tr>
+		</thead>
+		<tbody id="userTableBody" style="vertical-align: middle;">
+			<tr>
+			@* 	<td>1</td>
+				<td>Alexander Schmidt <br /> (a.schmidt3)</td>
+				<td>Reanimationspuppe</td>
+				<td>01.08.2024 - 31.08.2024</td>
+				<td>Freigabe</td>
+				<td>
+					<a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+					|
+					<a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+					<a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
+				</td>
+			</tr> *@
+
+			@foreach (var e in Model.rentals)
+			{
+				<tr>
+					<td>@e.rentalId</td>
+					<td>@e.user.username</td>
+					<td>
+						@{
+							var displayValue = String.IsNullOrEmpty(e.setname) != true ? e.setname :
+	e.singleProducts.ElementAt(0).singleProductCategory;
+						}
+						@displayValue
+					</td>
+					<td>@e.rentalStart - @e.rentalEnd</td>
+					<td>@e.status</td>
+					<td>
+						<a class="btn btn-danger" asp-route-id="@e.rentalId" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+						|
+						<a class="btn btn-primary" asp-route-id="@e.rentalId" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+						<a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
+					</td>
+				</tr>
+			}
+
+
+			@* <tr>
+				<td>2</td>
+				<td>Harald Dinger <br /> (h.dinger)</td>
+				<td>Schleife "Bewerter:in"</td>
+				<td>10.10.2024 - 30.11.2024</td>
+				<td>Anforderung</td>
+				<td>
+					<a class="btn btn-danger" asp-route-id="1" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
+					|
+					<a class="btn btn-primary" asp-route-id="1" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
+					<a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
+				</td>
+			</tr> *@
+		</tbody>
+	</table>
 </div>
 
 <script>
-    function filterTable() {
-        // Variablen für die Filter
-        const inputAnforderer = document.getElementById("searchInputAnforderer").value.toUpperCase();
-        const inputMaterial = document.getElementById("searchInputMaterial").value.toUpperCase();
-        const inputZeitraum = document.getElementById("searchInputZeitraum").value.toUpperCase();
-        const inputStatus = document.getElementById("searchInputStatus").value.toUpperCase();
-        const table = document.getElementById("userTableBody");
-        const tr = table.getElementsByTagName("tr");
+	function filterTable() {
+		// Variablen für die Filter
+		const inputAnforderer = document.getElementById("searchInputAnforderer").value.toUpperCase();
+		const inputMaterial = document.getElementById("searchInputMaterial").value.toUpperCase();
+		const inputZeitraum = document.getElementById("searchInputZeitraum").value.toUpperCase();
+		const inputStatus = document.getElementById("searchInputStatus").value.toUpperCase();
+		const table = document.getElementById("userTableBody");
+		const tr = table.getElementsByTagName("tr");
 
-        // Schleife über alle Zeilen in der Tabelle
-        for (let i = 0; i < tr.length; i++) {
-            const tdAnforderer = tr[i].getElementsByTagName("td")[1];
-            const tdMaterial = tr[i].getElementsByTagName("td")[2];
-            const tdZeitraum = tr[i].getElementsByTagName("td")[3];
-            const tdStatus = tr[i].getElementsByTagName("td")[4];
+		// Schleife über alle Zeilen in der Tabelle
+		for (let i = 0; i < tr.length; i++) {
+			const tdAnforderer = tr[i].getElementsByTagName("td")[1];
+			const tdMaterial = tr[i].getElementsByTagName("td")[2];
+			const tdZeitraum = tr[i].getElementsByTagName("td")[3];
+			const tdStatus = tr[i].getElementsByTagName("td")[4];
 
-            let match = true; // Initialisiere match als true
+			let match = true; // Initialisiere match als true
 
-            // Überprüfen auf Übereinstimmungen
-            if (tdAnforderer) {
-                const txtAnforderer = tdAnforderer.textContent || tdAnforderer.innerText;
-                if (txtAnforderer.toUpperCase().indexOf(inputAnforderer) === -1) {
-                    match = false;
-                }
-            }
+			// Überprüfen auf Übereinstimmungen
+			if (tdAnforderer) {
+				const txtAnforderer = tdAnforderer.textContent || tdAnforderer.innerText;
+				if (txtAnforderer.toUpperCase().indexOf(inputAnforderer) === -1) {
+					match = false;
+				}
+			}
 
-            if (tdMaterial) {
-                const txtMaterial = tdMaterial.textContent || tdMaterial.innerText;
-                if (txtMaterial.toUpperCase().indexOf(inputMaterial) === -1) {
-                    match = false;
-                }
-            }
+			if (tdMaterial) {
+				const txtMaterial = tdMaterial.textContent || tdMaterial.innerText;
+				if (txtMaterial.toUpperCase().indexOf(inputMaterial) === -1) {
+					match = false;
+				}
+			}
 
-            if (tdZeitraum) {
-                const txtZeitraum = tdZeitraum.textContent || tdZeitraum.innerText;
-                if (txtZeitraum.toUpperCase().indexOf(inputZeitraum) === -1) {
-                    match = false;
-                }
-            }
+			if (tdZeitraum) {
+				const txtZeitraum = tdZeitraum.textContent || tdZeitraum.innerText;
+				if (txtZeitraum.toUpperCase().indexOf(inputZeitraum) === -1) {
+					match = false;
+				}
+			}
 
-            if (tdStatus) {
-                const txtStatus = tdStatus.textContent || tdStatus.innerText;
-                if (inputStatus !== "" && txtStatus.toUpperCase().indexOf(inputStatus) === -1) {
-                    match = false;
-                }
-            }
+			if (tdStatus) {
+				const txtStatus = tdStatus.textContent || tdStatus.innerText;
+				if (inputStatus !== "" && txtStatus.toUpperCase().indexOf(inputStatus) === -1) {
+					match = false;
+				}
+			}
 
-            // Verstecken oder Anzeigen der Zeile basierend auf dem Filter
-            tr[i].style.display = match ? "" : "none";
-        }
-    }
+			// Verstecken oder Anzeigen der Zeile basierend auf dem Filter
+			tr[i].style.display = match ? "" : "none";
+		}
+	}
 </script>

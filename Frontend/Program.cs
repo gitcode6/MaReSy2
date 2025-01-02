@@ -35,6 +35,7 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<SetService>();
 builder.Services.AddScoped<SingleProductService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<RentalService>();
 
 
 

@@ -66,6 +66,9 @@ namespace MaReSy2_Api.Controllers
                 User = new Models.DTO.UserDTO.UserDTO
                 {
                     UserId = user.UserId,
+                    Firstname = user.Firstname,
+                    Lastname = user.Lastname,
+                    Email = user.Email,
                     Username = user.Username,
                     Role = user.Role.Rolename,
                 }
@@ -97,7 +100,7 @@ namespace MaReSy2_Api.Controllers
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(60),
+                expires: DateTime.Now.AddHours(3),
                 signingCredentials: credentials
                 );
 

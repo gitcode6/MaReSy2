@@ -113,6 +113,18 @@
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Materialien durchsuchen..." onkeyup="filterMaterials()">
     </div>
+    @if (TempData["FehlerMeldungRot"] != null)
+    {
+        <div class="alert alert-success custom-alert" role="alert" style="background-color: #B70E0C; color: white;">
+            @TempData["FehlerMeldungRot"]
+        </div>
+    }
+    @if (TempData["FehlerMeldungGrün"] != null)
+    {
+        <div class="alert alert-success custom-alert" role="alert" style="background-color: #A0DAB3; color: white;">
+            @TempData["FehlerMeldungGrün"]
+        </div>
+    }
 
          @foreach(var e in Model.products)
         {
@@ -131,7 +143,7 @@
             <img src="~/images/Übungsmedikament1.png" alt="Material">
             <div class="text-container">
                 <h3>@x.setname</h3>
-                <a href="/MaReDeSET/@x.setname" class="btn">Reservieren</a>
+                <a href="/MaReDeSET/@x.setId" class="btn">Reservieren</a>
             </div>
         </div>
     }
