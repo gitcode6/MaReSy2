@@ -94,6 +94,33 @@
 			}@note</p>
 	</div>
 
+	<br />
+	<div class="materialreservierung_detail">
+		<h2 style="text-align: center;">reservierte Produkte</h2>
+		<div class="table_detail">
+			<table class="table">
+				<thead>
+				<th>Produktname</th>
+				<th>Einzelprodukt-Name</th>
+				<th>Einzelprodukt-Seriennummer</th>
+				</thead>
+				<tbody>
+
+					@foreach(var e in Model.rental.singleProducts){
+						<tr>
+							<td>@e.singleProductCategory</td>
+							<td>@e.singleProductName</td>
+							<td>@e.singleProductNumber</td>
+						</tr>
+					}
+				
+
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 
 	<button onclick="history.back()" class="btn btnSpeichern" style="background-color: #403A60;">Zurück</button>
 </div>

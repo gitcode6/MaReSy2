@@ -132,12 +132,12 @@ namespace MaReSy2.Services
         }
 
 
-        public async Task<bool> bearbeitenProductAsync(Product product)
+        public async Task<bool> bearbeitenRentalAsync(UpdateRentalDTO rentalUpdate)
         {
             var client = _httpClientFactory.CreateClient("API");
 
             // Setze die URL, um das Produkt zu bearbeiten
-            string baseUrl = $"/api/products/{product.productId}";
+            string baseUrl = $"/api/rentals";
 
             // Hole den Token (angenommen, du hast ihn irgendwo gespeichert, z.B. im TokenManager)
             string token = TokenManager.GetToken();  // Beispiel für eine Klasse, die den Token speichert
@@ -152,7 +152,7 @@ namespace MaReSy2.Services
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             // Erstelle den StringContent mit dem Produkt-Objekt
-            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(product), Encoding.UTF8, "application/json");
+            using StringContent stringContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(rentalUpdate), Encoding.UTF8, "application/json");
 
             // Führe die PUT-Anfrage aus, um das Produkt zu bearbeiten
             var response = await client.PutAsync(baseUrl, stringContent);

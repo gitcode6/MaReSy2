@@ -3,8 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\maredeset.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\maredeset.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\\u00FCbersicht a.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\\u00FCbersicht a.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\\u00FCbersicht a.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\\u00FCbersicht a.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\seitenichtgefunden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\seitenichtgefunden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\\u00FCbersicht u.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\\u00FCbersicht u.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\consumemodels\\rentalactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:consumemodels\\rentalactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\reservierungdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\reservierungdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\\u00FCbersicht u.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\\u00FCbersicht u.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\consumemodels\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:consumemodels\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\benutzerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\materialreservierungdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\materialreservierungdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\maredeset.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\maredeset.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\materialreservierungdetails.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,22 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\materialreservierung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\materialreservierung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\maredeset.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\maredeset.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\materialreservierungdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\materialreservierungdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\\u00FCbersicht u.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\\u00FCbersicht u.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\\u00FCbersicht u.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\\u00FCbersicht u.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\lagerverwaltungephinzu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -75,22 +103,6 @@
       "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\lagerverwaltunghinzuf\u00FCgen.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\benutzerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\benutzerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\benutzerverwaltung.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\reservierungdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\reservierungdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -101,14 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\lagerverwaltungepbearb.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\lagerverwaltungepbearb.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\seitenichtgefunden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\seitenichtgefunden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\pages\\\u00FCbersicht a.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\\u00FCbersicht a.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\tobias\\documents\\github\\maresy2\\frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -146,332 +150,72 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Materialreservierung.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Materialreservierung.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml.cs",
-              "RelativeToolTip": "Pages\\Materialreservierung.cshtml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T20:55:36.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Materialreservierung.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Materialreservierung.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml",
-              "RelativeToolTip": "Pages\\Materialreservierung.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAH4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T18:46:46.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MaReDeSET.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaReDeSET.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\MaReDeSET.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaReDeSET.cshtml.cs",
-              "RelativeToolTip": "Pages\\MaReDeSET.cshtml.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAwDAAAAA7AAAAAAAAAA==",
+              "Title": "RentalActions.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\ConsumeModels\\RentalActions.cs",
+              "RelativeDocumentMoniker": "ConsumeModels\\RentalActions.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\ConsumeModels\\RentalActions.cs",
+              "RelativeToolTip": "ConsumeModels\\RentalActions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T20:53:15.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReservierungDetail.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\ReservierungDetail.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml.cs",
-              "RelativeToolTip": "Pages\\ReservierungDetail.cshtml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T20:16:54.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MaterialreservierungDetails.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\MaterialreservierungDetails.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml.cs",
-              "RelativeToolTip": "Pages\\MaterialreservierungDetails.cshtml.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowBMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T18:45:50.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MaReDeSET.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaReDeSET.cshtml",
-              "RelativeDocumentMoniker": "Pages\\MaReDeSET.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaReDeSET.cshtml",
-              "RelativeToolTip": "Pages\\MaReDeSET.cshtml",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAALEAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T18:46:45.289Z",
+              "WhenOpened": "2025-01-03T16:36:23.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MaterialreservierungDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml",
-              "RelativeDocumentMoniker": "Pages\\MaterialreservierungDetails.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml",
-              "RelativeToolTip": "Pages\\MaterialreservierungDetails.cshtml",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAawGEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T18:45:26.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "\u00DCbersicht U.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht U.cshtml",
-              "RelativeDocumentMoniker": "Pages\\\u00DCbersicht U.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht U.cshtml",
-              "RelativeToolTip": "Pages\\\u00DCbersicht U.cshtml",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAqwGwAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T21:06:18.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "\u00DCbersicht U.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht U.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\\u00DCbersicht U.cshtml.cs",
               "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht U.cshtml.cs",
               "RelativeToolTip": "Pages\\\u00DCbersicht U.cshtml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwBoAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T21:06:21.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LagerverwaltungEPHinzu.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml",
-              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPHinzu.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml",
-              "RelativeToolTip": "Pages\\LagerverwaltungEPHinzu.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T21:56:30.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BenutzerverwaltungHinzuf\u00FCgen.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
-              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
-              "RelativeToolTip": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T21:56:56.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BenutzerverwaltungBearbeiten.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "RelativeToolTip": "Pages\\BenutzerverwaltungBearbeiten.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T21:56:59.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "RelativeToolTip": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "\u00DCbersicht A.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht A.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\\u00DCbersicht A.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht A.cshtml.cs",
+              "RelativeToolTip": "Pages\\\u00DCbersicht A.cshtml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwBwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:56:53.923Z",
+              "WhenOpened": "2025-01-02T19:56:30.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BenutzerverwaltungBearbeiten.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "RelativeToolTip": "Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:50:00.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
-              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:49:46.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LagerverwaltungHinzuf\u00FCgungSet.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
-              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
-              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "\u00DCbersicht A.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht A.cshtml",
+              "RelativeDocumentMoniker": "Pages\\\u00DCbersicht A.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht A.cshtml",
+              "RelativeToolTip": "Pages\\\u00DCbersicht A.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAgwIMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T21:49:44.108Z",
+              "WhenOpened": "2025-01-03T15:50:45.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LagerverwaltungEPHinzu.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPHinzu.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml.cs",
-              "RelativeToolTip": "Pages\\LagerverwaltungEPHinzu.cshtml.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:49:38.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAcwFoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:48:24.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RentalService.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\RentalService.cs",
-              "RelativeDocumentMoniker": "Services\\RentalService.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\RentalService.cs",
-              "RelativeToolTip": "Services\\RentalService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAArwHMAAAByAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:36:38.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Benutzerverwaltung.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Benutzerverwaltung.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml",
-              "RelativeToolTip": "Pages\\Benutzerverwaltung.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFcAAAACAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "\u00DCbersicht U.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht U.cshtml",
+              "RelativeDocumentMoniker": "Pages\\\u00DCbersicht U.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht U.cshtml",
+              "RelativeToolTip": "Pages\\\u00DCbersicht U.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAqwHIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T21:20:31.022Z",
+              "WhenOpened": "2025-01-02T21:06:18.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Benutzerverwaltung.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Benutzerverwaltung.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml.cs",
-              "RelativeToolTip": "Pages\\Benutzerverwaltung.cshtml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:24:55.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Logout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Logout.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Logout.cshtml",
-              "RelativeToolTip": "Pages\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T21:00:06.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ReservierungDetail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml",
-              "RelativeDocumentMoniker": "Pages\\ReservierungDetail.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml",
-              "RelativeToolTip": "Pages\\ReservierungDetail.cshtml",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAuwCoAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T20:16:56.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "LagerverwaltungEPBearb.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml",
-              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPBearb.cshtml",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml",
-              "RelativeToolTip": "Pages\\LagerverwaltungEPBearb.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-01T17:36:44.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "LagerverwaltungEPBearb.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPBearb.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml.cs",
-              "RelativeToolTip": "Pages\\LagerverwaltungEPBearb.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T18:47:46.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 2,
               "Title": "SeiteNichtGefunden.cshtml",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\SeiteNichtGefunden.cshtml",
               "RelativeDocumentMoniker": "Pages\\SeiteNichtGefunden.cshtml",
@@ -484,20 +228,277 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "\u00DCbersicht A.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht A.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\\u00DCbersicht A.cshtml.cs",
-              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\\u00DCbersicht A.cshtml.cs",
-              "RelativeToolTip": "Pages\\\u00DCbersicht A.cshtml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADgvxEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T19:56:30.814Z",
+              "DocumentIndex": 5,
+              "Title": "ReservierungDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\ReservierungDetail.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml",
+              "RelativeToolTip": "Pages\\ReservierungDetail.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwFIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T20:16:56.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RentalService.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\RentalService.cs",
+              "RelativeDocumentMoniker": "Services\\RentalService.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Services\\RentalService.cs",
+              "RelativeToolTip": "Services\\RentalService.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T17:02:13.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Rental.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\ConsumeModels\\Rental.cs",
+              "RelativeDocumentMoniker": "ConsumeModels\\Rental.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\ConsumeModels\\Rental.cs",
+              "RelativeToolTip": "ConsumeModels\\Rental.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T18:28:41.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Benutzerverwaltung.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Benutzerverwaltung.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Benutzerverwaltung.cshtml.cs",
+              "RelativeToolTip": "Pages\\Benutzerverwaltung.cshtml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T21:24:55.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MaReDeSET.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaReDeSET.cshtml",
+              "RelativeDocumentMoniker": "Pages\\MaReDeSET.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaReDeSET.cshtml",
+              "RelativeToolTip": "Pages\\MaReDeSET.cshtml",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAALUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T18:46:45.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MaterialreservierungDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml",
+              "RelativeDocumentMoniker": "Pages\\MaterialreservierungDetails.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml",
+              "RelativeToolTip": "Pages\\MaterialreservierungDetails.cshtml",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAgwJUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T18:45:26.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MaterialreservierungDetails.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\MaterialreservierungDetails.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\MaterialreservierungDetails.cshtml.cs",
+              "RelativeToolTip": "Pages\\MaterialreservierungDetails.cshtml.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowBMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T18:45:50.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ReservierungDetail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\ReservierungDetail.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\ReservierungDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\ReservierungDetail.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T20:16:54.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Materialreservierung.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Materialreservierung.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml",
+              "RelativeToolTip": "Pages\\Materialreservierung.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAH4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T18:46:46.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Materialreservierung.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Materialreservierung.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml.cs",
+              "RelativeToolTip": "Pages\\Materialreservierung.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T20:55:36.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LagerverwaltungEPHinzu.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPHinzu.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml",
+              "RelativeToolTip": "Pages\\LagerverwaltungEPHinzu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T21:56:30.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BenutzerverwaltungHinzuf\u00FCgen.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
+              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
+              "RelativeToolTip": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T21:56:56.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BenutzerverwaltungBearbeiten.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml",
+              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungBearbeiten.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml",
+              "RelativeToolTip": "Pages\\BenutzerverwaltungBearbeiten.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T21:56:59.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "RelativeToolTip": "Pages\\BenutzerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T21:56:53.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BenutzerverwaltungBearbeiten.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
+              "RelativeToolTip": "Pages\\BenutzerverwaltungBearbeiten.cshtml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T21:50:00.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
+              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T21:49:46.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LagerverwaltungHinzuf\u00FCgungSet.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
+              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgungSet.cshtml",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T21:49:44.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LagerverwaltungEPHinzu.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPHinzu.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPHinzu.cshtml.cs",
+              "RelativeToolTip": "Pages\\LagerverwaltungEPHinzu.cshtml.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T21:49:38.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwFoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T21:48:24.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Logout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Logout.cshtml",
+              "RelativeToolTip": "Pages\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T21:00:06.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LagerverwaltungEPBearb.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPBearb.cshtml",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml",
+              "RelativeToolTip": "Pages\\LagerverwaltungEPBearb.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-01T17:36:44.02Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 27,
+              "Title": "LagerverwaltungEPBearb.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungEPBearb.cshtml.cs",
+              "ToolTip": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungEPBearb.cshtml.cs",
+              "RelativeToolTip": "Pages\\LagerverwaltungEPBearb.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T18:47:46.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -505,12 +506,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T19:10:04.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T19:10:04.229Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\ConsumeModels\\Product.cs",
               "RelativeDocumentMoniker": "ConsumeModels\\Product.cs",
@@ -518,12 +518,11 @@
               "RelativeToolTip": "ConsumeModels\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T19:08:22.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T19:08:22.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "LagerverwaltungBearbeiten.cshtml",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungBearbeiten.cshtml",
               "RelativeDocumentMoniker": "Pages\\LagerverwaltungBearbeiten.cshtml",
@@ -531,8 +530,7 @@
               "RelativeToolTip": "Pages\\LagerverwaltungBearbeiten.cshtml",
               "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-02T18:52:55.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T18:52:55.01Z"
             }
           ]
         }
@@ -557,7 +555,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "LagerverwaltungBearbeiten.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungBearbeiten.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\LagerverwaltungBearbeiten.cshtml.cs",
@@ -591,7 +589,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Lagerverwaltung.cshtml",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Lagerverwaltung.cshtml",
               "RelativeDocumentMoniker": "Pages\\Lagerverwaltung.cshtml",
@@ -604,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Lagerverwaltung.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Lagerverwaltung.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Lagerverwaltung.cshtml.cs",
@@ -612,8 +610,7 @@
               "RelativeToolTip": "Pages\\Lagerverwaltung.cshtml.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T19:54:04.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T19:54:04.149Z"
             }
           ]
         }

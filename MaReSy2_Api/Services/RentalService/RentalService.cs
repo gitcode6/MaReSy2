@@ -148,7 +148,7 @@ namespace MaReSy2_Api.Services.RentalService
                 return result;
             }
 
-            if(response.Data?.Count > 0)
+            if (response.Data?.Count > 0)
             {
                 result.Data = "Reservierung erfolgreich angelegt.";
             }
@@ -589,7 +589,7 @@ namespace MaReSy2_Api.Services.RentalService
 
             switch (rentalAction.action)
             {
-                case 1:
+                case -1:
                     //ablehnen
                     if (rental!.Status == 1)
                     {
@@ -609,10 +609,49 @@ namespace MaReSy2_Api.Services.RentalService
 
                     break;
 
-                case 2:
+                case 0:
+                    if (rental!.Status == 3)
+                    {
+                        await clearAblehnungFields(rental.RentalId);
+                    }
+
+                    if (rental!.Status == 2)
+                    {
+                        await clearFreigabeFields(rental.RentalId);
+                    }
+
+                    if (rental!.Status == 3 || rental!.Status == 2)
+                    {
+                        rental!.Status = 1;
+                        _context.Rentals.Update(rental);
+                        await _context.SaveChangesAsync();
+                        result.Data = "Rental wurde zurückgesetzt.";
+                    }
+                    if(rental!.Status != 1)
+                    {
+                        result.Errors.Add(new ErrorDetail { Field = "Status", Error = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht zurückgesetzt werden!" });
+                    }
+
+
+                    break;
+
+                case 1:
                     //freigeben
 
-                    if (rental!.Status == 1 || rental!.Status == 3 || rental!.Status == 4)
+                    if (rental!.Status == 3)
+                    {
+                        await clearAblehnungFields(rental.RentalId);
+                    }
+
+                    if (rental!.Status == 4)
+                    {
+                        await clearAuslieferungFields(rental.RentalId);
+
+                    }
+
+
+
+                    if (rental!.Status == 1 || rental!.Status == 3)
                     {
                         rental!.Status = 2;
                         rental.RentalFreigabe = DateTime.Now;
@@ -622,23 +661,32 @@ namespace MaReSy2_Api.Services.RentalService
                         result.Data = "Rental wurde freigegeben.";
                     }
 
-                    if (rental!.Status == 3)
-                    {
-                        await clearFreigabeFields(rental.RentalId);
-                    }
-
                     if (rental!.Status == 4)
                     {
-                        await clearAuslieferungFields(rental.RentalId);
+                        rental!.Status = 2;
+                        _context.Rentals.Update(rental);
+                        await _context.SaveChangesAsync();
                     }
+
+
 
                     break;
 
 
-                case 3:
+                case 2:
                     //ausliefern
                     //freigabe oder rückgabe
-                    if (rental!.Status == 2 || rental!.Status == 5)
+
+
+                    if (rental!.Status == 5)
+                    {
+                        await clearZurückgabeFields(rental.RentalId);
+                        rental!.Status = 4;
+                        _context.Rentals.Update(rental);
+                        await _context.SaveChangesAsync();
+                    }
+
+                    if (rental!.Status == 2)
                     {
                         rental!.Status = 4;
                         rental.RentalAuslieferung = DateTime.Now;
@@ -646,35 +694,32 @@ namespace MaReSy2_Api.Services.RentalService
                         _context.Rentals.Update(rental);
                         await _context.SaveChangesAsync();
                         result.Data = "Rental wurde ausgeliefert.";
-
                     }
-                    else
+                    if(rental!.Status != 4)
                     {
                         result.Errors.Add(new ErrorDetail { Field = "Status", Error = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht ausgeliefert werden!" });
                     }
 
-                    if (rental!.Status == 5)
-                    {
-                        await clearZurückgabeFields(rental.RentalId);
-                    }
+
 
 
                     break;
 
 
-                case 4:
+                case 3:
+
                     //zurücknehmen
                     if (rental!.Status == 4)
                     {
                         rental!.Status = 5;
-                        rental.RentalFreigabe = DateTime.Now;
-                        rental.RentalFreigabeUser = actionUser.UserId;
+                        rental.RentalZurückgabe = DateTime.Now;
+                        rental.RentalZurückgabeUser = actionUser.UserId;
                         _context.Rentals.Update(rental);
                         await _context.SaveChangesAsync();
                         result.Data = "Rental wurde zurückgenommen.";
 
                     }
-                    else
+                    if(rental!.Status != 5)
                     {
                         result.Errors.Add(new ErrorDetail { Field = "Status", Error = $"Das Rental befindet sich im Status {rental.StatusNavigation.Bezeichnung}, in diesem Status kann es nicht zurückgenommen werden!" });
                     }
@@ -700,7 +745,7 @@ namespace MaReSy2_Api.Services.RentalService
 
             var rental = await _context.Rentals
                 .Where(rental => rental.RentalId == rentalId)
-                .Include(rental=> rental.StatusNavigation)
+                .Include(rental => rental.StatusNavigation)
                 .FirstOrDefaultAsync();
 
             var user = await _context.Users.Where(user => user.UserId == userId).FirstOrDefaultAsync();
@@ -818,7 +863,7 @@ namespace MaReSy2_Api.Services.RentalService
             if (rental != null)
             {
                 rental.RentalZurückgabe = null;
-                rental.RentalZurückgabe = null;
+                rental.RentalZurückgabeUser = null;
                 _context.Rentals.Update(rental);
                 return Convert.ToBoolean(await _context.SaveChangesAsync());
             }

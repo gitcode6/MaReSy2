@@ -64,6 +64,17 @@
 						@{
 							var displayValue = String.IsNullOrEmpty(e.setname) != true ? e.setname :
 							e.singleProducts.ElementAt(0).singleProductCategory;
+
+							int count = 0;
+							if (String.IsNullOrEmpty(e.setname))
+							{
+								count = e.singleProducts.Count;
+							}
+
+							if (count > 0)
+							{
+								displayValue += $" (x {count})";
+							}
 						}
 						@displayValue
 					</td>

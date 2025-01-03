@@ -1,4 +1,5 @@
 ﻿@page
+@using MaReSy2.ConsumeModels
 @using Microsoft.AspNetCore.Authorization
 @model Übersicht_AModel
 @{
@@ -70,31 +71,79 @@
 				</td>
 			</tr> *@
 
-			@foreach (var e in Model.rentals)
-			{
+				@foreach (var e in Model.rentals)
+				{
 				<tr>
 					<td>@e.rentalId</td>
 					<td>@e.user.username</td>
 					<td>
-						@{
-							var displayValue = String.IsNullOrEmpty(e.setname) != true ? e.setname :
-	e.singleProducts.ElementAt(0).singleProductCategory;
-						}
-						@displayValue
+							@{
+								var displayValue = String.IsNullOrEmpty(e.setname) != true ? e.setname :
+								e.singleProducts.ElementAt(0).singleProductCategory;
+
+								int count = 0;
+								if (String.IsNullOrEmpty(e.setname))
+								{
+									count = e.singleProducts.Count;
+								}
+
+								if (count > 0)
+								{
+									displayValue += $" (x {count})";
+								}
+							}
+							@displayValue
 					</td>
 					<td>@e.rentalStart - @e.rentalEnd</td>
 					<td>@e.status</td>
 					<td>
 						<a class="btn btn-danger" asp-route-id="@e.rentalId" asp-page="/ReservierungDetail" style="background-color: #A0DAB3; border-color: #A0DAB3">🛈</a>
 						|
-						<a class="btn btn-primary" asp-route-id="@e.rentalId" style="background-color: #B70E0C; border-color:#B70E0C;">←</a>
-						<a class="btn btn-danger" asp-page="/Delete" asp-route-id="1" style="background-color: #403A60; border-color:#403A60;">→</a>
+
+							@if (RentalActions.Actions[e.status].PreviousAction.HasValue)
+							{
+							<form id="previousForm-@e.rentalId"
+								  method="post"
+								  asp-route-id="@e.rentalId"
+								  asp-page-handler="ChangeStatus"
+								  style="display:none;">
+								<input type="hidden" name="direction" value="backward" />
+								<input type="submit" id="btn-changeStatusBW-@e.rentalId" />
+							</form>
+
+							<a class="btn btn-primary"
+							   style="background-color: #B70E0C; border-color:#B70E0C;"
+							   onclick="return confirmAction('btn-changeStatusBW-@e.rentalId');">←</a>
+
+							}
+
+							@if (RentalActions.Actions[e.status].NextAction.HasValue)
+							{
+							<form id="nextForm-@e.rentalId"
+								  method="post"
+								  asp-route-id="@e.rentalId"
+								  asp-page-handler="ChangeStatus"
+								  style="display:none;">
+								<input type="hidden" name="direction" value="forward" />
+								<input type="submit" id="btn-changeStatusFW-@e.rentalId" />
+							</form>
+
+							<a class="btn btn-danger"
+							   onclick="return confirmAction('btn-changeStatusFW-@e.rentalId');"
+							   style="background-color: #403A60; border-color:#403A60;">
+								→
+							</a>
+
+							}
+
+
+
 					</td>
 				</tr>
-			}
+				}
 
 
-			@* <tr>
+				@* <tr>
 				<td>2</td>
 				<td>Harald Dinger <br /> (h.dinger)</td>
 				<td>Schleife "Bewerter:in"</td>
@@ -112,6 +161,16 @@
 </div>
 
 <script>
+
+	function confirmAction(buttonId){
+		var confirmation = confirm("Sind sie sicher, dass sie den Status ändern möchten?");
+		if(confirmation){
+			document.getElementById(buttonId).click();
+		}
+	}
+
+
+
 	function filterTable() {
 		// Variablen für die Filter
 		const inputAnforderer = document.getElementById("searchInputAnforderer").value.toUpperCase();
