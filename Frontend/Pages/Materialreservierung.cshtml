@@ -126,7 +126,9 @@
         </div>
     }
 
-         @foreach(var e in Model.products)
+    @foreach(var e in Model.products)
+    {
+        @if (e.productactive == true)
         {
             <div class="card">
                 <img src="~/images/Übungsmedikament1.png" alt="Material">
@@ -136,16 +138,20 @@
                 </div>
             </div>
         }
+    }
 
     @foreach (var x in Model.sets)
     {
-        <div class="card">
-            <img src="~/images/Übungsmedikament1.png" alt="Material">
+        @if (x.setactive == true)
+        {
+            <div class="card">
+                <img src="~/images/Übungsmedikament1.png" alt="Material">
             <div class="text-container">
                 <h3>@x.setname</h3>
                 <a href="/MaReDeSET/@x.setId" class="btn">Reservieren</a>
             </div>
         </div>
+        }
     }
 
     <div style="clear: both;"></div>
