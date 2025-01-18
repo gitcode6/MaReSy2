@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MeVE6CNictfmmfheq2IWetzCEVSIFWd0PlKyB3Nj9Aw=",
+  "Hash": "FTPQd/9L5os/wZJjkFFtTj4Vl3MYOlaGYNP0zHPpwWI=",
   "Source": "MaReSy2",
   "BasePath": "_content/MaReSy2",
   "Mode": "Default",
@@ -451,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yw4zjwzmbe",
-      "Integrity": "XtnvWsU07Z2p4V1DgJQHlJjBczOHaK0oxx9BUvpWSgg=",
+      "Fingerprint": "a4ay5g79cf",
+      "Integrity": "unx0Rvle9sUz82wCeyhene4t0LS3aXw051+Y6VyDdQY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\sonstiges_handbuch.jpg"
@@ -3742,6 +3742,51 @@
       ]
     },
     {
+      "Route": "images/sonstiges_handbuch.a4ay5g79cf.jpg",
+      "AssetFile": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\sonstiges_handbuch.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"unx0Rvle9sUz82wCeyhene4t0LS3aXw051+Y6VyDdQY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Jan 2025 17:33:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a4ay5g79cf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sonstiges_handbuch.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-unx0Rvle9sUz82wCeyhene4t0LS3aXw051+Y6VyDdQY="
+        }
+      ]
+    },
+    {
       "Route": "images/sonstiges_handbuch.jpg",
       "AssetFile": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\sonstiges_handbuch.jpg",
       "Selectors": [],
@@ -3752,7 +3797,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "114633"
+          "Value": "125102"
         },
         {
           "Name": "Content-Type",
@@ -3760,11 +3805,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XtnvWsU07Z2p4V1DgJQHlJjBczOHaK0oxx9BUvpWSgg=\""
+          "Value": "\"unx0Rvle9sUz82wCeyhene4t0LS3aXw051+Y6VyDdQY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 23:10:43 GMT"
+          "Value": "Sat, 18 Jan 2025 17:33:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3774,52 +3819,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XtnvWsU07Z2p4V1DgJQHlJjBczOHaK0oxx9BUvpWSgg="
-        }
-      ]
-    },
-    {
-      "Route": "images/sonstiges_handbuch.yw4zjwzmbe.jpg",
-      "AssetFile": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\wwwroot\\images\\sonstiges_handbuch.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "114633"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XtnvWsU07Z2p4V1DgJQHlJjBczOHaK0oxx9BUvpWSgg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Dec 2024 23:10:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yw4zjwzmbe"
-        },
-        {
-          "Name": "label",
-          "Value": "images/sonstiges_handbuch.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-XtnvWsU07Z2p4V1DgJQHlJjBczOHaK0oxx9BUvpWSgg="
+          "Value": "sha256-unx0Rvle9sUz82wCeyhene4t0LS3aXw051+Y6VyDdQY="
         }
       ]
     },

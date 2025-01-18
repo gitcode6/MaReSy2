@@ -336,8 +336,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yw4zjwzmbe</Fingerprint>
-      <Integrity>XtnvWsU07Z2p4V1DgJQHlJjBczOHaK0oxx9BUvpWSgg=</Integrity>
+      <Fingerprint>a4ay5g79cf</Fingerprint>
+      <Integrity>unx0Rvle9sUz82wCeyhene4t0LS3aXw051+Y6VyDdQY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\sonstiges_handbuch.jpg'))</OriginalItemSpec>

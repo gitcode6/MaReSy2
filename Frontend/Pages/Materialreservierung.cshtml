@@ -111,6 +111,7 @@
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Materialien durchsuchen..." onkeyup="filterMaterials()">
     </div>
+
     @if (TempData["FehlerMeldungRot"] != null)
     {
         <div class="alert alert-success custom-alert" role="alert" style="background-color: #B70E0C; color: white;">
@@ -124,34 +125,36 @@
         </div>
     }
 
-    @foreach(var e in Model.products)
-    {
-        @if (e.productactive == true)
+    <div id="materialContainer">
+        @foreach (var e in Model.products)
         {
-            <div class="card">
-                <div class="text-container">
-                    <h3>@e.productname</h3>
-                    <a href="/MaterialreservierungDetails/@e.productId" class="btn">Reservieren</a>
+            @if (e.productactive == true)
+            {
+                <div class="card">
+                    <div class="text-container">
+                        <h3>@e.productname</h3>
+                        <a href="/MaterialreservierungDetails/@e.productId" class="btn">Reservieren</a>
+                    </div>
                 </div>
-            </div>
+            }
         }
-    }
 
-    @foreach (var x in Model.sets)
-    {
-        @if (x.setactive == true)
+        @foreach (var x in Model.sets)
         {
-            <div class="card">
-            <div class="text-container">
-                <h3>@x.setname</h3>
-                <a href="/MaReDeSET/@x.setId" class="btn">Reservieren</a>
-            </div>
-        </div>
+            @if (x.setactive == true)
+            {
+                <div class="card">
+                    <div class="text-container">
+                        <h3>@x.setname</h3>
+                        <a href="/MaReDeSET/@x.setId" class="btn">Reservieren</a>
+                    </div>
+                </div>
+            }
         }
-    }
+    </div>
 
     <div style="clear: both;"></div>
-    <!-- Suchleiste für Material -->
+    <!-- JavaScript -->
     <script>
         function filterMaterials() {
             var input, filter, container, cards, h3, i, txtValue;

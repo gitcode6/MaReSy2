@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\alexander.schmidt\\documents\\github\\maresy2\\frontend\\pages\\handbuch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\handbuch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\alexander.schmidt\\documents\\github\\maresy2\\frontend\\pages\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\alexander.schmidt\\documents\\github\\maresy2\\frontend\\pages\\materialreservierung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\materialreservierung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Handbuch.cshtml",
-              "DocumentMoniker": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Handbuch.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Handbuch.cshtml",
-              "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Handbuch.cshtml",
-              "RelativeToolTip": "Pages\\Handbuch.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADkAAAAhAAAAAAAAAA==",
+              "Title": "Materialreservierung.cshtml",
+              "DocumentMoniker": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Materialreservierung.cshtml",
+              "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Materialreservierung.cshtml",
+              "RelativeToolTip": "Pages\\Materialreservierung.cshtml",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAwwKkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-18T17:26:15.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\Dashboard.cshtml",
-              "RelativeToolTip": "Pages\\Dashboard.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-18T17:26:03.811Z",
+              "WhenOpened": "2025-01-18T17:51:20.276Z",
               "EditorCaption": ""
             }
           ]
