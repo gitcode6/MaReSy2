@@ -50,14 +50,16 @@
 </div>
 
 <br />
-
+@if (User.IsInRole("Admin"))
+    {
 <div class="sonstiges_handbuch">
     <h2 style="text-align: center;">Admin-Tools</h2>
     <h4>Benutzer:innen-Verwaltung</h4>
     <p>Hier kommen Infos hin.</p>
 </div>
+    <br />
+    }
 
-<br />
 
 <div class="sonstiges_handbuch">
     <h2 style="text-align: center;">User-Tools</h2>

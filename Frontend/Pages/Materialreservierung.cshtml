@@ -32,9 +32,7 @@
             overflow: hidden;
             min-width: 250px;
             float: left;
-            height: 500px;
             display: grid;
-            grid-template-rows: 70% 30%; /* 70% für das Bild, 30% für den Text */
             overflow: hidden; /* Verhindert Überlauf */
         }
 
@@ -131,7 +129,6 @@
         @if (e.productactive == true)
         {
             <div class="card">
-                <img src="~/images/Übungsmedikament1.png" alt="Material">
                 <div class="text-container">
                     <h3>@e.productname</h3>
                     <a href="/MaterialreservierungDetails/@e.productId" class="btn">Reservieren</a>
@@ -145,7 +142,6 @@
         @if (x.setactive == true)
         {
             <div class="card">
-                <img src="~/images/Übungsmedikament1.png" alt="Material">
             <div class="text-container">
                 <h3>@x.setname</h3>
                 <a href="/MaReDeSET/@x.setId" class="btn">Reservieren</a>
