@@ -16,8 +16,8 @@ wwwroot\images\Logo_Österreichisches_Rotes_Kreuz_2.jpg
 wwwroot\images\reanimationspuppe.jpeg
 wwwroot\images\sonstiges_abmeldung.jpg
 wwwroot\images\sonstiges_einstellungen.jpg
-wwwroot\images\sonstiges_handbuch.jpg
 wwwroot\images\sonstiges_information.jpg
+wwwroot\images\sonstiges_support.jpg
 wwwroot\images\suche.svg
 wwwroot\images\Übungsmedikament1.png
 wwwroot\images\verbot.png

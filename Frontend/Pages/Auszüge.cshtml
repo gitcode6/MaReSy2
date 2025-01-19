@@ -52,44 +52,18 @@
     <br />
 
     <div class="dashboard_allgemein">
-
-
-        <div class="images_dashboard">
-            <a href="">
-                <img src="~/images/auszug_lagerstand.jpg" alt="Login Image" width="180" height="auto" />
-            </a>
-        </div>
-
-
-        <div class="images_dashboard">
-            <a href="">
-                <img src="~/images/auszug_materialreservierung.jpg" alt="Login Image" width="180" height="auto" />
-            </a>
-        </div>
         
-
-
         <div class="images_dashboard">
             <a href="@Url.Page("/Auszüge", "DownloadProduktePdf")" @* asp-page-handler="GeneratePdfProdukte" asp-route-inline="false" *@ class="btn btn-success" style="all: unset; cursor: pointer">
                     <img src="~/images/auszug_produkte.jpg" alt="Login Image" width="180" height="auto" />
         </a>
         </div>
-        
-
 
         <div class="images_dashboard">
             <a href="@Url.Page("/Auszüge", "DownloadSetsPdf")"@* asp-page-handler="GeneratePdfSets" asp-route-inline="false"  *@class="btn btn-success" style="all: unset; cursor: pointer">
                 <img src="~/images/auszug_sets.jpg" alt="Login Image" width="180" height="auto" />
             </a>
         </div>
-
-
-        <div class="images_dashboard">
-            <a asp-page-handler="GeneratePdfProdukteJeSets" asp-route-inline="false" class="btn btn-success" style="all: unset; cursor: pointer">
-                <img src="~/images/auszug_produktesets.jpg" alt="Login Image" width="180" height="auto" />
-            </a>
-        </div>
-
 
         <div style="clear: both;"></div>
     </div>
