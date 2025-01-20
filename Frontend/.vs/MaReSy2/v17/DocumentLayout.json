@@ -1,12 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gindl\\OneDrive - BHAK BHAS Feldbach\\MaReSy2\\Git\\MaReSy2\\Frontend\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\alexander.schmidt\\documents\\github\\maresy2\\frontend\\pages\\lagerverwaltunghinzuf\u00FCgen.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\lagerverwaltunghinzuf\u00FCgen.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|c:\\users\\alexander.schmidt\\documents\\github\\maresy2\\frontend\\pages\\lagerverwaltunghinzuf\u00FCgen.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19435F33-1FFB-4C0B-A3B1-5FFAD0808EBF}|MaReSy2.csproj|solutionrelative:pages\\lagerverwaltunghinzuf\u00FCgen.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswFYAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T19:18:00.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LagerverwaltungHinzuf\u00FCgen.cshtml",
+              "DocumentMoniker": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml",
+              "RelativeDocumentMoniker": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml",
+              "ToolTip": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\Frontend\\Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml",
+              "RelativeToolTip": "Pages\\LagerverwaltungHinzuf\u00FCgen.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-20T19:17:50.238Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

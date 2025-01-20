@@ -8065,23 +8065,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tobias\\.nuget\\packages\\": {},
+    "C:\\Users\\alexander.schmidt\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+      "projectUniqueName": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
       "projectName": "MaReSy2_Api",
-      "projectPath": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
-      "packagesPath": "C:\\Users\\Tobias\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tobias\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\obj\\",
+      "projectPath": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\MaReSy2_Api.csproj",
+      "packagesPath": "C:\\Users\\alexander.schmidt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexander.schmidt\\Documents\\GitHub\\MaReSy2\\MaReSy2_Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tobias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexander.schmidt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
