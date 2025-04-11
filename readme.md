@@ -26,7 +26,7 @@
 <b>Achtung:</b> \<Pfad\> mit dem im Schritt 3 kopierten Pfad ersetzten <br>
     Durch Befehl in Visual Studio Console:
     ```cmd
-    dotnet user-secrets set "ConnectionStrings:Datenbank" "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='<Pfad>';Integrated Security=True;Connect Timeout=30;Encrypt=True" ""
+    dotnet user-secrets set "ConnectionStrings:Datenbank" "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='<Pfad>';Integrated Security=True;Connect Timeout=30;Encrypt=True"
     ```
 
     Sollte das nicht funktionieren, kann jederzeit durch den Rechtsklick auf das Projekt und geheime Benutzerschlüssel verwalten der ConnectionString überprüft werden.
