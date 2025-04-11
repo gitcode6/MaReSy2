@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Runtime.ConstrainedExecution;
 using Azure;
-using MaReSy2_Api.Data.Models;
 using MaReSy2_Api.Models;
 using MaReSy2_Api.Models.DTO.RentalDTO;
 using MaReSy2_Api.Models.DTO.SingleProductDTO;

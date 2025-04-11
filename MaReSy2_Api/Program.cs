@@ -3,6 +3,7 @@ global using MaReSy2_Api.Models;
 global using MaReSy2_Api.Models.DTO;
 global using Microsoft.EntityFrameworkCore;
 using System.Text;
+using MaReSy2_Api.Exceptions;
 using MaReSy2_Api.Services;
 using MaReSy2_Api.Services.ImageService;
 using MaReSy2_Api.Services.ProductService;
@@ -88,8 +89,11 @@ namespace MaReSy2_Api
                     };
                 });
 
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+            builder.Services.AddProblemDetails();
 
             builder.Services.AddHttpContextAccessor();
+
 
             var app = builder.Build();
 
@@ -100,10 +104,10 @@ namespace MaReSy2_Api
                 app.UseSwaggerUI();
             }
 
-
-
+            app.UseExceptionHandler();
 
             app.UseHttpsRedirection();
+
 
             app.UseAuthentication();
 

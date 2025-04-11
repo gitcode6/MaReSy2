@@ -1,8 +1,10 @@
-﻿using MaReSy2_Api.Extensions;
+﻿using MaReSy2_Api.Utils;
 using MaReSy2_Api.Models;
 using MaReSy2_Api.Models.DTO.SetDTO;
 using MaReSy2_Api.Services.ProductService;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 
 namespace MaReSy2_Api.Services.SetService
 {
@@ -218,10 +220,10 @@ namespace MaReSy2_Api.Services.SetService
                         result.Errors.Add(new ErrorDetail { Field = "ProductAmount", Error = $"Das Produkt mit der ID {setitem.productId} muss eine positive Anzahl haben!" });
                     }
 
-                    if (setitem.productAmount == 0)
-                    {
-                        result.Errors.Add(new ErrorDetail { Field = "ProductAmount", Error = $"Das Produkt mit der ID {setitem.productId} darf nicht 0 sein!" });
-                    }
+                    //if (setitem.productAmount == 0)
+                    //{
+                    //    result.Errors.Add(new ErrorDetail { Field = "ProductAmount", Error = $"Das Produkt mit der ID {setitem.productId} darf nicht 0 sein!" });
+                    //}
                 }
             }
 
@@ -239,7 +241,22 @@ namespace MaReSy2_Api.Services.SetService
 
             if (set.setProductAssignDTOs?.Count > 0)
             {
-                foreach (var dto in set.setProductAssignDTOs!)
+                var dtoMap = set.setProductAssignDTOs.ToDictionary(d => d.productId, d => d.productAmount);
+
+                var assignmentsToRemove = setfromDb.ProductsSets
+                .Where(ps => !dtoMap.ContainsKey(ps.ProductId) || dtoMap[ps.ProductId] == 0)
+                .ToList();
+
+                foreach (var removeItem in assignmentsToRemove)
+                {
+                    var dbitem = await _context.ProductsSets.Where(dbset => dbset.SetId == setId).Where(x => x.ProductId == removeItem.ProductId).FirstOrDefaultAsync();
+
+                    _context.ProductsSets.Remove(dbitem);
+
+
+                }
+
+                foreach (var dto in set.setProductAssignDTOs.Where(x=>x.productAmount > 0))
                 {
                     var existingAssignment = setfromDb.ProductsSets.FirstOrDefault(
                         ps => ps.ProductId == dto.productId
@@ -252,6 +269,7 @@ namespace MaReSy2_Api.Services.SetService
                     }
                     else
                     {
+
                         setfromDb.ProductsSets.Add(new ProductsSet()
                         {
                             ProductId = dto.productId,
@@ -259,6 +277,8 @@ namespace MaReSy2_Api.Services.SetService
                             SingleProductAmount = dto.productAmount,
 
                         });
+
+
                     }
                 }
             }

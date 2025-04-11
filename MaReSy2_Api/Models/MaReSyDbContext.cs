@@ -33,7 +33,7 @@ public partial class MaReSyDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:Alex");
+        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:Datenbank");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

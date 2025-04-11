@@ -1,4 +1,4 @@
-﻿namespace MaReSy2_Api.Extensions
+﻿namespace MaReSy2_Api.Utils
 {
     public static class CollectionExtension
     {
